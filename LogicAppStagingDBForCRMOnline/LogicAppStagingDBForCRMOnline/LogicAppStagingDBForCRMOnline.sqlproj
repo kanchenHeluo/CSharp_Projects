@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>LogicAppStagingDBForCRMOnline</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{befb60cf-afda-442b-ad17-04a9f6b79beb}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>LogicAppStagingDBForCRMOnline</RootNamespace>
+    <AssemblyName>LogicAppStagingDBForCRMOnline</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\tables" />
+    <Folder Include="CRMAzure" />
+    <Folder Include="CRMAzure\storedProcedures" />
+    <Folder Include="CRMAzure\tables" />
+    <Folder Include="CRMAzure\views" />
+    <Folder Include="dbo\triggers" />
+    <Folder Include="CRMAzure\triggers" />
+    <Folder Include="CRMAzure\types" />
+    <Folder Include="dbo\queries" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\tables\UtilityContact.sql" />
+    <Build Include="dbo\tables\GL04Account.sql" />
+    <Build Include="dbo\tables\GL04InternalOrder.sql" />
+    <Build Include="CRMAzure\CRMAzure.sql" />
+    <Build Include="CRMAzure\storedProcedures\spCheckAvailable.sql" />
+    <Build Include="CRMAzure\storedProcedures\spClearLog.sql" />
+    <Build Include="CRMAzure\storedProcedures\spInsertTrigger.sql" />
+    <Build Include="CRMAzure\storedProcedures\spLog.sql" />
+    <Build Include="CRMAzure\storedProcedures\spPollData.sql" />
+    <Build Include="CRMAzure\tables\DeltaAccount.sql" />
+    <Build Include="CRMAzure\tables\MetaActionType.sql" />
+    <Build Include="CRMAzure\tables\MetaApp.sql" />
+    <Build Include="CRMAzure\tables\DeltaContact.sql" />
+    <Build Include="CRMAzure\tables\LogError.sql" />
+    <Build Include="CRMAzure\tables\MetaFeedStore.sql" />
+    <Build Include="CRMAzure\tables\DeltaIO.sql" />
+    <Build Include="CRMAzure\tables\MetaLogStatus.sql" />
+    <Build Include="CRMAzure\tables\LogMsg.sql" />
+    <Build Include="CRMAzure\views\vDeltaAccount.sql" />
+    <Build Include="CRMAzure\views\vDeltaContact.sql" />
+    <Build Include="CRMAzure\views\vDeltaIO.sql" />
+    <Build Include="dbo\triggers\trAccountInsert.sql" />
+    <Build Include="dbo\triggers\trAccountUpdate.sql" />
+    <Build Include="dbo\triggers\trContactInsert.sql" />
+    <Build Include="dbo\triggers\trContactUpdate.sql" />
+    <Build Include="dbo\triggers\trIOInsert.sql" />
+    <Build Include="dbo\triggers\trIOUpdate.sql" />
+    <Build Include="CRMAzure\tables\IdGuidContact.sql" />
+    <Build Include="CRMAzure\tables\IdGuidAccount.sql" />
+    <Build Include="CRMAzure\tables\IdGuidIO.sql" />
+    <Build Include="CRMAzure\triggers\trAppDeltaInsert.sql" />
+    <Build Include="CRMAzure\triggers\trAppDeltaUpdate.sql" />
+    <Build Include="CRMAzure\storedProcedures\spResetStatus.sql" />
+    <Build Include="CRMAzure\storedProcedures\spMergeContactGap.sql" />
+    <Build Include="CRMAzure\types\tpContactDeltaTableType.sql" />
+    <Build Include="CRMAzure\types\tpAccountDeltaTableType.sql" />
+    <Build Include="CRMAzure\types\tpInternalOrderDeltaTableType.sql" />
+    <Build Include="CRMAzure\storedProcedures\spMergeAccountGap.sql" />
+    <Build Include="CRMAzure\storedProcedures\spMergeInternalOrderGap.sql" />
+    <Build Include="CRMAzure\storedProcedures\spGetDailyReport.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Init.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UAT_LogicAppStagingDBForCRMOnline.publish.xml" />
+    <None Include="Prod2_LogicAppStagingDBForCRMOnline.publish.xml" />
+    <None Include="LogicAppStagingDBForCRMOnline.publish.xml" />
+    <None Include="dbo\queries\queryElasticMigration.sql" />
+    <None Include="dbo\queries\queryElasticOriginalTables.sql" />
+    <None Include="dbo\queries\queryElasticMigrateBack.sql" />
+    <None Include="dbo\queries\queryElasticMigrateLog.sql" />
+    <None Include="Test2_LogicAppStagingDBForCRMOnline.publish.xml" />
+    <None Include="Test1_LogicAppStagingDBForCRMOnline.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\AzureV12\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\AzureV12\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="LogicAppStagingDBForCRMOnline.refactorlog" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,49 @@
+﻿@using Web.Localization
+<div class="layout-agreementSearch-container">
+    
+    <!--Promise register start-->
+    <span op-busy-publisher="agreementSearchPromise" op-busy-publisher-event="AgreementSearch"></span>
+    <span op-busy-publisher="salesLocationsPromise" op-busy-publisher-event="SalesLocations"></span>
+    <!--Promise register end-->
+    <op-form name="AgreementSearchForm">
+        <op-errorsummary message-title="Agreement search couldn't proceed due to the following errors"></op-errorsummary>
+        <div class="ms-formblock leftalign">
+            <label class="ms-stdlabel">Agreement Number</label>
+            <input type="text" maxlength="100" class="ms-stdinput" id="agreementNumber" placeholder="Search Agreement" ng-model="agreementSearchParams.AgreementNumber" />
+            @*<div>
+                    <div type="text" maxlength="100" ng-auto-complete id="agreementNumber" placeholder="Search Agreement" pause="100" selectedobject="selectedagreementid" localdata="resultset" searchfields="Agreementid" titlefield="Agreementid" minlength="1" inputclass="autocompletecontrol" ng-model="agreementSearchParams.AgreementNumber">
+                    </div>
+                </div>*@
+        </div>
+        <div class="ms-formblock">
+            <label class="ms-stdlabel">Public Customer Number</label>
+            <input type="text" maxlength="100" class="ms-stdinput" id="acctNumber" placeholder="Search PCN" ng-model="agreementSearchParams.EndCustomerNumber" />
+            @*<div>
+                    <div type="text" maxlength="100" ng-auto-complete id="acctNumber" placeholder="Search Account Number" pause="100" selectedobject="selectedaccountnumber" localdata="resultset" searchfields="EndCustomerNumber" titlefield="EndCustomerNumber" minlength="1" inputclass="autocompletecontrol" ng-model="agreementSearchParams.EndCustomerNumber">
+                    </div>
+                </div>*@
+        </div>
+        <div class="ms-formblock">
+            <label class="ms-stdlabel">Customer Name</label>
+            <input type="text" maxlength="100" class="ms-stdinput" id="custName" placeholder="Search Customer" ng-model="agreementSearchParams.EndCustomerName" />
+            @*<div>
+                    <div type="text" maxlength="100" ng-auto-complete id="custName" placeholder="Search Customer" pause="100" selectedobject="selectedcustomername" localdata="resultset" searchfields="CustomerName" titlefield="CustomerName" minlength="1" inputclass="autocompletecontrol form-control-small" ng-model="agreementSearchParams.EndCustomerName">
+                    </div>
+                </div>*@
+        </div>
+        <div class="ms-formblock ">
+            <label class="ms-stdlabel">Sales Location</label>
+            <select class="ms-stddroplist" ng-model="agreementSearchParams.SalesLocation" ng-options="item.Code as item.Name for item in SalesLocations"></select>
+        </div>
+        <div class="ms-formblock datePicker">
+            <label class="ms-stdlabel">Lookup Date</label>
+            <input op-datepicker is-disabled="UsageDateIsDisable" date-format="UsageDateFormat" ng-bind="agreementSearchParams.LookUpDate" class="show-calendar" />
+        </div>
+
+        <div class="layout-inlineBlockOnly layout-agreementSearch-clearSearch">
+            <span class="ms-imgtextbtn layout-imgtextbtnS" ng-click="agreementClearAction()">Clear All</span>
+            <input type="button" value="Search" class="ms-stdbtn layout-ButtonS" ng-click="agreementSearchAction()" ng-disabled="!validators['AgreementSearchForm'].$isValid()" />
+        </div>
+    </op-form>
+</div>
+<div class="clr"></div>

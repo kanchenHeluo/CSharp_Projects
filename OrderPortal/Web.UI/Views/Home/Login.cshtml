@@ -1,0 +1,24 @@
+﻿@using Web.UI.Common;
+
+<section>
+    <div>
+        <div class="login-imglogin"><img src="~/Content/Images/homepage.jpg" /></div>
+        <div class="login-textlogin">
+            <div class="login-textloginLeft fll">
+                <div class="ms-signinintrotext">Welcome to the</div>
+                <div class="ms-signintitletextpart login-textloginsecond">Volume Licensing Partner Center</div>
+            </div>
+           
+                <div id="divlogintile" data-url="@Url.PartnerLogin()" id="SignInBtnCust" class="ms-signinbtnpart">
+                    <div class="ms-signinbtnlabel login-singinfirst">Sign In</div>
+                    <div class="ms-signinbtnsublabel login-singinsecond">with Partners account <span class="i_ArrowRight flr"></span></div>
+                </div>
+                <div id="divwindowslivetile" data-url="@Url.LoginWindowsLive()" class="ms-signinbtncust">
+                <div class="ms-signinbtnlabel login-singinfirst">Sign In</div>
+                    <div class="ms-signinbtnsublabel login-singinsecond">with Live ID <span class="i_ArrowRight flr"></span></div>
+                   
+            </div>
+         
+        </div>
+    </div>
+</section>

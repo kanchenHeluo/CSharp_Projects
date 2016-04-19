@@ -1,0 +1,67 @@
+﻿.ms-formblock{
+    vertical-align: text-top;
+}
+
+.ms-formblock.leftalign{
+    margin:0 1rem 1rem 0;
+}
+
+.ms-formblock.margin-left-large{
+    margin-left:5.8rem;
+}
+
+.ms-formblock.centeralign{
+    padding-left:10rem;
+}
+
+.ms-formblock>span.message{
+	vertical-align:bottom;
+	display:block;
+	width:100%;
+	max-width:100%;
+}
+
+.ms-formblock>span.nowrap{
+    white-space:nowrap;
+}
+
+.ms-formblock>span.inputheight{
+    height:2.4rem;
+}
+
+.ms-formblock.xxlarge{
+    width:76.4rem;
+    min-width:76.4rem;
+    margin:0;
+}
+
+.ms-formblock.extralarge{
+    width:38.2rem;
+    min-width:38.2rem;
+    margin:0;
+}
+
+.ms-formblock.large{
+    width:27.3rem;
+    min-width:27.3em;
+}
+
+.ms-formblock.large.rightalign{
+    margin:0 0 0 1rem;
+    border:0;
+    padding-bottom:10px;
+}
+
+.ms-formblock.medium{
+    width:13rem;
+    min-width:13rem;
+}
+
+.ms-formblock.small{
+    width:10rem;
+	min-width:10rem;
+}
+.ms-formblock.tiny{
+    width:7rem;
+	min-width:7rem;
+}

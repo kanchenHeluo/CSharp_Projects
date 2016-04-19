@@ -1,0 +1,55 @@
+﻿/* From Global Styles */
+*{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+/* End From Global Styles */
+
+.ms-imagebutton{
+	display:inline-block;
+	white-space:nowrap;
+	color:#666;
+	background-color:transparent;
+	padding:0 16px;
+	line-height:3.2rem;
+	height:3.2rem;
+}
+
+.ms-imagebutton:hover,
+.ms-imagebutton:active,
+.ms-imagebutton.active{
+	color:#FFF;
+	background-color:#0072c6;
+}
+
+.ms-imagebutton:visited,
+.ms-imagebutton:link{
+	color:inherit;
+	background-color:inherit;
+}
+
+.ms-imagebutton:disabled,
+.ms-imagebutton.disabled{
+	color:#A0A0A0 !important;
+	background-color:#EEE !important;
+}
+
+.ms-imagebutton >.symbol,
+.ms-imagebutton>.symbol+label
+{
+	color:inherit !important;
+	background-color:inherit;
+	display:inline-block;
+	vertical-align:middle;
+	font-weight:600;
+}
+
+.ms-imagebutton >.symbol
+{
+	margin:0;
+}
+
+.ms-imagebutton>.symbol+label{
+	margin-left:.25rem;
+}

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.DataAnnotations</id>
+    <version>1.0.0-alpha2</version>
+    <title>Microsoft.DataAnnotations</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Microsoft.DataAnnotations</description>
+    <dependencies>
+      <group targetFramework="K1.0">
+        <dependency id="System.ComponentModel.Annotations" version="4.0.10.0" />
+        <dependency id="System.Runtime" version="4.0.20.0" />
+      </group>
+      <group targetFramework=".NETPortable4.5-Profile111">
+        <dependency id="System.ComponentModel.Annotations" version="4.0.10.0" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.ComponentModel.Annotations" targetFramework=".NETFramework4.5" />
+      <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETPortable4.5-Profile111" />
+    </frameworkAssemblies>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm</licenseUrl>
+  </metadata>
+</package>

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [CRMAzure].[MetaLogStatus]
+(
+	[Id] INT NOT NULL, 
+    [Name] VARCHAR(255) NOT NULL,
+	CONSTRAINT [PK_MetaLogicStatus_Id] PRIMARY KEY CLUSTERED ([Id] ASC)
+)

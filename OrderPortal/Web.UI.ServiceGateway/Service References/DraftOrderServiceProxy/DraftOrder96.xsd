@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01" elementFormDefault="qualified" targetNamespace="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/OrderService/DraftOrder.svc?xsd=xsd4" namespace="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" />
+  <xs:import schemaLocation="http://localhost/OrderService/DraftOrder.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Request" />
+  <xs:import schemaLocation="http://localhost/OrderService/DraftOrder.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Response" />
+  <xs:element name="DeleteDraftOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="request" nillable="true" type="q1:DeleteDraftOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDraftOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="DeleteDraftOrderResult" nillable="true" type="q2:DeleteDraftOrderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDraftOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="request" nillable="true" type="q3:GetDraftOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDraftOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="GetDraftOrderResult" nillable="true" type="q4:DraftOrderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDraftOrderPortal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="request" nillable="true" type="q5:GetDraftOrderPortalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDraftOrderPortalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="GetDraftOrderPortalResult" nillable="true" type="q6:DraftOrderPortalResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListDraftOrders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="request" nillable="true" type="q7:ListDraftOrdersRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListDraftOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="ListDraftOrdersResult" nillable="true" type="q8:ArrayOfDraftOrderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDraftOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="request" nillable="true" type="q9:SaveDraftOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDraftOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="SaveDraftOrderResult" nillable="true" type="q10:SaveDraftOrderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDraftOrderPortal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="request" nillable="true" type="q11:SaveDraftOrderPortalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDraftOrderPortalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="SaveDraftOrderPortalResult" nillable="true" type="q12:SaveDraftOrderPortalResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlockDraftOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Request" minOccurs="0" name="request" nillable="true" type="q13:UnlockDraftOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlockDraftOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Response" minOccurs="0" name="UnlockDraftOrderResult" nillable="true" type="q14:UnlockDraftOrderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlockDraftOrderPortal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Request" minOccurs="0" name="request" nillable="true" type="q15:UnlockDraftOrderPortalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlockDraftOrderPortalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Response" minOccurs="0" name="UnlockDraftOrderPortalResult" nillable="true" type="q16:UnlockDraftOrderPortalResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LockDraftOrderPortal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Request" minOccurs="0" name="request" nillable="true" type="q17:LockDraftOrderPortalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LockDraftOrderPortalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Response" minOccurs="0" name="LockDraftOrderPortalResult" nillable="true" type="q18:LockDraftOrderPortalResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDraftOrderPortal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="request" nillable="true" type="q19:ValidateDraftOrderPortalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDraftOrderPortalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="ValidateDraftOrderPortalResult" nillable="true" type="q20:ValidateDraftOrderPortalResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDraftOrderPortal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="request" nillable="true" type="q21:DeleteDraftOrderPortalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDraftOrderPortalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="DeleteDraftOrderPortalResult" nillable="true" type="q22:DeleteDraftOrderPortalResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDraftOrderShipmentPortal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="request" nillable="true" type="q23:ValidateDraftOrderShipmentPortalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDraftOrderShipmentPortalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="ValidateDraftOrderShipmentPortalResult" nillable="true" type="q24:ValidateDraftOrderShipmentPortalResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDraftOrderShipmentPortal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="request" nillable="true" type="q25:SaveDraftOrderShipmentPortalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDraftOrderShipmentPortalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="SaveDraftOrderShipmentPortalResult" nillable="true" type="q26:SaveDraftOrderShipmentPortalResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDraftOrderShipmentPortal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="request" nillable="true" type="q27:DeleteDraftOrderShipmentPortalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDraftOrderShipmentPortalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="DeleteDraftOrderShipmentPortalResult" nillable="true" type="q28:DeleteDraftOrderShipmentPortalResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDraftOrderShipmentPortal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="request" nillable="true" type="q29:GetDraftOrderShipmentPortalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDraftOrderShipmentPortalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" minOccurs="0" name="GetDraftOrderShipmentPortalResult" nillable="true" type="q30:GetDraftOrderShipmentPortalResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

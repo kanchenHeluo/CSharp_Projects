@@ -1,0 +1,242 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.UI", "Web.UI\Web.UI.csproj", "{59995375-7048-4FFB-B8D0-A54F3FB7CA1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.UI.Repositories", "Web.UI.Repositories\Web.UI.Repositories.csproj", "{6DBB20C0-6075-4269-8F9A-D7192994B505}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.UI.ServiceGateway", "Web.UI.ServiceGateway\Web.UI.ServiceGateway.csproj", "{6B77A5A5-CE51-49D8-8878-7461B9D30E57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Localization", "Web.Localization\Web.Localization.csproj", "{6B0ED206-9F98-4BE6-810E-00401A26001C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.UI.Common", "Web.UI.Common\Web.UI.Common.csproj", "{B68B0E1C-CE53-4D66-9EA9-9DE010D60837}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Global.Search", "Global.Search\Global.Search.csproj", "{8721E5F5-8B40-4991-8176-9018339F027E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalSearch.UnitTest", "GlobalSearch.UnitTest\GlobalSearch.UnitTest.csproj", "{DC50F451-377D-42AE-BBB8-8FBEF1B15445}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8721E5F5-8B40-4991-8176-9018339F027E} = {8721E5F5-8B40-4991-8176-9018339F027E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.UI.Repositories.UnitTest", "Web.UI.Repositories.UnitTest\Web.UI.Repositories.UnitTest.csproj", "{C7F35202-F651-4783-AFD8-4D30ECB702D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Global.SearchSync", "Global.SearchSync\Global.SearchSync.csproj", "{7E7B4B9A-49E2-4B97-AF57-04BA7D9660C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9A257F4E-43EB-451F-9B84-B0610BB754E2}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalSync.UnitTest", "GlobalSync\GlobalSync.UnitTest.csproj", "{F99780EF-541E-44BD-871F-686A91269EB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Global.SearchService", "Global.SearchService\Global.SearchService.csproj", "{4B8C086A-F8D3-4EA5-863E-4D5CD7C8F6DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualSearchTool", "ManualSearchTool\ManualSearchTool.csproj", "{37316A14-65BD-44A6-B102-3AFF48229253}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelParser", "ExcelParser\ExcelParser.csproj", "{169DA9D9-096D-4839-A914-A29786D78F69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelParser.UnitTest", "ExcelParser.UnitTest\ExcelParser.UnitTest.csproj", "{460CFD8F-AFDF-4475-8648-8AEB5635FCDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.UI.Test", "Web.UI.Test\Web.UI.Test.csproj", "{FF5CAF19-18D0-4A87-8047-811C14FDED13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExcelModule", "ExcelModule", "{E77777DC-6F1D-4E9B-B945-3110706E5EE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AB7059A6-C243-4877-A96A-23B141C3119A}"
+	ProjectSection(SolutionItems) = preProject
+		WebEssentials-Settings.json = WebEssentials-Settings.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B8FBD4C3-4CEF-45E0-AC31-045E4FD318C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.UI.Tests.Integration", "Web.UI.Tests.Integration\Web.UI.Tests.Integration.csproj", "{B2567495-8044-476B-98FC-62402F8D577D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{3E03B967-269B-476F-9A08-2BD0CD4A20EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FitSharp", "FitSharp", "{89AB5936-C0CD-49EE-B42D-0D21D2B7D70D}"
+	ProjectSection(SolutionItems) = preProject
+		References\FitSharp\fit.dll = References\FitSharp\fit.dll
+		References\FitSharp\fitSharp.dll = References\FitSharp\fitSharp.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 17
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://msitvstf1:8080/tfs/ecit
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Web.UI\\Web.UI.csproj
+		SccProjectName1 = Web.UI
+		SccLocalPath1 = Web.UI
+		SccProjectUniqueName2 = Web.UI.Repositories\\Web.UI.Repositories.csproj
+		SccProjectName2 = Web.UI.Repositories
+		SccLocalPath2 = Web.UI.Repositories
+		SccProjectUniqueName3 = Web.UI.ServiceGateway\\Web.UI.ServiceGateway.csproj
+		SccProjectName3 = Web.UI.ServiceGateway
+		SccLocalPath3 = Web.UI.ServiceGateway
+		SccProjectUniqueName4 = Web.Localization\\Web.Localization.csproj
+		SccProjectName4 = Web.Localization
+		SccLocalPath4 = Web.Localization
+		SccProjectUniqueName5 = Web.UI.Common\\Web.UI.Common.csproj
+		SccProjectName5 = Web.UI.Common
+		SccLocalPath5 = Web.UI.Common
+		SccProjectUniqueName6 = Global.Search\\Global.Search.csproj
+		SccProjectName6 = Global.Search
+		SccLocalPath6 = Global.Search
+		SccProjectUniqueName7 = GlobalSearch.UnitTest\\GlobalSearch.UnitTest.csproj
+		SccProjectName7 = GlobalSearch.UnitTest
+		SccLocalPath7 = GlobalSearch.UnitTest
+		SccProjectUniqueName8 = Web.UI.Repositories.UnitTest\\Web.UI.Repositories.UnitTest.csproj
+		SccProjectName8 = Web.UI.Repositories.UnitTest
+		SccLocalPath8 = Web.UI.Repositories.UnitTest
+		SccProjectUniqueName9 = Global.SearchSync\\Global.SearchSync.csproj
+		SccProjectName9 = Global.SearchSync
+		SccLocalPath9 = Global.SearchSync
+		SccProjectUniqueName10 = GlobalSync\\GlobalSync.UnitTest.csproj
+		SccProjectName10 = GlobalSync
+		SccLocalPath10 = GlobalSync
+		SccProjectUniqueName11 = Global.SearchService\\Global.SearchService.csproj
+		SccProjectName11 = Global.SearchService
+		SccLocalPath11 = Global.SearchService
+		SccProjectUniqueName12 = ManualSearchTool\\ManualSearchTool.csproj
+		SccProjectName12 = ManualSearchTool
+		SccLocalPath12 = ManualSearchTool
+		SccProjectUniqueName13 = Web.UI.Test\\Web.UI.Test.csproj
+		SccProjectName13 = Web.UI.Test
+		SccLocalPath13 = Web.UI.Test
+		SccProjectUniqueName14 = ExcelParser\\ExcelParser.csproj
+		SccProjectTopLevelParentUniqueName14 = OrderPortal.sln
+		SccProjectName14 = ExcelParser
+		SccLocalPath14 = ExcelParser
+		SccProjectUniqueName15 = ExcelParser.UnitTest\\ExcelParser.UnitTest.csproj
+		SccProjectTopLevelParentUniqueName15 = OrderPortal.sln
+		SccProjectName15 = ExcelParser.UnitTest
+		SccLocalPath15 = ExcelParser.UnitTest
+		SccProjectUniqueName16 = Web.UI.Tests.Integration\\Web.UI.Tests.Integration.csproj
+		SccProjectTopLevelParentUniqueName16 = OrderPortal.sln
+		SccProjectName16 = Web.UI.Tests.Integration
+		SccLocalPath16 = Web.UI.Tests.Integration
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59995375-7048-4FFB-B8D0-A54F3FB7CA1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59995375-7048-4FFB-B8D0-A54F3FB7CA1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59995375-7048-4FFB-B8D0-A54F3FB7CA1C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{59995375-7048-4FFB-B8D0-A54F3FB7CA1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59995375-7048-4FFB-B8D0-A54F3FB7CA1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59995375-7048-4FFB-B8D0-A54F3FB7CA1C}.Release|x86.ActiveCfg = Release|Any CPU
+		{6DBB20C0-6075-4269-8F9A-D7192994B505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DBB20C0-6075-4269-8F9A-D7192994B505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DBB20C0-6075-4269-8F9A-D7192994B505}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6DBB20C0-6075-4269-8F9A-D7192994B505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DBB20C0-6075-4269-8F9A-D7192994B505}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DBB20C0-6075-4269-8F9A-D7192994B505}.Release|x86.ActiveCfg = Release|Any CPU
+		{6B77A5A5-CE51-49D8-8878-7461B9D30E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B77A5A5-CE51-49D8-8878-7461B9D30E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B77A5A5-CE51-49D8-8878-7461B9D30E57}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6B77A5A5-CE51-49D8-8878-7461B9D30E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B77A5A5-CE51-49D8-8878-7461B9D30E57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B77A5A5-CE51-49D8-8878-7461B9D30E57}.Release|x86.ActiveCfg = Release|Any CPU
+		{6B0ED206-9F98-4BE6-810E-00401A26001C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B0ED206-9F98-4BE6-810E-00401A26001C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B0ED206-9F98-4BE6-810E-00401A26001C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6B0ED206-9F98-4BE6-810E-00401A26001C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B0ED206-9F98-4BE6-810E-00401A26001C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B0ED206-9F98-4BE6-810E-00401A26001C}.Release|x86.ActiveCfg = Release|Any CPU
+		{B68B0E1C-CE53-4D66-9EA9-9DE010D60837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B68B0E1C-CE53-4D66-9EA9-9DE010D60837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B68B0E1C-CE53-4D66-9EA9-9DE010D60837}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B68B0E1C-CE53-4D66-9EA9-9DE010D60837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B68B0E1C-CE53-4D66-9EA9-9DE010D60837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B68B0E1C-CE53-4D66-9EA9-9DE010D60837}.Release|x86.ActiveCfg = Release|Any CPU
+		{8721E5F5-8B40-4991-8176-9018339F027E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8721E5F5-8B40-4991-8176-9018339F027E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8721E5F5-8B40-4991-8176-9018339F027E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8721E5F5-8B40-4991-8176-9018339F027E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8721E5F5-8B40-4991-8176-9018339F027E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8721E5F5-8B40-4991-8176-9018339F027E}.Release|x86.ActiveCfg = Release|Any CPU
+		{DC50F451-377D-42AE-BBB8-8FBEF1B15445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC50F451-377D-42AE-BBB8-8FBEF1B15445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC50F451-377D-42AE-BBB8-8FBEF1B15445}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DC50F451-377D-42AE-BBB8-8FBEF1B15445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC50F451-377D-42AE-BBB8-8FBEF1B15445}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC50F451-377D-42AE-BBB8-8FBEF1B15445}.Release|x86.ActiveCfg = Release|Any CPU
+		{C7F35202-F651-4783-AFD8-4D30ECB702D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7F35202-F651-4783-AFD8-4D30ECB702D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7F35202-F651-4783-AFD8-4D30ECB702D3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C7F35202-F651-4783-AFD8-4D30ECB702D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7F35202-F651-4783-AFD8-4D30ECB702D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7F35202-F651-4783-AFD8-4D30ECB702D3}.Release|x86.ActiveCfg = Release|Any CPU
+		{7E7B4B9A-49E2-4B97-AF57-04BA7D9660C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E7B4B9A-49E2-4B97-AF57-04BA7D9660C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E7B4B9A-49E2-4B97-AF57-04BA7D9660C4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7E7B4B9A-49E2-4B97-AF57-04BA7D9660C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E7B4B9A-49E2-4B97-AF57-04BA7D9660C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E7B4B9A-49E2-4B97-AF57-04BA7D9660C4}.Release|x86.ActiveCfg = Release|Any CPU
+		{F99780EF-541E-44BD-871F-686A91269EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99780EF-541E-44BD-871F-686A91269EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99780EF-541E-44BD-871F-686A91269EB5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F99780EF-541E-44BD-871F-686A91269EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99780EF-541E-44BD-871F-686A91269EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99780EF-541E-44BD-871F-686A91269EB5}.Release|x86.ActiveCfg = Release|Any CPU
+		{4B8C086A-F8D3-4EA5-863E-4D5CD7C8F6DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B8C086A-F8D3-4EA5-863E-4D5CD7C8F6DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B8C086A-F8D3-4EA5-863E-4D5CD7C8F6DB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4B8C086A-F8D3-4EA5-863E-4D5CD7C8F6DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B8C086A-F8D3-4EA5-863E-4D5CD7C8F6DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B8C086A-F8D3-4EA5-863E-4D5CD7C8F6DB}.Release|x86.ActiveCfg = Release|Any CPU
+		{37316A14-65BD-44A6-B102-3AFF48229253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37316A14-65BD-44A6-B102-3AFF48229253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37316A14-65BD-44A6-B102-3AFF48229253}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{37316A14-65BD-44A6-B102-3AFF48229253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37316A14-65BD-44A6-B102-3AFF48229253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37316A14-65BD-44A6-B102-3AFF48229253}.Release|x86.ActiveCfg = Release|Any CPU
+		{169DA9D9-096D-4839-A914-A29786D78F69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{169DA9D9-096D-4839-A914-A29786D78F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{169DA9D9-096D-4839-A914-A29786D78F69}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{169DA9D9-096D-4839-A914-A29786D78F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{169DA9D9-096D-4839-A914-A29786D78F69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{169DA9D9-096D-4839-A914-A29786D78F69}.Release|x86.ActiveCfg = Release|Any CPU
+		{460CFD8F-AFDF-4475-8648-8AEB5635FCDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{460CFD8F-AFDF-4475-8648-8AEB5635FCDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{460CFD8F-AFDF-4475-8648-8AEB5635FCDE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{460CFD8F-AFDF-4475-8648-8AEB5635FCDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{460CFD8F-AFDF-4475-8648-8AEB5635FCDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{460CFD8F-AFDF-4475-8648-8AEB5635FCDE}.Release|x86.ActiveCfg = Release|Any CPU
+		{FF5CAF19-18D0-4A87-8047-811C14FDED13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF5CAF19-18D0-4A87-8047-811C14FDED13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF5CAF19-18D0-4A87-8047-811C14FDED13}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FF5CAF19-18D0-4A87-8047-811C14FDED13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF5CAF19-18D0-4A87-8047-811C14FDED13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF5CAF19-18D0-4A87-8047-811C14FDED13}.Release|x86.ActiveCfg = Release|Any CPU
+		{B2567495-8044-476B-98FC-62402F8D577D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2567495-8044-476B-98FC-62402F8D577D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2567495-8044-476B-98FC-62402F8D577D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B2567495-8044-476B-98FC-62402F8D577D}.Debug|x86.Build.0 = Debug|Any CPU
+		{B2567495-8044-476B-98FC-62402F8D577D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2567495-8044-476B-98FC-62402F8D577D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2567495-8044-476B-98FC-62402F8D577D}.Release|x86.ActiveCfg = Release|Any CPU
+		{B2567495-8044-476B-98FC-62402F8D577D}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{169DA9D9-096D-4839-A914-A29786D78F69} = {E77777DC-6F1D-4E9B-B945-3110706E5EE3}
+		{460CFD8F-AFDF-4475-8648-8AEB5635FCDE} = {E77777DC-6F1D-4E9B-B945-3110706E5EE3}
+		{B2567495-8044-476B-98FC-62402F8D577D} = {B8FBD4C3-4CEF-45E0-AC31-045E4FD318C9}
+		{3E03B967-269B-476F-9A08-2BD0CD4A20EC} = {AB7059A6-C243-4877-A96A-23B141C3119A}
+		{89AB5936-C0CD-49EE-B42D-0D21D2B7D70D} = {3E03B967-269B-476F-9A08-2BD0CD4A20EC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Logging.5.0.505.1\lib\NET35;packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35
+	EndGlobalSection
+EndGlobal

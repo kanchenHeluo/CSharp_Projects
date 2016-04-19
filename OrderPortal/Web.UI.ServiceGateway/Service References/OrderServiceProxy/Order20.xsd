@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2013/16" elementFormDefault="qualified" targetNamespace="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2013/16" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfPurchaseOrderCentralSalesTaxTypes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseOrderCentralSalesTaxTypes" nillable="true" type="tns:PurchaseOrderCentralSalesTaxTypes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseOrderCentralSalesTaxTypes" nillable="true" type="tns:ArrayOfPurchaseOrderCentralSalesTaxTypes" />
+  <xs:complexType name="PurchaseOrderCentralSalesTaxTypes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CentralSalesTaxType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CentralSalesTaxValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PurchaseOrderCentralSalesTaxTypes" nillable="true" type="tns:PurchaseOrderCentralSalesTaxTypes" />
+</xs:schema>

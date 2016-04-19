@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.AspNet.Security.DataProtection</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.AspNet.Security.DataProtection.CryptRand">
+            <summary>
+            Helper class to populate buffers with cryptographically random data.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.CryptRand.FillBuffer(System.ArraySegment{System.Byte})">
+            <summary>
+            Populates a buffer with cryptographically random data.
+            </summary>
+            <param name="buffer">The buffer to populate.</param>
+        </member>
+        <member name="T:Microsoft.AspNet.Security.DataProtection.DataProtectionProvider">
+            <summary>
+            Provides methods for creating IDataProtectionProvider instances.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.DataProtectionProvider.CreateFromDpapi">
+            <summary>
+            Creates a new IDataProtectionProvider backed by DPAPI, where the protected
+            payload can only be decrypted by the current user.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.DataProtectionProvider.CreateFromDpapi(System.Boolean)">
+            <summary>
+            Creates a new IDataProtectionProvider backed by DPAPI.
+            </summary>
+            <param name="protectToLocalMachine">True if protected payloads can be decrypted by any user
+            on the local machine, false if protected payloads should only be able to decrypted by the
+            current user account.</param>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.DataProtectionProvider.CreateNew">
+            <summary>
+            Creates a new IDataProtectionProvider with a randomly-generated master key.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.DataProtectionProvider.CreateFromKey(System.Byte[])">
+            <summary>
+            Creates a new IDataProtectionProvider with the provided master key.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Security.DataProtection.IDataProtectionProvider">
+            <summary>
+            A factory that can provide IDataProtector instances.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.IDataProtectionProvider.CreateProtector(System.String)">
+            <summary>
+            Given a purpose, returns a new IDataProtector that has unique cryptographic keys tied to this purpose.
+            </summary>
+            <param name="purpose">The consumer of the IDataProtector.</param>
+            <returns>An IDataProtector.</returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Security.DataProtection.IDataProtector">
+            <summary>
+            Represents an object that can perform cryptographic operations.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.IDataProtector.CreateSubProtector(System.String)">
+            <summary>
+            Given a subpurpose, returns a new IDataProtector that has unique cryptographic keys tied <em>both</em> the purpose
+            that was used to create this IDataProtector instance <em>and</em> the purpose that is provided as a parameter
+            to this method.
+            </summary>
+            <param name="purpose">The sub-consumer of the IDataProtector.</param>
+            <returns>An IDataProtector.</returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.IDataProtector.Protect(System.Byte[])">
+            <summary>
+            Cryptographically protects some input data.
+            </summary>
+            <param name="unprotectedData">The data to be protected.</param>
+            <returns>An array containing cryptographically protected data.</returns>
+            <remarks>To retrieve the original data, call Unprotect on the protected data.</remarks>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.IDataProtector.Unprotect(System.Byte[])">
+            <summary>
+            Retrieves the original data that was protected by a call to Protect.
+            </summary>
+            <param name="protectedData">The protected data to be decrypted.</param>
+            <returns>The original data.</returns>
+            <remarks>Throws CryptographicException if the <em>protectedData</em> parameter has been tampered with.</remarks>
+        </member>
+        <member name="T:Microsoft.AspNet.Security.DataProtection.PBKDF2">
+            <summary>
+            Helper class to derive keys from low-entropy passwords using the PBKDF2 algorithm.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.PBKDF2.DeriveKey(System.String,System.Byte[],System.Byte[],System.UInt64,System.UInt32)">
+            <summary>
+            Derives a key from a low-entropy password.
+            </summary>
+            <param name="algorithmName">The name of the PRF to use for key derivation.</param>
+            <param name="password">The low-entropy password from which to generate a key.</param>
+            <param name="salt">The salt used to randomize the key derivation.</param>
+            <param name="iterationCount">The number of iterations to perform.</param>
+            <param name="numBytesToDerive">The desired byte length of the derived key.</param>
+            <returns>A key derived from the provided password.</returns>
+            <remarks>For compatibility with the Rfc2898DeriveBytes class, specify "SHA1" for the <em>algorithmName</em> parameter.</remarks>
+        </member>
+        <member name="T:Microsoft.AspNet.Security.DataProtection.SP800_108Helper">
+            <summary>
+            Provides an implementation of the SP800-108-CTR-HMACSHA512 key derivation function.
+            This class assumes at least Windows 7 / Server 2008 R2.
+            </summary>
+            <remarks>
+            More info at http://csrc.nist.gov/publications/nistpubs/800-108/sp800-108.pdf, Sec. 5.1.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.SP800_108Helper.DeriveKeys(System.Byte*,System.Int32,System.Byte[],System.Byte*,System.UInt32)">
+            <summary>
+            Performs a key derivation using SP800-108-CTR-HMACSHA512.
+            </summary>
+            <param name="pKdk">Pointer to the key derivation key.</param>
+            <param name="kdkByteLength">Length (in bytes) of the key derivation key.</param>
+            <param name="purpose">Purpose to attach to the generated subkey. Corresponds to the 'Label' parameter
+            in the KDF. May be null.</param>
+            <param name="pOutputBuffer">Pointer to a buffer which will receive the subkey.</param>
+            <param name="outputBufferByteLength">Length (in bytes) of the output buffer.</param>
+        </member>
+        <member name="P:Microsoft.AspNet.Security.DataProtection.Res.Common_NullOrEmpty">
+            <summary>
+            Argument cannot be null or empty.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.Res.FormatCommon_NullOrEmpty">
+            <summary>
+            Argument cannot be null or empty.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Security.DataProtection.Res.DataProtectorFactory_MasterKeyTooShort">
+            <summary>
+            The master key is too short. It must be at least {0} bytes in length.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.Res.FormatDataProtectorFactory_MasterKeyTooShort(System.Object)">
+            <summary>
+            The master key is too short. It must be at least {0} bytes in length.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Security.DataProtection.Res.DataProtectorImpl_BadEncryptedData">
+            <summary>
+            The data to decrypt is invalid.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.Res.FormatDataProtectorImpl_BadEncryptedData">
+            <summary>
+            The data to decrypt is invalid.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Security.DataProtection.Res.DpapiDataProtectorImpl_ProfileNotLoaded">
+            <summary>
+            Couldn't protect data. Perhaps the user profile isn't loaded?
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.Res.FormatDpapiDataProtectorImpl_ProfileNotLoaded">
+            <summary>
+            Couldn't protect data. Perhaps the user profile isn't loaded?
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.Util.BufferUtil.SecureZeroMemory(System.Byte*,System.Int32)">
+            <summary>
+            Securely clears a memory buffer.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.Util.BufferUtil.SecureZeroMemory(System.Byte*,System.UInt32)">
+            <summary>
+            Securely clears a memory buffer.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.Util.BufferUtil.ToManagedByteArray(System.Byte*,System.Int32)">
+            <summary>
+            Creates a new managed byte[] from unmanaged memory.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.Util.BufferUtil.ToManagedByteArray(System.Byte*,System.UInt32)">
+            <summary>
+            Creates a new managed byte[] from unmanaged memory.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.Util.BufferUtil.ToProtectedManagedByteArray(System.Byte*,System.Int32)">
+            <summary>
+            Creates a new managed byte[] from unmanaged memory. The returned value will be protected
+            by CryptProtectMemory.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Security.DataProtection.Util.ByteArrayExtensions">
+            <summary>
+            Defines helper methods for working with fixed expression blocks.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Security.DataProtection.Util.MemoryUtil.UnalignedWriteBigEndian(System.Byte*,System.UInt32)">
+            <summary>
+            Writes an Int32 to a potentially unaligned memory address, big-endian.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Win32.SafeHandles.SafeLibraryHandle">
+            <summary>
+            Represents a handle to a Windows module (DLL).
+            </summary>
+        </member>
+        <member name="M:Microsoft.Win32.SafeHandles.SafeLibraryHandle.GetProcAddress``1(System.String,System.Boolean)">
+            <summary>
+            Gets a delegate pointing to a given export from this library.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Win32.SafeHandles.SafeLibraryHandle.ForbidUnload">
+            <summary>
+            Forbids this library from being unloaded. The library will remain loaded until process termination,
+            regardless of how many times FreeLibrary is called.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Win32.SafeHandles.SafeLibraryHandle.Open(System.String)">
+            <summary>
+            Opens a library. If 'filename' is not a fully-qualified path, the default search path is used.
+            </summary>
+        </member>
+    </members>
+</doc>

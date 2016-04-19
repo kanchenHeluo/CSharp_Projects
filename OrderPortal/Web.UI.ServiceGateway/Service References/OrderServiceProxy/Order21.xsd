@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd2" namespace="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" />
+  <xs:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts.Responses" />
+  <xs:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Entity.Order" />
+  <xs:complexType name="GetOpportunityResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q1:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Header" nillable="true" type="q1:AgreementDetail" />
+          <xs:element minOccurs="0" name="OpportunityContainers" nillable="true" type="tns:ArrayOfOpportunityContainerBase" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetOpportunityResponse" nillable="true" type="tns:GetOpportunityResponse" />
+  <xs:complexType name="ArrayOfOpportunityContainerBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OpportunityContainerBase" nillable="true" type="tns:OpportunityContainerBase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOpportunityContainerBase" nillable="true" type="tns:ArrayOfOpportunityContainerBase" />
+  <xs:complexType name="OpportunityContainerBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Opportunities" nillable="true" type="tns:ArrayOfOpportunity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OpportunityContainerBase" nillable="true" type="tns:OpportunityContainerBase" />
+  <xs:complexType name="ArrayOfOpportunity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Opportunity" nillable="true" type="tns:Opportunity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOpportunity" nillable="true" type="tns:ArrayOfOpportunity" />
+  <xs:complexType name="Opportunity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseMappingID" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="OpportunityTypeCode" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="SourceLineItems" nillable="true" type="q2:ArrayOfVLLineItem" />
+      <xs:element xmlns:q3="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="TargetLineItems" nillable="true" type="q3:ArrayOfVLLineItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Opportunity" nillable="true" type="tns:Opportunity" />
+  <xs:complexType name="ReconciliationOpportunity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OpportunityContainerBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReconciliationOpportunity" nillable="true" type="tns:ReconciliationOpportunity" />
+  <xs:complexType name="StepUpOpportunity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OpportunityContainerBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StepUpOpportunity" nillable="true" type="tns:StepUpOpportunity" />
+  <xs:complexType name="EligibleProductOpportunity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OpportunityContainerBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EligibleProductOpportunity" nillable="true" type="tns:EligibleProductOpportunity" />
+  <xs:complexType name="DirectTransitionOpportunity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OpportunityContainerBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DirectTransitionOpportunity" nillable="true" type="tns:DirectTransitionOpportunity" />
+  <xs:complexType name="RenewalOpportunity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OpportunityContainerBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RenewalOpportunity" nillable="true" type="tns:RenewalOpportunity" />
+  <xs:complexType name="SearchOrdersResponseBase">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q4:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PageCount" type="xs:int" />
+          <xs:element minOccurs="0" name="PageNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="TotalCount" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchOrdersResponseBase" nillable="true" type="tns:SearchOrdersResponseBase" />
+  <xs:complexType name="SearchVLOrdersResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SearchOrdersResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q5="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="Results" nillable="true" type="q5:ArrayOfVLOrder" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchVLOrdersResponse" nillable="true" type="tns:SearchVLOrdersResponse" />
+  <xs:complexType name="SearchVLOrdersByOpportunityTypesResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SearchOrdersResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts.Responses" minOccurs="0" name="Results" nillable="true" type="q6:ArrayOfVLOrdersByOpportunityType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchVLOrdersByOpportunityTypesResponse" nillable="true" type="tns:SearchVLOrdersByOpportunityTypesResponse" />
+  <xs:complexType name="ArrayOfGetOpportunityRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetOpportunityRequest" nillable="true" type="tns:GetOpportunityRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetOpportunityRequest" nillable="true" type="tns:ArrayOfGetOpportunityRequest" />
+  <xs:complexType name="GetOpportunityRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q7:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndCustomerNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExcludeAgreementDetails" type="xs:boolean" />
+          <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtendedGetOpportunity" nillable="true" type="q8:ArrayOfKeyValueOfstringstring" />
+          <xs:element minOccurs="0" name="InDebug" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IncludeInvalidOpportunities" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsAnnualOrder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OpportunityTypes" type="tns:OpportunityType" />
+          <xs:element minOccurs="0" name="OrganizationGuid" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="POAgreementNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PageNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+          <xs:element minOccurs="0" name="PricingCallLogging" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PrimaryPCN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PublicCustomerNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurchaseOrderID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurchaseOrderNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SortColumn" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetOpportunityRequest" nillable="true" type="tns:GetOpportunityRequest" />
+  <xs:simpleType name="OpportunityType">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="StepUp">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="EligibleProduct">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Reconciliation">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="DirectTransition">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Renewal">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="All">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">31</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="OpportunityType" nillable="true" type="tns:OpportunityType" />
+  <xs:complexType name="ArrayOfGetOpportunityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetOpportunityResponse" nillable="true" type="tns:GetOpportunityResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetOpportunityResponse" nillable="true" type="tns:ArrayOfGetOpportunityResponse" />
+  <xs:complexType name="ArrayOfDependentAndRestatedOrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DependentAndRestatedOrderDetail" nillable="true" type="tns:DependentAndRestatedOrderDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDependentAndRestatedOrderDetail" nillable="true" type="tns:ArrayOfDependentAndRestatedOrderDetail" />
+  <xs:complexType name="DependentAndRestatedOrderDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AltPONumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAdjustment" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsCreatedFromInvalidPO" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDuplicatePO" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OrderDetailType" type="tns:OrderDetailType" />
+      <xs:element minOccurs="0" name="PurchaseOrderDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseOrderId" type="xs:int" />
+      <xs:element minOccurs="0" name="PurchaseOrderNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseOrderStatusCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseOrderTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalInvoiceAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UsagePeriodDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DependentAndRestatedOrderDetail" nillable="true" type="tns:DependentAndRestatedOrderDetail" />
+  <xs:simpleType name="OrderDetailType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RestatedOrder" />
+      <xs:enumeration value="DependentOrder" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OrderDetailType" nillable="true" type="tns:OrderDetailType" />
+  <xs:complexType name="GetCustomerStatisticsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q9:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AgreementNumbers" nillable="true" type="q10:ArrayOfstring" />
+          <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtendedCustomerStatistics" nillable="true" type="q11:ArrayOfKeyValueOfstringstring" />
+          <xs:element minOccurs="0" name="IncludeAgreementDetails" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeDraftOrders" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeInvalidOrderCount" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsAnnualOrderField" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="OrganizationGuid" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="PublicCustomerNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SourceSystem" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="isFixInvalid" nillable="true" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetCustomerStatisticsRequest" nillable="true" type="tns:GetCustomerStatisticsRequest" />
+  <xs:complexType name="GetCustomerStatisticsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q12:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgreementDetails" nillable="true" type="q12:ArrayOfAgreementSummary" />
+          <xs:element minOccurs="0" name="CustomerStatisticsCollection" nillable="true" type="tns:ArrayOfCustomerStatistics" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetCustomerStatisticsResponse" nillable="true" type="tns:GetCustomerStatisticsResponse" />
+  <xs:complexType name="ArrayOfCustomerStatistics">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerStatistics" nillable="true" type="tns:CustomerStatistics" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerStatistics" nillable="true" type="tns:ArrayOfCustomerStatistics" />
+  <xs:complexType name="CustomerStatistics">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CanBuyAdditionalProducts" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DraftCount" type="xs:int" />
+      <xs:element minOccurs="0" name="EligibleOpportunityCount" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasMultipleTrn" type="xs:int" />
+      <xs:element minOccurs="0" name="InProgressRecCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="InProgressStpCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="InvalidOrderCount" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDirtyATP" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDirtyREC" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDirtySTP" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NonCompliantAgreementCount" type="xs:int" />
+      <xs:element minOccurs="0" name="ReconcileOpportunityCount" type="xs:int" />
+      <xs:element minOccurs="0" name="RenewalOpportunityCount" type="xs:int" />
+      <xs:element minOccurs="0" name="StepUpOpportunityCount" type="xs:int" />
+      <xs:element minOccurs="0" name="TransitionCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerStatistics" nillable="true" type="tns:CustomerStatistics" />
+  <xs:complexType name="SearchOrdersRequestBase">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q13:RequestBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchOrdersRequestBase" nillable="true" type="tns:SearchOrdersRequestBase" />
+  <xs:complexType name="SearchVLOrdersRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SearchOrdersRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AgreementStatusCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DraftOrderName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IncludeLI" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InvalidOrderTileClick" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrganizationPCN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurchaseOrderID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurchaseOrderNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurchaseOrderStatusCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurchaseOrderTypeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SourceSystem" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchVLOrdersRequest" nillable="true" type="tns:SearchVLOrdersRequest" />
+  <xs:complexType name="SearchVLOrdersByOpportunityTypesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SearchOrdersRequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IncludeDetails" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OpportunityTypes" type="tns:OpportunityType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchVLOrdersByOpportunityTypesRequest" nillable="true" type="tns:SearchVLOrdersByOpportunityTypesRequest" />
+  <xs:complexType name="GetQuickStartReservationsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q14:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrgGuid" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetQuickStartReservationsRequest" nillable="true" type="tns:GetQuickStartReservationsRequest" />
+  <xs:complexType name="GetQuickStartReservationsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q15:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LineItems" nillable="true" type="q15:ArrayOfVLLineItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetQuickStartReservationsResponse" nillable="true" type="tns:GetQuickStartReservationsResponse" />
+  <xs:complexType name="GetDeleteInvalidOrderRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q16:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="invalidOrdersData" nillable="true" type="q17:ArrayOfKeyValueOfintstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetDeleteInvalidOrderRequest" nillable="true" type="tns:GetDeleteInvalidOrderRequest" />
+  <xs:complexType name="ZUDecisionParamsValidateRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q18:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserOrgGuid" nillable="true" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ZUDecisionParamsValidateRequest" nillable="true" type="tns:ZUDecisionParamsValidateRequest" />
+  <xs:complexType name="ZUDecisionParamsValidateResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q19:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AgreementStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AgreementType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ComplianceDetails" nillable="true" type="tns:ArrayOfComplianceDetailsEntity" />
+          <xs:element minOccurs="0" name="EnrollmentEndEffectiveDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EnrollmentStartEffectiveDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Issues" nillable="true" type="tns:ArrayOfZUOrderIssue" />
+          <xs:element minOccurs="0" name="PrimaryOrgGUID" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="ProgramCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ZUDecisionParamsValidateResponse" nillable="true" type="tns:ZUDecisionParamsValidateResponse" />
+  <xs:complexType name="ArrayOfComplianceDetailsEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ComplianceDetailsEntity" nillable="true" type="tns:ComplianceDetailsEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfComplianceDetailsEntity" nillable="true" type="tns:ArrayOfComplianceDetailsEntity" />
+  <xs:complexType name="ComplianceDetailsEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgreementAnniversaryDates" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AvailableReservationQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="ComplianceTargetDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="YearInNonCompliance" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ComplianceDetailsEntity" nillable="true" type="tns:ComplianceDetailsEntity" />
+  <xs:complexType name="ArrayOfZUOrderIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZUOrderIssue" nillable="true" type="tns:ZUOrderIssue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZUOrderIssue" nillable="true" type="tns:ArrayOfZUOrderIssue" />
+  <xs:complexType name="ZUOrderIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IssueId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IssueMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IssueType" type="tns:IssueType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZUOrderIssue" nillable="true" type="tns:ZUOrderIssue" />
+  <xs:simpleType name="IssueType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SQLException" />
+      <xs:enumeration value="ServiceException" />
+      <xs:enumeration value="DefinedError" />
+      <xs:enumeration value="DefinedWarning" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="IssueType" nillable="true" type="tns:IssueType" />
+  <xs:complexType name="ZUOrderAutomateRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q20:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AcceptedDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CPGuid" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="TargetDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ZUOrderYear" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ZUOrderAutomateRequest" nillable="true" type="tns:ZUOrderAutomateRequest" />
+  <xs:complexType name="ZUOrderAutomateResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q21:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsZeroUsageSuccessful" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Issues" nillable="true" type="tns:ArrayOfZUOrderIssue" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ZUOrderAutomateResponse" nillable="true" type="tns:ZUOrderAutomateResponse" />
+  <xs:complexType name="SearchOrdersDueAgreementsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q22:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrgGuid" type="ser:guid" />
+          <xs:element minOccurs="0" name="PartnerPCN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SearchWindow" nillable="true" type="tns:ArrayOfOrdersDueSearchWindow" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchOrdersDueAgreementsRequest" nillable="true" type="tns:SearchOrdersDueAgreementsRequest" />
+  <xs:complexType name="ArrayOfOrdersDueSearchWindow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrdersDueSearchWindow" type="tns:OrdersDueSearchWindow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrdersDueSearchWindow" nillable="true" type="tns:ArrayOfOrdersDueSearchWindow" />
+  <xs:simpleType name="OrdersDueSearchWindow">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Late">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="PastDue">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="InCompliance">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ComplianceUpComing">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="LatePastDue">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="All">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="OrdersDueSearchWindow" nillable="true" type="tns:OrdersDueSearchWindow" />
+  <xs:complexType name="SearchOrdersDueAgreementsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q23:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OrdersDueAgreements" nillable="true" type="q23:ArrayOfOrdersDueAgreements" />
+          <xs:element minOccurs="0" name="SortPriority" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchOrdersDueAgreementsResponse" nillable="true" type="tns:SearchOrdersDueAgreementsResponse" />
+  <xs:complexType name="GetOrdersDueAgreementSummaryRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q24:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrgGuid" type="ser:guid" />
+          <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetOrdersDueAgreementSummaryRequest" nillable="true" type="tns:GetOrdersDueAgreementSummaryRequest" />
+  <xs:complexType name="ArrayOfGetAdjustedPODetailsRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetAdjustedPODetailsRequest" nillable="true" type="tns:GetAdjustedPODetailsRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetAdjustedPODetailsRequest" nillable="true" type="tns:ArrayOfGetAdjustedPODetailsRequest" />
+  <xs:complexType name="GetAdjustedPODetailsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q25:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdjustedLineItemDetails" nillable="true" type="tns:ArrayOfAdjustedLineItemDetail" />
+          <xs:element minOccurs="0" name="AgreementID" type="xs:int" />
+          <xs:element minOccurs="0" name="AnniversaryOrderFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OpportunityTypes" type="tns:OpportunityType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAdjustedPODetailsRequest" nillable="true" type="tns:GetAdjustedPODetailsRequest" />
+  <xs:complexType name="ArrayOfAdjustedLineItemDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdjustedLineItemDetail" nillable="true" type="tns:AdjustedLineItemDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdjustedLineItemDetail" nillable="true" type="tns:ArrayOfAdjustedLineItemDetail" />
+  <xs:complexType name="AdjustedLineItemDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BASItemId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BaseOpportunityId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingOptionCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsCloned" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemID" type="xs:int" />
+      <xs:element minOccurs="0" name="LineItemTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OpportunityId" type="xs:int" />
+      <xs:element minOccurs="0" name="OpportunityTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgramOfferingCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdjustedLineItemDetail" nillable="true" type="tns:AdjustedLineItemDetail" />
+  <xs:complexType name="ArrayOfGetAdjustedPODetailsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetAdjustedPODetailsResponse" nillable="true" type="tns:GetAdjustedPODetailsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetAdjustedPODetailsResponse" nillable="true" type="tns:ArrayOfGetAdjustedPODetailsResponse" />
+  <xs:complexType name="GetAdjustedPODetailsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q26:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdjustedPOContainers" nillable="true" type="tns:ArrayOfAdjustedPOContainerBase" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAdjustedPODetailsResponse" nillable="true" type="tns:GetAdjustedPODetailsResponse" />
+  <xs:complexType name="ArrayOfAdjustedPOContainerBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdjustedPOContainerBase" nillable="true" type="tns:AdjustedPOContainerBase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdjustedPOContainerBase" nillable="true" type="tns:ArrayOfAdjustedPOContainerBase" />
+  <xs:complexType name="AdjustedPOContainerBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdjustedPODetails" nillable="true" type="tns:ArrayOfAdjustedPODetail" />
+      <xs:element minOccurs="0" name="OpportunityType" type="tns:OpportunityType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdjustedPOContainerBase" nillable="true" type="tns:AdjustedPOContainerBase" />
+  <xs:complexType name="ArrayOfAdjustedPODetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdjustedPODetail" nillable="true" type="tns:AdjustedPODetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdjustedPODetail" nillable="true" type="tns:ArrayOfAdjustedPODetail" />
+  <xs:complexType name="AdjustedPODetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseItemID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsRestatementRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemID" type="xs:int" />
+      <xs:element minOccurs="0" name="OpportunityId" type="xs:int" />
+      <xs:element minOccurs="0" name="OpportunityTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OriginalQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="POId" type="xs:int" />
+      <xs:element minOccurs="0" name="POLIConsumed" type="xs:int" />
+      <xs:element minOccurs="0" name="POLIUsageDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PONumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuantityConsumed" type="xs:int" />
+      <xs:element minOccurs="0" name="QuantityRemaining" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SystemPONumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdjustedPODetail" nillable="true" type="tns:AdjustedPODetail" />
+  <xs:complexType name="EligibleProductAdjustPODetails">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AdjustedPOContainerBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EligibleProductAdjustPODetails" nillable="true" type="tns:EligibleProductAdjustPODetails" />
+  <xs:complexType name="StepUpAdjustPODetails">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AdjustedPOContainerBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StepUpAdjustPODetails" nillable="true" type="tns:StepUpAdjustPODetails" />
+  <xs:complexType name="ReconciliationAdjustPODetails">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AdjustedPOContainerBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReconciliationAdjustPODetails" nillable="true" type="tns:ReconciliationAdjustPODetails" />
+  <xs:complexType name="DirectTransitionAdjustPODetails">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AdjustedPOContainerBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DirectTransitionAdjustPODetails" nillable="true" type="tns:DirectTransitionAdjustPODetails" />
+  <xs:complexType name="ArrayOfCompletedOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompletedOrder" nillable="true" type="tns:CompletedOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompletedOrder" nillable="true" type="tns:ArrayOfCompletedOrder" />
+  <xs:complexType name="CompletedOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgreementId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DirectCustomerBillToNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExtendedAmount" type="xs:float" />
+      <xs:element minOccurs="0" name="IndirectCustomerNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedDate" type="xs:dateTime" />
+      <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Entity.Order" minOccurs="0" name="LineItems" nillable="true" type="q27:ArrayOfVLOrderLineItem" />
+      <xs:element minOccurs="0" name="ModifiedByUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PricingCurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgramCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PublicCustomerNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseOrderId" type="xs:int" />
+      <xs:element minOccurs="0" name="PurchaseOrderNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseOrderStatusCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseOrderTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseOrderTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsageDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompletedOrder" nillable="true" type="tns:CompletedOrder" />
+</xs:schema>

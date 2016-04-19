@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Web App - Azure AD - Web Api</h1>
+    <p class="lead">Learn how to do authentication for web app & web api.</p>    
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h3>Memo List</h3>
+        <table>
+            <thead><tr><th>Key</th><th>Value</th></tr></thead>
+            <tbody>
+                @foreach (var item in ViewBag.MemoList)
+                {
+                    <tr><td>@item.Key</td><td>@item.Value</td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <h2>Getting Profiles</h2>
+        <p>
+            this is for testing profile api
+        </p>        
+    </div>    
+</div>

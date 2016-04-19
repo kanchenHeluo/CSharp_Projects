@@ -1,0 +1,110 @@
+﻿@using Web.UI.Common;
+@using Web.Localization;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Portal</title>
+    @Styles.Render("~/Content/css/customizewidgets")
+    @Styles.Render("~/Content/css/kendo")
+    @Styles.Render("~/Content/css/css")
+    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.9.0.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/NgModules/ui-router/angular-ui-router.min.js"></script>
+     <script src="~/Scripts/main.js"></script>
+    <script>
+    var RootUrl = '@Url.Content("~")';
+    </script>
+
+</head>
+<body ng-app="orderApp" ng-controller="userPreferenceCtrl">
+
+    <div class="layout-container">
+        <header>
+            <div>
+                @{ var UserDetails = UserContext.Current; }
+                @if (MyPrincipal.Current != null && MyPrincipal.Current.IsAuthorized)
+                {
+                    <div id="userInfo" class="userinfo" ng-controller="choosepartnerCtrl" ng-init="getUserPreference()">
+                        @MyPrincipal.Current.UserName
+                        <i class="i_DropDownArrow"></i>
+                        <i class="userImage"></i>
+                        <div class="useroptions">
+                            <a href="#" ng-click="openUserPreference();$event.preventDefault(); $event.stopPropagation();" title="User Preference">User Preference</a>
+                            <a href="#" title="My Profile">My Profile</a>
+                            @{
+                    if (MyPrincipal.Current != null && MyPrincipal.Current.IsAuthorized && UserDetails != null &&
+               UserDetails.Organizations != null && UserDetails.Organizations.Count() > 1)
+                    {
+                        <a href="" title="Choose Partner" ng-click="getmodal()">Choose Partner</a>
+                    }
+                            }
+                            <a href=@Url.SignOut() title="Signout">Signout</a>
+
+                        </div>
+
+                    </div>
+                }
+                <div class="layout-headerAlign"><div class="i_MsLogo"></div></div>
+                <div class="layout-headerTitle ms-sitetitle">@("VolumeLicensingPartnerCenter".Localize()) </div>
+            </div>
+
+        </header>
+
+        <div class="content-padding">
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+        @RenderPage("footer.cshtml")
+        @{
+
+            if (MyPrincipal.Current != null && MyPrincipal.Current.IsAuthorized &&
+                UserDetails != null && UserDetails.Organizations != null && UserDetails.Organizations.Count() > 1)
+            {
+                @RenderPage("ChoosePartner.cshtml");
+            }
+        }
+    </div>
+
+    <div ng-include="'@Url.Action("UserPreference", "Resource", new {area = "Order"})'"></div>
+
+    <script src="//ajax.aspnetcdn.com/ajax/respond/1.2.0/respond.js"></script>
+    <script src="~/Scripts/ecitglobal/Message_Banner.js"></script>
+    <script src="~/Scripts/ecitglobal/Modal_dialog.js"></script>
+    @*<script src="~/Scripts/App/Order/orderApp.js"></script>*@
+    <script>
+        var RootUrl = '@Url.Content("~")'
+    </script>
+
+    @Scripts.Render("~/external/js")
+    @Scripts.Render("~/common/js")
+    @Scripts.Render("~/kendo/js")
+
+    @if (MyPrincipal.Current != null && MyPrincipal.Current.IsAuthorized)
+    {
+        if (Session["UserPreference"] != null)
+        {
+            Web.UI.Repositories.DomainModels.UserPreference up = Session["UserPreference"] as Web.UI.Repositories.DomainModels.UserPreference;
+
+            <script src="@("/OrderPortal/Scripts/Kendo/cultures/kendo.culture." + up.Language + ".min.js")"></script>
+            <script>
+                kendo.culture('@up.Language');
+            </script>
+        }
+    }
+    
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>
+
+
+<script type="text/javascript">
+    window.appInsights = { queue: [], applicationInsightsId: null, accountId: null, appUserId: null, configUrl: null, start: function (n) { function u(n) { t[n] = function () { var i = arguments; t.queue.push(function () { t[n].apply(t, i) }) } } function f(n, t) { if (n) { var u = r.createElement(i); u.type = "text/javascript"; u.src = n; u.async = !0; u.onload = t; u.onerror = t; r.getElementsByTagName(i)[0].parentNode.appendChild(u) } else t() } var r = document, t = this, i; t.applicationInsightsId = n; u("logEvent"); u("logPageView"); i = "script"; f(t.configUrl, function () { f("//az416426.vo.msecnd.net/scripts/v/ai.0.7.js") }); t.start = function () { } } };
+    appInsights.start("6eb9f802-c348-4f41-aabf-e2e9c9adc4dc");
+    appInsights.logPageView();
+</script>

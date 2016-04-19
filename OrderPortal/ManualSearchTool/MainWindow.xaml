@@ -1,0 +1,64 @@
+﻿<Window x:Class="ManualSearchTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="800px" Width="Auto"
+        xmlns:local="clr-namespace:ManualSearchTool"
+        >
+    
+    <Window.Resources>
+        <local:InverseBoolConverter x:Key="InverseBoolConverter" />
+        <local:InverseBoolToVisConverter x:Key="InverseBoolToVisConverter" />
+        <local:BoolToVisConverter x:Key="BoolToVisConverter" />
+        <local:TimeSpanConverter x:Key="TimeSpanConverter" />
+    </Window.Resources>
+    <ScrollViewer>
+    <Grid>
+        <StackPanel Visibility="{Binding IsLoaded, Converter={StaticResource BoolToVisConverter}}">
+            <TextBlock Text="Run this tool to clear out the search api and upload data via a connection string."></TextBlock>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="Search ColumnName"></TextBlock>
+                    <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding searchColumnName}"></TextBox>
+                    <TextBlock Grid.Row="7" Grid.Column="0" Text="Search Value"></TextBlock>
+                    <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding searchValue}"></TextBox>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Sql Connection String"></TextBlock>
+                <TextBox  Grid.Row="0" Grid.Column="1" Text="{Binding sqlConnectionString}" Width="Auto"></TextBox>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Sql Query"></TextBlock>
+                <TextBox Grid.Row="1" Grid.Column="1" x:Name="sqlQuery" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding sqlQuery}"></TextBox>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Search Index"></TextBlock>
+                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding searchApiIndex}"></TextBox>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Search Namespace"></TextBlock>
+                <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding searchNameSpace}"></TextBox>
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Api-key (Admin)"></TextBlock>
+                <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding searchApiKey}"></TextBox>
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="Schema JSON"></TextBlock>
+                <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding schemaJsonString}" TextWrapping="Wrap" AcceptsReturn="True" HorizontalAlignment="Left"></TextBox>
+            </Grid>
+            <Button Content="Clear and Sync" Width="200" Margin="0,10" Click="SyncButton_Click" x:Name="SyncButton"></Button>
+                <Button Content="Add/Update" Width="200" Margin="0,10" Click="UpdateButton_Click" x:Name="UpdateButton"></Button>
+                <Button Content="Search" Width="200" Margin="272,10,271,10" x:Name="SearchButton" Click="SearchButton_Click"/>
+
+            </StackPanel>
+        <StackPanel Visibility="{Binding IsLoaded, Converter={StaticResource InverseBoolToVisConverter}}" VerticalAlignment="Center">
+            <TextBlock Text="Syncing... get some coffee" HorizontalAlignment="Center" FontSize="24" FontFamily="Segoe UI Light" VerticalAlignment="Center"></TextBlock>
+            <ProgressBar Height="45" Margin="5,0" IsIndeterminate="{Binding IsLoaded, Converter={StaticResource InverseBoolConverter}}"></ProgressBar>
+            <TextBlock Text="{Binding loadingUpdate}" HorizontalAlignment="Center" FontSize="20" FontFamily="Segoe UI Light" VerticalAlignment="Center"></TextBlock>
+            <!--<TextBlock Text="{Binding timespanElapsed, Converter={StaticResource TimeSpanConverter}}" HorizontalAlignment="Center" FontSize="20" FontFamily="Segoe UI Light" VerticalAlignment="Center"></TextBlock>-->
+        </StackPanel>
+        
+    </Grid>
+    </ScrollViewer>
+</Window>

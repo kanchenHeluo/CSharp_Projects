@@ -1,0 +1,12 @@
+C:\IndividualProject\Restful_AAD\Restful_AAD\MemoConsoleApp\bin\Release\MemoConsoleApp.exe.config
+C:\IndividualProject\Restful_AAD\Restful_AAD\MemoConsoleApp\bin\Release\MemoConsoleApp.exe
+C:\IndividualProject\Restful_AAD\Restful_AAD\MemoConsoleApp\bin\Release\MemoConsoleApp.pdb
+C:\IndividualProject\Restful_AAD\Restful_AAD\MemoConsoleApp\obj\Release\MemoConsoleApp.csprojResolveAssemblyReference.cache
+C:\IndividualProject\Restful_AAD\Restful_AAD\MemoConsoleApp\obj\Release\MemoConsoleApp.exe
+C:\IndividualProject\Restful_AAD\Restful_AAD\MemoConsoleApp\obj\Release\MemoConsoleApp.pdb
+C:\IndividualProject\Restful_AAD\Restful_AAD\MemoConsoleApp\bin\Release\MemoApiClient.dll
+C:\IndividualProject\Restful_AAD\Restful_AAD\MemoConsoleApp\bin\Release\MemoContracts.dll
+C:\IndividualProject\Restful_AAD\Restful_AAD\MemoConsoleApp\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\IndividualProject\Restful_AAD\Restful_AAD\MemoConsoleApp\bin\Release\MemoApiClient.pdb
+C:\IndividualProject\Restful_AAD\Restful_AAD\MemoConsoleApp\bin\Release\MemoContracts.pdb
+C:\IndividualProject\Restful_AAD\Restful_AAD\MemoConsoleApp\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.xml

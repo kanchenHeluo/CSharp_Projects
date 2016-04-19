@@ -1,0 +1,242 @@
+﻿@using Web.Localization
+
+<div>
+    <div>
+        <!--Promise register start-->
+        <span op-busy-publisher="getAllShipmentListPromise" op-busy-publisher-event="GetAllShipmentList"></span>
+        <span op-busy-publisher="validateShipmentAddressPromise" op-busy-publisher-event="ValidateShipmentAddress"></span>
+        <span op-busy-publisher="saveShipmentAddressPromise" op-busy-publisher-event="SaveShipmentAddress"></span>
+        <span op-busy-publisher="deleteShipmentAddressPromise" op-busy-publisher-event="DeleteShipmentAddress"></span>
+        <span op-busy-publisher="saveDraftOrderPromise" op-busy-publisher-event="SaveDraftOrder"></span>
+        <!--Promise register end-->
+    </div>
+    <div class="flr">
+        <a href="javascript:void(0)" ng-click="openAddRequestDialog()"> @("Shipping information required".Localize())</a>
+    </div>
+    <div>
+        <op-dialog title="Shipping information required" ng-open="dialogStatus.addRequestDialogOpen">
+            <div style="height: 350px;">
+                <div op-busy-subscriber="SaveDraftOrder" class="layout-positionRel">
+                    <span class="ms-textheading">One or more items in this order requires physical delivery. Please complete the information below.</span>
+                    <op-errorsummary message-title="Shipping information could not be submitted due to the following errors"></op-errorsummary>
+                    <div class="layout-gap"></div>
+                    <div>
+                        <div class="ms-formblock leftalign">
+                            <label class="ms-stdlabel required">@("Shipping information".Localize())</label>
+                            <div class="dropdown">
+                                <a style="width:178px; height:29px" class="btn btn-default" data-toggle="dropdown" ng-blur="triggerBlur($event)" ng-click='initShipmentDropdownListDisplay()' href="javascript:void(0)">
+                                    <div style='float:left'>{{shipmentAddressSelected.ContactFirstName}}</div>
+                                    <div class="caret"></div>
+                                </a>
+                                <input type="text" ng-model="shipmentAddressSelected.ContactFirstName" style="display:none;" op-required op-validation-msg="shipping information is required" name="shipment info" />
+                                <ul class="dropdown-menu" role="menu">
+                                    <table class="table table-striped table-hover">
+                                        <tbody>
+                                            <tr ng-repeat="item in shipmentAddressList" ng-show="showshipmentAddressList">
+                                                <td ng-click='selectShipmentAddress($index)'>
+                                                    <span>{{item.ContactFirstName}}</span>
+                                                </td>
+                                                <td ng-click='selectShipmentAddress($index)'>
+                                                    <span>{{item.City}}</span>
+                                                </td>
+                                                <td>
+                                                    <a href="javascript:void(0)" ng-click="displayShipmentAddressDetails($index, $event)">details</a>
+                                                </td>
+                                                <td>
+                                                    <a href="javascript:void(0)" ng-click="openAddAddressDialog(item)">edit</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div ng-repeat="item in shipmentAddressList" ng-show="showShipmentAddressDetails[$index]">
+                                        <div style="width:400px">
+                                            <h4>@("Shipping Address Details:".Localize())</h4>
+                                            <div><span>{{item.ContactFirstName}}</span><a href="javascript:void(0)" class="flr" ng-click="openAddAddressDialog(item)">edit</a></div>
+                                            <div><span>{{item.AddressLine1}}</span></div>
+                                            <div><span>{{item.PostalCode}}|{{item.StateProvince}}</span></div>
+                                            <br />
+                                            <div>@("Tel:".Localize()){{item.ContactPhoneNumber}}</div>
+                                            <div>@("Fax:".Localize()){{item.ContactFaxNumber}}</div>
+                                            <br />
+                                            <div>{{item.ContactEmailAddress}}</div>
+                                            <div>@("Last Modified:".Localize()){{item.LastModifiedDate}}</div>
+                                        </div>
+                                    </div>
+                                    <!--<li><a href="javascript:void(0)" ng-show="!showshipmentAddressList" ng-click='initShipmentDropdownListDisplay($event)'>+ back</a></li>-->
+                                    <li><a href="javascript:void(0)" ng-click="openAddAddressDialog()">+add new address</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="ms-formblock ">
+                            <label class="ms-stdlabel">@("Reference".Localize())</label>
+                            <input type="text" maxlength="100" class="ms-stdinput" ng-model="globalModels.orderModel.Reference" />
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ms-formblock leftalign">
+                            <label class="ms-stdlabel">@("Carrier Code".Localize())</label>
+                            <input type="text" maxlength="100" class="ms-stdinput" ng-model="globalModels.orderModel.CarrierCode" />
+                        </div>
+                        <div class="ms-formblock">
+                            <label class="ms-stdlabel">@("Carrier Account Number".Localize())</label>
+                            <input type="text" maxlength="100" class="ms-stdinput" ng-model="globalModels.orderModel.CarrierAccountNumber" />
+                        </div>
+                    </div>
+                    
+                    <div class="layout-gap"></div>
+                    <div class="layout-positionAbsOnly" style="bottom:2px;right:0px">
+                        <div>
+                            <input type="button" style="margin-right:5px" class="ms-stdbtn" ng-click="validators['shipToRequestForm'].$validate() && saveShipmentRequest()" ng-disabled="!validators['shipToRequestForm'].$isValid()" value="OK" />
+                            <input type="button" class="ms-stdbtn" ng-click="dialogStatus.addRequestDialogOpen=false" value="Cancel" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </op-dialog>
+    </div>
+    <div>
+        <op-form name="shipToAddressForm" validation-enable="dialogStatus.addAddressDialogOpen">
+            <op-slide-in ng-open="dialogStatus.addAddressDialogOpen" ng-on-close="shipmentAddressCloseCallback()">
+                <div class="clr layout-gapS"></div>
+                <div op-busy-subscriber="ValidateShipmentAddress SaveShipmentAddress DeleteShipmentAddress" class="layout-positionRel">
+
+                    <div class="layout-positionRel">
+                        <div class="layout-inlineBlockOnly">
+                            <h2>Shipping Contanct and address Management</h2>
+                            <h4>Use this form to create, edit or delete a shipping contact or address.</h4>
+                        </div>
+                        <div class="layout-inlineBlockOnly layout-positionAbsOnly" style="right:0px">
+                            <div class="dropdown layout-MoreSymbol">
+                                <span class="more symbol" data-toggle="dropdown"></span>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li ng-show="showAddingShipToOrder()"><span ng-click="openAddRequestDialog(Shipment);">Adding shipping info to this order</span></li>
+                                    <li><span ng-click="newShipmentAddress()">Create new entry</span></li>
+                                    <li><span ng-click="deleteShipmentAddress(Shipment);">Delete this entry</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layout-gap"></div>
+                    <!--<span class="accept symbol" style="color:green;" ng-show="validators['shipToAddressForm'].$isValid()"></span>-->
+                    <div>
+                        <op-errorsummary message-title="Shipping Contanct and addres information could not be submitted due to the following errors"></op-errorsummary>
+                    </div>
+                    <div class="layout-gap"></div>
+
+                    <div>
+                        <div class="ms-formblock leftalign">
+                            <label class="ms-stdlabel required">@("Contact Name".Localize())</label>
+                            <input type="text" maxlength="100" class="ms-stdinput" ng-model="Shipment.ContactFirstName" op-required name="Contact First Name" />
+                        </div>
+                        <div class="ms-formblock margin-left-large">
+                            <label class="ms-stdlabel required">@("Contact Phone".Localize())</label>
+                            <input type="text" maxlength="100" class="ms-stdinput" ng-model="Shipment.ContactPhoneNumber" op-required name="Phone Number" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="ms-formblock leftalign">
+                            <label class="ms-stdlabel required">@("Contact Email".Localize())</label>
+                            <input type="text" maxlength="100" class="ms-stdinput" ng-model="Shipment.ContactEmailAddress" op-required name="Email" />
+                        </div>
+                        <div class="ms-formblock margin-left-large">
+                            <label class="ms-stdlabel">@("Contact Fax".Localize())</label>
+                            <input type="text" maxlength="100" class="ms-stdinput" ng-model="Shipment.ContactFaxNumber" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="ms-formblock leftalign">
+                            <label class="ms-stdlabel required">@("Correspondence Language".Localize())</label>
+                            <select class="ms-stddroplist" op-required name="Correspondence Language" ng-model="Shipment.CorrespondenceLanguageCode" ng-options="item.Category as item.Name for item in Languages"></select>
+                        </div>
+                        <div class="ms-formblock margin-left-large">
+                            <label class="ms-stdlabel">@("Organization Name".Localize())</label>
+                            <input type="text" maxlength="100" class="ms-stdinput" ng-model="Shipment.OrganizationName" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="ms-formblock leftalign xxlarge">
+                            <label class="ms-stdlabel required">@("Address Line 1".Localize())</label>
+                            <input type="text" style="width: 428px" maxlength="100" class="ms-stdinput" ng-model="Shipment.AddressLine1" op-required name="Address Line 1" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="ms-formblock leftalign xxlarge">
+                            <label class="ms-stdlabel ">@("Address Line 2".Localize())</label>
+                            <input type="text" style="width: 428px" maxlength="100" class="ms-stdinput" ng-model="Shipment.AddressLine2" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="ms-formblock leftalign xxlarge">
+                            <label class="ms-stdlabel ">@("Address Line 3".Localize())</label>
+                            <input type="text" style="width: 428px" maxlength="100" class="ms-stdinput" ng-model="Shipment.AddressLine3" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="ms-formblock leftalign xxlarge">
+                            <label class="ms-stdlabel ">@("Address Line 4".Localize())</label>
+                            <input type="text" style="width: 428px" maxlength="100" class="ms-stdinput" ng-model="Shipment.AddressLine4" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="ms-formblock leftalign">
+                            <label class="ms-stdlabel required">@("Postal Code".Localize())</label>
+                            <input type="text" maxlength="100" class="ms-stdinput" ng-model="Shipment.PostalCode" op-required name="Postal Code" />
+                        </div>
+                        <div class="ms-formblock margin-left-large">
+                            <label class="ms-stdlabel required">@("City".Localize())</label>
+                            <input type="text" maxlength="100" class="ms-stdinput" ng-model="Shipment.City" op-required name="City" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="ms-formblock leftalign">
+                            <label class="ms-stdlabel">@("State/Province".Localize())</label>
+                            <input type="text" maxlength="100" class="ms-stdinput" ng-model="Shipment.StateProvince" />
+                        </div>
+                        <div class="ms-formblock margin-left-large">
+                            <label class="ms-stdlabel required">@("Country".Localize())</label>
+                            <select class="ms-stddroplist" ng-model="Shipment.CountryCode" ng-options="item.Code as item.Name for item in UsageCountries" op-required name="Usage Country"></select>
+                        </div>
+                    </div>
+
+                    <div class="layout-gap"></div>
+
+                    <div>
+                        <h4>Address Validation Date</h4>
+                        <label>
+                            {{Shipment.LastValidatedDate}}
+                        </label>
+                    </div>
+
+                    <div class="layout-gap"></div>
+
+                    <div class="layout-positionAbsOnly" style="bottom:0px;right:0px">
+                        <input type="button" class="ms-stdbtn" ng-click="validators['shipToAddressForm'].$validate() && validateShipmentAddress()" value="Validate Address" ng-disabled="!validators['shipToAddressForm'].$isValid()" />
+                        <input type="button" class="ms-stdbtn" ng-click="validators['shipToAddressForm'].$validate() && saveShipmentAddress()" value="Save" ng-disabled="!validators['shipToAddressForm'].$isValid()" />
+                        <input type="button" class="ms-stdbtn" ng-click="dialogStatus.addAddressDialogOpen=false" value="Cancel" />
+                    </div>
+                </div>
+
+                <div name="errBox" class="shipToAddressForm"></div>
+
+                <div>
+                    <ol>
+                        <li ng-repeat="error in errorMessage" style="color:red">{{error}}</li>
+                    </ol>
+                    <span ng-show="errorMessage!=null && errorMessage.length==0" style="color:green">Validation Success</span>
+                </div>
+
+            </op-slide-in>
+        </op-form>
+    </div>
+</div>

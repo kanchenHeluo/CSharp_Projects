@@ -1,0 +1,5 @@
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\YieldExample\bin\Debug\YieldExample.exe.config
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\YieldExample\bin\Debug\YieldExample.exe
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\YieldExample\bin\Debug\YieldExample.pdb
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\YieldExample\obj\Debug\YieldExample.exe
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\YieldExample\obj\Debug\YieldExample.pdb

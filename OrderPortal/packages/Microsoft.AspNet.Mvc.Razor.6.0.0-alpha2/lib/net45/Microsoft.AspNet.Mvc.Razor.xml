@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.AspNet.Mvc.Razor</name>
+    </assembly>
+    <members>
+        <member name="P:Microsoft.AspNet.Mvc.Razor.Resources.ArgumentCannotBeNullOrEmpty">
+            <summary>
+            The value cannot be null or empty.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.Razor.Resources.FormatArgumentCannotBeNullOrEmpty">
+            <summary>
+            The value cannot be null or empty.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.Razor.Resources.LayoutCannotBeLocated">
+            <summary>
+            The layout view '{0}' could not be located.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.Razor.Resources.FormatLayoutCannotBeLocated(System.Object)">
+            <summary>
+            The layout view '{0}' could not be located.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.Razor.Resources.MvcRazorCodeParser_CannotHaveModelAndInheritsKeyword">
+            <summary>
+            The 'inherits' keyword is not allowed when a '{0}' keyword is used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.Razor.Resources.FormatMvcRazorCodeParser_CannotHaveModelAndInheritsKeyword(System.Object)">
+            <summary>
+            The 'inherits' keyword is not allowed when a '{0}' keyword is used.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.Razor.Resources.MvcRazorCodeParser_ModelKeywordMustBeFollowedByTypeName">
+            <summary>
+            The '{0}' keyword must be followed by a type name on the same line.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.Razor.Resources.FormatMvcRazorCodeParser_ModelKeywordMustBeFollowedByTypeName(System.Object)">
+            <summary>
+            The '{0}' keyword must be followed by a type name on the same line.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.Razor.Resources.MvcRazorCodeParser_OnlyOneModelStatementIsAllowed">
+            <summary>
+            Only one '{0}' statement is allowed in a file.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.Razor.Resources.FormatMvcRazorCodeParser_OnlyOneModelStatementIsAllowed(System.Object)">
+            <summary>
+            Only one '{0}' statement is allowed in a file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.Razor.Resources.RenderBodyCannotBeCalled">
+            <summary>
+            {0} can only be called from a layout page.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.Razor.Resources.FormatRenderBodyCannotBeCalled(System.Object)">
+            <summary>
+            {0} can only be called from a layout page.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.Razor.Resources.RenderBodyNotCalled">
+            <summary>
+            {0} must be called from a layout page.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.Razor.Resources.FormatRenderBodyNotCalled(System.Object)">
+            <summary>
+            {0} must be called from a layout page.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.Razor.Resources.SectionAlreadyDefined">
+            <summary>
+            Section '{0}' is already defined.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.Razor.Resources.FormatSectionAlreadyDefined(System.Object)">
+            <summary>
+            Section '{0}' is already defined.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.Razor.Resources.SectionAlreadyRendered">
+            <summary>
+            {0} has already been called for the section named '{1}'.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.Razor.Resources.FormatSectionAlreadyRendered(System.Object,System.Object)">
+            <summary>
+            {0} has already been called for the section named '{1}'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.Razor.Resources.SectionNotDefined">
+            <summary>
+            Section '{0}' is not defined.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.Razor.Resources.FormatSectionNotDefined(System.Object)">
+            <summary>
+            Section '{0}' is not defined.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.Razor.Resources.SectionsNotRendered">
+            <summary>
+            The following sections have been defined but have not been rendered: '{0}'.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.Razor.Resources.FormatSectionsNotRendered(System.Object)">
+            <summary>
+            The following sections have been defined but have not been rendered: '{0}'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.Razor.Resources.ViewMustEndInExtension">
+            <summary>
+            View '{0}' must have extension '{1}' when the view represents a full path.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.Razor.Resources.FormatViewMustEndInExtension(System.Object,System.Object)">
+            <summary>
+            View '{0}' must have extension '{1}' when the view represents a full path.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.Razor.Resources.View_MethodCannotBeCalled">
+            <summary>
+            The method '{0}' cannot be invoked by this view.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.Razor.Resources.FormatView_MethodCannotBeCalled(System.Object)">
+            <summary>
+            The method '{0}' cannot be invoked by this view.
+            </summary>
+        </member>
+    </members>
+</doc>

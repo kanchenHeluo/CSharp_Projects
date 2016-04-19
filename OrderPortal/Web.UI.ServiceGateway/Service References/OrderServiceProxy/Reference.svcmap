@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="da1131e4-ced7-436e-a70a-011c06a45134" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OrderService1.wsdl" MetadataType="Wsdl" ID="f0a0f244-d45d-42c2-80c2-b73e31e405e2" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?wsdl" />
+    <MetadataFile FileName="Order12.xsd" MetadataType="Schema" ID="88336660-db99-4d8e-a2d7-84d903c5841f" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd12" />
+    <MetadataFile FileName="Order13.xsd" MetadataType="Schema" ID="b118f4b8-a150-441e-8d47-52044b9a9e0c" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd5" />
+    <MetadataFile FileName="Order14.xsd" MetadataType="Schema" ID="050095cc-fa13-4c5b-8192-73eceb4b22fe" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd1" />
+    <MetadataFile FileName="Order15.xsd" MetadataType="Schema" ID="ec337e77-7259-4fd7-9d4f-e592799f1637" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd9" />
+    <MetadataFile FileName="Order16.xsd" MetadataType="Schema" ID="6fd6a5f8-9504-4ec2-bfff-713a3d920cd5" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd11" />
+    <MetadataFile FileName="Order1.disco" MetadataType="Disco" ID="531b9b49-2423-43f2-9bac-bc6fb4c13abe" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?disco" />
+    <MetadataFile FileName="Order17.xsd" MetadataType="Schema" ID="988faffb-d04b-483c-afb9-b8d410a5abf6" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd6" />
+    <MetadataFile FileName="Order18.xsd" MetadataType="Schema" ID="5339121a-24c3-4147-88a4-38d39a8678a7" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd2" />
+    <MetadataFile FileName="Order19.xsd" MetadataType="Schema" ID="36c9515e-9c69-406a-89b8-a37c5a950189" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd13" />
+    <MetadataFile FileName="Order20.xsd" MetadataType="Schema" ID="2e6dfeb0-2a44-4b9a-878f-db56828dcca4" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd8" />
+    <MetadataFile FileName="Order21.xsd" MetadataType="Schema" ID="95fbff35-4c42-4022-b47d-0380521c3534" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd7" />
+    <MetadataFile FileName="Order22.xsd" MetadataType="Schema" ID="3d308a4d-7e84-4685-b8df-b331c6329e0c" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd3" />
+    <MetadataFile FileName="Order1.wsdl" MetadataType="Wsdl" ID="dbd2e8ed-b891-4831-91b7-d1513277fa66" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Order23.xsd" MetadataType="Schema" ID="3458311f-1bd6-42a0-94a9-04e3ed127fd7" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd10" />
+    <MetadataFile FileName="Order24.xsd" MetadataType="Schema" ID="0e16e062-74dd-42b7-969b-f61c928cf9db" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd4" />
+    <MetadataFile FileName="Order25.xsd" MetadataType="Schema" ID="f5c23552-4945-4961-84a7-b6aebaabab47" SourceId="1" SourceUrl="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,16 @@
+C:\IndividualProject\DemoRestWebAPI\DemoService\bin\Debug\DemoService.dll.config
+C:\IndividualProject\DemoRestWebAPI\DemoService\bin\Debug\DemoService.dll
+C:\IndividualProject\DemoRestWebAPI\DemoService\bin\Debug\DemoService.pdb
+C:\IndividualProject\DemoRestWebAPI\DemoService\bin\Debug\Contracts.dll
+C:\IndividualProject\DemoRestWebAPI\DemoService\bin\Debug\Contracts.pdb
+C:\IndividualProject\DemoRestWebAPI\DemoService\obj\Debug\Demo.Service.csprojResolveAssemblyReference.cache
+C:\IndividualProject\DemoRestWebAPI\DemoService\obj\Debug\DemoService.dll
+C:\IndividualProject\DemoRestWebAPI\DemoService\obj\Debug\DemoService.pdb
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\bin\Debug\Demo.Service.dll.config
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\bin\Debug\Demo.Service.dll
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\bin\Debug\Demo.Service.pdb
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\bin\Debug\Demo.Contracts.dll
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\bin\Debug\Demo.Contracts.pdb
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\obj\Debug\Demo.Service.csprojResolveAssemblyReference.cache
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\obj\Debug\Demo.Service.dll
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\obj\Debug\Demo.Service.pdb

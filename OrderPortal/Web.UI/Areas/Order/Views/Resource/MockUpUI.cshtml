@@ -1,0 +1,740 @@
+﻿<!-- Order Dashboard Start"-->
+<div>
+    <!--Header Start-->
+    <div>
+        <div class="layout-gap"></div>
+        <div class="ms-sectiontitle">Orders</div>
+        <div class="layout-gap"></div>
+    </div>
+    <!--Header End-->
+    <!--ROC Users Only Start"-->
+    <div>
+        <div class="ms-formblock large leftalign">
+            <label class="ms-stdlabel">Customer Name</label>
+            <select>
+                <option value="">Select</option>
+                <option value="customer">Customer</option>
+                <option value="partner">Partner</option>
+            </select>
+        </div>
+        <div class="ms-formblock">
+            <label class="ms-stdlabel">&nbsp;</label>
+            <input type="button" value="Search for Customer" class="ms-stdbtn" />
+        </div>
+        <div class="layout-gapS"></div>
+    </div>
+    <!--ROC Users Only End"-->
+    <!--Buttons Start"-->
+    <div>
+        <div>
+            <input type="button" value="NEW ORDER" class="ms-stdbtn stdbtnmargin" />
+            <input type="button" value="BATCH UPLOAD" class="ms-stdbtn" />
+        </div>
+
+        <div class="clr layout-gap"></div>
+
+        <div>
+            <a class="ms-filtertileitem" title="View all your orders that are incomplete, saved or have errors. - all orders that have not been submitted yet.">
+                <span class="ms-filtertilecount">12</span>
+                <h3>Draft/Incomplete Orders</h3>
+            </a>
+            <a class="ms-filtertileitem" title="View all your completed orders.">
+                <span class="ms-filtertilecount">29</span>
+                <h3>Complete Orders</h3>
+            </a>
+        </div>
+
+        <div class="clr layout-gap"></div>
+    </div>
+    <!--Buttons End"-->
+    <!--Don't copy this section! Collapse testing start-->
+    <div>
+        <div class="layout-gap"></div>
+        <div>
+            <label id="lblSelectColors" class="ms-containertitle">Saved Orders test </label>
+
+            <label id="lblSelectColors">Is Open?</label>
+            <input type="checkbox" ng-model="SaveOrdersIsOpen" />
+
+            <label id="lblSelectColors">Disable?</label>
+            <input type="checkbox" ng-model="SaveOrdersIsDisable" />
+        </div>
+        <div class="layout-gap"></div>
+    </div>
+    <!--Don't copy this section! Collapse testing end-->
+    <!--Saved Orders Start"-->
+    @*<div>
+            <op-panelcontainer is-open="SaveOrdersIsOpen" is-disabled="SaveOrdersIsDisable">
+                <!--Replacement Start-->
+                <div class="replacement">
+                    <div>
+                        <div class="ms-formblock extralarge leftalign">
+                            <label class="ms-stdlabel required">Item Name & Number</label>
+                            <input type="text" maxlength="100" class="ms-stdinput" />
+                        </div>
+                        <div class="layout-ItemSearchSymbol">
+                            <span class="search symbol"></span>
+                        </div>
+                        <div class="dropdown layout-MoreSymbol">
+                            <span class="more symbol" data-toggle="dropdown"></span>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><span>Browse Purchase History</span></li>
+                                <li><span>Browse Renewals</span></li>
+                                <li><span>Browse Transitions</span></li>
+                                <li><span>Browse True-ups</span></li>
+                                <li><span>Browse Upgrades</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--Replacement End-->
+                <!--Content Start-->
+                <div>
+                    <div class="layout-scroll maxheightS">
+                        <table class="table table-striped table-hover nowrap">
+                            <thead>
+                                <tr class="ms-stdlabel">
+                                    <th></th>
+                                    <th>PO Number</th>
+                                    <th>Customer Name</th>
+                                    <th>Public Customer Number</th>
+                                    <th>Agreement Number</th>
+                                    <th>Draft Name</th>
+                                    <th>Program Type</th>
+                                    <th>Last Modified By/Date</th>
+                                    <th>Comments</th>
+                                    <th>Microsoft Extended Amount(USD)</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="ms-stdtext">
+                                <tr ng-repeat="order in savedorders">
+                                    <td>{{$index + 1}}</td>
+                                    <td>{{order.PONumber}}</td>
+                                    <td>{{order.CustomerName}}</td>
+                                    <td>{{order.PublicCustomerNumber}}</td>
+                                    <td>{{order.AgreementNumber}}</td>
+                                    <td>{{order.DraftName}}</td>
+                                    <td>{{order.ProgramType}}</td>
+                                    <td>{{order.LastModifiedByDate}}</td>
+                                    <td>{{order.Comments}}</td>
+                                    <td>{{order.MicrosoftExtendedAmount}}</td>
+                                    <td title="Delete item" class="atc"><span class="i_SwooshDelete" ng-click="RemoveOrder(savedorders, $index, $event)"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--Content End-->
+            </op-panelcontainer>
+        </div>*@
+    <!--Saved Orders End"-->
+    <!--Action Required Start"-->
+    @*<div>
+            <div class="layout-gap"></div>
+            <op-panelcontainer is-open="ActionRequiredIsOpen" is-disabled="ActionRequiredIsDisable">
+                <!--Replacement Start-->
+                <div class="replacement">
+                    <span class="panel-title ms-sitetitle layout-panel-heading-left">{{ActionRequiredName}}</span>
+                </div>
+                <!--Replacement End-->
+                <!--Content Start-->
+                <div>
+                    <div class="layout-scroll maxheightS">
+                        <table class="table table-striped table-hover nowrap">
+                            <thead>
+                                <tr class="ms-stdlabel">
+                                    <th></th>
+                                    <th>PO Number</th>
+                                    <th>Customer Name</th>
+                                    <th>Public Customer Number</th>
+                                    <th>Agreement Number</th>
+                                    <th>Order Source</th>
+                                    <th>Type</th>
+                                    <th>Purchase Order Date</th>
+                                    <th>Created By</th>
+                                    <th>Purchase Order Status</th>
+                                    <th>Comments</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="ms-stdtext">
+                                <tr ng-repeat="order in actionrequired">
+                                    <td>{{$index + 1}}</td>
+                                    <td>{{order.PONumber}}</td>
+                                    <td>{{order.CustomerName}}</td>
+                                    <td>{{order.PublicCustomerNumber}}</td>
+                                    <td>{{order.AgreementNumber}}</td>
+                                    <td>{{order.OrderSource}}</td>
+                                    <td>{{order.Type}}</td>
+                                    <td>{{order.PurchaseOrderDate}}</td>
+                                    <td>{{order.CreatedBy}}</td>
+                                    <td>{{order.PurchaseOrderStatus}}</td>
+                                    <td>{{order.Comments}}</td>
+                                    <td title="Delete item" class="atc"><span class="i_SwooshDelete" ng-click="RemoveOrder(actionrequired, $index, $event)"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--Content End-->
+            </op-panelcontainer>
+        </div>*@
+    <!--Action Required End"-->
+    <!--Order Due Start"-->
+    @*<div>
+            <div class="layout-gap"></div>
+            <op-panelcontainer name="OrdersDueName" is-open="OrdersDueIsOpen" is-disabled="OrdersDueIsDisable">
+                <!--Content Start-->
+                <div>
+                    <div class="layout-scroll maxheightS">
+                        <table class="table table-striped table-hover nowrap">
+                            <thead>
+                                <tr class="ms-stdlabel">
+                                    <th></th>
+                                    <th>Public Customer Number</th>
+                                    <th>Customer Name</th>
+                                    <th>Agreement Number</th>
+                                    <th>Program Type</th>
+                                    <th>Contract Type</th>
+                                    <th>Status</th>
+                                    <th>Days Overdue/Remaining</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="ms-stdtext">
+                                <tr ng-repeat="order in ordersdue">
+                                    <td>{{$index + 1}}</td>
+                                    <td>{{order.PublicCustomerNumber}}</td>
+                                    <td>{{order.CustomerName}}</td>
+                                    <td>{{order.AgreementNumber}}</td>
+                                    <td>{{order.ProgramType}}</td>
+                                    <td>{{order.ContractType}}</td>
+                                    <td>{{order.Status}}</td>
+                                    <td>{{order.DaysOverdueRemaining}}</td>
+                                    <td title="Delete item" class="atc"><span class="i_SwooshDelete" ng-click="RemoveOrder(ordersdue, $index, $event)"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--Content End-->
+            </op-panelcontainer>
+        </div>*@
+    <!--Order Due End"-->
+    <!--Other Category Start"-->
+    @*<div>
+            <div class="layout-gap"></div>
+            <op-panelcontainer name="OtherCategoryName" is-open="OtherCategoryIsOpen" is-disabled="OtherCategoryIsDisable">
+                <!--Content Start-->
+                <div>
+                    <div class="layout-scroll maxheightS">
+                        <table class="table table-striped table-hover nowrap">
+                            <thead>
+                                <tr class="ms-stdlabel">
+                                    <th></th>
+                                    <th>Item Number</th>
+                                    <th>Ordering Part Name</th>
+                                    <th>Quantity</th>
+                                    <th>Purchase Type</th>
+                                    <th>Purchase Option</th>
+                                    <th>Line Item Type</th>
+                                    <th>Microsoft Extended Amount(USD)</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="ms-stdtext">
+                                <tr ng-repeat="order in othercategory">
+                                    <td>{{$index + 1}}</td>
+                                    <td>{{order.ItemNumber}}</td>
+                                    <td>{{order.OrderingPartName}}</td>
+                                    <td>{{order.Quantity}}</td>
+                                    <td>{{order.PurchaseType}}</td>
+                                    <td>{{order.PurchaseOption}}</td>
+                                    <td>{{order.LineItemType}}</td>
+                                    <td>{{order.MicrosoftExtendedAmount}}</td>
+                                    <td title="Delete item" class="atc"><span class="i_SwooshDelete" ng-click="RemoveOrder(othercategory, $index, $event)"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--Content End-->
+            </op-panelcontainer>
+        </div>*@
+    <!--Other Category End"-->
+</div>
+<!-- Order Dashboard End"-->
+<!-- Order Create Start"-->
+<div>
+    <!--Header Start-->
+    <div>
+        <div class="clr layout-gap"></div>
+        <div class="ms-sectiontitle">New Order</div>
+        <div class="clr layout-gap"></div>
+    </div>
+    <!--Header End-->
+    <!--Agreement Search Start-->
+    <div>
+        <div class="clr"></div>
+
+        <div class="fll">
+
+            <div class="ms-formblock">
+                <label class="ms-stdlabel required">Agreement Number</label>
+                <input type="text" maxlength="100" class="ms-stdinput" />
+            </div>
+
+            <div class="ms-formblock">
+                <label class="ms-stdlabel required">Partner Customer Number</label>
+                <input type="text" maxlength="100" class="ms-stdinput" />
+            </div>
+
+            <div class="ms-formblock">
+                <label class="ms-stdlabel">Customer Name</label>
+                <input type="text" maxlength="100" class="ms-stdinput" />
+            </div>
+
+            <div class="ms-formblock datePicker">
+                <label class="ms-stdlabel required">USAGE DATE</label>
+                <input op-datepicker is-disabled="UsageDateIsDisable" date-format="UsageDateFormat" date-model="UsageDate" class="show-calendar" />
+            </div>
+
+        </div>
+
+        <div class="layout-search flr">
+            <input type="button" value="CLEAR ALL" class="ms-stdSecondaryBtn" />
+        </div>
+
+        <div class="clr"></div>
+    </div>
+    <!--Agreement Search End-->
+    <!--Don't copy this section! Datepicker testing start-->
+    <div>
+        <div class="layout-gap"></div>
+        <div class="flr">
+            <label id="lblSelectColors" class="ms-containertitle">Date Picker Test</label>
+
+            <label id="lblSelectColors">Is Disable?</label>
+            <input type="checkbox" ng-model="UsageDateIsDisable" />
+            <label id="lblSelectColors">Switch Format?</label>
+            <input type="button" value="Switch" ng-click="UsageDateFormatSwitch()" />
+        </div>
+        <div class="layout-gap"></div>
+    </div>
+    <!--Don't copy this section! Datepicker testing end-->
+    <!--Agreement Search Result Start-->
+    <div>
+        <div class="clr layout-gapS"></div>
+
+        <div class="layout-scroll maxheightS">
+            <table class="table table-striped table-hover">
+                <thead class="nowrap">
+                    <tr class="ms-stdlabel">
+                        <th>AGREEMENT NUMBER</th>
+                        <th>Partner Customer Number</th>
+                        <th>Customer Name</th>
+                        <th>CITY</th>
+                        <th>COUNTRY/REGION</th>
+                        <th>Agreement Duration</th>
+                    </tr>
+                </thead>
+                <tbody class="ms-stdtext">
+                    <tr>
+                        <td>4200002400</td>
+                        <td>00052XX723</td>
+                        <td>Fabrikam Research</td>
+                        <td>Redmond</td>
+                        <td>United States</td>
+                        <td>8/1/2012 - 7/3/2015</td>
+                    </tr>
+                    <tr>
+                        <td>4200002400</td>
+                        <td>00052XX723</td>
+                        <td>Fabrikam Research</td>
+                        <td>Redmond</td>
+                        <td>United States</td>
+                        <td>8/1/2012 - 7/3/2015</td>
+                    </tr>
+                    <tr>
+                        <td>4200002400</td>
+                        <td>00052XX723</td>
+                        <td>Fabrikam Research</td>
+                        <td>Redmond</td>
+                        <td>United States</td>
+                        <td>8/1/2012 - 7/3/2015</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--Agreement Search Result End-->
+    <!--Order Information Start-->
+    <div>
+        <div class="layout-gap"></div>
+        <op-panelcontainer is-open="OrderInformationIsOpen" is-disabled="OrderInformationIsDisable">
+            <!--Replacement Start-->
+            <div class="replacement-left">
+                <div style="display:inline-block">
+                    <span class="panel-title ms-sitetitle layout-panel-heading-left">{{OrderInformationName}}</span>
+                </div>
+            </div>
+            <div class="replacement-right">
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><span>Browse Purchase History</span></li>
+                    <li><span>Browse Renewals</span></li>
+                    <li><span>Browse Transitions</span></li>
+                    <li><span>Browse True-ups</span></li>
+                    <li><span>Browse Upgrades</span></li>
+                </ul>
+            </div>
+            <!--Replacement End-->
+            <!--Content Start-->
+            <div class="layout-positionRel">
+                <div class="layout-gapXS" />
+                <div class="layout-inlineBlock">
+                    <div class="ms-formblock leftalign">
+                        <label class="ms-stdlabel required">Purchase Order Number</label>
+                        <input type="text" maxlength="100" class="ms-stdinput" />
+                    </div>
+
+                    <div class="ms-formblock">
+                        <label class="ms-stdlabel">PO Type</label>
+                        <input type="text" maxlength="100" class="ms-stdinput" />
+                    </div>
+
+                    <div class="ms-formblock small">
+                        <label class="ms-stdlabel required">Currency</label>
+                        <span class="ms-stdtext">USD - US DOLLAR</span>
+                    </div>
+
+                    <div class="ms-formblock medium">
+                        <label class="ms-stdlabel required">Bill To</label>
+                        <span class="ms-stdtext message inputheight nowrap">Contoso<br>1234 Main Street...</span>
+                    </div>
+
+                    <div class="ms-formblock">
+                        <label class="ms-stdlabel">Assigned To</label>
+                        <select>
+                            <option value="">Select</option>
+                            <option value="customer">Customer</option>
+                            <option value="partner">Partner</option>
+                        </select>
+                    </div>
+
+                    <br>
+
+                    <div class="ms-formblock leftalign">
+                        <label class="ms-stdlabel">Secondary Purchase Order Number</label>
+                        <input type="text" maxlength="100" class="ms-stdinput" />
+                    </div>
+
+                    <div class="ms-formblock">
+                        <label class="ms-stdlabel">Direct Partner Number</label>
+                        <select>
+                            <option value="">Select</option>
+                            <option value="customer">Customer</option>
+                            <option value="partner">Partner</option>
+                        </select>
+                    </div>
+
+                    <div class="ms-formblock">
+                        <label class="ms-stdlabel">Indirect Partner Number</label>
+                        <input type="text" maxlength="100" class="ms-stdinput" />
+                    </div>
+
+                    <div class="ms-formblock">
+                        <label class="ms-stdlabel">Program Type</label>
+                        <span class="ms-stdtext">CUS</span>
+                    </div>
+                </div>
+
+                <div class="layout-inlineBlock layout-positionAbs">
+                    <div class="ms-formblock large rightalign">
+                        <label class="ms-stdlabel">Order Comment</label>
+                        <textarea class="small"></textarea>
+                    </div>
+                </div>
+
+                <div class="layout-gapS" />
+            </div>
+            <!--Content ENd-->
+        </op-panelcontainer>
+    </div>
+    <!--Order Information End-->
+    <!--Order Items Start-->
+    <div>
+        <div class="layout-positionRel"></div>
+        <div class="clr layout-gap"></div>
+        <div class="ms-sitetitle">Items:1</div>
+        <div class="clr layout-gapXS"></div>
+        <op-panelcontainer is-open="OrderItemsIsOpen" is-disabled="OrderItemsIsDisable">
+            <!--Replacement Start-->
+            <div class="replacement-left">
+                <div style="display:inline-block">
+                    <div class="ms-formblock extralarge leftalign">
+                        <label class="ms-stdlabel required">Item Name & Number</label>
+                        <input type="text" maxlength="100" class="ms-stdinput" />
+                    </div>
+                    <div class="layout-ItemSearchSymbol">
+                        <span class="search symbol"></span>
+                    </div>
+                    <div class="dropdown layout-MoreSymbol">
+                        <span class="more symbol" data-toggle="dropdown"></span>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><span>Browse Purchase History</span></li>
+                            <li><span>Browse Renewals</span></li>
+                            <li><span>Browse Transitions</span></li>
+                            <li><span>Browse True-ups</span></li>
+                            <li><span>Browse Upgrades</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="replacement-right">
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><span>Browse Purchase History</span></li>
+                    <li><span>Browse Renewals</span></li>
+                    <li><span>Browse Transitions</span></li>
+                    <li><span>Browse True-ups</span></li>
+                    <li><span>Browse Upgrades</span></li>
+                </ul>
+            </div>
+            <!--Replacement End-->
+            <!--Content Start-->
+            <div class="layout-gapXS"></div>
+            <div>
+                <div class="ms-formblock leftalign">
+                    <label class="ms-stdlabel required">Quantity</label>
+                    <input type="text" maxlength="100" class="ms-stdinput" />
+                </div>
+
+                <div class="ms-formblock">
+                    <label class="ms-stdlabel required">Usage Country</label>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="customer">Customer</option>
+                        <option value="partner">Partner</option>
+                    </select>
+                </div>
+
+                <div class="ms-formblock">
+                    <label class="ms-stdlabel required">Usage Date</label>
+                    <input op-datepicker is-disabled="UsageDateIsDisable" date-format="UsageDateFormat" date-model="UsageDate" class="hide-calendar" />
+                </div>
+
+                <div class="ms-formblock medium">
+                    <label class="ms-stdlabel">Coverage Dates</label>
+                    <span class="ms-stdtext">1/1/2014 to 12/31/2016</span>
+                </div>
+
+                <div class="ms-formblock small">
+                    <label class="ms-stdlabel">Unit Price</label>
+                    <span class="ms-stdtext">$327.00</span>
+                </div>
+
+                <div class="ms-formblock centeralign">
+                    <label class="ms-stdlabel">Extended</label>
+                    <span class="ms-stdtext">$4,905.00</span>
+                </div>
+
+                <br>
+
+                <div class="ms-formblock leftalign">
+                    <label class="ms-stdlabel">Line Item Type</label>
+                    <span class="ms-stdtext">New License</span>
+                </div>
+
+                <div class="ms-formblock">
+                    <label class="ms-stdlabel">Unit Quantity</label>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="customer">Customer</option>
+                        <option value="partner">Partner</option>
+                    </select>
+                </div>
+
+                <div class="ms-formblock">
+                    <label class="ms-stdlabel">Program Offering</label>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="customer">Customer</option>
+                        <option value="partner">Partner</option>
+                    </select>
+                </div>
+
+                <div class="ms-formblock medium">
+                    <label class="ms-stdlabel required">Special Deal Number</label>
+                    <span class="ms-stdtext">USD - US DOLLAR</span>
+                </div>
+
+                <div class="ms-formblock small">
+                    <label class="ms-stdlabel">Flag Reason</label>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="customer">Customer</option>
+                        <option value="partner">Partner</option>
+                    </select>
+                </div>
+
+                <div class="ms-formblock large rightalign">
+                    <label class="ms-stdlabel">Flag Comments</label>
+                    <input type="text" maxlength="100" class="ms-stdinput" />
+                </div>
+            </div>
+            <!--Content ENd-->
+        </op-panelcontainer>
+    </div>
+    <!--Order Items End-->
+    <!--Product Catalog Start-->
+    <div>
+        <div class="layout-positionRel"></div>
+        <div class="clr layout-gap"></div>
+        <div class="ms-sitetitle">Product Catalog</div>
+        <div class="clr layout-gapXS"></div>
+
+        <div class="replacement">
+            <div>
+                <div class="ms-formblock xxlarge leftalign layout-positionRel">
+                    <label class="ms-stdlabel">Search</label>
+                    <input type="text" maxlength="100" class="ms-stdinput" />
+                    <span class="search symbol layout-searchsymbolinbox"></span>
+                </div>
+                <div class="dropdown layout-MoreSymbolNextToSearch">
+                    <span class="more symbol" data-toggle="dropdown"></span>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><span>Browse Purchase History</span></li>
+                        <li><span>Browse Renewals</span></li>
+                        <li><span>Browse Transitions</span></li>
+                        <li><span>Browse True-ups</span></li>
+                        <li><span>Browse Upgrades</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Product Catalog End-->
+    <!--Pricing Start-->
+    <div>
+        <div class="clr layout-gap"></div>
+        <div class="ms-sitetitle">Pricing</div>
+        <div class="clr layout-gap"></div>
+
+        <div class="layout-scroll maxheightS">
+            <table class="table table-striped table-hover nowrap">
+                <thead>
+                    <tr class="ms-stdlabel">
+                        <th>Price Level</th>
+                        <th>Adjustment</th>
+                        <th>Estimated Taxes</th>
+                        <th>Item Points</th>
+                        <th>Invoice Date</th>
+                        <th>Amount</th>
+                        <th>Invoice Status</th>
+                    </tr>
+                </thead>
+                <tbody class="ms-stdtext">
+                    <tr>
+                        <td>A</td>
+                        <td>0.00</td>
+                        <td>2344.33</td>
+                        <td>45</td>
+                        <td>8/22/2014</td>
+                        <td>1000.00</td>
+                        <td>Not Invoiced</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>8/22/2015</td>
+                        <td>1000.00</td>
+                        <td>Not Invoiced</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>8/22/2016</td>
+                        <td>1000.00</td>
+                        <td>Not Invoiced</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--Pricing End-->
+    <!--Bottom Start-->
+    <div>
+        <div class="clr layout-gap"></div>
+
+        <div class="fll">
+            <div class="ms-formblock large leftalign">
+                <label class="ms-stdlabel">Your notes (not submitted to Microsoft)</label>
+                <textarea class="large">Rajesh - I am heading out to lunch and then going to Syd’s soccer game at the high school - can you finish this and get it submitted this afternoon? Thanks!</textarea>
+            </div>
+        </div>
+
+        <div class="flr subtotal">
+            <div class="ms-stdlabel">ALL ORDERS (USD)</div>
+            <div class="layout-gapXS"></div>
+            <div class="ms-stdtext">
+                <div class="clr"></div>
+                <div class="fll">Subtotal</div>
+                <div class="flr">2,900.00</div>
+                <div class="clr"></div>
+            </div>
+            <div class="layout-gapXS"></div>
+            <div class="ms-stdtext">
+                <div class="clr"></div>
+                <div class="fll">Estimated Tax</div>
+                <div class="flr">290.00</div>
+                <div class="clr"></div>
+            </div>
+            <div class="layout-gapXS"></div>
+            <div class=" ms-stdtext bold">
+                <div class="clr"></div>
+                <div class="fll">Total Price</div>
+                <div class="flr">3,190.00</div>
+                <div class="clr"></div>
+            </div>
+            <div class="layout-gap"></div>
+            <div class="ms-stdtext">Prices are estimated until the order is processed. Taxes are finalized upon invoice.</div>
+        </div>
+
+        <div class="clr"></div>
+        <div class="layout-gap"></div>
+
+        <div>
+            <div class="clr"></div>
+            <div class="flr">
+                <input type="button" value="SAVE AND VALIDATE DATA" class="ms-stdbtn stdbtnmargin" />
+                <input type="button" value="SUBMIT ORDER" class="ms-stdbtn" />
+            </div>
+            <div class="clr"></div>
+        </div>
+    </div>
+    <!--Bottom End-->
+</div>
+<!-- Order Create End"-->
+<!--Others Start-->
+<div>
+    <div class="layout-gap"></div>
+    <div class="clr layout-gap"></div>
+    <div class="fll">
+        <ul class="pagination pagination-sm">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+    <div class="ms-stdtext layout-paging flr">Displaying items 1-4 of 4</div>
+</div>
+<div class="clr"></div>
+<!--Others End-->

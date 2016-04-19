@@ -1,0 +1,153 @@
+﻿/*ECIT ICON Override Begin*/
+
+.i_MsLogo
+{
+    display: inline-block;
+	overflow:hidden;
+	position:relative;
+    width: 72px;
+	height: 18px;
+}
+.i_MsLogo:after {
+    content: url('../Images/Icons.png');
+    left :-119px;
+    top :-361px;
+	position:relative;
+}
+.i_footerlogo
+{
+    display: inline-block;
+	overflow:hidden;
+	position:relative;
+    width: 83px;
+	height: 18px;
+}
+.i_footerlogo:after {
+    content: url('../Images/Icons.png');
+    left :0;
+    top :-243px;
+	position:relative;
+}
+.i_Download:after
+{
+	content: url('../Images/Icons.png');
+	left: -999px;
+	top: -1px;
+	position:relative;
+}
+
+.i_CircleSearch,
+.i_CollapseUp,
+.i_CollapseDown,
+.i_ArrowRightBlue
+{
+	display: inline-block;
+	overflow:hidden;
+	position:relative;
+}
+
+*:hover > .i_CircleSearch,
+*:hover > .i_CollapseUp,
+*:hover > .i_CollapseDown,
+*:hover > .i_ArrowRightBlue
+{
+	cursor:pointer;
+}
+
+.i_CircleSearch
+{
+	width: 20px;
+	height: 20px;
+}
+
+.i_CollapseUp,
+.i_CollapseDown,
+.i_ArrowRightBlue
+{
+	width: 25px;
+	height: 25px;
+}
+
+.i_CircleSearch:before
+{
+	content: url('../Images/Icons.png');
+	left: -1240px;
+	top: -237px;
+	position:relative;
+}
+
+.i_CircleSearch:hover:before,
+.i_CircleSearch:focus:before,
+.i_CircleSearch.active:before 
+{
+	 left: -1280px;
+	 top: -237px;
+}
+
+.i_CollapseUp:before
+{
+	content: url('../Images/Icons.png');
+	left: 0;
+	top: -400px;
+	position:relative;
+}
+
+.i_CollapseUp:hover:before,
+.i_CollapseUp:focus:before,
+.i_CollapseUp.active:before 
+{
+	 left: -80px;
+	 top: -400px;
+}
+
+.i_CollapseDown:before
+{
+	content: url('../Images/Icons.png');
+	left: -120px;
+	top: -400px;
+	position:relative;
+}
+
+.i_CollapseDown:hover:before,
+.i_CollapseDown:focus:before,
+.i_CollapseDown.active:before 
+{
+	 left: -200px;
+	 top: -400px;
+}
+
+.i_ArrowRightBlue:before
+{
+	content: url('../Images/Icons.png');
+	left: -560px;
+	top: -280px;
+	position:relative;
+}
+
+.i_ArrowRightBlue:hover:before,
+.i_ArrowRightBlue:focus:before,
+.i_ArrowRightBlue.active:before 
+{
+	 left: -560px;
+	 top: -320px;
+}
+
+.i_ArrowBack{
+	width: 36px;
+	height: 36px;
+}
+
+.i_ArrowRight:after
+{
+	left: -560px;
+	top: -80px;
+}
+
+.i_ArrowRight:hover:after,
+.i_ArrowRight:focus:after,
+.i_ArrowRight.active:after 
+{
+	 left: -560px;
+	 top: 0;
+}
+/*ECIT ICON Override End*/

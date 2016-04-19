@@ -1,0 +1,54 @@
+﻿<div op-busy-subscriber="BatchFileUpload">
+    
+    <!--Promise register start-->
+    <span op-busy-publisher="uploadPromise" op-busy-publisher-event="BatchFileUpload"></span>
+    <!--Promise register end-->
+
+    <div>
+        <div class="layout-gap"></div>
+        <div class="layout-positionRel">
+            <div class="layout-inlineBlockOnly">
+                <a ui-sref="dashboard"><span class="i_ArrowBack"></span></a>
+            </div>
+            <div class="layout-inlineBlockOnly layout-positionAbsOnly">
+                <span class="ms-sectiontitle">Batch File Upload</span>
+            </div>
+            <div class="layout-gap"></div>
+        </div>
+    </div>
+
+    <div style="margin-left:250px; margin-right:400px">
+        <input type="file" style="display:none" op-fileuploader>
+        <div class="ms-formblock extralarge leftalign" style="position:relative; width:382px">
+            <label class="ms-stdlabel">Choose Batch File</label>
+            <input type="text" placeholder="{{placeholder}}" maxlength="100" class="ms-stdinput batch-input" ng-model="filename" ng-disabled="browseflag" />
+            <input type="button" value="Browse" class="ms-stdbtn" ng-disabled="browseflag" style="position: absolute; right:0; bottom: 0; margin-bottom:2px; height:2rem;margin-right:2px; font-size:1rem; padding:4px 10px">
+        </div>
+        <div class="ms-stdlabel" style="margin-top:5px;"><a href="~/Content/Excel/VolumeLicensingmultiplebatch.xlsx" style="color:#666; font-size:1.1rem">Get Batch Upload Template</a></div>
+        <div class="layout-gapXS"></div>
+        <div class="ms-stdlabel" style="margin-top:20px;width:382px">
+            <div class="layout-inlineBlockOnly"><div class="i_NotificationInfo"></div></div>
+            <div class="layout-inlineBlockOnly" style="width:354px">Your batch order will submit automatically. Check the box below if you would like to review your batch order prior to submitting.</div>
+        </div>
+        <div class="layout-gap"></div>
+        <div class="layout-gapXS"></div>
+        <div>
+            <input type="checkbox" ng-model="unsubmitflag" />
+            <label class="ms-stdlabel">I will review the order before submitting it.</label>
+        </div>
+        <div class="layout-gap"></div>
+
+        <op-errorsummary message-title="Batch upload has following errors" message-source="errorMessages"></op-errorsummary>
+
+    </div>
+    <div class="layout-gap"></div>
+    <div class="layout-gap"></div>
+    <div style="margin-left:700px" ng-if="showUploadButton">
+        <input type="button" value="Upload" class="ms-stdbtn" ng-click="Upload()" ng-disabled="disableUpload" style="margin-right:10px; text-transform:none" />
+        <input type="button" value="Cancel" class="ms-stdbtn" ng-click="Clear()" style="text-transform:none" />
+    </div>
+    <div style="margin-left:700px" ng-if="showFixButton">
+        <a ui-sref="dashboard"><input type="button" value="Fix Now" class="ms-stdbtn" style="margin-right:10px; text-transform:none" /></a>
+        <a ui-sref="dashboard"><input type="button" value="Fix Later" class="ms-stdbtn" style="text-transform:none" /></a>
+    </div>
+</div>

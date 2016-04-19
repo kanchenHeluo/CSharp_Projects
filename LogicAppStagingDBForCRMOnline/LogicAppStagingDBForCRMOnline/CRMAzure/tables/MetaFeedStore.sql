@@ -1,0 +1,8 @@
+﻿CREATE TABLE [CRMAzure].[MetaFeedStore]
+(
+	[FSTableId] INT NOT NULL PRIMARY KEY, 
+    [FSTableName] VARCHAR(50) NOT NULL,
+	[FSTableKey] VARCHAR(20) NOT NULL,
+	[FSTableSecKey] VARCHAR(20) NULL
+)
+

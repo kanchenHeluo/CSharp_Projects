@@ -1,0 +1,5 @@
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\DelegateExample\bin\Debug\DelegateExample.exe.config
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\DelegateExample\bin\Debug\DelegateExample.exe
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\DelegateExample\bin\Debug\DelegateExample.pdb
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\DelegateExample\obj\Debug\DelegateExample.exe
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\DelegateExample\obj\Debug\DelegateExample.pdb

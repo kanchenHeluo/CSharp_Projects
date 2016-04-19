@@ -1,0 +1,48 @@
+﻿/* From Global Styles */
+*{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+/* End From Global Styles */
+
+span.SearchBoxContainer{
+	display:inline-block;
+}
+input.SearchBox {
+	min-width: 26rem;
+	padding-right: 4.4rem !important;
+	margin-right: -4.4rem;
+	vertical-align: middle;
+}
+input.SearchBox:hover,
+input.SearchBox:active,
+input.SearchBox:focus{
+	margin-right: -4.5rem;
+}
+
+	input.SearchBox + .symbol.remove,
+	input.SearchBox + .symbol.remove + .symbol.search {
+		margin: 0 .25rem;
+		padding: 0;
+		cursor: pointer;
+		vertical-align: middle;
+		display: inline;
+	}
+
+		input.SearchBox + .symbol.remove:hover,
+		input.SearchBox + .symbol.remove:active,
+		input.SearchBox + .symbol.remove:focus,
+		input.SearchBox + .symbol.remove + .symbol.search:hover,
+		input.SearchBox + .symbol.remove + .symbol.search:active,
+		input.SearchBox + .symbol.remove + .symbol.search:focus {
+			color: #0072c6;
+		}
+
+	input.SearchBox + .symbol.remove {
+		font-size: 1.2rem;
+	}
+
+		input.SearchBox + .symbol.remove + .symbol.search {
+			font-size: 1.5rem;
+		}

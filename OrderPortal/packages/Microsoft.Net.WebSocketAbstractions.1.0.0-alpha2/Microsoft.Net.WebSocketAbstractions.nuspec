@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Net.WebSocketAbstractions</id>
+    <version>1.0.0-alpha2</version>
+    <title>Microsoft.Net.WebSocketAbstractions</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Microsoft.Net.WebSocketAbstractions</description>
+    <dependencies>
+      <group targetFramework="K1.0">
+        <dependency id="System.Runtime" version="4.0.20.0" />
+        <dependency id="System.Threading.Tasks" version="4.0.10.0" />
+      </group>
+    </dependencies>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm</licenseUrl>
+  </metadata>
+</package>

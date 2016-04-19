@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Request" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/OrderService/DraftOrder.svc?xsd=xsd4" namespace="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" />
+  <xs:simpleType name="ListType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DraftOrders" />
+      <xs:enumeration value="InvalidOrders" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ListType" nillable="true" type="tns:ListType" />
+  <xs:complexType name="UnlockDraftOrderRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" base="q1:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UnlockDraftOrderRequest" nillable="true" type="tns:UnlockDraftOrderRequest" />
+  <xs:complexType name="UnlockDraftOrderPortalRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" base="q2:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
+          <xs:element minOccurs="0" name="MaxLockMinutes" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UnlockDraftOrderPortalRequest" nillable="true" type="tns:UnlockDraftOrderPortalRequest" />
+  <xs:complexType name="LockDraftOrderPortalRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" base="q3:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
+          <xs:element minOccurs="0" name="MaxLockMinutes" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LockDraftOrderPortalRequest" nillable="true" type="tns:LockDraftOrderPortalRequest" />
+</xs:schema>

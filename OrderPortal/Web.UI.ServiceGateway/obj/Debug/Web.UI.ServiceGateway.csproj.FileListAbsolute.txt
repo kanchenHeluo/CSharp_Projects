@@ -1,0 +1,6 @@
+C:\Dalei\SourceCode\OrderPortal\Web.UI.ServiceGateway\bin\Debug\Web.UI.ServiceGateway.dll.config
+C:\Dalei\SourceCode\OrderPortal\Web.UI.ServiceGateway\bin\Debug\Web.UI.ServiceGateway.dll
+C:\Dalei\SourceCode\OrderPortal\Web.UI.ServiceGateway\bin\Debug\Web.UI.ServiceGateway.pdb
+C:\Dalei\SourceCode\OrderPortal\Web.UI.ServiceGateway\obj\Debug\Web.UI.ServiceGateway.csprojResolveAssemblyReference.cache
+C:\Dalei\SourceCode\OrderPortal\Web.UI.ServiceGateway\obj\Debug\Web.UI.ServiceGateway.dll
+C:\Dalei\SourceCode\OrderPortal\Web.UI.ServiceGateway\obj\Debug\Web.UI.ServiceGateway.pdb

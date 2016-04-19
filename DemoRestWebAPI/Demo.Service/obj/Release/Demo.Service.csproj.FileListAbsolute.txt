@@ -1,0 +1,8 @@
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\bin\Release\Demo.Service.dll.config
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\bin\Release\Demo.Service.dll
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\bin\Release\Demo.Service.pdb
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\bin\Release\Demo.Contracts.dll
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\bin\Release\Demo.Contracts.pdb
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\obj\Release\Demo.Service.csprojResolveAssemblyReference.cache
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\obj\Release\Demo.Service.dll
+C:\IndividualProject\DemoRestWebAPI\Demo.Service\obj\Release\Demo.Service.pdb

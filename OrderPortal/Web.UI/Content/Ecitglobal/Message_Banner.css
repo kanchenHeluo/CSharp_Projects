@@ -1,0 +1,111 @@
+﻿/* From Global Styles */
+*{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+/* End From Global Styles */
+
+/*---------------------------------------Toast Notification CSS-------------------------------------------------------------*/
+.toast {
+	display: none;
+	z-index: 999999;
+	width: 100%;
+	bottom: 2rem;
+}
+
+	.toast .message {
+		position: fixed;
+		width: 100%;
+		height: auto;
+		min-height: 8em;
+		top: 0;
+		left: 0;
+		z-index: 999999;
+		padding-bottom: 1rem;
+	}
+
+	.toast .Yellow,
+	.toast .yellow {
+		background: #FCD116;
+	}
+
+	.toast .Green,
+	.toast .green {
+		background: #007233;
+		color: white;
+	}
+
+	.toast .Blue,
+	.toast .blue {
+		background: #0072C6;
+		color: white;
+	}
+
+	.toast .Red,
+	.toast .red {
+		background: #E81123;
+		color: white;
+	}
+
+	.toast .message > div {
+		margin: 2rem;
+	}
+
+	.toast .message > .textContainer {
+		position: relative;
+		display: inline-block;
+		margin-left:0;
+		vertical-align:top;
+	}
+
+		.toast .message > .textContainer > span {
+			display: block;
+		}
+
+	.toast .message .toastTitle {
+		display: block;
+		font-size: 1.8rem;
+		font-weight: 500;
+	}
+
+	.toast .message .validation-summary-errors {
+		color: #000000;
+		position: relative;
+		bottom: 1rem;
+		border: none;
+	}
+
+		.toast .message .validation-summary-errors ul {
+			color: #000000;
+			padding-left: 1rem;
+			list-style-type: none;
+		}
+
+	.toast .toastCloseButton {
+		position: absolute;
+		display: inline-block;
+		right: 0;
+		margin: 2.5rem 2rem 0 2rem !important;
+		font-size: 1.8rem;
+		font-weight: 700;
+		cursor: pointer;
+	}
+
+.toastCloseButton:hover, .toastCloseButton:focus {
+	outline: 1px dashed;
+	color: white;
+}
+
+	.MiniToast {
+	display: inline-block;
+    float: left;
+	height: 4rem;
+    padding: 0 5px 0 5px;
+    margin: 5px;
+	background-color: #FF0000;
+	font-size: 1.4rem;
+	color: #fff;
+	text-align: center;
+	line-height: 4rem;
+}

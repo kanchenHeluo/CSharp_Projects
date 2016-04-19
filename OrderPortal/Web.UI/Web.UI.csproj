@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{59995375-7048-4FFB-B8D0-A54F3FB7CA1C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web.UI</RootNamespace>
+    <AssemblyName>Web.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>2</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="DomainDataClient, Version=1.0.4723.26022, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DomainData\DomainDataClient.dll</HintPath>
+    </Reference>
+    <Reference Include="EBAC, Version=1.0.1622.26910, Culture=neutral, PublicKeyToken=cb8e677c9ce195d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\EBAC\EBAC.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Telemetry.Services">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Telemetry.Services.0.7.1.0\lib\net35\Microsoft.ApplicationInsights.Telemetry.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Telemetry.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Telemetry.Services.0.7.1.0\lib\net35\Microsoft.ApplicationInsights.Telemetry.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DomainData\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DomainData\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DomainData\Microsoft.Data.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DomainData\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\STS\1.2\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IT.Licensing.Diagnostics.Common">
+      <HintPath>..\packages\Microsoft.IT.Licensing.Diagnostics.Common.2.5.4853.26298\lib\net40\Microsoft.IT.Licensing.Diagnostics.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IT.Licensing.ECDM.DomainData.Services.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=887de24977510cd2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DomainData\Microsoft.IT.Licensing.ECDM.DomainData.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IT.Licensing.Entity, Version=1.0.4727.14444, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DomainData\Microsoft.IT.Licensing.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IT.Licensing.Security.AuthHelper">
+      <HintPath>References\DomainData\Microsoft.IT.Licensing.Security.AuthHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging">
+      <HintPath>..\packages\EnterpriseLibrary.Logging.5.0.505.1\lib\NET35\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Mvc">
+      <HintPath>..\packages\Unity.Mvc.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="MS.IT.Ops.Shared.FederatedIdentity.Client.AuthPolicy, Version=1.3.0.1, Culture=neutral, PublicKeyToken=16addf8cccee939d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\MS.IT.Ops.Shared.FederatedIdentity.Client.AuthPolicy.dll</HintPath>
+    </Reference>
+    <Reference Include="MS.IT.Ops.Shared.FederatedIdentity.Framework.ClaimContract, Version=1.3.0.1, Culture=neutral, PublicKeyToken=16addf8cccee939d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\STS\1.2\MS.IT.Ops.Shared.FederatedIdentity.Framework.ClaimContract.dll</HintPath>
+    </Reference>
+    <Reference Include="MS.IT.Ops.Shared.GZipEncoder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2c2179b1621ee28e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\GZip\MS.IT.Ops.Shared.GZipEncoder.dll</HintPath>
+    </Reference>
+    <Reference Include="MS.IT.Ops.Shared.Security.SecureWebClient, Version=1.3.0.1, Culture=neutral, PublicKeyToken=16addf8cccee939d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\MS.IT.Ops.Shared.Security.SecureWebClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis">
+      <HintPath>..\packages\StackExchange.Redis.1.0.333\lib\net45\StackExchange.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.identitymodel.services" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DomainData\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Mvc, Version=2012.1.214.340, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\DomainData\Telerik.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Wintellect.Threading">
+      <HintPath>..\packages\PowerThreading.20120420.0\lib\net20\Wintellect.Threading.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.1.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.1.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.1.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Dashboard\Controllers\DashboardHomeController.cs" />
+    <Compile Include="Areas\Dashboard\DashboardAreaRegistration.cs" />
+    <Compile Include="Areas\Order\Controllers\OrderDashboardController.cs" />
+    <Compile Include="Areas\Order\Controllers\ManageVLOrderController.cs" />
+    <Compile Include="Areas\Order\Controllers\ResourceController.cs" />
+    <Compile Include="Areas\Order\Controllers\UserMgmtController.cs" />
+    <Compile Include="Areas\Order\OrderAreaRegistration.cs" />
+    <Compile Include="Cache\CacheManager.cs" />
+    <Compile Include="Common\ClaimManager.cs" />
+    <Compile Include="Common\ExceptionManager.cs" />
+    <Compile Include="Common\ExtensionUtils.cs" />
+    <Compile Include="Common\JsonNetFormatter.cs" />
+    <Compile Include="Common\JsonNetModelBinder.cs" />
+    <Compile Include="Common\JsonNetResult.cs" />
+    <Compile Include="Common\SessionExtensions.cs" />
+    <Compile Include="Controllers\DomainDataController.cs" />
+    <Compile Include="Controllers\AutocompleteController.cs" />
+    <Compile Include="Data\DomainData.cs" />
+    <Compile Include="Models\LineItem.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Agreement.cs" />
+    <Compile Include="Models\AutoComplete.cs" />
+    <Compile Include="Models\LineItemAttributes.cs" />
+    <Compile Include="Models\OrderHeaderAttributes.cs" />
+    <Compile Include="Models\OrderSearchResult.cs" />
+    <Compile Include="Moks\EcdmDomainProviderMock.cs" />
+    <Compile Include="Providers\EcdmDomainProvider.cs" />
+    <Compile Include="Providers\ICacheProvider.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Filters\ErrorHandlerFilter.cs" />
+    <Compile Include="Common\StringHelper.cs" />
+    <Compile Include="Common\UrlExtentions.cs" />
+    <Compile Include="Common\UserContext.cs" />
+    <Compile Include="Common\Utility.cs" />
+    <Compile Include="Common\WebBaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Filters\AuthenticationFilter.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\LoggingHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\IDomainDataProvider.cs" />
+    <Compile Include="Providers\InMemoryCacheProvider.cs" />
+    <Compile Include="Providers\RedisCacheProvider.cs" />
+    <Compile Include="Security\AccessorRequest.cs" />
+    <Compile Include="Security\AccessorResponse.cs" />
+    <Compile Include="Security\CapabilityManager.cs" />
+    <Compile Include="Security\ContactRoleClaim.cs" />
+    <Compile Include="Security\ICapabilities.cs" />
+    <Compile Include="Security\OrganizationClaimSet.cs" />
+    <Compile Include="UnitOfWork\IPortalUnitOfWork.cs" />
+    <Compile Include="Moks\PortalUnitOfWorkMock.cs" />
+    <Compile Include="UnitOfWork\PortalUnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Order\Views\Resource\Dashboard.cshtml" />
+    <Content Include="Areas\Order\Views\Resource\OrderEditor.cshtml" />
+    <Content Include="Areas\Order\Views\Resource\OrderSummary.cshtml" />
+    <Content Include="ApplicationInsights.config" />
+    <Content Include="Areas\Order\Views\Resource\OrderRenewal.cshtml" />
+    <None Include="Areas\Order\Views\Resource\Partials\AgreementSearch.cshtml" />
+    <None Include="Areas\Order\Views\Resource\Partials\AgreementSearchResult.cshtml" />
+    <Content Include="Content\Ecitglobal\Error_Summary.css" />
+    <Content Include="Content\Ecitglobal\Error_Summary.override.css" />
+    <Content Include="Content\Ecitglobal\Filter_tiles.override.css" />
+    <Content Include="Content\Ecitglobal\GlobalStyles.override.css" />
+    <Content Include="Content\Ecitglobal\GlobalSymbols.override.css" />
+    <Content Include="Content\Images\Spinner.gif" />
+    <Content Include="Content\kendo\kendo.common.min.css" />
+    <Content Include="Content\kendo\kendo.common.override.min.css">
+      <DependentUpon>kendo.common.override.css</DependentUpon>
+    </Content>
+    <Content Include="Content\kendo\kendo.dataviz.metro.min.css" />
+    <Content Include="Content\kendo\kendo.dataviz.min.css" />
+    <Content Include="Content\kendo\kendo.metro.min.css" />
+    <Content Include="Content\Images\Metro\sprite.png" />
+    <Content Include="Content\kendo\kendo.common.override.css" />
+    <Content Include="Content\Order\OrderDashboard\opBusy.css" />
+    <Content Include="Content\Order\OrderDashboard\opDropdown.css" />
+    <Content Include="Content\Order\OrderDashboard\opPagination.css" />
+    <Content Include="Content\Order\OrderDashboard\opPanelcontainer.css" />
+    <Content Include="Content\Order\OrderDashboard\opTable.css" />
+    <Content Include="Content\Site\site.min.css">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Order\autocomplete.css" />
+    <Content Include="Content\Ecitglobal\Filter_tiles.css" />
+    <Content Include="Content\Ecitglobal\Form_module.css" />
+    <Content Include="Content\Ecitglobal\GlobalStyles.css" />
+    <Content Include="Content\Ecitglobal\GlobalSymbols.css" />
+    <Content Include="Content\Ecitglobal\iconsoverride.css" />
+    <Content Include="Content\Ecitglobal\icons.css" />
+    <Content Include="Content\Ecitglobal\Image_or_Icon_Button.css" />
+    <Content Include="Content\Ecitglobal\Message_Banner.css" />
+    <Content Include="Content\Ecitglobal\Modal_dialog.css" />
+    <Content Include="Content\Ecitglobal\Search_Field.css" />
+    <Content Include="Content\Ecitglobal\Tabs.css" />
+    <Content Include="Content\Order\OrderDashboard\OrderDashboard.css" />
+    <Content Include="Content\Images\homepage.jpg" />
+    <Content Include="Content\Images\Icons.png" />
+    <Content Include="Content\Login\login.css" />
+    <Content Include="Content\Site\tile.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site\site.css" />
+    <Content Include="References\DomainData\DomainDataClient.dll" />
+    <Content Include="References\DomainData\Microsoft.Data.Edm.dll" />
+    <Content Include="References\DomainData\Microsoft.Data.OData.dll" />
+    <Content Include="References\DomainData\Microsoft.Data.Services.Client.dll" />
+    <Content Include="References\DomainData\Microsoft.Data.Services.dll" />
+    <Content Include="References\DomainData\Microsoft.IT.Licensing.ECDM.DomainData.Services.Client.dll" />
+    <Content Include="References\DomainData\Microsoft.IT.Licensing.Entity.dll" />
+    <Content Include="References\DomainData\Microsoft.IT.Licensing.Security.AuthHelper.dll" />
+    <Content Include="References\DomainData\System.Spatial.dll" />
+    <Content Include="References\DomainData\Telerik.Web.Mvc.dll" />
+    <Content Include="References\EBAC\EBAC.dll" />
+    <Content Include="References\GZip\MS.IT.Ops.Shared.GZipEncoder.dll" />
+    <Content Include="References\MS.IT.Ops.Shared.FederatedIdentity.Client.AuthPolicy.dll" />
+    <Content Include="References\MS.IT.Ops.Shared.Security.SecureWebClient.dll" />
+    <Content Include="References\STS\1.2\Microsoft.IdentityModel.dll" />
+    <Content Include="References\STS\1.2\MS.IT.Ops.Shared.Common.dll" />
+    <Content Include="References\STS\1.2\MS.IT.Ops.Shared.FederatedIdentity.ClaimTypes.dll" />
+    <Content Include="References\STS\1.2\MS.IT.Ops.Shared.FederatedIdentity.Client.AuthHelper.dll" />
+    <Content Include="References\STS\1.2\MS.IT.Ops.Shared.FederatedIdentity.Client.AuthPolicy.dll" />
+    <Content Include="References\STS\1.2\MS.IT.Ops.Shared.FederatedIdentity.Framework.AuthPolicy.dll" />
+    <Content Include="References\STS\1.2\MS.IT.Ops.Shared.FederatedIdentity.Framework.ClaimContract.dll" />
+    <Content Include="References\STS\1.2\MS.IT.Ops.Shared.FederatedIdentity.Framework.CustomToken.dll" />
+    <Content Include="References\STS\1.2\MS.IT.Ops.Shared.FederatedIdentity.Framework.dll" />
+    <Content Include="References\STS\1.2\MS.IT.Ops.Shared.FederatedIdentity.Framework.RSTParameter.dll" />
+    <Content Include="References\STS\1.2\MS.IT.Ops.Shared.FederatedIdentity.Framework.Utility.dll" />
+    <Content Include="References\STS\1.2\MS.IT.Ops.Shared.FederatedIdentity.RelyingParty.AuthPolicy.dll" />
+    <Content Include="References\STS\1.2\MS.IT.Ops.Shared.Security.SecureWebClient.dll" />
+    <Content Include="Content\Ecitglobal\Form_module.override.css" />
+    <Content Include="Content\kendo\kendo.common.override.css.map">
+      <DependentUpon>kendo.common.override.css</DependentUpon>
+    </Content>
+    <Content Include="Areas\Order\Views\Resource\Partials\OrderLineItemRow.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Areas\Order\Views\Resource\Partials\BatchUpload.cshtml" />
+    <Content Include="Content\Excel\VolumeLicensingmultiplebatch.xlsx" />
+    <Content Include="Areas\Order\Views\Resource\Partials\OrderShipTo.cshtml" />
+    <Content Include="Areas\Order\Views\Resource\Partials\UserPreference.cshtml" />
+    <None Include="Content\kendo\kendo.common.override.less" />
+    <None Include="Scripts\amplify-vsdoc.js" />
+    <Content Include="Scripts\amplify.js" />
+    <Content Include="Scripts\amplify.min.js" />
+    <Content Include="Scripts\Amplify\amplify.core.js" />
+    <Content Include="Scripts\Amplify\amplify.core.min.js" />
+    <Content Include="Scripts\Amplify\amplify.request.js" />
+    <Content Include="Scripts\Amplify\amplify.request.min.js" />
+    <Content Include="Scripts\Amplify\amplify.store.js" />
+    <Content Include="Scripts\Amplify\amplify.store.min.js" />
+    <Content Include="Scripts\angular-animate.js" />
+    <Content Include="Scripts\angular-animate.min.js" />
+    <Content Include="Scripts\angular-animate.min.js.map" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\App\Common\Controllers\choosepartnerCtrl.js" />
+    <Content Include="Scripts\App\Common\Controllers\userPreferenceCtrl.js" />
+    <Content Include="Scripts\App\Common\Directives\autocomplete.js" />
+    <Content Include="Scripts\App\Common\Directives\opBusyPublisher.js" />
+    <Content Include="Scripts\App\Common\Directives\opBusySubscriber.js" />
+    <Content Include="Scripts\App\Common\Directives\opClickDisabled.js" />
+    <Content Include="Scripts\App\Common\Directives\opDatepicker.js" />
+    <Content Include="Scripts\App\Common\Directives\opErrorsummary.js" />
+    <Content Include="Scripts\App\Common\Directives\opNumber.js" />
+    <Content Include="Scripts\App\Common\Directives\opSlideIn.js" />
+    <Content Include="Scripts\App\Common\Directives\opDialog.js" />
+    <Content Include="Scripts\App\Common\Directives\opDropdown.js" />
+    <Content Include="Scripts\App\Common\Directives\opFileUploader.js" />
+    <Content Include="Scripts\App\Common\Directives\opForm.js" />
+    <Content Include="Scripts\App\Common\Directives\opPagination.js" />
+    <Content Include="Scripts\App\Common\Directives\opPanelcontainer.js" />
+    <Content Include="Scripts\App\Common\Directives\opReadOnly.js" />
+    <Content Include="Scripts\App\Common\Directives\opRequired.js" />
+    <Content Include="Scripts\App\Common\opCommonModule.js" />
+    <Content Include="Scripts\App\Common\Services\channelPartnerSvc.js" />
+    <Content Include="Scripts\App\Common\Services\domainDataSvc.js" />
+    <Content Include="Scripts\App\Common\Services\localStorageSvc.js" />
+    <Content Include="Scripts\App\Common\Services\opAjaxSvc.js" />
+    <Content Include="Scripts\App\Common\Services\opNotificationSvc.js" />
+    <Content Include="Scripts\App\Order\Controllers\agreementSearchCtrl.js" />
+    <Content Include="Scripts\App\Order\Controllers\autocompleteCtrl.js" />
+    <Content Include="Scripts\App\Order\Controllers\batchUploadCtrl.js" />
+    <Content Include="Scripts\App\Order\Controllers\mockuiCtrl.js" />
+    <Content Include="Scripts\App\Order\Controllers\orderDashboardCtrl.js" />
+    <Content Include="Scripts\App\Order\Controllers\orderEditorCtrl.js" />
+    <Content Include="Scripts\App\Order\Controllers\orderHeaderCtrl.js" />
+    <Content Include="Scripts\App\Order\Controllers\orderLineItemCtrl.js" />
+    <Content Include="Scripts\App\Order\Controllers\orderShipToCtrl.js" />
+    <Content Include="Scripts\App\Order\Controllers\orderSubmitCtrl.js" />
+    <Content Include="Scripts\App\Order\Controllers\orderSummaryCtrl.js" />
+    <Content Include="Scripts\App\Order\orderApp.js" />
+    <Content Include="Scripts\App\Order\Services\autocompleteSvc.js" />
+    <Content Include="Scripts\App\Order\Services\orderDashboardSvc.js" />
+    <Content Include="Scripts\App\Order\Services\orderSvc.js" />
+    <Content Include="Scripts\App\readme.txt" />
+    <Content Include="Scripts\Ecitglobal\Message_Banner.js" />
+    <Content Include="Scripts\Ecitglobal\Modal_dialog.js" />
+    <Content Include="Scripts\Ecitglobal\Search_Field.js" />
+    <Content Include="Scripts\Ecitglobal\Tabs.js" />
+    <Content Include="Scripts\jquery-1.9.0.js" />
+    <Content Include="Scripts\Kendo\cultures\kendo.culture.de.min.js" />
+    <Content Include="Scripts\Kendo\cultures\kendo.culture.en-US.min.js" />
+    <Content Include="Scripts\Kendo\cultures\kendo.culture.es-MX.min.js" />
+    <Content Include="Scripts\Kendo\cultures\kendo.culture.fr.min.js" />
+    <Content Include="Scripts\Kendo\cultures\kendo.culture.ja.min.js" />
+    <Content Include="Scripts\Kendo\cultures\kendo.culture.ko.min.js" />
+    <Content Include="Scripts\Kendo\cultures\kendo.culture.pt-BR.min.js" />
+    <Content Include="Scripts\Kendo\cultures\kendo.culture.ru.min.js" />
+    <Content Include="Scripts\Kendo\cultures\kendo.culture.zh-CN.min.js" />
+    <Content Include="Scripts\Kendo\cultures\kendo.culture.zh-TW.min.js" />
+    <Content Include="Scripts\Kendo\kendo.calendar.min.js" />
+    <Content Include="Scripts\Kendo\kendo.core.min.js" />
+    <Content Include="Scripts\Kendo\kendo.datepicker.min.js" />
+    <Content Include="Scripts\Kendo\kendo.popup.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\NgModules\ui-router\angular-ui-router.js" />
+    <Content Include="Scripts\NgModules\ui-router\angular-ui-router.min.js" />
+    <Content Include="Scripts\require.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\UnAuthorized.cshtml" />
+    <Content Include="Unity.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Dashboard\Models\" />
+    <Folder Include="Areas\Dashboard\Views\Shared\" />
+    <Folder Include="Areas\Order\Models\" />
+    <Folder Include="Areas\Order\Views\UserMgmt\" />
+    <Folder Include="Content\Styles\" />
+    <Folder Include="Scripts\App\Common\Filters\" />
+    <Folder Include="Scripts\App\Order\Directives\" />
+    <Folder Include="Scripts\App\Order\Filters\" />
+    <Folder Include="Views\WebBase\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Areas\Dashboard\Views\web.config" />
+    <Content Include="Areas\Dashboard\Views\DashboardHome\Index.cshtml" />
+    <Content Include="Content\Site\tile.less" />
+    <Content Include="Content\Site\tile.css.map" />
+    <Content Include="Areas\Order\Views\web.config" />
+    <Content Include="Areas\Order\Views\ManageVLOrder\Index.cshtml" />
+    <Content Include="Areas\Order\Views\OrderDashboard\Index.cshtml" />
+    <Content Include="fonts\ecitglobal\GlobalSymbols.woff" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Order\Views\Resource\Partials\OrderHeader.cshtml" />
+    <Content Include="Content\Site\site.less" />
+    <Content Include="Content\Site\site.css.map">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
+    <Content Include="Areas\Order\Views\Resource\Partials\OrderLineItem.cshtml" />
+    <Content Include="Areas\Order\Views\Resource\Partials\SuperCatalog.cshtml" />
+    <Content Include="Areas\Order\Views\Resource\MockUpUI.cshtml" />
+    <Content Include="MiddleTierXML\EBACConfig.config" />
+    <Content Include="MiddleTierXML\MSL_EBAC_RoleSpace.config" />
+    <None Include="Project_Readme.html" />
+    <None Include="Properties\PublishProfiles\ordercenter.pubxml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Shared\footer.cshtml" />
+    <Content Include="Views\Shared\ChoosePartner.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExcelParser\ExcelParser.csproj">
+      <Project>{169da9d9-096d-4839-a914-a29786d78f69}</Project>
+      <Name>ExcelParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Global.SearchService\Global.SearchService.csproj">
+      <Project>{4b8c086a-f8d3-4ea5-863e-4d5cd7c8f6db}</Project>
+      <Name>Global.SearchService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web.Localization\Web.Localization.csproj">
+      <Project>{6b0ed206-9f98-4be6-810e-00401a26001c}</Project>
+      <Name>Web.Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web.UI.Common\Web.UI.Common.csproj">
+      <Project>{b68b0e1c-ce53-4d66-9ea9-9de010d60837}</Project>
+      <Name>Web.UI.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web.UI.Repositories\Web.UI.Repositories.csproj">
+      <Project>{6dbb20c0-6075-4269-8f9a-d7192994b505}</Project>
+      <Name>Web.UI.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web.UI.ServiceGateway\Web.UI.ServiceGateway.csproj">
+      <Project>{6b77a5a5-ce51-49d8-8878-7461b9d30e57}</Project>
+      <Name>Web.UI.ServiceGateway</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <Target Name="BeforeBuild">
+    <Copy Condition="Exists('Web.config')" DestinationFiles="Web.bak.config" SourceFiles="Web.config" />
+    <XslTransformation Condition="Exists('Web.bak.config') And Exists('trans.xsl')" OutputPaths="Web.config" XmlInputPaths="Web.bak.config" XslInputPath="trans.xsl" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55069</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/OrderPortal</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

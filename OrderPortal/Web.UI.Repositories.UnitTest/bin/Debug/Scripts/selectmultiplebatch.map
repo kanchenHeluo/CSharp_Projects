@@ -1,0 +1,50 @@
+; Format of the map
+; 1. Field Name
+; 2. Field Type:""=string, 1 = Numeric
+; 3. Required : Y=yes else = No
+; 4. Break PO on Change:Y = yes else =No
+; 5. IsDisplayed after parsing: Y=yes else =No
+; 6. IsHeader Attribute  Y=yes else No
+; 7. Field Length.
+; 8. Field Caption in data.
+<SECTION>
+Microsoft Volume Licensing Order Sheet
+</SECTION>
+<HEADER>
+<TOKEN>PONumber,,Y,Y,Y,Y,20,PO Number</TOKEN>
+<TOKEN>POType,,Y,Y,Y,Y,3,PO Type</TOKEN>
+<TOKEN>UsageDate,1,N,Y,Y,Y,8,Usage Date (YYYYMMDD)</TOKEN>
+<TOKEN>AgreementNumber,,Y,Y,Y,Y,8,Agreement Number</TOKEN>
+<TOKEN>ShipToOrganizationName,,N,Y,Y,Y,60,Ship-To Organization Name</TOKEN>
+<TOKEN>ShipToContactName,,N,Y,Y,Y,60,Ship-To Contact Name</TOKEN>
+<TOKEN>ShipToAddress1,,N,Y,Y,Y,50,Ship-To Address Line 1</TOKEN>
+<TOKEN>ShipToContactPhoneNumber,,N,Y,Y,Y,40,Ship-To Contact Phone Number</TOKEN>
+<TOKEN>ShipToAddress2,,N,Y,Y,Y,50,Ship-To Address Line 2</TOKEN>
+<TOKEN>ShipToContactFaxNumber,,N,Y,Y,Y,40,Ship-To Contact Fax Number</TOKEN>
+<TOKEN>ShipToAddress3,,N,Y,Y,Y,50,Ship-To Address Line 3</TOKEN>
+<TOKEN>ShipToContactEmailAddress,,N,Y,Y,Y,80,Ship-To Contact Email Address</TOKEN>
+<TOKEN>ShipToAddress4,,N,Y,Y,Y,50,Ship-To Address Line 4</TOKEN>
+<TOKEN>ShipToCorrespondenceLanguage,,N,Y,Y,Y,2,Ship-To Correspondence Language</TOKEN>
+<TOKEN>ShipToCity,,N,Y,Y,Y,30,Ship-To City</TOKEN>
+<TOKEN>CarrierCode,,N,Y,Y,Y,20,Carrier Code</TOKEN>
+<TOKEN>ShipToStateProvince,,N,Y,Y,Y,2,Ship-To State Province</TOKEN>
+<TOKEN>CarrierAccountNumber,,N,Y,Y,Y,30,Carrier Account Number</TOKEN>
+<TOKEN>ShipToPostalCode,,N,Y,Y,Y,10,Ship-To Postal Code</TOKEN>
+<TOKEN>Reference,,N,Y,Y,Y,80,Reference</TOKEN>
+<TOKEN>ShipToCountryCode,,N,Y,Y,Y,2,Ship-To Country Code</TOKEN>
+<TOKEN>PublicCustomerNumber,,N,Y,Y,Y,8,Public Customer Number</TOKEN>
+</HEADER>
+<DETAIL>
+<TOKEN>LineNo,1,,,,N,3,Line Number</TOKEN>
+<TOKEN>MSPartNo,,Y,,,N,16,MS Part Number</TOKEN>
+<TOKEN>Qty,1,Y,,,N,6,Order Quantity</TOKEN>
+<TOKEN>BillingOption,,,,,N,2,Billing Option</TOKEN>
+<TOKEN>ProgramOffering,,,,,N,3,Offering Type</TOKEN>
+<TOKEN>UsageCountry,,Y,,,N,2,Usage Country</TOKEN>
+<TOKEN>CustomerRefNumber,,,,,N,30,Customer Ref Number</TOKEN>
+<TOKEN>SpecialDealsNumber,,N,,,N,10,Special Deals Number</TOKEN>
+<TOKEN>UnitType,,,,,N,2,Unit Type</TOKEN>
+<TOKEN>UnitQuantity,,,,,N,9,Unit Quantity</TOKEN>
+<TOKEN>ReferenceID,1,,,,N,10,Reference ID</TOKEN>
+
+</DETAIL>

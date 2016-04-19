@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:Microsoft.IT.Licensing.Services.Product.DataContract/2012/08" elementFormDefault="qualified" targetNamespace="urn:Microsoft.IT.Licensing.Services.Product.DataContract/2012/08" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="FilterType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Equal" />
+      <xs:enumeration value="NotEqual" />
+      <xs:enumeration value="StartWith" />
+      <xs:enumeration value="Contain" />
+      <xs:enumeration value="EndWith" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FilterType" nillable="true" type="tns:FilterType" />
+  <xs:simpleType name="OrderableAgreementAdditionalFilterName">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AgreementNumber" />
+      <xs:enumeration value="PCN" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OrderableAgreementAdditionalFilterName" nillable="true" type="tns:OrderableAgreementAdditionalFilterName" />
+  <xs:simpleType name="AgreementSearchSortingField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AgreementNumber" />
+      <xs:enumeration value="CustomerName" />
+      <xs:enumeration value="NextAnniversary" />
+      <xs:enumeration value="PCN" />
+      <xs:enumeration value="ProgramName" />
+      <xs:enumeration value="CustomerLocationName" />
+      <xs:enumeration value="QuickStartComplianceEndDate" />
+      <xs:enumeration value="ComplianceWindow" />
+      <xs:enumeration value="PriorYearComplianceStatus" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AgreementSearchSortingField" nillable="true" type="tns:AgreementSearchSortingField" />
+  <xs:simpleType name="SearchCriteriaName">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PartNumber" />
+      <xs:enumeration value="ItemName" />
+      <xs:enumeration value="ProductFamilyCode" />
+      <xs:enumeration value="ProductFamilyName" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SearchCriteriaName" nillable="true" type="tns:SearchCriteriaName" />
+  <xs:simpleType name="SearchType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="StartWith" />
+      <xs:enumeration value="Contain" />
+      <xs:enumeration value="Exact" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SearchType" nillable="true" type="tns:SearchType" />
+  <xs:simpleType name="ProductSearchSortingField">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PartNumber" />
+      <xs:enumeration value="ItemName" />
+      <xs:enumeration value="ProductFamilyName" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ProductSearchSortingField" nillable="true" type="tns:ProductSearchSortingField" />
+</xs:schema>

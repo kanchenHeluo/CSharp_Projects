@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" elementFormDefault="qualified" targetNamespace="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://mspaulilt.fareast.corp.microsoft.com/OrderService/DraftOrder.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder" />
+  <xs:import schemaLocation="http://mspaulilt.fareast.corp.microsoft.com/OrderService/DraftOrder.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://mspaulilt.fareast.corp.microsoft.com/OrderService/DraftOrder.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+  <xs:import schemaLocation="http://mspaulilt.fareast.corp.microsoft.com/OrderService/DraftOrder.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Request" />
+  <xs:complexType name="DeleteDraftOrderRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="IsSubmitted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PreviousLastModifiedDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteDraftOrderRequest" nillable="true" type="tns:DeleteDraftOrderRequest" />
+  <xs:complexType name="RequestBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SourceSystem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestBase" nillable="true" type="tns:RequestBase" />
+  <xs:complexType name="DeleteDraftOrderResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LockedByUser" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteDraftOrderResponse" nillable="true" type="tns:DeleteDraftOrderResponse" />
+  <xs:complexType name="ResponseBase">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder" minOccurs="0" name="AuditDetails" nillable="true" type="q1:AuditInfo" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="IssueId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseBase" nillable="true" type="tns:ResponseBase" />
+  <xs:complexType name="GetDraftOrderRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccessLevelRequested" type="tns:AccessLevel" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="PublicCustomerNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetDraftOrderRequest" nillable="true" type="tns:GetDraftOrderRequest" />
+  <xs:simpleType name="AccessLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ViewOnly" />
+      <xs:enumeration value="Resume" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AccessLevel" nillable="true" type="tns:AccessLevel" />
+  <xs:complexType name="DraftOrderResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActiveEligiblePOExists" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ActiveReconciliationPOExists" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AgreementId" type="xs:int" />
+          <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Comments" nillable="true" type="q2:ArrayOfstring" />
+          <xs:element minOccurs="0" name="CommentsCreatedDate" type="xs:dateTime" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System.IO" minOccurs="0" name="Content" nillable="true" type="q3:Stream" />
+          <xs:element minOccurs="0" name="DirectCustomerBusinessName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DirectCustomerNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndCustomerBusinessName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndCustomerPublicCustomerNumber" nillable="true" type="xs:string" />
+          <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtendedGetDraftOrder" nillable="true" type="q4:ArrayOfKeyValueOfstringstring" />
+          <xs:element minOccurs="0" name="InvalidEmailFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsAnnualOrder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsLocked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LockedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="POCentralSalesTaxValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SourceSystem" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DraftOrderResponse" nillable="true" type="tns:DraftOrderResponse" />
+  <xs:complexType name="GetDraftOrderPortalRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetDraftOrderPortalRequest" nillable="true" type="tns:GetDraftOrderPortalRequest" />
+  <xs:complexType name="DraftOrderPortalResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder" minOccurs="0" name="DraftOrderAttrs" nillable="true" type="q5:ArrayOfDraftOrderAttrs" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder" minOccurs="0" name="DraftOrderLineItem" nillable="true" type="q6:ArrayOfDraftOrderLineItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DraftOrderPortalResponse" nillable="true" type="tns:DraftOrderPortalResponse" />
+  <xs:complexType name="ListDraftOrdersRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedByUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PublicCustomerNumber" nillable="true" type="xs:string" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Request" minOccurs="0" name="SelectedListType" type="q7:ListType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ListDraftOrdersRequest" nillable="true" type="tns:ListDraftOrdersRequest" />
+  <xs:complexType name="ArrayOfDraftOrderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DraftOrderResponse" nillable="true" type="tns:DraftOrderResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDraftOrderResponse" nillable="true" type="tns:ArrayOfDraftOrderResponse" />
+  <xs:complexType name="SaveDraftOrderRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Action" type="tns:SaveDraftOrderAction" />
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder" minOccurs="0" name="Attributes" nillable="true" type="q8:DraftOrderAttributes" />
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/System.IO" minOccurs="0" name="DraftOrderData" nillable="true" type="q9:Stream" />
+          <xs:element minOccurs="0" name="FinishAndSend" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="InvalidPurchaseOrderComments" nillable="true" type="q10:ArrayOfstring" />
+          <xs:element minOccurs="0" name="InvalidPurchaseOrderId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveDraftOrderRequest" nillable="true" type="tns:SaveDraftOrderRequest" />
+  <xs:simpleType name="SaveDraftOrderAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SaveAndClose" />
+      <xs:enumeration value="SaveAndContinue" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SaveDraftOrderAction" nillable="true" type="tns:SaveDraftOrderAction" />
+  <xs:complexType name="SaveDraftOrderResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveDraftOrderResponse" nillable="true" type="tns:SaveDraftOrderResponse" />
+  <xs:complexType name="SaveDraftOrderPortalRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AssignedTo" nillable="true" type="xs:string" />
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder" minOccurs="0" name="DraftOrderAttributes" nillable="true" type="q11:DraftOrderAttrs" />
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder" minOccurs="0" name="DraftOrderLineItems" nillable="true" type="q12:ArrayOfDraftOrderLineItem" />
+          <xs:element minOccurs="0" name="LockedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LockedFlag" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveDraftOrderPortalRequest" nillable="true" type="tns:SaveDraftOrderPortalRequest" />
+  <xs:complexType name="SaveDraftOrderPortalResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveDraftOrderPortalResponse" nillable="true" type="tns:SaveDraftOrderPortalResponse" />
+  <xs:complexType name="ValidateDraftOrderPortalRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ValidateDraftOrderPortalRequest" nillable="true" type="tns:ValidateDraftOrderPortalRequest" />
+  <xs:complexType name="ValidateDraftOrderPortalResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ValidateDraftOrderPortalResponse" nillable="true" type="tns:ValidateDraftOrderPortalResponse" />
+  <xs:complexType name="DeleteDraftOrderPortalRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
+          <xs:element minOccurs="0" name="MaxLockMinutes" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteDraftOrderPortalRequest" nillable="true" type="tns:DeleteDraftOrderPortalRequest" />
+  <xs:complexType name="DeleteDraftOrderPortalResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LockedBy" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteDraftOrderPortalResponse" nillable="true" type="tns:DeleteDraftOrderPortalResponse" />
+  <xs:complexType name="SaveDraftOrderShipmentPortalRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CarrierAccountNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CarrierCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Shipment" nillable="true" type="tns:Shipment" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveDraftOrderShipmentPortalRequest" nillable="true" type="tns:SaveDraftOrderShipmentPortalRequest" />
+  <xs:complexType name="Shipment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgreementID" type="xs:int" />
+      <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorrespondenceLanguageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseProgramCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToAddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToAddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToAddressLine3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToAddressLine4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToContactEMailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToContactFaxNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToContactPhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToId" type="xs:int" />
+      <xs:element minOccurs="0" name="ShipToLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToOrganizationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToPartnerNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToPostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShipToStateProvince" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Shipment" nillable="true" type="tns:Shipment" />
+  <xs:complexType name="SaveDraftOrderShipmentPortalResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ShipToId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveDraftOrderShipmentPortalResponse" nillable="true" type="tns:SaveDraftOrderShipmentPortalResponse" />
+  <xs:complexType name="SaveShipmentPortalRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Shipment" nillable="true" type="tns:Shipment" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveShipmentPortalRequest" nillable="true" type="tns:SaveShipmentPortalRequest" />
+  <xs:complexType name="SaveShipmentPortalResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ShipToId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveShipmentPortalResponse" nillable="true" type="tns:SaveShipmentPortalResponse" />
+  <xs:complexType name="DeleteShipmentPortalRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ShipToId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteShipmentPortalRequest" nillable="true" type="tns:DeleteShipmentPortalRequest" />
+  <xs:complexType name="DeleteShipmentPortalResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ShipToId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteShipmentPortalResponse" nillable="true" type="tns:DeleteShipmentPortalResponse" />
+  <xs:complexType name="GetDraftOrderShipmentsPortalRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AgreementId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetDraftOrderShipmentsPortalRequest" nillable="true" type="tns:GetDraftOrderShipmentsPortalRequest" />
+  <xs:complexType name="GetDraftOrderShipmentsPortalResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Shipments" nillable="true" type="tns:ArrayOfShipment" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetDraftOrderShipmentsPortalResponse" nillable="true" type="tns:GetDraftOrderShipmentsPortalResponse" />
+  <xs:complexType name="ArrayOfShipment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Shipment" nillable="true" type="tns:Shipment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShipment" nillable="true" type="tns:ArrayOfShipment" />
+</xs:schema>

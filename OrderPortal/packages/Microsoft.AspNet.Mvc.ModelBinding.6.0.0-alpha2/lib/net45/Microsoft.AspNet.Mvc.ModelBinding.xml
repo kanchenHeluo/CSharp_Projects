@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.AspNet.Mvc.ModelBinding</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.AspNet.Mvc.ModelBinding.CompositeModelBinder">
+            <summary>
+            This class is an <see cref="T:Microsoft.AspNet.Mvc.ModelBinding.IModelBinder"/> that delegates to one of a collection of
+            <see cref="T:Microsoft.AspNet.Mvc.ModelBinding.IModelBinder"/> instances.
+            </summary>
+            <remarks>
+            If no binder is available and the <see cref="T:Microsoft.AspNet.Mvc.ModelBinding.ModelBindingContext"/> allows it,
+            this class tries to find a binder using an empty prefix.
+            </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Microsoft.AspNet.Mvc.ModelBinding.GenericModelBinder.GetGenericBinderType(System.Type,System.Type,System.Type,System.Type)" -->
+        <member name="T:Microsoft.AspNet.Mvc.ModelBinding.IModelBinder">
+            <summary>
+            Interface for model binding.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.IInputFormatter.SupportedMediaTypes">
+            <summary>
+            Gets the mutable collection of media types supported by this <see cref="T:Microsoft.AspNet.Mvc.ModelBinding.JsonInputFormatter"/> instance.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.IInputFormatter.SupportedEncodings">
+            <summary>
+            Gets the mutable collection of character encodings supported by this <see cref="T:Microsoft.AspNet.Mvc.ModelBinding.JsonInputFormatter"/> 
+            instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.IInputFormatter.ReadAsync(Microsoft.AspNet.Mvc.ModelBinding.InputFormatterContext)">
+            <summary>
+            Called during deserialization to read an object from the request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.JsonInputFormatter.SupportedMediaTypes">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.JsonInputFormatter.SupportedEncodings">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.JsonInputFormatter.SerializerSettings">
+            <summary>
+            Gets or sets the <see cref="T:Newtonsoft.Json.JsonSerializerSettings"/> used to configure the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.JsonInputFormatter.CaptureDeserilizationErrors">
+            <summary>
+            Gets or sets if deserialization errors are captured. When set, these errors appear in 
+            the <see cref="T:Microsoft.AspNet.Mvc.ModelBinding.ModelStateDictionary"/> instance of <see cref="T:Microsoft.AspNet.Mvc.ModelBinding.InputFormatterContext"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.JsonInputFormatter.ReadAsync(Microsoft.AspNet.Mvc.ModelBinding.InputFormatterContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.JsonInputFormatter.CreateJsonReader(Microsoft.AspNet.Mvc.ModelBinding.InputFormatterContext,System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            Called during deserialization to get the <see cref="T:Newtonsoft.Json.JsonReader"/>.
+            </summary>
+            <param name="context">The <see cref="T:Microsoft.AspNet.Mvc.ModelBinding.InputFormatterContext"/> for the read.</param>
+            <param name="readStream">The <see cref="T:System.IO.Stream"/> from which to read.</param>
+            <param name="effectiveEncoding">The <see cref="T:System.Text.Encoding"/> to use when reading.</param>
+            <returns>The <see cref="T:Newtonsoft.Json.JsonReader"/> used during deserialization.</returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.JsonInputFormatter.CreateJsonSerializer">
+            <summary>
+            Called during deserialization to get the <see cref="T:Newtonsoft.Json.JsonSerializer"/>.
+            </summary>
+            <returns>The <see cref="T:Newtonsoft.Json.JsonSerializer"/> used during serialization and deserialization.</returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Internal.CollectionExtensions.ToArrayWithoutNulls``1(System.Collections.Generic.ICollection{``0})">
+            <summary>
+            Convert an ICollection to an array, removing null values. Fast path for case where 
+            there are no null values.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Mvc.ModelBinding.Internal.PrefixContainer">
+            <summary>
+            This is a container for prefix values. It normalizes all the values into dotted-form and then stores
+            them in a sorted array. All queries for prefixes are also normalized to dotted-form, and searches
+            for ContainsPrefix are done with a binary search.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.ModelMetadata.RealModelType">
+            <returns>
+            Gets TModel if ModelType is Nullable{TModel}, ModelType otherwise.
+            </returns>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.ArgumentCannotBeNullOrEmpty">
+            <summary>
+            The value cannot be null or empty.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatArgumentCannotBeNullOrEmpty">
+            <summary>
+            The value cannot be null or empty.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.Common_PropertyNotFound">
+            <summary>
+            The property {0}.{1} could not be found.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatCommon_PropertyNotFound(System.Object,System.Object)">
+            <summary>
+            The property {0}.{1} could not be found.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.DataAnnotationsModelValidatorProvider_ConstructorRequirements">
+            <summary>
+            The type '{0}' must have a public constructor which accepts a single parameter of type '{1}'.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatDataAnnotationsModelValidatorProvider_ConstructorRequirements(System.Object,System.Object)">
+            <summary>
+            The type '{0}' must have a public constructor which accepts a single parameter of type '{1}'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.JQuerySyntaxMissingClosingBracket">
+            <summary>
+            The key is invalid JQuery syntax because it is missing a closing bracket.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatJQuerySyntaxMissingClosingBracket">
+            <summary>
+            The key is invalid JQuery syntax because it is missing a closing bracket.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.MediaTypeFormatterNoEncoding">
+            <summary>
+            No encoding found for input formatter '{0}'. There must be at least one supported encoding registered in order for the formatter to read content.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatMediaTypeFormatterNoEncoding(System.Object)">
+            <summary>
+            No encoding found for input formatter '{0}'. There must be at least one supported encoding registered in order for the formatter to read content.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.MissingDataMemberIsRequired">
+            <summary>
+            Property '{0}' on type '{1}' is invalid. Value-typed properties marked as [Required] must also be marked with [DataMember(IsRequired=true)] to be recognized as required. Consider attributing the declaring type with [DataContract] and the property with [DataMember(IsRequired=true)].
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatMissingDataMemberIsRequired(System.Object,System.Object)">
+            <summary>
+            Property '{0}' on type '{1}' is invalid. Value-typed properties marked as [Required] must also be marked with [DataMember(IsRequired=true)] to be recognized as required. Consider attributing the declaring type with [DataContract] and the property with [DataMember(IsRequired=true)].
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.MissingRequiredMember">
+            <summary>
+            The '{0}' property is required.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatMissingRequiredMember(System.Object)">
+            <summary>
+            The '{0}' property is required.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.ModelBinderConfig_ValueInvalid">
+            <summary>
+            The value '{0}' is not valid for {1}.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatModelBinderConfig_ValueInvalid(System.Object,System.Object)">
+            <summary>
+            The value '{0}' is not valid for {1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.ModelBinderConfig_ValueRequired">
+            <summary>
+            A value is required.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatModelBinderConfig_ValueRequired">
+            <summary>
+            A value is required.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.ModelBinderUtil_ModelCannotBeNull">
+            <summary>
+            The binding context has a null Model, but this binder requires a non-null model of type '{0}'.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatModelBinderUtil_ModelCannotBeNull(System.Object)">
+            <summary>
+            The binding context has a null Model, but this binder requires a non-null model of type '{0}'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.ModelBinderUtil_ModelInstanceIsWrong">
+            <summary>
+            The binding context has a Model of type '{0}', but this binder can only operate on models of type '{1}'.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatModelBinderUtil_ModelInstanceIsWrong(System.Object,System.Object)">
+            <summary>
+            The binding context has a Model of type '{0}', but this binder can only operate on models of type '{1}'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.ModelBinderUtil_ModelMetadataCannotBeNull">
+            <summary>
+            The binding context cannot have a null ModelMetadata.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatModelBinderUtil_ModelMetadataCannotBeNull">
+            <summary>
+            The binding context cannot have a null ModelMetadata.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.ModelBinderUtil_ModelTypeIsWrong">
+            <summary>
+            The binding context has a ModelType of '{0}', but this binder can only operate on models of type '{1}'.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatModelBinderUtil_ModelTypeIsWrong(System.Object,System.Object)">
+            <summary>
+            The binding context has a ModelType of '{0}', but this binder can only operate on models of type '{1}'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.ModelBindingContext_ModelMetadataMustBeSet">
+            <summary>
+            The ModelMetadata property must be set before accessing this property.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatModelBindingContext_ModelMetadataMustBeSet">
+            <summary>
+            The ModelMetadata property must be set before accessing this property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.TypeMustDeriveFromType">
+            <summary>
+            The type '{0}' must derive from '{1}'.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatTypeMustDeriveFromType(System.Object,System.Object)">
+            <summary>
+            The type '{0}' must derive from '{1}'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.ValidatableObjectAdapter_IncompatibleType">
+            <summary>
+            The model object inside the metadata claimed to be compatible with '{0}', but was actually '{1}'.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatValidatableObjectAdapter_IncompatibleType(System.Object,System.Object)">
+            <summary>
+            The model object inside the metadata claimed to be compatible with '{0}', but was actually '{1}'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.ValidationAttributeOnField">
+            <summary>
+            Field '{0}' on type '{1}' is attributed with one or more validation attributes. Validation attributes on fields are not supported. Consider using a public property for validation instead.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatValidationAttributeOnField(System.Object,System.Object)">
+            <summary>
+            Field '{0}' on type '{1}' is attributed with one or more validation attributes. Validation attributes on fields are not supported. Consider using a public property for validation instead.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.ValidationAttributeOnNonPublicProperty">
+            <summary>
+            Non-public property '{0}' on type '{1}' is attributed with one or more validation attributes. Validation attributes on non-public properties are not supported. Consider using a public property for validation instead.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatValidationAttributeOnNonPublicProperty(System.Object,System.Object)">
+            <summary>
+            Non-public property '{0}' on type '{1}' is attributed with one or more validation attributes. Validation attributes on non-public properties are not supported. Consider using a public property for validation instead.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.Validation_InvalidFieldCannotBeReset">
+            <summary>
+            A field previously marked invalid should not be marked valid.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatValidation_InvalidFieldCannotBeReset">
+            <summary>
+            A field previously marked invalid should not be marked valid.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.Validation_ValueNotFound">
+            <summary>
+            A value is required but was not present in the request.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatValidation_ValueNotFound">
+            <summary>
+            A value is required but was not present in the request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.ValueProviderResult_CannotConvertEnum">
+            <summary>
+            Cannot convert value '{0}' to enum type '{1}'.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatValueProviderResult_CannotConvertEnum(System.Object,System.Object)">
+            <summary>
+            Cannot convert value '{0}' to enum type '{1}'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.ValueProviderResult_ConversionThrew">
+            <summary>
+            The parameter conversion from type '{0}' to type '{1}' failed. See the inner exception for more information.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatValueProviderResult_ConversionThrew(System.Object,System.Object)">
+            <summary>
+            The parameter conversion from type '{0}' to type '{1}' failed. See the inner exception for more information.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.ValueProviderResult_NoConverterExists">
+            <summary>
+            The parameter conversion from type '{0}' to type '{1}' failed because no type converter can convert between these types.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatValueProviderResult_NoConverterExists(System.Object,System.Object)">
+            <summary>
+            The parameter conversion from type '{0}' to type '{1}' failed because no type converter can convert between these types.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.DataAnnotationsModelMetadataProvider_UnknownProperty">
+            <summary>
+            {0} has a DisplayColumn attribute for {1}, but property {1} does not exist.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatDataAnnotationsModelMetadataProvider_UnknownProperty(System.Object,System.Object)">
+            <summary>
+            {0} has a DisplayColumn attribute for {1}, but property {1} does not exist.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.Resources.DataAnnotationsModelMetadataProvider_UnreadableProperty">
+            <summary>
+            {0} has a DisplayColumn attribute for {1}, but property {1} does not have a public 'get' method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.Resources.FormatDataAnnotationsModelMetadataProvider_UnreadableProperty(System.Object,System.Object)">
+            <summary>
+            {0} has a DisplayColumn attribute for {1}, but property {1} does not have a public 'get' method.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Mvc.ModelBinding.DataAnnotationsModelValidatorProvider">
+            <summary>
+            An implementation of <see cref="!:ModelValidatorProvider"/> which providers validators
+            for attributes which derive from <see cref="T:System.ComponentModel.DataAnnotations.ValidationAttribute"/>. It also provides
+            a validator for types which implement <see cref="T:System.ComponentModel.DataAnnotations.IValidatableObject"/>. To support
+            client side validation, you can either register adapters through the static methods
+            on this class, or by having your validation attributes implement
+            <see cref="!:IClientValidatable"/>. The logic to support IClientValidatable
+            is implemented in <see cref="T:Microsoft.AspNet.Mvc.ModelBinding.DataAnnotationsModelValidator"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Mvc.ModelBinding.DataMemberModelValidatorProvider">
+            <summary>
+            This <see cref="!:ModelValidatorProvider"/> provides a required ModelValidator for members marked
+            as [DataMember(IsRequired=true)].
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Mvc.ModelBinding.DataTypeAttributeAdapter">
+            <summary>
+            A validation adapter that is used to map <see cref="T:System.ComponentModel.DataAnnotations.DataTypeAttribute"/>'s to a single client side validation 
+            rule.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Mvc.ModelBinding.ErrorModelValidator">
+            <summary>
+            A <see cref="T:Microsoft.AspNet.Mvc.ModelBinding.IModelValidator"/> to represent an error. This validator will always throw an exception regardless 
+            of the actual model value.
+            This is used to perform meta-validation - that is to verify the validation attributes make sense.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Mvc.ModelBinding.ModelClientValidationEqualToRule">
+            <summary>
+            Represents client side validation rule that determines if two values are equal.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Mvc.ModelBinding.ModelClientValidationRule.ValidationType">
+            <summary>
+            Identifier of the <see cref="T:Microsoft.AspNet.Mvc.ModelBinding.ModelClientValidationRule"/>. If client-side unobtrustive validation is
+            enabled, use this <see langref="string"/> as part of the generated "data-val" attribute name. Must be
+            unique in the set of enabled validation rules.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.IValueProviderFactory.GetValueProvider(Microsoft.AspNet.Mvc.ModelBinding.ValueProviderFactoryContext)">
+            <summary>
+            Get a value provider with values from the given <paramref name="requestContext"/>.
+            </summary>
+            <param name="context">ValueProviderFactoryContext that value provider will populate from</param>
+            <returns>a value provider instance or null</returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Mvc.ModelBinding.IValueProvider">
+            <summary>
+            Defines the methods that are required for a value provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.IValueProvider.ContainsPrefixAsync(System.String)">
+            <summary>
+            Determines whether the collection contains the specified prefix.
+            </summary>
+            <param name="prefix">The prefix to search for.</param>
+            <returns>true if the collection contains the specified prefix; otherwise, false.</returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.IValueProvider.GetValueAsync(System.String)">
+            <summary>
+            Retrieves a value object using the specified key.
+            </summary>
+            <param name="key">The key of the value object to retrieve.</param>
+            <returns>The value object for the specified key. If the exact key is not found, null.</returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Mvc.ModelBinding.ReadableStringCollectionValueProvider.#ctor(Microsoft.AspNet.Http.IReadableStringCollection,System.Globalization.CultureInfo)">
+            <summary>
+            Creates a NameValuePairsProvider wrapping an existing set of key value pairs.
+            </summary>
+            <param name="values">The key value pairs to wrap.</param>
+            <param name="culture">The culture to return with ValueProviderResult instances.</param>
+        </member>
+    </members>
+</doc>

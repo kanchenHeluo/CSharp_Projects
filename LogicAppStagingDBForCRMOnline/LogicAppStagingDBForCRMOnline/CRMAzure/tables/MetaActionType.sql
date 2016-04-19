@@ -1,0 +1,6 @@
+﻿CREATE TABLE [CRMAzure].[MetaActionType]
+(
+	[Id] INT NOT NULL, 
+    [Name] VARCHAR(255) NOT NULL,
+	CONSTRAINT [PK_MetaActionType_Id] PRIMARY KEY CLUSTERED ([Id] ASC)
+)

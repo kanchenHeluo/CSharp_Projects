@@ -1,0 +1,42 @@
+﻿<op-slide-in title="Preferences" ng-open="userPreferenceDialogStatus.isOpen" ng-on-close="savePreference()">
+    <h3>User Settings</h3>
+    <div>
+        <div>
+            <label class="ms-stdlabel">Display Lanuage</label>
+            <div style="margin-left:15px; padding-top: 5px">
+                <input id="lang-zh-cn" name="lang" type="radio" value="zh-cn" ng-model="userPreference.Language" /><label for="lang-zh-cn">Chinese (People's Republic Of China)</label><br />
+                <input id="lang-zh-tw" name="lang" type="radio" value="zh-tw" ng-model="userPreference.Language" /><label for="lang-zh-tw">Chinese (Taiwan)</label><br />
+                <input id="lang-en-us" name="lang" type="radio" value="en-us" ng-model="userPreference.Language" /><label for="lang-en-us">English (United States)</label><br />
+                <input id="lang-fr" name="lang" type="radio" value="fr" ng-model="userPreference.Language" /><label for="lang-fr">French (France)</label><br />
+                <input id="lang-de" name="lang" type="radio" value="de" ng-model="userPreference.Language" /><label for="lang-de">German (Germany)</label><br />
+                <input id="lang-ja" name="lang" type="radio" value="ja" ng-model="userPreference.Language" /><label for="lang-ja">Japanese (Japan)</label><br />
+                <input id="lang-ko" name="lang" type="radio" value="ko" ng-model="userPreference.Language" /><label for="lang-ko">Korean (Korea)</label><br />
+                <input id="lang-pt-br" name="lang" type="radio" value="pt-br" ng-model="userPreference.Language" /><label for="lang-pt-br">Portuguese (Brazil)</label><br />
+                <input id="lang-ru" name="lang" type="radio" value="ru" ng-model="userPreference.Language" /><label for="lang-ru">Russian (Russia)</label><br />
+                <input id="lang-es-mx" name="lang" type="radio" value="es-mx" ng-model="userPreference.Language" /><label for="lang-es-mx">Spanish (Mexico)</label>
+            </div>
+        </div>
+
+        <div style="height:20px"></div>
+        <div>
+            <label class="ms-stdlabel">Address Format</label>
+            <div style="margin-left:15px; padding-top: 5px">
+                <input id="addr-ko" name="addr" type="radio" value="ko" ng-model="userPreference.AddressFormat" /><label for="addr-ko">Korean Address Format</label><br />
+                <input id="addr-ja" name="addr" type="radio" value="ja" ng-model="userPreference.AddressFormat" /><label for="addr-ja">Japanese Address Format</label><br />
+                <input id="addr-en-us" name="addr" type="radio" value="en-us" ng-model="userPreference.AddressFormat" /><label for="addr-en-us">US Address Format</label><br />
+            </div>
+        </div>
+
+        <div style="height:20px"></div>
+        <div>
+            <label class="ms-stdlabel">Date Format</label>
+            <div style="margin-left:15px; padding-top: 5px">
+                <input id="date-1" name="date" type="radio" value="MM/DD/YYYY" ng-model="userPreference.DateFormat" /><label for="date-1">MM/DD/YYYY</label><br />
+                <input id="date-2" name="date" type="radio" value="YYYY-MM-DD" ng-model="userPreference.DateFormat" /><label for="date-2">YYYY-MM-DD</label><br />
+                <input id="date-3" name="date" type="radio" value="YYYY/MM/DD" ng-model="userPreference.DateFormat" /><label for="date-3">YYYY/MM/DD</label><br />
+                <input id="date-4" name="date" type="radio" value="DD-MM-YYYY" ng-model="userPreference.DateFormat" /><label for="date-4">DD-MM-YYYY</label><br />
+            </div>
+        </div>
+    </div>
+
+</op-slide-in>

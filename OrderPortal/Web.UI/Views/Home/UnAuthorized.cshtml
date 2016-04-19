@@ -1,0 +1,13 @@
+﻿@using Web.UI.Common
+@{
+    ViewBag.Title = "UnAuthorized";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="homecontent">
+    <h2>UnAuthorized</h2>
+          
+        <div class="unauthorized">
+            You do not have the appropriate permissions to access this site. Please contact support. <a href=@Url.SignOut() title="Sign Out">Sign out</a>
+        </div>
+    
+</div>

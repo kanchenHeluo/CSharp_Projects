@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Response" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://mspaulilt.fareast.corp.microsoft.com/OrderService/DraftOrder.svc?xsd=xsd4" namespace="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" />
+  <xs:complexType name="UnlockDraftOrderResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" base="q1:ResponseBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UnlockDraftOrderResponse" nillable="true" type="tns:UnlockDraftOrderResponse" />
+  <xs:complexType name="UnlockDraftOrderPortalResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" base="q2:ResponseBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UnlockDraftOrderPortalResponse" nillable="true" type="tns:UnlockDraftOrderPortalResponse" />
+  <xs:complexType name="LockDraftOrderPortalResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" base="q3:ResponseBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LockDraftOrderPortalResponse" nillable="true" type="tns:LockDraftOrderPortalResponse" />
+</xs:schema>

@@ -1,0 +1,47 @@
+﻿.ms-formblock{
+	display:inline-block;
+	border: 1px solid transparent;
+	width:18rem;
+	min-width:18rem;
+	margin:0 1rem 1rem;
+	font-size:0;
+}
+
+.ms-formblock>.required:first-child:before{
+	padding:0;
+	margin-right:.25rem;
+}
+
+.ms-formblock>label:first-child{
+	white-space:normal;
+	margin-bottom:1rem;
+}
+
+.ms-formblock>label>.symbol{
+	font-size:1.4rem;
+	color:#666;
+	text-decoration:none;
+	margin:0;
+	padding:0;
+	margin-left:-.02rem;
+	vertical-align:text-top;
+	height:1.4rem;
+}
+
+.ms-formblock>label:first-child,
+.ms-formblock>input,
+.ms-formblock>select{
+	vertical-align:bottom;
+	display:block;
+	width:100%;
+	max-width:100%;
+}
+
+.ms-formblock>input[type=checkbox],
+.ms-formblock>input[type=radio],
+.ms-formblock>input[type=submit],
+.ms-formblock>input[type=button]
+{
+	display:inline-block;
+	width:auto;
+}

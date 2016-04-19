@@ -1,0 +1,14 @@
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\FallBackTool.Producer\bin\Debug\FallBackTool.Producer.dll.config
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\FallBackTool.Producer\bin\Debug\FallBackTool.Producer.dll
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\FallBackTool.Producer\bin\Debug\FallBackTool.Producer.pdb
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\FallBackTool.Producer\bin\Debug\FallBackTool.Converter.dll
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\FallBackTool.Producer\bin\Debug\log4net.dll
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\FallBackTool.Producer\bin\Debug\AutoMapper.dll
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\FallBackTool.Producer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\FallBackTool.Producer\bin\Debug\FallBackTool.Converter.pdb
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\FallBackTool.Producer\bin\Debug\log4net.xml
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\FallBackTool.Producer\bin\Debug\AutoMapper.xml
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\FallBackTool.Producer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\FallBackTool.Producer\obj\Debug\FallBackTool.Producer.csprojResolveAssemblyReference.cache
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\FallBackTool.Producer\obj\Debug\FallBackTool.Producer.dll
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\FallBackTool.Producer\obj\Debug\FallBackTool.Producer.pdb

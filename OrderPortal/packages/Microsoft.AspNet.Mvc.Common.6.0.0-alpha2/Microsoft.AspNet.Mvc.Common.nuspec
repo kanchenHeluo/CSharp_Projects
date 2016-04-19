@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.Mvc.Common</id>
+    <version>6.0.0-alpha2</version>
+    <title>Microsoft.AspNet.Mvc.Common</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Microsoft.AspNet.Mvc.Common</description>
+    <dependencies>
+      <group targetFramework="K1.0">
+        <dependency id="System.Linq" version="4.0.0.0" />
+        <dependency id="System.Reflection" version="4.0.10.0" />
+        <dependency id="System.Runtime" version="4.0.20.0" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Linq" targetFramework=".NETFramework4.5" />
+      <frameworkAssembly assemblyName="System.Reflection" targetFramework=".NETFramework4.5" />
+      <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.5" />
+    </frameworkAssemblies>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm</licenseUrl>
+  </metadata>
+</package>

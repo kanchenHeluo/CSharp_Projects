@@ -1,0 +1,6 @@
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\Observer\bin\Debug\Observer.exe.config
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\Observer\bin\Debug\Observer.exe
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\Observer\bin\Debug\Observer.pdb
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\Observer\obj\Debug\Observer.exe
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\Observer\obj\Debug\Observer.pdb
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\Observer\obj\Debug\Observer.csprojResolveAssemblyReference.cache

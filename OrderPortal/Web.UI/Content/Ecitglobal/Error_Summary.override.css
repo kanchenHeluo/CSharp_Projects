@@ -1,0 +1,12 @@
+﻿.validation-summary-errors ul li {
+	margin: 0 0 10px 0;
+	list-style-position: inside;
+	list-style-type: disc;
+	text-indent: 15px;
+	padding: 0 0 0 17px;
+}
+
+	.validation-summary-errors span:after {
+		content: "";
+		font-weight: bold;
+	}

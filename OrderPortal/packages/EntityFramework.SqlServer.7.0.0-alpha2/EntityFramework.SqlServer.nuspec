@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>EntityFramework.SqlServer</id>
+    <version>7.0.0-alpha2</version>
+    <title>EntityFramework.SqlServer</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>EntityFramework.SqlServer</description>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.1">
+        <dependency id="EntityFramework.Migrations" version="7.0.0-alpha2" />
+        <dependency id="System.Data.SqlClient" version="1.0.0-alpha2" />
+      </group>
+      <group targetFramework="K1.0">
+        <dependency id="EntityFramework.Migrations" version="7.0.0-alpha2" />
+        <dependency id="System.Data.SqlClient" version="1.0.0-alpha2" />
+      </group>
+    </dependencies>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm</licenseUrl>
+  </metadata>
+</package>

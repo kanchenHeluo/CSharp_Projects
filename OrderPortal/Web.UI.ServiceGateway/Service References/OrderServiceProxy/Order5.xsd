@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Entity.Order" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Entity.Order" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://v-arra-0515.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfCustomerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerInfo" nillable="true" type="tns:CustomerInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerInfo" nillable="true" type="tns:ArrayOfCustomerInfo" />
+  <xs:complexType name="CustomerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrgGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="ParticipantType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PublicNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerInfo" nillable="true" type="tns:CustomerInfo" />
+  <xs:simpleType name="CALTypeId">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="ECAL">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="CCAL">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="CALTypeId" nillable="true" type="tns:CALTypeId" />
+  <xs:simpleType name="PFAMIdentity">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Office">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="Intune">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="OfficeIntune">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="All">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="PFAMIdentity" nillable="true" type="tns:PFAMIdentity" />
+  <xs:complexType name="ArrayOfAdjustedRefPOLineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdjustedRefPOLineItem" nillable="true" type="tns:AdjustedRefPOLineItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdjustedRefPOLineItem" nillable="true" type="tns:ArrayOfAdjustedRefPOLineItem" />
+  <xs:complexType name="AdjustedRefPOLineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QuantityConsumed" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RefPOLineItemID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdjustedRefPOLineItem" nillable="true" type="tns:AdjustedRefPOLineItem" />
+  <xs:complexType name="ArrayOfVLSalesOrderLineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VLSalesOrderLineItem" nillable="true" type="tns:VLSalesOrderLineItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVLSalesOrderLineItem" nillable="true" type="tns:ArrayOfVLSalesOrderLineItem" />
+  <xs:complexType name="VLSalesOrderLineItem">
+    <xs:sequence>
+      <xs:element name="_x003C_AdjustmentReasonCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_AdjustmentReasonName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BillOnDate_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_BillingExtractStatusCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_BillingMultiplierPrice_x003E_k__BackingField" nillable="true" type="xs:double" />
+      <xs:element name="_x003C_BillingMultiplier_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_BillingTypeCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ExpectedAmount_x003E_k__BackingField" nillable="true" type="xs:double" />
+      <xs:element name="_x003C_ExtendedAmount_x003E_k__BackingField" nillable="true" type="xs:double" />
+      <xs:element name="_x003C_ExtractedOnDate_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_GenerationTypeCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_InvoiceCurrencyCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_InvoiceDate_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_InvoiceLineItemNumber_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_InvoiceNumber_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_InvoiceQuantity_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_InvoiceTotalAmount_x003E_k__BackingField" nillable="true" type="xs:double" />
+      <xs:element name="_x003C_InvoiceUnitPrice_x003E_k__BackingField" nillable="true" type="xs:double" />
+      <xs:element name="_x003C_ItemID_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_ItemName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LCPDispositionCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_LastModifiedDate_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_LineItemHistorySeqNumber_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_MaintenanceBilledPeriodEndDate_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_MaintenanceBilledPeriodId_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_MaintenanceBilledPeriodStartDate_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_ModifiedByUser_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PartNumber_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PricingPeriodDate_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_ProductTypeCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Quantity_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_ReBillPurchaseOrderNumber_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ReceivedDate_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_RevenueTransactionTypeCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_RevenueTransactionTypeName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_RmaNumber_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_SalesOrderId_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_SalesOrderLineItemId_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_SalesOrderLineItemStatusCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_SalesOrderLineItemStatusDate_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_SystemPrice_x003E_k__BackingField" nillable="true" type="xs:double" />
+      <xs:element name="_x003C_UsageCountryCode_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_UsagePeriodDate_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_UsedPrice_x003E_k__BackingField" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VLSalesOrderLineItem" nillable="true" type="tns:VLSalesOrderLineItem" />
+</xs:schema>

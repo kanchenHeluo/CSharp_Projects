@@ -1,0 +1,24 @@
+﻿textarea{
+    resize: none;
+    overflow:auto;
+}
+
+textarea.large{
+    min-width:56rem;
+    min-height:10rem;
+}
+
+textarea.small{
+    width:100%;
+    /*min-width:28rem;*/
+    min-height:8.6rem;
+}
+
+.ms-stdlabel{
+    text-transform:none;
+}
+
+.ms-stdinput.error,
+.ms-stddroplist.error {
+    border-color: #E81123;
+}

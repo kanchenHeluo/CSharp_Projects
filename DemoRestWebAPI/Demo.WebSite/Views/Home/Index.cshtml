@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div ng-controller="demoCtrl">
+    <div class="jumbotron">
+        <h1>Demo Web Site</h1>
+        <p class="lead">Call Restful API with authentication.</p>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Get Purchase Order:</h4>
+            <br />
+            <label>Purchase Order Id:</label>
+            <input type="text" ng-model="searchPo_PoId"/>
+            <br />
+            <input type="button" value="get" ng-click="getPurchaseOrder()"/>
+        </div>
+        <div class="col-md-4">
+            <h4>Get Purchase Order LineItem:</h4>
+            <br />
+            <label>Purchase Order Id:</label>
+            <input type="text" ng-model="searchPoLi_PoId" />
+            <br />
+            <label>LineItem Id:</label>
+            <input type="text" ng-model="searchPoLi_LiId" />
+            <br />
+            <input type="button" value="get" ng-click="getPurchaseOrderLineItem()" />
+        </div>
+
+        <div class="col-md-4">
+            <h4>Result:</h4>
+            <table>
+                <thead>
+                    <th>PurchaseOrder ID</th>
+                    <th>PurchaseOrder Status</th>
+                    <th>PurchaseOrder LineItem ID</th>
+                    <th>PurchaseOrder LineItem Name</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in results">
+                        <td>{{item.PoId}}</td>
+                        <td>{{item.OrderStatus}}</td>
+                        <!--<tr ng-repeat ="lineitem in item.lineitems">-->
+                        <td>{{item.ItemId}}</td>
+                        <td>{{item.ItemName}}</td>
+                        
+                    </tr>
+                </tbody>                
+            </table>
+         </div>
+    </div>
+</div>

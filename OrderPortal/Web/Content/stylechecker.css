@@ -1,0 +1,169 @@
+﻿
+@color: red;
+
+.cr {
+    border: 2px solid !important;
+    border-color: @color !important;
+    display:block;   
+    border-color:transparent;
+    border-style:solid;
+}
+
+
+.crtext 
+{
+   position: absolute;  
+   z-index:5000;
+    display:block;
+    visibility:visible;  
+    line-height:1.4;  
+  visibility: hidden;  
+  font-weight:bolder;
+  background-color:antiquewhite;
+ color:red;
+ margin-top:-43px;	
+	border: 4px solid #c2e1f5;
+}
+
+.crtext:before {  
+ content:"";
+  position: absolute; 
+  visibility: hidden;
+  margin-left: -36px;  
+}  
+  
+.crtext:after {  
+  content: attr(content);  
+  -webkit-border-radius: 2px;  
+  -moz-border-radius: 2px;  
+  border-radius: 2px;  
+  white-space: nowrap;  
+  visibility: hidden;   
+  pointer-events: none;
+  margin-left: -30px;
+}
+  [style],[onclick],[onblur],[onfocus],[onchange],img:not([alt]),table
+  {
+ &:hover:before,&:hover:after
+     {
+     visibility: visible;  
+  -webkit-transition: visibility 0s linear .3s;  
+  -moz-transition: visibility 0s linear .3s;  
+  -o-transition: visibility 0s linear .3s;  
+  transition: visibility 0s linear .3s;   
+ }
+      }
+
+[style] {
+    .cr;
+     &:after
+      {
+     .crtext;  
+       content:"   Do not use inline style,Define the style in css";
+   }
+}
+
+[onclick],[onblur],[onfocus],[onchange]
+{
+    .cr;     
+   &:after
+      {
+    .crtext;  
+       content:"   Do not use inline events";
+   }
+}
+
+img:not([alt]) {
+    .cr;
+     &:after
+      {
+    .crtext;  
+       content:"   Img attribute should have alt";
+   }
+}
+[bgcolor]
+{
+    .cr;
+
+}
+div[align], p[align] {
+    .cr;
+}
+
+body[alink], body[background],body[text] {
+    .cr;
+}
+
+br {
+    .cr;
+}
+
+table {
+    .cr;
+     &:after
+      {
+    .crtext;  
+       content:"Use div layout instead of table";
+   }
+}
+
+[vspace] {
+    .cr;
+}
+
+img[border] {
+    .cr;
+}
+
+hr {
+    .cr;
+}
+
+basefont {
+    .cr;
+}
+
+center {
+    .cr;
+}
+
+dir {
+    .cr;
+}
+
+font {
+    .cr;
+}
+
+menu {
+    .cr;
+}
+
+u {
+    .cr;
+}
+
+strike {
+    .cr;
+}
+
+s {
+    .cr;
+}
+layer
+{
+    .cr;
+}
+
+color
+{
+    .cr;
+}
+
+b
+{.cr;}
+
+blockquote
+{
+    .cr;
+}

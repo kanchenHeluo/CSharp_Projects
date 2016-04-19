@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:Microsoft.IT.Licensing.Services.Order/2012/08" elementFormDefault="qualified" targetNamespace="urn:Microsoft.IT.Licensing.Services.Order/2012/08" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd2" namespace="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" />
+  <xs:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" />
+  <xs:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts.Requests.UserPreference" />
+  <xs:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts.Responses.UserPreference" />
+  <xs:element name="GetOrderSearchResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Orderno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AgreementNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PCN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isRoc" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderSearchResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="GetOrderSearchResultResult" nillable="true" type="q1:ArrayOfPurchaseOrderDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecentPurchaseOrders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PCN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="noOfDays" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maxNoRecords" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isRoc" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecentPurchaseOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="GetRecentPurchaseOrdersResult" nillable="true" type="q2:ArrayOfPurchaseOrderDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchOrderableProducts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="request" nillable="true" type="q3:SearchOrderableProductsRequestBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchOrderableProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="SearchOrderableProductsResult" nillable="true" type="q4:SearchOrderableProductsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchOrderableAgreements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="request" nillable="true" type="q5:SearchOrderableAgreementsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchOrderableAgreementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="SearchOrderableAgreementsResult" nillable="true" type="q6:SearchOrderableAgreementsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchAgreements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="request" nillable="true" type="q7:SearchOrderableAgreementsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchAgreementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="SearchAgreementsResult" nillable="true" type="q8:SearchOrderableAgreementsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProducts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="request" nillable="true" type="q9:SearchProductRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="GetProductsResult" nillable="true" type="q10:SearchProductResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderableAgreementDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="request" nillable="true" type="q11:GetOrderableAgreementDetailsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderableAgreementDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="GetOrderableAgreementDetailsResult" nillable="true" type="q12:GetOrderableAgreementDetailsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderEstimates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="request" nillable="true" type="q13:GetOrderEstimatesRequestBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderEstimatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="GetOrderEstimatesResult" nillable="true" type="q14:GetOrderEstimatesResponseBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpportunities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="request" nillable="true" type="q15:ArrayOfGetOpportunityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpportunitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="GetOpportunitiesResult" nillable="true" type="q16:ArrayOfGetOpportunityResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PopulateOpportunities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="request" nillable="true" type="q17:ArrayOfGetOpportunityRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PopulateOpportunitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="PopulateOpportunitiesResult" nillable="true" type="q18:ArrayOfGetOpportunityResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="request" nillable="true" type="q19:ArrayOfCreateOrderRequestBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="CreateOrderResult" nillable="true" type="q20:ArrayOfCreateOrderResponseBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerStatistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="request" nillable="true" type="q21:GetCustomerStatisticsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerStatisticsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="GetCustomerStatisticsResult" nillable="true" type="q22:GetCustomerStatisticsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchOrders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="request" nillable="true" type="q23:SearchOrdersRequestBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="SearchOrdersResult" nillable="true" type="q24:SearchOrdersResponseBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchOrdersByOpportunityTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="request" nillable="true" type="q25:SearchOrdersRequestBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchOrdersByOpportunityTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="SearchOrdersByOpportunityTypesResult" nillable="true" type="q26:SearchOrdersResponseBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuickStartReservations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="request" nillable="true" type="q27:GetQuickStartReservationsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuickStartReservationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="GetQuickStartReservationsResult" nillable="true" type="q28:GetQuickStartReservationsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteInvalidOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="request" nillable="true" type="q29:GetDeleteInvalidOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteInvalidOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="DeleteInvalidOrderResult" nillable="true" type="q30:GetDeleteInvalidOrderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ZUDecisionParamsValidate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="request" nillable="true" type="q31:ZUDecisionParamsValidateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ZUDecisionParamsValidateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="ZUDecisionParamsValidateResult" nillable="true" type="q32:ZUDecisionParamsValidateResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ZUOrderAutomate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="request" nillable="true" type="q33:ZUOrderAutomateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ZUOrderAutomateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="ZUOrderAutomateResult" nillable="true" type="q34:ZUOrderAutomateResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchOrdersDueAgreements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="request" nillable="true" type="q35:SearchOrdersDueAgreementsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchOrdersDueAgreementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="SearchOrdersDueAgreementsResult" nillable="true" type="q36:SearchOrdersDueAgreementsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrdersDueAgreementSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="request" nillable="true" type="q37:GetOrdersDueAgreementSummaryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrdersDueAgreementSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="GetOrdersDueAgreementSummaryResult" nillable="true" type="q38:GetOrdersDueAgreementSummaryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdjustedPODetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="request" nillable="true" type="q39:ArrayOfGetAdjustedPODetailsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdjustedPODetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" minOccurs="0" name="GetAdjustedPODetailsResult" nillable="true" type="q40:ArrayOfGetAdjustedPODetailsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLineItemAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="lineRequest" nillable="true" type="q41:LineItemAttributeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLineItemAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="GetLineItemAttributesResult" nillable="true" type="q42:ArrayOfDomainItemResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderHeaderAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agreementId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderHeaderAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="GetOrderHeaderAttributesResult" nillable="true" type="q43:ArrayOfDomainItemResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalesLocation">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalesLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="GetSalesLocationResult" nillable="true" type="q44:ArrayOfDomainItemResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchPurchaseOpportunities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agreementId" type="xs:int" />
+        <xs:element minOccurs="0" name="endCustomerNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchPurchaseOpportunitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="SearchPurchaseOpportunitiesResult" nillable="true" type="q45:ArrayOfSearchPurchaseOpportunitiesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchPurchaseOrderWithDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="request" nillable="true" type="q46:SearchPurchaseOrderDetailsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchPurchaseOrderWithDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="SearchPurchaseOrderWithDetailsResult" nillable="true" type="q47:SearchPurchaseOrderDetailsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserPreference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts.Requests.UserPreference" minOccurs="0" name="request" nillable="true" type="q48:GetUserPreferenceRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserPreferenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts.Responses.UserPreference" minOccurs="0" name="GetUserPreferenceResult" nillable="true" type="q49:GetUserPreferenceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserPreference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts.Requests.UserPreference" minOccurs="0" name="request" nillable="true" type="q50:SetUserPreferenceRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserPreferenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts.Responses.UserPreference" minOccurs="0" name="SetUserPreferenceResult" nillable="true" type="q51:SetUserPreferenceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="request" nillable="true" type="q52:GetCustomerRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" minOccurs="0" name="GetCustomersResult" nillable="true" type="q53:ArrayOfGetCustomerResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

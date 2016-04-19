@@ -1,0 +1,4 @@
+C:\IndividualProject\RestfulAAD\Restful_AAD\Restful_AAD\bin\Release\ServiceConfiguration.cscfg
+C:\IndividualProject\RestfulAAD\Restful_AAD\Restful_AAD\bin\Release\ServiceDefinition.csdef
+C:\IndividualProject\Restful_AAD\Restful_AAD\Restful_AAD\bin\Release\ServiceConfiguration.cscfg
+C:\IndividualProject\Restful_AAD\Restful_AAD\Restful_AAD\bin\Release\ServiceDefinition.csdef

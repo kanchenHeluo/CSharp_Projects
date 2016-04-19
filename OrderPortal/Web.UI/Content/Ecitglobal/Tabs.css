@@ -1,0 +1,67 @@
+﻿/* <summary>Style file for UxTab.</summary>*/
+/* <author>joschemd</author> */
+/* Dependencies: GlobalStyles.css */
+
+/* From Global Styles */
+*{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+/* End From Global Styles */
+
+.UxTab{
+	font-size:0;
+	display:block;
+}
+.UxTab .header{
+	 border-bottom: solid 1px #CCC;
+	 background-color: #FFF;
+}
+.UxTab a.tabItem
+{
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: #666;
+	background-color: #FFF;
+	margin:0;
+	text-transform:none;
+	border:solid 1px transparent;
+	margin-bottom:-1px;
+	padding:5px 1.5rem;
+	line-height:2rem;
+	display: inline-block;
+	border-bottom: solid 1px #CCC;
+	text-decoration:none;
+}
+
+.UxTab a.tabItem:active,
+.UxTab a.tabItem.active
+{
+	font-weight: 700;
+	color:#000;
+	background-color: #FFF;
+	border:solid 1px #CCC;
+	border-bottom:solid 1px #FFF;
+	padding:5px 1.4rem;
+}
+
+.UxTab a.tabItem:hover
+{
+	color: #FFF;
+	background-color:#0072C6;
+	border: solid 1px #0072C6;
+}
+
+.UxTab .tabContainer
+{
+	background-color: #FFF;
+	border:none;
+	position: relative;
+	padding:2rem 1rem 1rem;
+	display:none;
+}
+
+.UxTab .tabContainer.active{
+	display:block;
+}

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="0ec7c598-e199-4a71-a8cc-ad3921ddb0b8" ChangeDateTime="02/05/2016 04:38:58">
+    <Property Name="ElementName" Value="[CRMAzure].[LogError].[LogCreateOn]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[CRMAzure].[LogError]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LogCreatedOn" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="97be3c20-99a0-4e2a-8854-15fffb22c1c6" ChangeDateTime="02/05/2016 04:39:03">
+    <Property Name="ElementName" Value="[CRMAzure].[LogMsg].[LogCreateOn]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[CRMAzure].[LogMsg]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LogCreatedOn" />
+  </Operation>
+</Operations>

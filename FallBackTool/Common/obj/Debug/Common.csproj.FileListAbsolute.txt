@@ -1,0 +1,9 @@
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\Common\bin\Debug\Common.dll
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\Common\bin\Debug\Common.pdb
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\Common\bin\Debug\AutoMapper.dll
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\Common\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\Common\bin\Debug\AutoMapper.xml
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\Common\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\Common\obj\Debug\Common.dll
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\FallBackTool\Common\obj\Debug\Common.pdb

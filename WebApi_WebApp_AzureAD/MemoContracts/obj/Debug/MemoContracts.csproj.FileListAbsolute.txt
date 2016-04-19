@@ -1,0 +1,9 @@
+C:\IndividualProject\RestfulAAD\Restful_AAD\MemoContracts\bin\Debug\MemoContracts.dll
+C:\IndividualProject\RestfulAAD\Restful_AAD\MemoContracts\bin\Debug\MemoContracts.pdb
+C:\IndividualProject\RestfulAAD\Restful_AAD\MemoContracts\obj\Debug\MemoContracts.dll
+C:\IndividualProject\RestfulAAD\Restful_AAD\MemoContracts\obj\Debug\MemoContracts.pdb
+C:\IndividualProject\RestfulAAD\Restful_AAD\MemoContracts\obj\Debug\MemoContracts.csprojResolveAssemblyReference.cache
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoContracts\bin\Debug\MemoContracts.dll
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoContracts\bin\Debug\MemoContracts.pdb
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoContracts\obj\Debug\MemoContracts.dll
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoContracts\obj\Debug\MemoContracts.pdb

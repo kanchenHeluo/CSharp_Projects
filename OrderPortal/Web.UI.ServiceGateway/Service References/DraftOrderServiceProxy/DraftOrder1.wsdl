@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/Imports">
+      <xsd:import schemaLocation="http://localhost/OrderService/DraftOrder.svc?xsd=xsd3" namespace="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01" />
+      <xsd:import schemaLocation="http://localhost/OrderService/DraftOrder.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/OrderService/DraftOrder.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+      <xsd:import schemaLocation="http://localhost/OrderService/DraftOrder.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost/OrderService/DraftOrder.svc?xsd=xsd4" namespace="urn:Microsoft.IT.Licensing.Services.DraftOrder.DataContract/2013/01" />
+      <xsd:import schemaLocation="http://localhost/OrderService/DraftOrder.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder" />
+      <xsd:import schemaLocation="http://localhost/OrderService/DraftOrder.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/OrderService/DraftOrder.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Request" />
+      <xsd:import schemaLocation="http://localhost/OrderService/DraftOrder.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder.Response" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDraftOrderService_DeleteDraftOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDraftOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_DeleteDraftOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDraftOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_GetDraftOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDraftOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_GetDraftOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDraftOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_GetDraftOrderPortal_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDraftOrderPortal" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_GetDraftOrderPortal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDraftOrderPortalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_ListDraftOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListDraftOrders" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_ListDraftOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListDraftOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_SaveDraftOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDraftOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_SaveDraftOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDraftOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_SaveDraftOrderPortal_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDraftOrderPortal" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_SaveDraftOrderPortal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDraftOrderPortalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_UnlockDraftOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnlockDraftOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_UnlockDraftOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnlockDraftOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_UnlockDraftOrderPortal_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnlockDraftOrderPortal" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_UnlockDraftOrderPortal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnlockDraftOrderPortalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_LockDraftOrderPortal_InputMessage">
+    <wsdl:part name="parameters" element="tns:LockDraftOrderPortal" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_LockDraftOrderPortal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LockDraftOrderPortalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_ValidateDraftOrderPortal_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDraftOrderPortal" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_ValidateDraftOrderPortal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDraftOrderPortalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_DeleteDraftOrderPortal_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDraftOrderPortal" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_DeleteDraftOrderPortal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDraftOrderPortalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_ValidateDraftOrderShipmentPortal_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDraftOrderShipmentPortal" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_ValidateDraftOrderShipmentPortal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDraftOrderShipmentPortalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_SaveDraftOrderShipmentPortal_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDraftOrderShipmentPortal" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_SaveDraftOrderShipmentPortal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDraftOrderShipmentPortalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_DeleteDraftOrderShipmentPortal_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDraftOrderShipmentPortal" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_DeleteDraftOrderShipmentPortal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDraftOrderShipmentPortalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_GetDraftOrderShipmentPortal_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDraftOrderShipmentPortal" />
+  </wsdl:message>
+  <wsdl:message name="IDraftOrderService_GetDraftOrderShipmentPortal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDraftOrderShipmentPortalResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDraftOrderService">
+    <wsdl:operation name="DeleteDraftOrder">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/DeleteDraftOrder" message="tns:IDraftOrderService_DeleteDraftOrder_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/DeleteDraftOrderResponse" message="tns:IDraftOrderService_DeleteDraftOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDraftOrder">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/GetDraftOrder" message="tns:IDraftOrderService_GetDraftOrder_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/GetDraftOrderResponse" message="tns:IDraftOrderService_GetDraftOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDraftOrderPortal">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/GetDraftOrderPortal" message="tns:IDraftOrderService_GetDraftOrderPortal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/GetDraftOrderPortalResponse" message="tns:IDraftOrderService_GetDraftOrderPortal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListDraftOrders">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/ListDraftOrders" message="tns:IDraftOrderService_ListDraftOrders_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/ListDraftOrdersResponse" message="tns:IDraftOrderService_ListDraftOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDraftOrder">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/SaveDraftOrder" message="tns:IDraftOrderService_SaveDraftOrder_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/SaveDraftOrderResponse" message="tns:IDraftOrderService_SaveDraftOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDraftOrderPortal">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/SaveDraftOrderPortal" message="tns:IDraftOrderService_SaveDraftOrderPortal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/SaveDraftOrderPortalResponse" message="tns:IDraftOrderService_SaveDraftOrderPortal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockDraftOrder">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/UnlockDraftOrder" message="tns:IDraftOrderService_UnlockDraftOrder_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/UnlockDraftOrderResponse" message="tns:IDraftOrderService_UnlockDraftOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockDraftOrderPortal">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/UnlockDraftOrderPortal" message="tns:IDraftOrderService_UnlockDraftOrderPortal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/UnlockDraftOrderPortalResponse" message="tns:IDraftOrderService_UnlockDraftOrderPortal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LockDraftOrderPortal">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/LockDraftOrderPortal" message="tns:IDraftOrderService_LockDraftOrderPortal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/LockDraftOrderPortalResponse" message="tns:IDraftOrderService_LockDraftOrderPortal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDraftOrderPortal">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/ValidateDraftOrderPortal" message="tns:IDraftOrderService_ValidateDraftOrderPortal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/ValidateDraftOrderPortalResponse" message="tns:IDraftOrderService_ValidateDraftOrderPortal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDraftOrderPortal">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/DeleteDraftOrderPortal" message="tns:IDraftOrderService_DeleteDraftOrderPortal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/DeleteDraftOrderPortalResponse" message="tns:IDraftOrderService_DeleteDraftOrderPortal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDraftOrderShipmentPortal">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/ValidateDraftOrderShipmentPortal" message="tns:IDraftOrderService_ValidateDraftOrderShipmentPortal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/ValidateDraftOrderShipmentPortalResponse" message="tns:IDraftOrderService_ValidateDraftOrderShipmentPortal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDraftOrderShipmentPortal">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/SaveDraftOrderShipmentPortal" message="tns:IDraftOrderService_SaveDraftOrderShipmentPortal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/SaveDraftOrderShipmentPortalResponse" message="tns:IDraftOrderService_SaveDraftOrderShipmentPortal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDraftOrderShipmentPortal">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/DeleteDraftOrderShipmentPortal" message="tns:IDraftOrderService_DeleteDraftOrderShipmentPortal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/DeleteDraftOrderShipmentPortalResponse" message="tns:IDraftOrderService_DeleteDraftOrderShipmentPortal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDraftOrderShipmentPortal">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/GetDraftOrderShipmentPortal" message="tns:IDraftOrderService_GetDraftOrderShipmentPortal_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.DraftOrder/2013/01/IDraftOrderService/GetDraftOrderShipmentPortalResponse" message="tns:IDraftOrderService_GetDraftOrderShipmentPortal_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,5 @@
+C:\IndividualProject\DemoRestWebAPI\Demo.Contracts\bin\Release\Demo.Contracts.dll
+C:\IndividualProject\DemoRestWebAPI\Demo.Contracts\bin\Release\Demo.Contracts.pdb
+C:\IndividualProject\DemoRestWebAPI\Demo.Contracts\obj\Release\Demo.Contracts.csprojResolveAssemblyReference.cache
+C:\IndividualProject\DemoRestWebAPI\Demo.Contracts\obj\Release\Demo.Contracts.dll
+C:\IndividualProject\DemoRestWebAPI\Demo.Contracts\obj\Release\Demo.Contracts.pdb

@@ -1,0 +1,128 @@
+﻿html {
+  background-color: #ddd;
+  height: 100%;
+}
+body {
+  background-color: #ddd !important ;
+  margin: 0;
+  min-height: 100%;
+  height: 100%;
+}
+.layout-container {
+  width: 1264px;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 100%;
+  height: auto;
+  border-width: 0 32px 0 32px;
+  border-style: solid;
+  border-color: #e4e4e4;
+}
+header .layout-headerAlign {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+header .layout-headerTitle {
+  padding-left: 20px;
+  color: #666;
+  margin: 0;
+}
+footer {
+  bottom: 0;
+  position: relative;
+  width: 1200px;
+}
+footer .layout-foorercontentpadding {
+  height: 40px;
+}
+footer .layout-footeralign {
+  padding-right: 20px;
+  float: right;
+}
+footer .layout-footerlinks {
+  margin-top: 20px;
+  margin-right: 20px;
+  clear: both;
+  float: right;
+}
+footer .layout-footerlinks a {
+  margin-right: 22px;
+}
+footer .layout-foorerPadding {
+  height: 20px;
+  clear: both;
+}
+.userinfo {
+  padding-right: 20px;
+  float: right;
+  font-size: 12px;
+  padding-bottom: 2.15rem;
+}
+.userinfo .userImage {
+  transform: scale(1.5, 1.5);
+  -moz-transform: scale(1.5, 1.5);
+  -ms-transform: scale(1.5, 1.5);
+  -webkit-transform: scale(1.5, 1.5);
+  -o-transform: scale(1.5, 1.5);
+}
+.userinfo .i_DropDownArrow {
+  cursor: pointer;
+  transform: scale(1.5, 1.5);
+  -moz-transform: scale(1.5, 1.5);
+  -ms-transform: scale(1.5, 1.5);
+  -webkit-transform: scale(1.5, 1.5);
+  -o-transform: scale(1.5, 1.5);
+  padding: 2px 0 0 0;
+  margin-right: 10px;
+}
+.userinfo .useroptions {
+  font-size: 1.2rem;
+  position: fixed;
+  margin-right: 25rem;
+  border: 1px solid #666;
+  min-width: 18.1rem;
+  background-color: transparent;
+  display: none;
+}
+.useroptions a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000;
+  display: inline-block;
+  min-height: 1.5rem;
+  padding: 4px;
+  width: 100%;
+  text-decoration: none;
+}
+.useroptions a:hover {
+  color: #FFF;
+  background-color: #0072C6 !important;
+  cursor: pointer;
+  text-decoration: none;
+}
+.tilesContainer {
+  width: 870px;
+  overflow-wrap: normal;
+  margin: 100px 0 0 80px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.copyright {
+  display: inline;
+  font-size: 12px;
+}
+#myDialog .content  > input,
+#myDialog .content  > select {
+  vertical-align: middle;
+  margin: 0.5rem;
+  width: auto;
+}
+#errrorLabel {
+  display: none;
+}
+.unauthorized {
+  padding-bottom: 40px;
+  border-bottom: 3px solid black;
+}
+/*# sourceMappingURL=site.css.map */

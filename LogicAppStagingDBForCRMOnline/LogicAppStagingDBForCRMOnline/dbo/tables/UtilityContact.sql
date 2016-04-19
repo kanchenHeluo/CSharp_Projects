@@ -1,0 +1,53 @@
+﻿CREATE TABLE [dbo].[UtilityContact] (
+    [ContactId]              INT              IDENTITY (1, 1) NOT NULL,
+    [ContactGuid]            UNIQUEIDENTIFIER NOT NULL,
+    [personnelnumber]        INT              NOT NULL,
+    [firstname]              VARCHAR (40)     NULL,
+    [lastname]               VARCHAR (40)     NULL,
+    [fullname]               VARCHAR (93)     NULL,
+    [middlename]             VARCHAR (10)     NULL,
+    [emailaddress1]          NVARCHAR (450)   NULL,
+    [telephone1]             VARCHAR (30)     NOT NULL,
+    [mobilephone]            VARCHAR (30)     NOT NULL,
+    [jobtitle]               VARCHAR (30)     NOT NULL,
+    [address1_line1]         VARCHAR (100)    NOT NULL,
+    [address1_line2]         VARCHAR (50)     NOT NULL,
+    [address1_line3]         VARCHAR (50)     NOT NULL,
+    [address1_city]          VARCHAR (30)     NOT NULL,
+    [address1_county]        VARCHAR (3)      NOT NULL,
+    [address1_postalcode]    VARCHAR (25)     NOT NULL,
+    [address1_country]       VARCHAR (75)     NOT NULL,
+    [costcenter]             VARCHAR (150)    NOT NULL,
+    [costcenternumber]       INT              NOT NULL,
+    [costcentercode]         VARCHAR (20)     NOT NULL,
+    [ms_alias]               VARCHAR (50)     NOT NULL,
+    [domain]                 VARCHAR (50)     NOT NULL,
+    [domain_alias]           VARCHAR (100)    NOT NULL,
+    [StatusCode]             INT              NOT NULL,
+    [StateCode]              INT              NOT NULL,
+    [Created]                DATETIME         CONSTRAINT [UtilityContact_Created_Auto] DEFAULT (sysutcdatetime()) NOT NULL,
+    [LastModified]           DATETIME         CONSTRAINT [UtilityContact_LastModified_Auto] DEFAULT (sysutcdatetime()) NOT NULL,
+    [StatusLastModified]     DATETIME         CONSTRAINT [UtilityContact_StatusLastModified_Auto] DEFAULT (sysutcdatetime()) NOT NULL,
+    [StateLastModified]      DATETIME         CONSTRAINT [UtilityContact_StateLastModified_Auto] DEFAULT (sysutcdatetime()) NOT NULL,
+    [PositionNbr]            VARCHAR (100)    NULL,
+    [ReportsToPositionNbr]   VARCHAR (100)    NULL,
+    [secondaryEmailAddress]  NVARCHAR (450)   NULL,
+    [workingPositionCountry] VARCHAR (75)     NULL,
+    [RoomNumber]             VARCHAR (6)      NULL,
+    [BuildingName]           VARCHAR (80)     NULL,
+    [CompanyCode]            CHAR (4)         NULL,
+    [CompanyName]            VARCHAR (25)     NULL,
+    [ManagerFullName]        VARCHAR (93)     NULL,
+    [OfficeLocation]         NCHAR (450)      NULL,
+    [FirstRegularHireDate]   DATETIME         NULL,
+    [FirstMsjvHireDate]      DATETIME         NULL,
+    [ManagerPersonnelNumber] INT              NULL,
+    [Manager]                UNIQUEIDENTIFIER NULL,
+
+    CONSTRAINT [PK_UtilityContact_ContactId] PRIMARY KEY CLUSTERED ([ContactId] ASC)
+);
+
+
+GO
+
+CREATE NONCLUSTERED INDEX [IX_UtilityContact_personnelnumber] ON [dbo].[UtilityContact] ([personnelnumber]);

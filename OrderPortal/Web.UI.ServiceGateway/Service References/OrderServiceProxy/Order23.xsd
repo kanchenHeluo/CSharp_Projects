@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:Microsoft.IT.Licensing.Entity.Products/2012/08" elementFormDefault="qualified" targetNamespace="urn:Microsoft.IT.Licensing.Entity.Products/2012/08" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfProductBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductBase" nillable="true" type="tns:ProductBase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductBase" nillable="true" type="tns:ArrayOfProductBase" />
+  <xs:complexType name="ProductBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductBase" nillable="true" type="tns:ProductBase" />
+  <xs:complexType name="VLProductSummary">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProductBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsCoterminous" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsOnlineServiceSKU" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsStepupSKU" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProductFamilyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductFamilyName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductLanguageCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductTypeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PurposeCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VLProductSummary" nillable="true" type="tns:VLProductSummary" />
+  <xs:complexType name="VLProductDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ProductBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsOnlineServiceSKU" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OfferingCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OperatingSystemCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PoolCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductFamilyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductItemStatusCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductLanguageCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductMarketPlaceCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductTypeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReplacedByPartNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VersionSequence" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VLProductDetail" nillable="true" type="tns:VLProductDetail" />
+</xs:schema>

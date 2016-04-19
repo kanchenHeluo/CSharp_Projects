@@ -1,0 +1,49 @@
+﻿@using System.Web.Script.Serialization
+@using Web.UI.Common;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts{
+    @Scripts.Render("~/orderApp/js")
+    @{
+        var serializer = new JavaScriptSerializer();
+        var context = UserContext.Current;
+    }
+    <script>
+    angular.module('orderApp')
+        .factory("orderEditorSetting", function() {
+            return {
+                maxLockMinutes: @Utility.GetMaxLockMinutes()
+                }
+        })
+        .factory("configSvc", function() {
+            return {
+                'isRocUser': @Html.Raw(serializer.Serialize(context.IsRocUser)),
+                'organizations': @Html.Raw(serializer.Serialize(context.Organizations)),
+                'pcn': @Html.Raw(serializer.Serialize(context.PartnerPCN))
+                }
+        })
+            .factory("urlSvc", function() {
+                return  {
+                    CreateOrder: '@Html.Raw(context.CanSubmit ? Url.Action("CreateOrder", "ManageVLOrder", new { area = "Order" }) : "")',
+                    SaveDraftOrder: '@Html.Raw(!context.IsReadonly ? Url.Action("SaveDraftOrder", "ManageVLOrder", new { area = "Order" }) : "")',
+                    DeleteDraftOrder: '@Html.Raw(!context.IsReadonly ? Url.Action("DeleteDraftOrder", "ManageVLOrder", new { area = "Order" }) : "")',
+                };
+            });
+    </script>
+}
+
+@*<script>
+    angular.module("orderApp")
+    
+
+    .factory("localStrSvc", function(){
+        return {
+            'networkError': @ResourceManager.GetString("networkError"),
+            'invalidInput': @ResourceManager.GetSring("invalidInput")
+        };
+    });
+</script>*@
+
+<div ui-view></div>

@@ -1,0 +1,11 @@
+﻿.ms-filtertileitem:hover,
+.ms-filtertileitem:focus,
+.ms-filtertileitem:active,
+.ms-filterTileItem.active,
+.ms-filtertileitem:hover>.symbol,
+.ms-filtertileitem:focus>.symbol,
+.ms-filtertileitem:active>.symbol,
+.ms-filterTileItem.active>.symbol
+{
+    text-decoration: none;
+}

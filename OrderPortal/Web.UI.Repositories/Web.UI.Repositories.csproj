@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6DBB20C0-6075-4269-8F9A-D7192994B505}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web.UI.Repositories</RootNamespace>
+    <AssemblyName>Web.UI.Repositories</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\packages\Unity.Interception.2.1.505.0\lib\NET35\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="PlainElastic.Net, Version=1.0.48.0, Culture=neutral, PublicKeyToken=0930e76dfc03b7ac, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PlainElastic.Net.1.0.48\lib\Net40\PlainElastic.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bridges\AgreementServiceBridge.cs" />
+    <Compile Include="Bridges\NoSqlOrderBridge.cs" />
+    <Compile Include="Bridges\NoSqlAgreementBridge.cs" />
+    <Compile Include="Bridges\NoSqlProductsBridge.cs" />
+    <Compile Include="Bridges\OrderServiceBridge.cs" />
+    <Compile Include="Bridges\ProductsServiceBridge.cs" />
+    <Compile Include="Data\ConfigData.cs" />
+    <Compile Include="DomainModels\Agreement.cs" />
+    <Compile Include="DomainModels\Customer.cs" />
+    <Compile Include="DomainModels\ExtendedProperty.cs" />
+    <Compile Include="DomainModels\IssueInfo.cs" />
+    <Compile Include="DomainModels\LevelPosition.cs" />
+    <Compile Include="DomainModels\LevelSetting.cs" />
+    <Compile Include="DomainModels\Opportunity.cs" />
+    <Compile Include="DomainModels\OpportunityLineItem.cs" />
+    <Compile Include="DomainModels\OrderLineItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainModels\ProductRequest.cs" />
+    <Compile Include="DomainModels\SaveShipmentAddressResult.cs" />
+    <Compile Include="DomainModels\SearchRequest.cs" />
+    <Compile Include="DomainModels\SearchResult.cs" />
+    <Compile Include="DomainModels\UserPreference.cs" />
+    <Compile Include="DomainModels\VolumeLicensingOrder.cs" />
+    <Compile Include="DomainModels\OrderHeader.cs" />
+    <Compile Include="DomainModels\PriceAtNewLevel.cs" />
+    <Compile Include="DomainModels\PriceType.cs" />
+    <Compile Include="DomainModels\PricingDrivers.cs" />
+    <Compile Include="DomainModels\LineItemRequest.cs" />
+    <Compile Include="Interfaces\IAgreementBridge.cs" />
+    <Compile Include="Interfaces\IOrderBridge.cs" />
+    <Compile Include="Interfaces\IProductBridge.cs" />
+    <Compile Include="Interfaces\IUserRepository.cs" />
+    <Compile Include="Models\SearchModels\AgreemenswithCompleteDetails.cs" />
+    <Compile Include="DomainModels\AgreementRequest.cs" />
+    <Compile Include="DomainModels\OpportunityRequest.cs" />
+    <Compile Include="Models\SearchModels\OrderItem.cs" />
+    <Compile Include="Models\SearchModels\SearchAgreements.cs" />
+    <Compile Include="Models\SearchModels\StepupSearch.cs" />
+    <Compile Include="Models\SearchModels\AgreementRef.cs" />
+    <Compile Include="Models\SearchModels\AvailableInPool.cs" />
+    <Compile Include="Models\SearchModels\Item.cs" />
+    <Compile Include="Models\SearchModels\LicensePool.cs" />
+    <Compile Include="Models\SearchModels\OderableItem.cs" />
+    <Compile Include="Models\SearchModels\Offering.cs" />
+    <Compile Include="Models\SearchModels\SpecialPricing.cs" />
+    <Compile Include="Repositories\AgreementRepository.cs" />
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Models\Common\DateRange.cs" />
+    <Compile Include="Models\Common\DomainData.cs" />
+    <Compile Include="Models\Common\DomainItem.cs" />
+    <Compile Include="Models\Common\IDomainObject.cs" />
+    <Compile Include="DomainModels\Shipment.cs" />
+    <Compile Include="Models\SearchModels\SearchCriteria.cs" />
+    <Compile Include="Models\SearchModels\OrderSearchResult.cs" />
+    <Compile Include="Repositories\OrderRepository.cs" />
+    <Compile Include="Repositories\RepositoryBase.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Interfaces\IAgreementRepository.cs" />
+    <Compile Include="Interfaces\IOrderRepository.cs" />
+    <Compile Include="Interfaces\IProductRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Agreement\" />
+    <Folder Include="Models\Order\" />
+    <Folder Include="Providers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <ProjectReference Include="..\Global.SearchService\Global.SearchService.csproj">
+      <Project>{4b8c086a-f8d3-4ea5-863e-4d5cd7c8f6db}</Project>
+      <Name>Global.SearchService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Global.SearchService\Global.SearchService.csproj">
+      <Project>{4b8c086a-f8d3-4ea5-863e-4d5cd7c8f6db}</Project>
+      <Name>Global.SearchService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Global.Search\Global.Search.csproj">
+      <Project>{8721e5f5-8b40-4991-8176-9018339f027e}</Project>
+      <Name>Global.Search</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web.Localization\Web.Localization.csproj">
+      <Project>{6b0ed206-9f98-4be6-810e-00401a26001c}</Project>
+      <Name>Web.Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web.UI.Common\Web.UI.Common.csproj">
+      <Project>{b68b0e1c-ce53-4d66-9ea9-9de010d60837}</Project>
+      <Name>Web.UI.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web.UI.ServiceGateway\Web.UI.ServiceGateway.csproj">
+      <Project>{6b77a5a5-ce51-49d8-8878-7461b9d30e57}</Project>
+      <Name>Web.UI.ServiceGateway</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

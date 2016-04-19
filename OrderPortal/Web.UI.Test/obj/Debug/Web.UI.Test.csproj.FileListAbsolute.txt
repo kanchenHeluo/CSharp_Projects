@@ -1,0 +1,1 @@
+C:\Dalei\SourceCode\OrderPortal\Web.UI.Test\obj\Debug\Web.UI.Test.csprojResolveAssemblyReference.cache

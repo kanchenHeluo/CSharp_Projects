@@ -1,0 +1,73 @@
+﻿/* From Global Styles */
+*{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+/* End From Global Styles */
+/* <summary>Style file for ModalDialog.</summary>*/
+/* <author>joschemd</author> */
+.ModalDialog {
+	background-color:#fff;
+	padding:0;
+	margin:0;
+	position:fixed;
+	top:50%;
+	left:0;
+	right:0;
+	width:100%;
+	max-width:100%;
+	min-width:20rem;
+	max-height:75%;
+}
+
+.ModalDialog span.symbol.remove
+{
+	position:absolute;
+	top:1rem;
+	right:0;
+	cursor:pointer
+}
+
+.ModalDialog > header{
+	margin:1rem auto 0;
+	height:10%;
+	min-height:1.8rem;
+	width:50%;	
+	max-width:50%;
+	position:relative;
+}
+
+.ModalDialog > header>h2{
+	margin:0 1rem;
+	vertical-align:middle;
+}
+
+.ModalDialog > .content{
+	margin:0 auto 2rem;
+	position:relative;
+	max-height:90%;
+	max-width:50%;
+	width:50%;
+
+	overflow:auto;
+	font-size:0;
+}
+
+.ModalDialog input[data-item='dialogClose']
+{
+	min-width:12rem;
+}
+
+.ModalDialogCurtain
+{
+	background-color: #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=50)";
+	opacity: 0.5;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+

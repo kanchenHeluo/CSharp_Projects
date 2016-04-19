@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Portal</title>
+    <link href="~/content/GlobalStyle.less" rel="stylesheet" />
+    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.6.2.js"></script>
+    <script  src="~/scripts/require.js"></script>
+
+</head>
+<body>
+    <div>
+        @RenderBody()
+        <footer></footer>
+    </div>
+  
+    <script src="//ajax.aspnetcdn.com/ajax/respond/1.2.0/respond.js"></script>
+   @RenderSection("scripts", required: false)
+   <script src="~/scripts/requirejs-config.js"></script>
+    <script src="~/scripts/main.js"></script>
+</body>
+
+</html>

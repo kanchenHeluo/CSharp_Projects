@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.DraftOrder" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://mspaulilt.fareast.corp.microsoft.com/OrderService/DraftOrder.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="AuditInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModifiedOn" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuditInfo" nillable="true" type="tns:AuditInfo" />
+  <xs:complexType name="ArrayOfDraftOrderAttrs">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DraftOrderAttrs" nillable="true" type="tns:DraftOrderAttrs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDraftOrderAttrs" nillable="true" type="tns:ArrayOfDraftOrderAttrs" />
+  <xs:complexType name="DraftOrderAttrs">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgreementId" type="xs:int" />
+      <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="tns:ArrayOfDraftOrderComment" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DirectCustomerNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndCustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndCustomerNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ModifiedUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PricingCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PricingCurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgramCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgramName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseOrderNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseOrderType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesLocationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsageDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ValidateFlag" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DraftOrderAttrs" nillable="true" type="tns:DraftOrderAttrs" />
+  <xs:complexType name="ArrayOfDraftOrderComment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DraftOrderComment" nillable="true" type="tns:DraftOrderComment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDraftOrderComment" nillable="true" type="tns:ArrayOfDraftOrderComment" />
+  <xs:complexType name="DraftOrderComment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Severity" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DraftOrderComment" nillable="true" type="tns:DraftOrderComment" />
+  <xs:complexType name="ArrayOfDraftOrderLineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DraftOrderLineItem" nillable="true" type="tns:DraftOrderLineItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDraftOrderLineItem" nillable="true" type="tns:ArrayOfDraftOrderLineItem" />
+  <xs:complexType name="DraftOrderLineItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillingOptionCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="tns:ArrayOfDraftOrderComment" />
+      <xs:element minOccurs="0" name="CoverageEndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CoverageStartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CoverageTerm" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerReferenceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IsPriced" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LineItemType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListPrice" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="NetPrice" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="OfferingLevel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLIUsageDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="POLineItemStatusDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PartNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Points" type="xs:int" />
+      <xs:element minOccurs="0" name="PoolCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PoolName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PricingCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PricingCurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductFamilyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductFamilyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductId" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgramOfferingCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseUnitQuantity" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PurchaseUnitTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuantityFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="QuantityTo" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ReferencePOLIds" nillable="true" type="q1:ArrayOfint" />
+      <xs:element minOccurs="0" name="SpecialDealNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SystemPrice" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="UnitPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UsageCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValidateFlag" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DraftOrderLineItem" nillable="true" type="tns:DraftOrderLineItem" />
+  <xs:complexType name="DraftOrderAttributes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgreementId" type="xs:int" />
+      <xs:element minOccurs="0" name="AgreementNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAnniversaryOrder" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PublicCustomerNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DraftOrderAttributes" nillable="true" type="tns:DraftOrderAttributes" />
+</xs:schema>

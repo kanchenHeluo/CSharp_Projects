@@ -1,0 +1,48 @@
+﻿@tileblue: RGB(0,112,192);
+@tilehover:RGB(112,48,160);
+.tilesContainer {
+    width: 870px;
+    overflow-wrap: normal;
+    margin:100px 0 0 80px;
+    padding-right:5px;
+    padding-left:5px;
+}
+div.tile {
+    cursor: pointer;
+    width: 200px;
+    height: 100px;
+    margin: 0 5px 7px 0;
+    padding-top:25px;
+    display: inline-block;
+    color:white;
+    background-color:@tileblue;
+    h3.title {
+        z-index: 1;
+        margin: 8px 0px 0px 25px;        
+        position: relative;
+        right: 10px;
+        color:white;
+        font-family:'Segoe UI';
+        font-size:12pt;
+        height: 18px;
+    }
+    i {
+        margin-left:85px;
+    }
+}
+div.tile:hover {
+    transform: scale(0.97, 0.97);
+    -moz-transform: scale(0.97, 0.97);
+    -ms-transform: scale(0.97, 0.97);
+    -webkit-transform: scale(0.97, 0.97);
+    -o-transform: scale(0.97, 0.97);
+    background-color:@tilehover;
+}
+div.tile:focus {
+    transform: scale(0.97, 0.97);
+    -moz-transform: scale(0.97, 0.97);
+    -ms-transform: scale(0.97, 0.97);
+    -webkit-transform: scale(0.97, 0.97);
+    -o-transform: scale(0.97, 0.97);
+    background-color:@tilehover;
+}

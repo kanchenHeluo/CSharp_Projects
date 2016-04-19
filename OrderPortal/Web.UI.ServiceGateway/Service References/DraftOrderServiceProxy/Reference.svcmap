@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7b9682d5-b356-4eca-9eb2-6e37614cc294" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/OrderService/DraftOrder.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DraftOrderService1.wsdl" MetadataType="Wsdl" ID="d79a57e8-f55f-42b4-84b0-3190c1dfa9e0" SourceId="1" SourceUrl="http://localhost/OrderService/DraftOrder.svc?wsdl" />
+    <MetadataFile FileName="DraftOrder1.wsdl" MetadataType="Wsdl" ID="07bbf538-832d-44af-98c9-1c743a41b2dd" SourceId="1" SourceUrl="http://localhost/OrderService/DraftOrder.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DraftOrder1.disco" MetadataType="Disco" ID="685241e8-20f8-461d-8d24-ef0ed1055551" SourceId="1" SourceUrl="http://localhost/OrderService/DraftOrder.svc?disco" />
+    <MetadataFile FileName="DraftOrder91.xsd" MetadataType="Schema" ID="e0daaf43-7f66-4e35-bb29-494fc1e20ba7" SourceId="1" SourceUrl="http://localhost/OrderService/DraftOrder.svc?xsd=xsd0" />
+    <MetadataFile FileName="DraftOrder94.xsd" MetadataType="Schema" ID="8dec95dd-77b5-4f7e-a9a5-07887ade77dc" SourceId="1" SourceUrl="http://localhost/OrderService/DraftOrder.svc?xsd=xsd1" />
+    <MetadataFile FileName="DraftOrder95.xsd" MetadataType="Schema" ID="15ca2d0a-1600-46de-ac47-ebbf34178a39" SourceId="1" SourceUrl="http://localhost/OrderService/DraftOrder.svc?xsd=xsd2" />
+    <MetadataFile FileName="DraftOrder96.xsd" MetadataType="Schema" ID="37198f65-898c-4868-90af-da68e2d507a7" SourceId="1" SourceUrl="http://localhost/OrderService/DraftOrder.svc?xsd=xsd3" />
+    <MetadataFile FileName="DraftOrder97.xsd" MetadataType="Schema" ID="4870ac22-6193-40da-9866-20f5e1c0f31b" SourceId="1" SourceUrl="http://localhost/OrderService/DraftOrder.svc?xsd=xsd4" />
+    <MetadataFile FileName="DraftOrder93.xsd" MetadataType="Schema" ID="15691563-9f05-4188-bf82-4b56e49bdb0e" SourceId="1" SourceUrl="http://localhost/OrderService/DraftOrder.svc?xsd=xsd5" />
+    <MetadataFile FileName="DraftOrder98.xsd" MetadataType="Schema" ID="2cba8206-87aa-450a-acc1-e3fab2baf62c" SourceId="1" SourceUrl="http://localhost/OrderService/DraftOrder.svc?xsd=xsd6" />
+    <MetadataFile FileName="DraftOrder9.xsd" MetadataType="Schema" ID="39ff8075-fb7c-48a8-9773-6ce93d173d5b" SourceId="1" SourceUrl="http://localhost/OrderService/DraftOrder.svc?xsd=xsd7" />
+    <MetadataFile FileName="DraftOrder92.xsd" MetadataType="Schema" ID="88b4b09d-d805-41a6-887b-034ca859a983" SourceId="1" SourceUrl="http://localhost/OrderService/DraftOrder.svc?xsd=xsd8" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

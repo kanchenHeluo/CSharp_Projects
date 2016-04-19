@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FallBackTool", "FallBackTool\FallBackTool.csproj", "{837D1FF8-652D-4001-B6BE-529CD70DFC7C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{53D3D57C-4664-47F2-B48C-5BEE06C06014} = {53D3D57C-4664-47F2-B48C-5BEE06C06014}
+		{05F98593-9C8B-4179-8E95-359E6F5D83A5} = {05F98593-9C8B-4179-8E95-359E6F5D83A5}
+		{7659D7E0-6572-449F-9231-A6F109082F26} = {7659D7E0-6572-449F-9231-A6F109082F26}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FallBackTool.Converter", "FallBackTool.Converter\FallBackTool.Converter.csproj", "{53D3D57C-4664-47F2-B48C-5BEE06C06014}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FallBackTool.Consumer", "FallBackTool.Consumer\FallBackTool.Consumer.csproj", "{7659D7E0-6572-449F-9231-A6F109082F26}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D54A95F8-D9E1-4A06-BC52-B18B316C61E8} = {D54A95F8-D9E1-4A06-BC52-B18B316C61E8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FallBackTool.Producer", "FallBackTool.Producer\FallBackTool.Producer.csproj", "{05F98593-9C8B-4179-8E95-359E6F5D83A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FallBackTool.UnitTest", "FallBackTool.UnitTest\FallBackTool.UnitTest.csproj", "{C3B25C8E-74D8-4294-8332-27A4FDA76522}"
+	ProjectSection(ProjectDependencies) = postProject
+		{05F98593-9C8B-4179-8E95-359E6F5D83A5} = {05F98593-9C8B-4179-8E95-359E6F5D83A5}
+		{7659D7E0-6572-449F-9231-A6F109082F26} = {7659D7E0-6572-449F-9231-A6F109082F26}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMRestService", "..\Library\CRMRestService\CRMRestService\CRMRestService.csproj", "{D54A95F8-D9E1-4A06-BC52-B18B316C61E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{837D1FF8-652D-4001-B6BE-529CD70DFC7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{837D1FF8-652D-4001-B6BE-529CD70DFC7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{837D1FF8-652D-4001-B6BE-529CD70DFC7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{837D1FF8-652D-4001-B6BE-529CD70DFC7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53D3D57C-4664-47F2-B48C-5BEE06C06014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D3D57C-4664-47F2-B48C-5BEE06C06014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53D3D57C-4664-47F2-B48C-5BEE06C06014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D3D57C-4664-47F2-B48C-5BEE06C06014}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7659D7E0-6572-449F-9231-A6F109082F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7659D7E0-6572-449F-9231-A6F109082F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7659D7E0-6572-449F-9231-A6F109082F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7659D7E0-6572-449F-9231-A6F109082F26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05F98593-9C8B-4179-8E95-359E6F5D83A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05F98593-9C8B-4179-8E95-359E6F5D83A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F98593-9C8B-4179-8E95-359E6F5D83A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05F98593-9C8B-4179-8E95-359E6F5D83A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3B25C8E-74D8-4294-8332-27A4FDA76522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3B25C8E-74D8-4294-8332-27A4FDA76522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3B25C8E-74D8-4294-8332-27A4FDA76522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3B25C8E-74D8-4294-8332-27A4FDA76522}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D54A95F8-D9E1-4A06-BC52-B18B316C61E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D54A95F8-D9E1-4A06-BC52-B18B316C61E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D54A95F8-D9E1-4A06-BC52-B18B316C61E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D54A95F8-D9E1-4A06-BC52-B18B316C61E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

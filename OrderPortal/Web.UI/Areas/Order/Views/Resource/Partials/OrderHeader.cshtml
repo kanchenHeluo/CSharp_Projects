@@ -1,0 +1,66 @@
+﻿<div op-busy-subscriber="OrderHeaderAttributes GetAllShipmentList">
+
+    <!--Promise register start-->
+    <span op-busy-publisher="OrderHeaderAttributesPromise" op-busy-publisher-event="OrderHeaderAttributes"></span>
+    <!--Promise register end-->
+
+    <op-form name="orderHeaderForm">
+        <op-errorsummary message-title="Order could not be submitted due to the following errors"></op-errorsummary>
+        <op-panelcontainer name="Order Information" is-open="status.open" is-disabled="!globalModels.agreementModel">
+            <!--Content Start-->
+            <div class="layout-positionRel">
+                <div class="layout-gapXS"></div>
+                <div class="layout-inlineBlock">
+                    <div class="ms-formblock leftalign">
+                        <label class="ms-stdlabel required">Purchase Order Number</label>
+                        <input type="text" maxlength="30" class="ms-stdinput" ng-model="globalModels.orderModel.PurchaseOrderNumber" op-required op-validation-msg="purchase order number is required" />
+                    </div>
+
+                    <div class="ms-formblock">
+                        <label class="ms-stdlabel required">PO Type</label>
+                        <select class="ms-stddroplist" ng-model="globalModels.orderModel.PurchaseOrderTypeCode" ng-options="item.Code as item.Name for item in globalModels.orderHeaderAttributes.PurchaseOrderTypes" op-required op-validation-msg="purchase order type is required"></select>
+                    </div>
+
+                    <div class="ms-formblock small">
+                        <label class="ms-stdlabel">Currency</label>
+                        <span class="ms-stdtext" ng-bind="globalModels.orderModel.PricingCurrencyCode"></span>
+                    </div>
+                    <div class="ms-formblock medium">
+                        <label class="ms-stdlabel required">Direct Partner Number</label>
+                        <span class="ms-stdtext" ng-if="globalModels.orderHeaderAttributes.DirectPartners.length == 1" ng-bind="globalModels.orderHeaderAttributes.DirectPartners[0].Name">&nbsp;</span>
+                        <select class="ms-stddroplist" ng-show="globalModels.orderHeaderAttributes.DirectPartners.length > 1" ng-model="globalModels.orderModel.DirectCustomerNumber" ng-options="item.Code as item.Name for item in globalModels.orderHeaderAttributes.DirectPartners" op-required op-validation-msg="Direct Partner Number is required"></select>
+                    </div>
+
+                    <div class="ms-formblock">
+                        <label class="ms-stdlabel">Assigned To</label>
+                        <select ng-model="globalModels.orderModel.AssignedTo" ng-options="item for item in assignedToCollection"></select>
+                    </div>
+                    <br />
+
+                    <div class="ms-formblock leftalign">
+                        <label class="ms-stdlabel">Secondary Purchase Order Number</label>
+                        <input type="text" maxlength="30" class="ms-stdinput" ng-model="globalModels.orderModel.SeconderyPurchaseOrderNumber" />
+                    </div>
+                    <div class="ms-formblock">
+                        <label class="ms-stdlabel">Indirect Customer Number</label>
+                        <span class="ms-stdtext" ng-if="globalModels.orderHeaderAttributes.IndirectPartners.length == 1" ng-bind="globalModels.orderHeaderAttributes.IndirectPartners[0].Name">&nbsp;</span>
+                        <select class="ms-stddroplist" ng-if="globalModels.orderHeaderAttributes.IndirectPartners.length > 1" ng-model="globalModels.orderModel.IndirectCustomerNumber" ng-options="item.Code as item.Name for item in globalModels.orderHeaderAttributes.IndirectPartners"></select>
+                    </div>
+
+                    <div class="ms-formblock">
+                        <label class="ms-stdlabel">Program Type</label>
+                        <span class="ms-stdtext" ng-bind="globalModels.agreementModel.ProgramCode"></span>
+                    </div>
+                </div>
+                <div class="layout-inlineBlock layout-positionAbs">
+                    <div class="ms-formblock large rightalign">
+                        <label class="ms-stdlabel">Order Comments</label>
+                        <textarea class="small" ng-model="globalModels.orderModel.UserComment"></textarea>
+                    </div>
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!--Content End-->
+        </op-panelcontainer>
+    </op-form>
+</div>

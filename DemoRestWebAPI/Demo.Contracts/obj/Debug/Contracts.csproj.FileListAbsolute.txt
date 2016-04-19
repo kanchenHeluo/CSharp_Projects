@@ -1,0 +1,5 @@
+C:\IndividualProject\DemoRestWebAPI\Contracts\bin\Debug\Contracts.dll
+C:\IndividualProject\DemoRestWebAPI\Contracts\bin\Debug\Contracts.pdb
+C:\IndividualProject\DemoRestWebAPI\Contracts\obj\Debug\Contracts.dll
+C:\IndividualProject\DemoRestWebAPI\Contracts\obj\Debug\Contracts.pdb
+C:\IndividualProject\DemoRestWebAPI\Contracts\obj\Debug\Contracts.csprojResolveAssemblyReference.cache

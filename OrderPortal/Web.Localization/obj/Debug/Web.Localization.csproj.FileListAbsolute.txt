@@ -1,0 +1,10 @@
+C:\Dalei\SourceCode\OrderPortal\Web.Localization\bin\Debug\Web.Localization.dll
+C:\Dalei\SourceCode\OrderPortal\Web.Localization\bin\Debug\Web.Localization.pdb
+C:\Dalei\SourceCode\OrderPortal\Web.Localization\bin\Debug\zh-cn\Web.Localization.resources.dll
+C:\Dalei\SourceCode\OrderPortal\Web.Localization\obj\Debug\Web.Localization.csprojResolveAssemblyReference.cache
+C:\Dalei\SourceCode\OrderPortal\Web.Localization\obj\Debug\Web.Localization.Strings.resources
+C:\Dalei\SourceCode\OrderPortal\Web.Localization\obj\Debug\Web.Localization.Strings.zh-cn.resources
+C:\Dalei\SourceCode\OrderPortal\Web.Localization\obj\Debug\Web.Localization.csproj.GenerateResource.Cache
+C:\Dalei\SourceCode\OrderPortal\Web.Localization\obj\Debug\zh-cn\Web.Localization.resources.dll
+C:\Dalei\SourceCode\OrderPortal\Web.Localization\obj\Debug\Web.Localization.dll
+C:\Dalei\SourceCode\OrderPortal\Web.Localization\obj\Debug\Web.Localization.pdb

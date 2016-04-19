@@ -1,0 +1,910 @@
+/*Variables*/
+@black: #000000;
+@gray40: #666666;
+@blue6: #0072C6;
+@red1: #FF0000;
+@red6: #E81123;
+@darkWhite: #DADADA;
+@white: #ffffff;
+@blue6: #0066cc;
+@green6: #007233;
+@white6: #EEEEEE;
+
+
+/* Standard Global Styles*/
+/* Initial document setup */
+*
+{ /* Firefox, other Gecko */ /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    &::-ms-clear
+    {
+        display: none;
+    }
+
+    HTML
+    {
+        position: absolute;
+    }
+}    
+
+HTML
+{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    height: 100%;
+    font-size: 62.5%;
+}
+
+* body, body
+{
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body
+{
+    position: relative;
+    z-index: 1;
+    color: @black;
+    font-weight: 500;
+    font-family: "Segoe UI", Tahoma, Helvetica, Arial, Verdana, sans-serif;
+    direction: ltr /*@leftToRight*/;
+}
+
+/* Backward browser support */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
+{
+    display: block;
+}
+
+p, H4, H5, body, div, span, td, tr
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+p, em, blockquote, strong
+{
+    font-size: 1.2rem;
+}
+
+/* End document setup*/
+
+
+.siteTitle
+{
+    .mixinFontFormatting(@color: @gray40; @fontWeight: 600; @fontSize:1.9rem; @textTransform :capitalize);
+}
+
+.mixinFontFormatting(@color: @black; @fontWeight: 500; @fontSize: 2.4rem; @lineHeight: none; @textTransform : none){
+    color: @color;
+    font-weight: @fontWeight;
+    font-size: @fontSize;
+    line-height: @lineHeight;
+    text-transform: @textTransform;
+}
+
+h1,
+.sectionTitle
+{
+    .mixinFontFormatting(@color: @gray40);   
+}
+
+h2,
+.containerTitle
+{
+    .mixinFontFormatting(@fontSize:1.6rem);     
+}
+
+h3,
+.textHeadingMed
+{
+    .mixinFontFormatting(@fontWeight: 600; @fontSize:1.4rem; @lineHeight: 1.4em);     
+}
+
+h4,
+.textHeading
+{
+    .mixinFontFormatting(@fontWeight: 700; @fontSize:1.2rem; @lineHeight: 1.2rem);   
+}
+
+.mixinLink()
+{
+    color: @blue6;
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    cursor: pointer;
+}
+
+a
+{
+    .mixinLink;
+
+    &:link,
+    &:visited
+    {
+        .mixinLink;
+    }
+
+    &:hover, &:active, &:focus
+    {
+        text-decoration: underline;
+    }
+        
+    .smallLinkText,
+    .smallLinkText:link,
+    .smallLinkText:visited
+    {
+        color: @gray40;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.1em;
+        
+        &:hover,
+        &:focus,
+        &:active
+        {
+            color: @blue6;
+            text-decoration: underline;
+        }        
+    }     
+}
+
+.linkText
+{
+    .mixinLink;
+    
+    .active,
+    &:hover,
+    &:active,
+    &:focus
+    {
+        text-decoration: underline;
+    }
+
+    .small
+    {
+        color: @gray40;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.1em;        
+    }
+}
+
+ .stdTextWhite    
+    {
+        color: @white;
+        font-size: 1.2rem;
+    }
+
+p,
+.stdText
+{
+    color: @black;
+    text-transform: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    .white
+    {
+        .stdTextWhite;
+    }
+}
+   
+
+.stdTextMed
+{
+    color: @black;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+label,
+.label,
+.stdLabel
+{
+    margin-right: 1rem;
+    color: @gray40;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+}
+
+textarea
+{
+    color: @black;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.stdLabelMed
+{
+    margin-right: 1rem;
+    color: @gray40;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+}
+
+.infoLabel
+{
+    border-bottom: dashed 1px @black;
+    color: @black;
+    text-transform: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
+.required:before,
+label.required:before
+{
+    padding: 5px;
+    color: @red1;
+    content: '*';
+}
+
+.stdInput,
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"]
+{
+    padding: 4px;
+    min-width: 5rem;
+    height: 2.4rem;
+    border: 1px solid @gray40;
+    background-color: @white;
+    font-size: 1.2rem;
+}
+
+input[type="button"],
+input[type="submit"],
+button,
+*.button,
+.stdBtn
+{
+    padding: 7px 10px;
+    border: none;
+    background-color: @gray40;
+    color: @white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+
+    &:hover, &:focus
+    {
+        background-color: @blue6;
+        cursor: pointer;
+    }
+}
+
+/* Global Nav */
+
+.globalNavRoot
+{
+    color: @black;
+    font-weight: 500;
+    font-size: 2.4rem;
+    cursor: pointer;
+
+    &:hover,
+    &:focus
+    {
+        color: @blue6;
+    }
+}
+
+    
+
+.globalNavItem
+{
+    color: @black;
+    font-weight: 500;
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    &:hover, &:focus
+    {
+        background-color: @blue6;
+        color: @white;
+    }
+
+    &:active, .active
+    {
+        color: @black;
+        font-weight: 600;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+}
+    
+
+/* END Global Nav */
+
+/* Bread Crumb */
+
+.breadCrumbLink
+{
+    color: @gray40;
+    font-weight: 500;
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    &:active, .active
+    {
+        color: @gray40;
+        font-weight: 500;
+        font-size: 1.4rem;
+    }
+}
+
+a.breadCrumbLink
+{
+    .breadCrumbLink;
+
+    &:link, &:visited
+    {
+        .breadCrumbLink;
+    }
+
+    &:hover,
+    &:focus
+    {
+        color: @blue6;
+        text-decoration: underline;
+    }
+} 
+/* Bread Crumb */
+
+
+/* Help Classes*/
+
+.helpTextLink
+{
+    .mixinFontFormatting(@color: @blue6; @fontSize: 1.2rem; @lineHeight: 1.3rem);
+
+    &:active, .active
+    {
+        text-decoration: underline;
+    }
+}
+
+a.helpTextLink
+{
+    .helpTextLink;
+
+    &:link, &:visited
+    {
+        .helpTextLink;
+    }   
+    
+    &:hover,
+    &:focus
+    {
+        text-decoration: underline;
+    }
+}   
+/*End Help Classes*/
+
+
+.dlgText
+{
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+}
+
+.errorInput
+{
+    border-color: @red6;
+}
+
+.validation-summary-errors
+{
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    border: 1px solid red;
+    color: @black;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+select,
+.stdDroplist
+{
+    padding: 2px;
+    height: 2.4rem;
+    vertical-align: middle;
+    font-size: 1.2rem;
+}
+
+.stdListItem
+{
+    display: inline-block;
+    padding: 4px;
+    min-height: 1.5rem;
+    color: @black;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+    .stdListItem:hover,
+    .stdListItem:focus
+    {
+        background-color: @blue6 !important;
+        color: @white;
+        cursor: pointer;
+    }
+
+
+.pageItem
+{
+    width: 24px;
+    height: 2.4rem;
+    background-color: @white;
+    font-size: 1.2rem;
+}
+
+    .pageItem:active,
+    .pageItem.active
+    {
+        width: 24px;
+        height: 2.4rem;
+        background-color: @darkWhite;
+        font-size: 1.2rem;
+    }
+
+.bannerHeading
+{
+    color: @black;
+    font-size: 1.8rem;
+}
+
+
+.fieldErrorText
+{
+    color: @red6;
+    font-size: 1.2rem;
+}
+
+a.stdSecondaryBtn,
+a.stdSecondaryBtn:link,
+a.stdSecondaryBtn:visited,
+input[type="submit"].stdSecondaryBtn,
+input[type="button"].stdSecondaryBtn,
+input[type="submit"].stdSecondaryBtn,
+button.stdSecondaryBtn,
+*.stdSecondaryBtn
+{
+    display: inline-block;
+    padding: 7px 10px;
+    height: 3rem;
+    border: solid 1px @gray40;
+    background-color: transparent;
+    color: @gray40;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+    a.stdSecondaryBtn:hover,
+    a.stdSecondaryBtn:active,
+    input[type="button"].stdSecondaryBtn:hover,
+    input[type="submit"].stdSecondaryBtn:hover,
+    button.stdSecondaryBtn:hover,
+    *.stdSecondaryBtn:hover,
+    *.stdSecondaryBtn:hover > *,
+    a.stdSecondaryBtn:focus,
+    a.stdSecondaryBtn:active,
+    input[type="button"].stdSecondaryBtn:focus,
+    input[type="submit"].stdSecondaryBtn:focus,
+    button.stdSecondaryBtn:focus,
+    *.stdSecondaryBtn:focus,
+    *.stdSecondaryBtn:focus > *
+    {
+        border: solid 1px @blue6;
+        background-color: @blue6;
+        color: @white;
+        text-decoration: none;
+    }
+
+.stdSecondaryBtn > *
+{
+    vertical-align: middle;
+}
+
+.imgTextBtn,
+a.imgTextBtn
+{
+    display: inline-block;
+    padding: 7px 10px;
+    color: @gray40;
+    font-weight: 500;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+    .imgTextBtn > * a.imgTextBtn > *
+    {
+        display: inline-block;
+    }
+
+    .imgTextBtn:hover,
+    .imgTextBtn:focus,
+    a.imgTextBtn:hover,
+    a.imgTextBtn:focus
+    {
+        color: @blue6;
+    }
+
+.imgTextBtn2,
+a.imgTextBtn2
+{
+    display: inline-block;
+    padding: 7px 10px;
+    color: @gray40;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    cursor: pointer;
+}
+
+    .imgTextBtn2 > *,
+    a.imgTextBtn2 > *
+    {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .imgTextBtn2:hover,
+    .imgTextBtn2:focus,
+    a.imgTextBtn2:hover,
+    a.imgTextBtn2:focus
+    {
+        background-color: @blue6;
+        color: @white;
+        text-decoration: none;
+    }
+
+
+/* error page classes */
+.errorPageHeader,
+h4.errorPageHeader
+{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.errorPageSubHeader
+{
+    color: @gray40;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+/* END error page classes */
+
+
+/* filterTile classes */
+.filterTileItem,
+.filterTileItem:link,
+.filterTileItem:visited
+{
+    position: relative;
+    display: inline-block;
+    min-width: 20rem;
+    min-height: 4rem;
+    max-width: 20rem;
+    border: solid 1px @gray40;
+    background-color: @white;
+    color: @gray40;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 4rem;
+    cursor: pointer;
+}
+
+    .filterTileItem:hover,
+    .filterTileItem:focus,
+    .filterTileItem:active,
+    .filterTileItem.active
+    {
+        border-color: @blue6 !important;
+        background-color: @blue6 !important;
+        color: @white;
+    }
+
+
+
+    .filterTileItem > *
+    {
+        display: table-cell;
+        padding: .4rem;
+        min-width: 2.2rem;
+        min-height: 4rem;
+        max-height: 100%;
+        width: 100%;
+        vertical-align: bottom;
+        white-space: normal;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+
+
+.filterTileCount
+{
+    padding: 0 .5rem;
+    vertical-align: top;
+    text-align: center;
+    white-space: nowrap;
+    -ms-word-break: keep-all;
+    word-break: keep-all;
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: normal;
+}
+
+.filterTileActiveItem:hover,
+.filterTileActiveItem:focus,
+.filterTileItem.active:hover,
+.filterTileItem.active:focus
+{
+    border-color: @gray40;
+    background-color: @white;
+    color: @gray40;
+}
+
+.filterTileItem:active,
+.filterTileItem.active
+{
+    border-color: @blue6;
+    background-color: @blue6;
+    color: @white;
+}
+
+.filterTileItem.invert,
+.filterTileItem.invert:hover,
+.filterTileItem.invert:active,
+.filterTileItem.invert:focus
+{
+    background-color: @blue6;
+    color: @white;
+}
+
+/* END filterTile classes */
+
+/* Sign In Classes */
+.signInTitleText,
+.signInTitleTextCust,
+.signInTitleTextPart
+{
+    font-size: 3rem;
+}
+
+.signInTitleTextPart
+{
+    color: @green6;
+}
+
+.signInTitleTextCust
+{
+    color: @blue6;
+}
+
+.signInIntroText
+{
+    color: @gray40;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.signInBtnPart
+{
+    min-width: 200px;
+    height: 10rem;
+    background-color: @green6;
+}
+
+.signInBtnCust
+{
+    min-width: 200px;
+    height: 10rem;
+    background-color: @blue6;
+}
+
+.signInBtnLabel
+{
+    color: @white;
+    font-size: 1.9rem;
+}
+
+.signInBtnSubLabel
+{
+    color: @white;
+    font-size: 1.2rem;
+}
+/* END Sign In Classes */
+
+*.focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus
+{
+    border: solid 1px @blue6;
+}
+
+
+*:disabled input,
+*.disabled input,
+input:disabled,
+input.disabled
+{
+    border-color: @white6;
+}
+
+
+*:disabled,
+*.disabled,
+*:disabled *,
+*.disabled *,
+*:disabled:hover,
+*.disabled:hover,
+*:disabled:hover *,
+*.disabled:hover *
+{
+    color: #a0a0a0 !important;
+    text-decoration: none;
+    cursor: default;
+}
+
+
+/* Helper / Compound  Styles */
+.active
+{ /* used to apply state on an active or selected element*/
+    outline: auto !important;
+}
+
+.focus
+{ /* defined to give appearance same as a input field focus */
+}
+
+.disabled
+{ /* has default style rules from global styles based on type*/
+}
+
+/* mark item to be styled as readonly, same visual appearance as 
+	disabled="disabled" without disabling content
+*/
+.readonly
+{
+    background-color: @darkWhite !important;
+    cursor: default !important;
+}
+
+/* Aligns text center */
+.atl
+{
+    text-align: left !important;
+}
+/* Aligns text right */
+.atr
+{
+    text-align: right !important;
+}
+
+/* Aligns text center */
+.atc
+{
+    text-align: center !important;
+}
+
+.ilb
+{
+    display: inline-block !important;
+}
+
+/* Hides content but leaves allocated space */
+.hidden
+{
+    visibility: hidden !important;
+}
+
+/* Hides content and collapses allocated space*/
+.hide
+{
+    display: none !important;
+}
+
+.wrap
+{
+    white-space: normal !important;
+    -ms-word-break: break-all !important;
+    word-break: break-all !important;
+}
+
+.nowrap
+{
+    white-space: nowrap !important;
+}
+
+.pointer
+{
+    cursor: pointer !important;
+}
+
+.defaultCase
+{
+    text-transform: none !important;
+}
+
+.uppercase
+{
+    text-transform: uppercase !important;
+}
+
+/* Text color override */
+.white
+{
+    color: @white !important;
+}
+
+.black
+{
+    color: @black !important;
+}
+
+.bold
+{
+    font-weight: 600 !important;
+}
+
+.bolder
+{
+    font-weight: 700 !important;
+}
+
+
+.flr
+{
+    float: right!important;
+}
+
+.fll
+{
+    float: left !important;
+}
+
+.clear,
+.clr
+{
+    clear: both;
+}
+
+.vt
+{
+    vertical-align: top !important;
+}
+
+.vb
+{
+    vertical-align: bottom !important;
+}

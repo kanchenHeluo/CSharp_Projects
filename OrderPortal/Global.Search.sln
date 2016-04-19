@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22310.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{337C4DEF-93D2-45D0-8128-A16F8ADB4E05}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Global.Search", "Global.Search\Global.Search.csproj", "{8721E5F5-8B40-4991-8176-9018339F027E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Global.SearchSync", "Global.SearchSync\Global.SearchSync.csproj", "{7E7B4B9A-49E2-4B97-AF57-04BA7D9660C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalSearch.UnitTest", "GlobalSearch.UnitTest\GlobalSearch.UnitTest.csproj", "{DC50F451-377D-42AE-BBB8-8FBEF1B15445}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualSearchTool", "ManualSearchTool\ManualSearchTool.csproj", "{37316A14-65BD-44A6-B102-3AFF48229253}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Global.SearchService", "Global.SearchService\Global.SearchService.csproj", "{4B8C086A-F8D3-4EA5-863E-4D5CD7C8F6DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8721E5F5-8B40-4991-8176-9018339F027E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8721E5F5-8B40-4991-8176-9018339F027E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8721E5F5-8B40-4991-8176-9018339F027E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8721E5F5-8B40-4991-8176-9018339F027E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E7B4B9A-49E2-4B97-AF57-04BA7D9660C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E7B4B9A-49E2-4B97-AF57-04BA7D9660C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E7B4B9A-49E2-4B97-AF57-04BA7D9660C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E7B4B9A-49E2-4B97-AF57-04BA7D9660C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC50F451-377D-42AE-BBB8-8FBEF1B15445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC50F451-377D-42AE-BBB8-8FBEF1B15445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC50F451-377D-42AE-BBB8-8FBEF1B15445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC50F451-377D-42AE-BBB8-8FBEF1B15445}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37316A14-65BD-44A6-B102-3AFF48229253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37316A14-65BD-44A6-B102-3AFF48229253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37316A14-65BD-44A6-B102-3AFF48229253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37316A14-65BD-44A6-B102-3AFF48229253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B8C086A-F8D3-4EA5-863E-4D5CD7C8F6DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B8C086A-F8D3-4EA5-863E-4D5CD7C8F6DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B8C086A-F8D3-4EA5-863E-4D5CD7C8F6DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B8C086A-F8D3-4EA5-863E-4D5CD7C8F6DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://msitvstf1:8080/tfs/ecit
+		SccProjectUniqueName0 = Global.Search\\Global.Search.csproj
+		SccProjectName0 = Global.Search
+		SccAuxPath0 = http://msitvstf1:8080/tfs/ecit
+		SccLocalPath0 = Global.Search
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = Global.SearchSync\\Global.SearchSync.csproj
+		SccProjectName1 = Global.SearchSync
+		SccAuxPath1 = http://msitvstf1:8080/tfs/ecit
+		SccLocalPath1 = Global.SearchSync
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = GlobalSearch.UnitTest\\GlobalSearch.UnitTest.csproj
+		SccProjectName2 = GlobalSearch.UnitTest
+		SccAuxPath2 = http://msitvstf1:8080/tfs/ecit
+		SccLocalPath2 = GlobalSearch.UnitTest
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = ManualSearchTool\\ManualSearchTool.csproj
+		SccProjectName3 = ManualSearchTool
+		SccAuxPath3 = http://msitvstf1:8080/tfs/ecit
+		SccLocalPath3 = ManualSearchTool
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName4 = Global.SearchService\\Global.SearchService.csproj
+		SccProjectName4 = Global.SearchService
+		SccAuxPath4 = http://msitvstf1:8080/tfs/ecit
+		SccLocalPath4 = Global.SearchService
+		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+EndGlobal

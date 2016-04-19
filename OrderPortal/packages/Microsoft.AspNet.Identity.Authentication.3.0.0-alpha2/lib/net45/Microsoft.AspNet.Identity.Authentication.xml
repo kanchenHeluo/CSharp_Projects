@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.AspNet.Identity.Authentication</name>
+    </assembly>
+    <members>
+        <member name="T:System.Security.Principal.IdentityExtensions">
+            <summary>
+                Extensions making it easier to get the user name/user id claims off of an identity
+            </summary>
+        </member>
+        <member name="M:System.Security.Principal.IdentityExtensions.GetUserName(System.Security.Principal.IIdentity)">
+            <summary>
+                Return the user name using the UserNameClaimType
+            </summary>
+            <param name="identity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Security.Principal.IdentityExtensions.GetUserId(System.Security.Principal.IIdentity)">
+            <summary>
+                Return the user id using the UserIdClaimType
+            </summary>
+            <param name="identity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Security.Principal.IdentityExtensions.FindFirstValue(System.Security.Claims.ClaimsIdentity,System.String)">
+            <summary>
+                Return the claim value for the first claim with the specified type if it exists, null otherwise
+            </summary>
+            <param name="identity"></param>
+            <param name="claimType"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

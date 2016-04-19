@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="urn:Microsoft.IT.Licensing.Services.Order/2012/08" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:Microsoft.IT.Licensing.Services.Order/2012/08" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:Microsoft.IT.Licensing.Services.Order/2012/08/Imports">
+      <xsd:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd0" namespace="urn:Microsoft.IT.Licensing.Services.Order/2012/08" />
+      <xsd:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd2" namespace="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" />
+      <xsd:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" />
+      <xsd:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd3" namespace="urn:Microsoft.IT.Licensing.Services.Product.DataContract/2012/08" />
+      <xsd:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Entity.Order" />
+      <xsd:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling" />
+      <xsd:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts" />
+      <xsd:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd8" namespace="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2013/16" />
+      <xsd:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts.Responses" />
+      <xsd:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd10" namespace="urn:Microsoft.IT.Licensing.Entity.Products/2012/08" />
+      <xsd:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts.Requests.UserPreference" />
+      <xsd:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts.Responses.UserPreference" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOrderService_GetOrderSearchResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderSearchResult" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOrderSearchResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderSearchResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetRecentPurchaseOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecentPurchaseOrders" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetRecentPurchaseOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecentPurchaseOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchOrderableProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOrderableProducts" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchOrderableProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOrderableProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchOrderableProducts_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q1:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchOrderableAgreements_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOrderableAgreements" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchOrderableAgreements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOrderableAgreementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchOrderableAgreements_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q2:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchAgreements_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAgreements" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchAgreements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchAgreementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchAgreements_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q3:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProducts" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetProducts_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q4:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOrderableAgreementDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderableAgreementDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOrderableAgreementDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderableAgreementDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOrderableAgreementDetails_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q5:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOrderEstimates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderEstimates" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOrderEstimates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderEstimatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOrderEstimates_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q6:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOpportunities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpportunities" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOpportunities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpportunitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOpportunities_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q7:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_PopulateOpportunities_InputMessage">
+    <wsdl:part name="parameters" element="tns:PopulateOpportunities" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_PopulateOpportunities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PopulateOpportunitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_PopulateOpportunities_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q8:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_CreateOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_CreateOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_CreateOrder_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q9:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetCustomerStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerStatistics" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetCustomerStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetCustomerStatistics_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q10:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOrders" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchOrders_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q11:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchOrdersByOpportunityTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOrdersByOpportunityTypes" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchOrdersByOpportunityTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOrdersByOpportunityTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchOrdersByOpportunityTypes_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q12:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetQuickStartReservations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuickStartReservations" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetQuickStartReservations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuickStartReservationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetQuickStartReservations_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q13:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_DeleteInvalidOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInvalidOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_DeleteInvalidOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInvalidOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_DeleteInvalidOrder_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q14:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_ZUDecisionParamsValidate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ZUDecisionParamsValidate" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_ZUDecisionParamsValidate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ZUDecisionParamsValidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_ZUDecisionParamsValidate_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q15:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_ZUOrderAutomate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ZUOrderAutomate" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_ZUOrderAutomate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ZUOrderAutomateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_ZUOrderAutomate_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q16:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchOrdersDueAgreements_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOrdersDueAgreements" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchOrdersDueAgreements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOrdersDueAgreementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchOrdersDueAgreements_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q17:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOrdersDueAgreementSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersDueAgreementSummary" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOrdersDueAgreementSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersDueAgreementSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOrdersDueAgreementSummary_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q18:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetAdjustedPODetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdjustedPODetails" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetAdjustedPODetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdjustedPODetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetAdjustedPODetails_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q19:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetLineItemAttributes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineItemAttributes" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetLineItemAttributes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLineItemAttributesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetLineItemAttributes_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q20:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOrderHeaderAttributes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderHeaderAttributes" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOrderHeaderAttributes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderHeaderAttributesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetOrderHeaderAttributes_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q21:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetSalesLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesLocation" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetSalesLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetSalesLocation_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q22:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchPurchaseOpportunities_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPurchaseOpportunities" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchPurchaseOpportunities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPurchaseOpportunitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchPurchaseOpportunities_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q23:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchPurchaseOrderWithDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPurchaseOrderWithDetails" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchPurchaseOrderWithDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPurchaseOrderWithDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SearchPurchaseOrderWithDetails_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q24:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetUserPreference_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPreference" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetUserPreference_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPreferenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetUserPreference_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q25:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SetUserPreference_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserPreference" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SetUserPreference_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserPreferenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_SetUserPreference_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q26:ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetCustomers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomers" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrderService_GetCustomers_ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" name="detail" element="q27:ServiceFault" />
+  </wsdl:message>
+  <wsdl:portType name="IOrderService">
+    <wsdl:operation name="GetOrderSearchResult">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOrderSearchResult" message="tns:IOrderService_GetOrderSearchResult_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOrderSearchResultResponse" message="tns:IOrderService_GetOrderSearchResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecentPurchaseOrders">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetRecentPurchaseOrders" message="tns:IOrderService_GetRecentPurchaseOrders_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetRecentPurchaseOrdersResponse" message="tns:IOrderService_GetRecentPurchaseOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchOrderableProducts">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchOrderableProducts" message="tns:IOrderService_SearchOrderableProducts_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchOrderableProductsResponse" message="tns:IOrderService_SearchOrderableProducts_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchOrderableProductsServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_SearchOrderableProducts_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchOrderableAgreements">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchOrderableAgreements" message="tns:IOrderService_SearchOrderableAgreements_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchOrderableAgreementsResponse" message="tns:IOrderService_SearchOrderableAgreements_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchOrderableAgreementsServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_SearchOrderableAgreements_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchAgreements">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchAgreements" message="tns:IOrderService_SearchAgreements_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchAgreementsResponse" message="tns:IOrderService_SearchAgreements_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchAgreementsServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_SearchAgreements_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetProducts" message="tns:IOrderService_GetProducts_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetProductsResponse" message="tns:IOrderService_GetProducts_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetProductsServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_GetProducts_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderableAgreementDetails">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOrderableAgreementDetails" message="tns:IOrderService_GetOrderableAgreementDetails_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOrderableAgreementDetailsResponse" message="tns:IOrderService_GetOrderableAgreementDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOrderableAgreementDetailsServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_GetOrderableAgreementDetails_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderEstimates">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOrderEstimates" message="tns:IOrderService_GetOrderEstimates_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOrderEstimatesResponse" message="tns:IOrderService_GetOrderEstimates_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOrderEstimatesServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_GetOrderEstimates_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpportunities">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOpportunities" message="tns:IOrderService_GetOpportunities_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOpportunitiesResponse" message="tns:IOrderService_GetOpportunities_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOpportunitiesServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_GetOpportunities_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PopulateOpportunities">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/PopulateOpportunities" message="tns:IOrderService_PopulateOpportunities_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/PopulateOpportunitiesResponse" message="tns:IOrderService_PopulateOpportunities_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/PopulateOpportunitiesServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_PopulateOpportunities_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/CreateOrder" message="tns:IOrderService_CreateOrder_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/CreateOrderResponse" message="tns:IOrderService_CreateOrder_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/CreateOrderServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_CreateOrder_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerStatistics">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetCustomerStatistics" message="tns:IOrderService_GetCustomerStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetCustomerStatisticsResponse" message="tns:IOrderService_GetCustomerStatistics_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetCustomerStatisticsServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_GetCustomerStatistics_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchOrders">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchOrders" message="tns:IOrderService_SearchOrders_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchOrdersResponse" message="tns:IOrderService_SearchOrders_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchOrdersServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_SearchOrders_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchOrdersByOpportunityTypes">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchOrdersByOpportunityTypes" message="tns:IOrderService_SearchOrdersByOpportunityTypes_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchOrdersByOpportunityTypesResponse" message="tns:IOrderService_SearchOrdersByOpportunityTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchOrdersByOpportunityTypesServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_SearchOrdersByOpportunityTypes_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuickStartReservations">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetQuickStartReservations" message="tns:IOrderService_GetQuickStartReservations_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetQuickStartReservationsResponse" message="tns:IOrderService_GetQuickStartReservations_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetQuickStartReservationsServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_GetQuickStartReservations_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInvalidOrder">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/DeleteInvalidOrder" message="tns:IOrderService_DeleteInvalidOrder_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/DeleteInvalidOrderResponse" message="tns:IOrderService_DeleteInvalidOrder_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/DeleteInvalidOrderServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_DeleteInvalidOrder_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ZUDecisionParamsValidate">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/ZUDecisionParamsValidate" message="tns:IOrderService_ZUDecisionParamsValidate_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/ZUDecisionParamsValidateResponse" message="tns:IOrderService_ZUDecisionParamsValidate_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/ZUDecisionParamsValidateServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_ZUDecisionParamsValidate_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ZUOrderAutomate">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/ZUOrderAutomate" message="tns:IOrderService_ZUOrderAutomate_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/ZUOrderAutomateResponse" message="tns:IOrderService_ZUOrderAutomate_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/ZUOrderAutomateServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_ZUOrderAutomate_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchOrdersDueAgreements">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchOrdersDueAgreements" message="tns:IOrderService_SearchOrdersDueAgreements_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchOrdersDueAgreementsResponse" message="tns:IOrderService_SearchOrdersDueAgreements_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchOrdersDueAgreementsServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_SearchOrdersDueAgreements_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersDueAgreementSummary">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOrdersDueAgreementSummary" message="tns:IOrderService_GetOrdersDueAgreementSummary_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOrdersDueAgreementSummaryResponse" message="tns:IOrderService_GetOrdersDueAgreementSummary_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOrdersDueAgreementSummaryServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_GetOrdersDueAgreementSummary_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustedPODetails">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetAdjustedPODetails" message="tns:IOrderService_GetAdjustedPODetails_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetAdjustedPODetailsResponse" message="tns:IOrderService_GetAdjustedPODetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetAdjustedPODetailsServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_GetAdjustedPODetails_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineItemAttributes">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetLineItemAttributes" message="tns:IOrderService_GetLineItemAttributes_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetLineItemAttributesResponse" message="tns:IOrderService_GetLineItemAttributes_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetLineItemAttributesServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_GetLineItemAttributes_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderHeaderAttributes">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOrderHeaderAttributes" message="tns:IOrderService_GetOrderHeaderAttributes_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOrderHeaderAttributesResponse" message="tns:IOrderService_GetOrderHeaderAttributes_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetOrderHeaderAttributesServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_GetOrderHeaderAttributes_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesLocation">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetSalesLocation" message="tns:IOrderService_GetSalesLocation_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetSalesLocationResponse" message="tns:IOrderService_GetSalesLocation_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetSalesLocationServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_GetSalesLocation_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPurchaseOpportunities">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchPurchaseOpportunities" message="tns:IOrderService_SearchPurchaseOpportunities_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchPurchaseOpportunitiesResponse" message="tns:IOrderService_SearchPurchaseOpportunities_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchPurchaseOpportunitiesServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_SearchPurchaseOpportunities_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPurchaseOrderWithDetails">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchPurchaseOrderWithDetails" message="tns:IOrderService_SearchPurchaseOrderWithDetails_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchPurchaseOrderWithDetailsResponse" message="tns:IOrderService_SearchPurchaseOrderWithDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SearchPurchaseOrderWithDetailsServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_SearchPurchaseOrderWithDetails_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPreference">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetUserPreference" message="tns:IOrderService_GetUserPreference_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetUserPreferenceResponse" message="tns:IOrderService_GetUserPreference_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetUserPreferenceServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_GetUserPreference_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPreference">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SetUserPreference" message="tns:IOrderService_SetUserPreference_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SetUserPreferenceResponse" message="tns:IOrderService_SetUserPreference_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/SetUserPreferenceServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_SetUserPreference_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomers">
+      <wsdl:input wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetCustomers" message="tns:IOrderService_GetCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetCustomersResponse" message="tns:IOrderService_GetCustomers_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:Microsoft.IT.Licensing.Services.Order/2012/08/IOrderService/GetCustomersServiceFaultFault" name="ServiceFaultFault" message="tns:IOrderService_GetCustomers_ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

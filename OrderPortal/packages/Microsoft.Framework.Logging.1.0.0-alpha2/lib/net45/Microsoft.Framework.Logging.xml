@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Framework.Logging</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Framework.Logging.DiagnosticsLoggerFactory">
+            <summary>
+            Provides an ILoggerFactory based on System.Diagnostics.TraceSource.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Framework.Logging.DiagnosticsLoggerFactory.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Framework.Logging.DiagnosticsLoggerFactory"/> class. 
+            </summary>
+            <summary>
+            Creates a factory named "Microsoft.Owin".
+            </summary>
+        </member>
+        <member name="M:Microsoft.Framework.Logging.DiagnosticsLoggerFactory.#ctor(System.Diagnostics.SourceSwitch,System.Diagnostics.TraceListener)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Framework.Logging.DiagnosticsLoggerFactory"/> class.
+            </summary>
+            <param name="rootSourceSwitch"></param>
+            <param name="rootTraceListener"></param>
+        </member>
+        <member name="M:Microsoft.Framework.Logging.DiagnosticsLoggerFactory.Create(System.String)">
+            <summary>
+            Creates a new DiagnosticsLogger for the given component name.
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Framework.Logging.ILogger">
+            <summary>
+            A generic interface for logging.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Framework.Logging.ILogger.WriteCore(Microsoft.Framework.Logging.TraceType,System.Int32,System.Object,System.Exception,System.Func{System.Object,System.Exception,System.String})">
+            <summary>
+            Aggregates most logging patterns to a single method.  This must be compatible with the Func representation in the OWIN environment.
+            
+            To check IsEnabled call WriteCore with only TraceEventType and check the return value, no event will be written.
+            </summary>
+            <param name="eventType"></param>
+            <param name="eventId"></param>
+            <param name="state"></param>
+            <param name="exception"></param>
+            <param name="formatter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Framework.Logging.ILoggerFactory">
+            <summary>
+            Used to create logger instances of the given name.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Framework.Logging.ILoggerFactory.Create(System.String)">
+            <summary>
+            Creates a new ILogger instance of the given name.
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Framework.Logging.LoggerExtensions">
+            <summary>
+            ILogger extension methods for common scenarios.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Framework.Logging.LoggerExtensions.IsEnabled(Microsoft.Framework.Logging.ILogger,Microsoft.Framework.Logging.TraceType)">
+            <summary>
+            Checks if the given TraceEventType is enabled.
+            </summary>
+            <param name="logger"></param>
+            <param name="eventType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Framework.Logging.LoggerExtensions.WriteVerbose(Microsoft.Framework.Logging.ILogger,System.String)">
+            <summary>
+            Writes a verbose log message.
+            </summary>
+            <param name="logger"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:Microsoft.Framework.Logging.LoggerExtensions.WriteInformation(Microsoft.Framework.Logging.ILogger,System.String)">
+            <summary>
+            Writes an informational log message.
+            </summary>
+            <param name="logger"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:Microsoft.Framework.Logging.LoggerExtensions.WriteWarning(Microsoft.Framework.Logging.ILogger,System.String,System.String[])">
+            <summary>
+            Writes a warning log message.
+            </summary>
+            <param name="logger"></param>
+            <param name="message"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Microsoft.Framework.Logging.LoggerExtensions.WriteWarning(Microsoft.Framework.Logging.ILogger,System.String,System.Exception)">
+            <summary>
+            Writes a warning log message.
+            </summary>
+            <param name="logger"></param>
+            <param name="message"></param>
+            <param name="error"></param>
+        </member>
+        <member name="M:Microsoft.Framework.Logging.LoggerExtensions.WriteError(Microsoft.Framework.Logging.ILogger,System.String)">
+            <summary>
+            Writes an error log message.
+            </summary>
+            <param name="logger"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:Microsoft.Framework.Logging.LoggerExtensions.WriteError(Microsoft.Framework.Logging.ILogger,System.String,System.Exception)">
+            <summary>
+            Writes an error log message.
+            </summary>
+            <param name="logger"></param>
+            <param name="message"></param>
+            <param name="error"></param>
+        </member>
+        <member name="M:Microsoft.Framework.Logging.LoggerExtensions.WriteCritical(Microsoft.Framework.Logging.ILogger,System.String)">
+            <summary>
+            Writes a critical log message.
+            </summary>
+            <param name="logger"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:Microsoft.Framework.Logging.LoggerExtensions.WriteCritical(Microsoft.Framework.Logging.ILogger,System.String,System.Exception)">
+            <summary>
+            Writes a critical log message.
+            </summary>
+            <param name="logger"></param>
+            <param name="message"></param>
+            <param name="error"></param>
+        </member>
+    </members>
+</doc>

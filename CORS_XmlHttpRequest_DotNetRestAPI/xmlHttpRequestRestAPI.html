@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset='utf-8'> 
+<title> XMLHttpRequest call REST API Example</title>
+<script type="text/javascript">
+var xmlHttp;
+function createXMLHttpRequest() {
+    if (window.ActiveXObject) {
+        xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    else if (window.XMLHttpRequest) {
+        xmlHttp = new XMLHttpRequest();
+    }
+}
+//Get
+function AddNumber() {
+    createXMLHttpRequest();
+    var url = "http://localhost:32443/POC/Add/" + document.getElementById("addNum1").value + "/" + document.getElementById("addNum2").value;
+    xmlHttp.open("GET", url, true);
+    xmlHttp.onreadystatechange = ShowAddResult;
+    xmlHttp.send(null);
+}
+function ShowAddResult() {
+    if (xmlHttp.readyState == 4) {
+        if (xmlHttp.status = 200) {
+            document.getElementById("addSum").value = xmlHttp.responseText;
+        }
+    }
+}
+
+//Post
+function MultipleNumber() {
+    createXMLHttpRequest();
+    var url = "http://localhost:32443/POC/Multiple";
+    var params = JSON.stringify({ Num1: document.getElementById("multipleNum1").value, Num2: document.getElementById("multipleNum2").value });
+    xmlHttp.open("POST", url, true);
+
+    xmlHttp.setRequestHeader("Content-type", "application/json; charset=utf-8");
+    //xmlHttp.setRequestHeader("Content-length", params.length);
+    //xmlHttp.setRequestHeader("Connection", "close");
+
+    xmlHttp.onreadystatechange = ShowMultipleResult;
+    xmlHttp.send(params);
+}
+
+function ShowMultipleResult() {
+    if (xmlHttp.readyState == 4) {
+        if (xmlHttp.status = 200) {
+            document.getElementById("multipleSum").value = xmlHttp.responseText;
+        }
+    }
+}
+ 
+</script>
+</head>
+<body>
+
+<div style="text-align: center">
+    <br/>无刷新求和示例<br/>
+    <p>GET</p>
+    <br />
+    <input id="addNum1" style="width: 107px" type="text" onkeyup="AddNumber();" value="0" />
+    +<input id="addNum2" style="width: 95px" type="text" onkeyup="AddNumber();" value="0" />
+    =<input id="addSum" style="width: 97px" type="text"/>
+    <br />
+    <p>POST</p>
+    <br />
+    <input id="multipleNum1" style="width: 107px" type="text" onkeyup="MultipleNumber();" value="0" />
+    X<input id="multipleNum2" style="width: 95px" type="text" onkeyup="MultipleNumber();" value="0" />
+    =<input id="multipleSum" style="width: 97px" type="text" />
+</div>
+</body>
+</html>

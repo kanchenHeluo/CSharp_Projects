@@ -1,0 +1,4 @@
+C:\IndividualProject\DemoRestWebAPI\Contracts\bin\Release\Contracts.dll
+C:\IndividualProject\DemoRestWebAPI\Contracts\bin\Release\Contracts.pdb
+C:\IndividualProject\DemoRestWebAPI\Contracts\obj\Release\Contracts.dll
+C:\IndividualProject\DemoRestWebAPI\Contracts\obj\Release\Contracts.pdb

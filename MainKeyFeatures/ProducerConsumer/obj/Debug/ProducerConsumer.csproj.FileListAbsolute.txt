@@ -1,0 +1,6 @@
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\ProducerConsumer\bin\Debug\ProducerConsumer.exe.config
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\ProducerConsumer\bin\Debug\ProducerConsumer.exe
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\ProducerConsumer\bin\Debug\ProducerConsumer.pdb
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\ProducerConsumer\obj\Debug\ProducerConsumer.exe
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\ProducerConsumer\obj\Debug\ProducerConsumer.pdb
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\ProducerConsumer\obj\Debug\ProducerConsumer.csprojResolveAssemblyReference.cache

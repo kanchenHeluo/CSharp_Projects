@@ -1,0 +1,4 @@
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\TelemetryTool\Common\bin\Release\Common.dll
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\TelemetryTool\Common\bin\Release\Common.pdb
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\TelemetryTool\Common\obj\Release\Common.dll
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\TelemetryTool\Common\obj\Release\Common.pdb

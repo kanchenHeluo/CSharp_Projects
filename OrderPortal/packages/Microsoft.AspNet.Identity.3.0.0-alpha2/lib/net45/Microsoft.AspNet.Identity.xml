@@ -1,0 +1,2148 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.AspNet.Identity</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.AspNet.Identity.ClaimsIdentityFactory`1">
+            <summary>
+                Creates a ClaimsIdentity from a User
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.ClaimsIdentityFactory`1.CreateAsync(Microsoft.AspNet.Identity.UserManager{`0},`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                CreateAsync a ClaimsIdentity from a user
+            </summary>
+            <param name="manager"></param>
+            <param name="user"></param>
+            <param name="authenticationType"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Microsoft.AspNet.Identity.ClaimTypeOptions.DefaultSecurityStampClaimType">
+            <summary>
+                ClaimType used for the security stamp by default
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.ClaimTypeOptions.Role">
+            <summary>
+                Claim type used for role claims
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.ClaimTypeOptions.UserName">
+            <summary>
+                Claim type used for the user name
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.ClaimTypeOptions.UserId">
+            <summary>
+                Claim type used for the user id
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.ClaimTypeOptions.SecurityStamp">
+            <summary>
+                Claim type used for the user security stamp
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IClaimsIdentityFactory`1">
+            <summary>
+                Interface for creating a ClaimsIdentity from an user
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IClaimsIdentityFactory`1.CreateAsync(Microsoft.AspNet.Identity.UserManager{`0},`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Create a ClaimsIdentity from an user using a UserManager
+            </summary>
+            <param name="manager"></param>
+            <param name="user"></param>
+            <param name="authenticationType"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IdentityMessage">
+            <summary>
+                Represents a message
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityMessage.Destination">
+            <summary>
+                Destination, i.e. To email, or SMS phone number
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityMessage.Subject">
+            <summary>
+                Subject
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityMessage.Body">
+            <summary>
+                Message contents
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IdentityOptions">
+            <summary>
+                Configuration for lockout
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IdentityResult">
+            <summary>
+                Represents the result of an identity operation
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IdentityResult.#ctor(System.String[])">
+            <summary>
+                Failure constructor that takes error messages
+            </summary>
+            <param name="errors"></param>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IdentityResult.#ctor(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+                Failure constructor that takes error messages
+            </summary>
+            <param name="errors"></param>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityResult.Succeeded">
+            <summary>
+                True if the operation was successful
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityResult.Errors">
+            <summary>
+                List of errors
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityResult.Success">
+            <summary>
+                Static success result
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IdentityResult.Failed(System.String[])">
+            <summary>
+                Failed helper method
+            </summary>
+            <param name="errors"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IdentityRole">
+            <summary>
+                Represents a Role entity
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IdentityRole.#ctor">
+            <summary>
+                Constructor
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IdentityRole.#ctor(System.String)">
+            <summary>
+                Constructor
+            </summary>
+            <param name="roleName"></param>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IdentityRole`1">
+            <summary>
+                Represents a Role entity
+            </summary>
+            <typeparam name="TKey"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IdentityRole`1.#ctor">
+            <summary>
+                Constructor
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityRole`1.Users">
+            <summary>
+                Navigation property for users in the role
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityRole`1.Id">
+            <summary>
+                Role id
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityRole`1.Name">
+            <summary>
+                Role name
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IdentityServices">
+            <summary>
+            Default services used by UserManager and RoleManager
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUser`1.Email">
+            <summary>
+                Email
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUser`1.EmailConfirmed">
+            <summary>
+                True if the email is confirmed, default is false
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUser`1.PasswordHash">
+            <summary>
+                The salted/hashed form of the user password
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUser`1.SecurityStamp">
+            <summary>
+                A random value that should change whenever a users credentials have changed (password changed, login removed)
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUser`1.PhoneNumber">
+            <summary>
+                PhoneNumber for the user
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUser`1.PhoneNumberConfirmed">
+            <summary>
+                True if the phone number is confirmed, default is false
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUser`1.TwoFactorEnabled">
+            <summary>
+                Is two factor enabled for the user
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUser`1.LockoutEnd">
+            <summary>
+                DateTime in UTC when lockout ends, any time in the past is considered not locked out.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUser`1.LockoutEnabled">
+            <summary>
+                Is lockout enabled for this user
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUser`1.AccessFailedCount">
+            <summary>
+                Used to record failures for the purposes of lockout
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUser`1.Roles">
+            <summary>
+                Roles for the user
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUser`1.Claims">
+            <summary>
+                Claims for the user
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUser`1.Logins">
+            <summary>
+                Associated logins for the user
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IdentityUserClaim`1">
+            <summary>
+                EntityType that represents one specific user claim
+            </summary>
+            <typeparam name="TKey"></typeparam>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUserClaim`1.Id">
+            <summary>
+                Primary key
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUserClaim`1.UserId">
+            <summary>
+                User Id for the user who owns this login
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUserClaim`1.ClaimType">
+            <summary>
+                Claim type
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUserClaim`1.ClaimValue">
+            <summary>
+                Claim value
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IdentityUserLogin`1">
+            <summary>
+                Entity type for a user's login (i.e. facebook, google)
+            </summary>
+            <typeparam name="TKey"></typeparam>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUserLogin`1.LoginProvider">
+            <summary>
+                The login provider for the login (i.e. facebook, google)
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUserLogin`1.ProviderKey">
+            <summary>
+                Key representing the login for the provider
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUserLogin`1.UserId">
+            <summary>
+                User Id for the user who owns this login
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IdentityUserRole`1">
+            <summary>
+                EntityType that represents a user belonging to a role
+            </summary>
+            <typeparam name="TKey"></typeparam>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUserRole`1.UserId">
+            <summary>
+                UserId for the user that is in the role
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IdentityUserRole`1.RoleId">
+            <summary>
+                RoleId for the role
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IIdentityMessageService">
+            <summary>
+                Expose a way to send messages (email/txt)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IIdentityMessageService.SendAsync(Microsoft.AspNet.Identity.IdentityMessage,System.Threading.CancellationToken)">
+            <summary>
+                This method should send the message
+            </summary>
+            <param name="message"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IPasswordHasher">
+            <summary>
+                Abstraction for password hashing methods
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IPasswordHasher.HashPassword(System.String)">
+            <summary>
+                Hash a password
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IPasswordHasher.VerifyHashedPassword(System.String,System.String)">
+            <summary>
+                Verify that a password matches the hashed password
+            </summary>
+            <param name="hashedPassword"></param>
+            <param name="providedPassword"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IPasswordValidator`1">
+            <summary>
+                Used to validate passwords
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IPasswordValidator`1.ValidateAsync(System.String,Microsoft.AspNet.Identity.UserManager{`0},System.Threading.CancellationToken)">
+            <summary>
+                Validate the item
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IQueryableRoleStore`1">
+            <summary>
+                Interface that exposes an IQueryable roles
+            </summary>
+            <typeparam name="TRole"></typeparam>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IQueryableRoleStore`1.Roles">
+            <summary>
+                IQueryable roles
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IQueryableUserStore`1">
+            <summary>
+                Interface that exposes an IQueryable users
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.IQueryableUserStore`1.Users">
+            <summary>
+                IQueryable users
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IRoleStore`1">
+            <summary>
+                Interface that exposes basic role management
+            </summary>
+            <typeparam name="TRole"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IRoleStore`1.CreateAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Insert a new role
+            </summary>
+            <param name="role"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IRoleStore`1.UpdateAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Update a role
+            </summary>
+            <param name="role"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IRoleStore`1.DeleteAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                DeleteAsync a role
+            </summary>
+            <param name="role"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IRoleStore`1.GetRoleIdAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns a role's id
+            </summary>
+            <param name="role"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IRoleStore`1.GetRoleNameAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns a role's name
+            </summary>
+            <param name="role"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IRoleStore`1.SetRoleNameAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Set a role's name
+            </summary>
+            <param name="role"></param>
+            <param name="roleName"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IRoleStore`1.FindByIdAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+                Finds a role by id
+            </summary>
+            <param name="roleId"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IRoleStore`1.FindByNameAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+                Find a role by name
+            </summary>
+            <param name="roleName"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IRoleValidator`1">
+            <summary>
+                Used to validate a role
+            </summary>
+            <typeparam name="TRole"></typeparam>
+            <typeparam name="TKey"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IRoleValidator`1.ValidateAsync(Microsoft.AspNet.Identity.RoleManager{`0},`0,System.Threading.CancellationToken)">
+            <summary>
+                ValidateAsync the user
+            </summary>
+            <param name="role"></param>
+            <param name="manager"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IUserClaimStore`1">
+            <summary>
+                Stores user specific claims
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserClaimStore`1.GetClaimsAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns the claims for the user with the issuer set
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserClaimStore`1.AddClaimAsync(`0,System.Security.Claims.Claim,System.Threading.CancellationToken)">
+            <summary>
+                Add a new user claim
+            </summary>
+            <param name="user"></param>
+            <param name="claim"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserClaimStore`1.RemoveClaimAsync(`0,System.Security.Claims.Claim,System.Threading.CancellationToken)">
+            <summary>
+                Remove a user claim
+            </summary>
+            <param name="user"></param>
+            <param name="claim"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IUserEmailStore`1">
+            <summary>
+                Stores a user's email
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserEmailStore`1.SetEmailAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Set the user email
+            </summary>
+            <param name="user"></param>
+            <param name="email"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserEmailStore`1.GetEmailAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Get the user email
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserEmailStore`1.GetEmailConfirmedAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns true if the user email is confirmed
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserEmailStore`1.SetEmailConfirmedAsync(`0,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+                Sets whether the user email is confirmed
+            </summary>
+            <param name="user"></param>
+            <param name="confirmed"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserEmailStore`1.FindByEmailAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+                Returns the user associated with this email
+            </summary>
+            <param name="email"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IUserLockoutStore`1">
+            <summary>
+                Stores information which can be used to implement account lockout, including access failures and lockout status
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserLockoutStore`1.GetLockoutEndDateAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns the DateTimeOffset that represents the end of a user's lockout, any time in the past should be considered
+                not locked out.
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserLockoutStore`1.SetLockoutEndDateAsync(`0,System.DateTimeOffset,System.Threading.CancellationToken)">
+            <summary>
+                Locks a user out until the specified end date (set to a past date, to unlock a user)
+            </summary>
+            <param name="user"></param>
+            <param name="lockoutEnd"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserLockoutStore`1.IncrementAccessFailedCountAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Used to record when an attempt to access the user has failed
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserLockoutStore`1.ResetAccessFailedCountAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Used to reset the account access count, typically after the account is successfully accessed
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserLockoutStore`1.GetAccessFailedCountAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns the current number of failed access attempts.  This number usually will be reset whenever the password is
+                verified or the account is locked out.
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserLockoutStore`1.GetLockoutEnabledAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns whether the user can be locked out.
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserLockoutStore`1.SetLockoutEnabledAsync(`0,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+                Sets whether the user can be locked out.
+            </summary>
+            <param name="user"></param>
+            <param name="enabled"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IUserLoginStore`1">
+            <summary>
+                Interface that maps users to login providers, i.e. Google, Facebook, Twitter, Microsoft
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserLoginStore`1.AddLoginAsync(`0,Microsoft.AspNet.Identity.UserLoginInfo,System.Threading.CancellationToken)">
+            <summary>
+                Adds a user login with the specified provider and key
+            </summary>
+            <param name="user"></param>
+            <param name="login"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserLoginStore`1.RemoveLoginAsync(`0,Microsoft.AspNet.Identity.UserLoginInfo,System.Threading.CancellationToken)">
+            <summary>
+                Removes the user login with the specified combination if it exists, returns true if found and removed
+            </summary>
+            <param name="user"></param>
+            <param name="login"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserLoginStore`1.GetLoginsAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns the linked accounts for this user
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserLoginStore`1.FindByLoginAsync(Microsoft.AspNet.Identity.UserLoginInfo,System.Threading.CancellationToken)">
+            <summary>
+                Returns the user associated with this login
+            </summary>
+            <param name="login"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IUserPasswordStore`1">
+            <summary>
+                Stores a user's password hash
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserPasswordStore`1.SetPasswordHashAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Set the user password hash
+            </summary>
+            <param name="user"></param>
+            <param name="passwordHash"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserPasswordStore`1.GetPasswordHashAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Get the user password hash
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserPasswordStore`1.HasPasswordAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns true if a user has a password set
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IUserPhoneNumberStore`1">
+            <summary>
+                Stores a user's phoneNumber
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserPhoneNumberStore`1.SetPhoneNumberAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Set the user PhoneNumber
+            </summary>
+            <param name="user"></param>
+            <param name="phoneNumber"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserPhoneNumberStore`1.GetPhoneNumberAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Get the user phoneNumber
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserPhoneNumberStore`1.GetPhoneNumberConfirmedAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns true if the user phone number is confirmed
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserPhoneNumberStore`1.SetPhoneNumberConfirmedAsync(`0,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+                Sets whether the user phone number is confirmed
+            </summary>
+            <param name="user"></param>
+            <param name="confirmed"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IUserRoleStore`1">
+            <summary>
+                Interface that maps users to their roles
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserRoleStore`1.AddToRoleAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Adds a user to role
+            </summary>
+            <param name="user"></param>
+            <param name="roleName"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserRoleStore`1.RemoveFromRoleAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Removes the role for the user
+            </summary>
+            <param name="user"></param>
+            <param name="roleName"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserRoleStore`1.GetRolesAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns the roles for this user
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserRoleStore`1.IsInRoleAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Returns true if a user is in a role
+            </summary>
+            <param name="user"></param>
+            <param name="roleName"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IUserSecurityStampStore`1">
+            <summary>
+                Stores a user's security stamp
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserSecurityStampStore`1.SetSecurityStampAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Set the security stamp for the user
+            </summary>
+            <param name="user"></param>
+            <param name="stamp"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserSecurityStampStore`1.GetSecurityStampAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Get the user security stamp
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IUserStore`1">
+            <summary>
+                Interface that exposes basic user management apis
+            </summary>
+            <typeparam name="TUser"></typeparam>
+            <typeparam name="TKey"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserStore`1.GetUserIdAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns the user id for a user
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserStore`1.GetUserNameAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+            Returns the user's name
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserStore`1.SetUserNameAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Set the user name
+            </summary>
+            <param name="user"></param>
+            <param name="userName"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserStore`1.CreateAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Insert a new user
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserStore`1.UpdateAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                UpdateAsync a user
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserStore`1.DeleteAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                DeleteAsync a user
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserStore`1.FindByIdAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+                Finds a user
+            </summary>
+            <param name="userId"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserStore`1.FindByNameAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+                Returns the user associated with this name
+            </summary>
+            <param name="name"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IUserTokenProvider`1">
+            <summary>
+                Interface to generate user tokens
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserTokenProvider`1.GenerateAsync(System.String,Microsoft.AspNet.Identity.UserManager{`0},`0,System.Threading.CancellationToken)">
+            <summary>
+                Generate a token for a user
+            </summary>
+            <param name="purpose"></param>
+            <param name="manager"></param>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserTokenProvider`1.ValidateAsync(System.String,System.String,Microsoft.AspNet.Identity.UserManager{`0},`0,System.Threading.CancellationToken)">
+            <summary>
+                ValidateAsync and unprotect a token, returns null if invalid
+            </summary>
+            <param name="purpose"></param>
+            <param name="token"></param>
+            <param name="manager"></param>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserTokenProvider`1.NotifyAsync(System.String,Microsoft.AspNet.Identity.UserManager{`0},`0,System.Threading.CancellationToken)">
+            <summary>
+                Notifies the user that a token has been generated, i.e. via email or sms, or can no-op
+            </summary>
+            <param name="token"></param>
+            <param name="manager"></param>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserTokenProvider`1.IsValidProviderForUserAsync(Microsoft.AspNet.Identity.UserManager{`0},`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns true if provider can be used for this user, i.e. could require a user to have an email
+            </summary>
+            <param name="manager"></param>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IUserTwoFactorStore`1">
+            <summary>
+                Stores whether two factor is enabled for a user
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserTwoFactorStore`1.SetTwoFactorEnabledAsync(`0,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+                Sets whether two factor is enabled for the user
+            </summary>
+            <param name="user"></param>
+            <param name="enabled"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserTwoFactorStore`1.GetTwoFactorEnabledAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns whether two factor is enabled for the user
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.IUserValidator`1">
+            <summary>
+                Used to validate a user
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.IUserValidator`1.ValidateAsync(Microsoft.AspNet.Identity.UserManager{`0},`0,System.Threading.CancellationToken)">
+            <summary>
+                ValidateAsync the user
+            </summary>
+            <param name="manager"></param>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.LockoutOptions.EnabledByDefault">
+            <summary>
+                If true, will enable user lockout when users are created
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.LockoutOptions.MaxFailedAccessAttempts">
+            <summary>
+                Number of access attempts allowed for a user before lockout (if enabled)
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.LockoutOptions.DefaultLockoutTimeSpan">
+            <summary>
+                Default amount of time an user is locked out for after MaxFailedAccessAttempsBeforeLockout is reached
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.PasswordHasher">
+            <summary>
+                Implements password hashing methods
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.PasswordHasher.HashPassword(System.String)">
+            <summary>
+                Hash a password
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.PasswordHasher.VerifyHashedPassword(System.String,System.String)">
+            <summary>
+                Verify that a password matches the hashedPassword
+            </summary>
+            <param name="hashedPassword"></param>
+            <param name="providedPassword"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.PasswordOptions.RequiredLength">
+            <summary>
+                Minimum required length
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.PasswordOptions.RequireNonLetterOrDigit">
+            <summary>
+                Require a non letter or digit character
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.PasswordOptions.RequireLowercase">
+            <summary>
+                Require a lower case letter ('a' - 'z')
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.PasswordOptions.RequireUppercase">
+            <summary>
+                Require an upper case letter ('A' - 'Z')
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.PasswordOptions.RequireDigit">
+            <summary>
+                Require a digit ('0' - '9')
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.PasswordValidator`1">
+            <summary>
+                Used to validate some basic password policy like length and number of non alphanumerics
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.PasswordValidator`1.ValidateAsync(System.String,Microsoft.AspNet.Identity.UserManager{`0},System.Threading.CancellationToken)">
+            <summary>
+                Ensures that the password is of the required length and meets the configured requirements
+            </summary>
+            <param name="password"></param>
+            <param name="manager"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.PasswordValidator`1.IsDigit(System.Char)">
+            <summary>
+                Returns true if the character is a digit between '0' and '9'
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.PasswordValidator`1.IsLower(System.Char)">
+            <summary>
+                Returns true if the character is between 'a' and 'z'
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.PasswordValidator`1.IsUpper(System.Char)">
+            <summary>
+                Returns true if the character is between 'A' and 'Z'
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.PasswordValidator`1.IsLetterOrDigit(System.Char)">
+            <summary>
+                Returns true if the character is upper, lower, or a digit
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.PasswordVerificationResult">
+            <summary>
+                Return result for IPasswordHasher
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNet.Identity.PasswordVerificationResult.Failed">
+            <summary>
+                Password verification failed
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNet.Identity.PasswordVerificationResult.Success">
+            <summary>
+                Success
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNet.Identity.PasswordVerificationResult.SuccessRehashNeeded">
+            <summary>
+                Success but should update and rehash the password
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.DefaultError">
+            <summary>
+              Looks up a localized string similar to An unknown failure has occured..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.DuplicateEmail">
+            <summary>
+              Looks up a localized string similar to Email &apos;{0}&apos; is already taken..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.DuplicateName">
+            <summary>
+              Looks up a localized string similar to Name {0} is already taken..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.ExternalLoginExists">
+            <summary>
+              Looks up a localized string similar to A user with that external login already exists..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.InvalidEmail">
+            <summary>
+              Looks up a localized string similar to Email &apos;{0}&apos; is invalid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.InvalidToken">
+            <summary>
+              Looks up a localized string similar to Invalid token..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.InvalidUserName">
+            <summary>
+              Looks up a localized string similar to User name {0} is invalid, can only contain letters or digits..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.LockoutNotEnabled">
+            <summary>
+              Looks up a localized string similar to Lockout is not enabled for this user..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.NoTokenProvider">
+            <summary>
+              Looks up a localized string similar to No IUserTokenProvider is registered..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.NoTwoFactorProvider">
+            <summary>
+              Looks up a localized string similar to No IUserTwoFactorProvider for &apos;{0}&apos; is registered..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.PasswordMismatch">
+            <summary>
+              Looks up a localized string similar to Incorrect password..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.PasswordRequireDigit">
+            <summary>
+              Looks up a localized string similar to Passwords must have at least one digit (&apos;0&apos;-&apos;9&apos;)..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.PasswordRequireLower">
+            <summary>
+              Looks up a localized string similar to Passwords must have at least one lowercase (&apos;a&apos;-&apos;z&apos;)..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.PasswordRequireNonLetterOrDigit">
+            <summary>
+              Looks up a localized string similar to Passwords must have at least one non letter or digit character..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.PasswordRequireUpper">
+            <summary>
+              Looks up a localized string similar to Passwords must have at least one uppercase (&apos;A&apos;-&apos;Z&apos;)..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.PasswordTooShort">
+            <summary>
+              Looks up a localized string similar to Passwords must be at least {0} characters..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.PropertyTooShort">
+            <summary>
+              Looks up a localized string similar to {0} cannot be null or empty..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.RoleNotFound">
+            <summary>
+              Looks up a localized string similar to Role {0} does not exist..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.StoreNotIQueryableRoleStore">
+            <summary>
+              Looks up a localized string similar to Store does not implement IQueryableRoleStore&lt;TRole&gt;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.StoreNotIQueryableUserStore">
+            <summary>
+              Looks up a localized string similar to Store does not implement IQueryableUserStore&lt;TUser&gt;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.StoreNotIUserClaimStore">
+            <summary>
+              Looks up a localized string similar to Store does not implement IUserClaimStore&lt;TUser&gt;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.StoreNotIUserConfirmationStore">
+            <summary>
+              Looks up a localized string similar to Store does not implement IUserConfirmationStore&lt;TUser&gt;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.StoreNotIUserEmailStore">
+            <summary>
+              Looks up a localized string similar to Store does not implement IUserEmailStore&lt;TUser&gt;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.StoreNotIUserLockoutStore">
+            <summary>
+              Looks up a localized string similar to Store does not implement IUserLockoutStore&lt;TUser&gt;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.StoreNotIUserLoginStore">
+            <summary>
+              Looks up a localized string similar to Store does not implement IUserLoginStore&lt;TUser&gt;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.StoreNotIUserPasswordStore">
+            <summary>
+              Looks up a localized string similar to Store does not implement IUserPasswordStore&lt;TUser&gt;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.StoreNotIUserPhoneNumberStore">
+            <summary>
+              Looks up a localized string similar to Store does not implement IUserPhoneNumberStore&lt;TUser&gt;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.StoreNotIUserRoleStore">
+            <summary>
+              Looks up a localized string similar to Store does not implement IUserRoleStore&lt;TUser&gt;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.StoreNotIUserSecurityStampStore">
+            <summary>
+              Looks up a localized string similar to Store does not implement IUserSecurityStampStore&lt;TUser&gt;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.StoreNotIUserTwoFactorStore">
+            <summary>
+              Looks up a localized string similar to Store does not implement IUserTwoFactorStore&lt;TUser&gt;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.UserAlreadyHasPassword">
+            <summary>
+              Looks up a localized string similar to User already has a password set..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.UserAlreadyInRole">
+            <summary>
+              Looks up a localized string similar to User already in role..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.UserIdNotFound">
+            <summary>
+              Looks up a localized string similar to UserId not found..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.UserNameNotFound">
+            <summary>
+              Looks up a localized string similar to User {0} does not exist..
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.Resources.UserNotInRole">
+            <summary>
+              Looks up a localized string similar to User is not in role..
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.RoleManager`1">
+            <summary>
+                Exposes role related api which will automatically save changes to the RoleStore
+            </summary>
+            <typeparam name="TRole"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.RoleManager`1.#ctor(Microsoft.AspNet.Identity.IRoleStore{`0},Microsoft.AspNet.Identity.IRoleValidator{`0})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="store">The IRoleStore is responsible for commiting changes via the UpdateAsync/CreateAsync methods</param>
+            <param name="roleValidator"></param>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.RoleManager`1.Store">
+            <summary>
+                Persistence abstraction that the Manager operates against
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.RoleManager`1.RoleValidator">
+            <summary>
+                Used to validate roles before persisting changes
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.RoleManager`1.Roles">
+            <summary>
+                Returns an IQueryable of roles if the store is an IQueryableRoleStore
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.RoleManager`1.SupportsQueryableRoles">
+            <summary>
+                Returns true if the store is an IQueryableRoleStore
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.RoleManager`1.Dispose">
+            <summary>
+                Dispose this object
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.RoleManager`1.CreateAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                CreateAsync a role
+            </summary>
+            <param name="role"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.RoleManager`1.UpdateAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                UpdateAsync an existing role
+            </summary>
+            <param name="role"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.RoleManager`1.DeleteAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                DeleteAsync a role
+            </summary>
+            <param name="role"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.RoleManager`1.RoleExistsAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+                Returns true if the role exists
+            </summary>
+            <param name="roleName"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.RoleManager`1.FindByIdAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+                FindByLoginAsync a role by id
+            </summary>
+            <param name="roleId"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.RoleManager`1.GetRoleNameAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+            Return the name of the role
+            </summary>
+            <param name="role"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.RoleManager`1.SetRoleNameAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Set the name of the role
+            </summary>
+            <param name="role"></param>
+            <param name="name"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.RoleManager`1.GetRoleIdAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+            Return the role id for a role
+            </summary>
+            <param name="role"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.RoleManager`1.FindByNameAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+                FindByLoginAsync a role by name
+            </summary>
+            <param name="roleName"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.RoleManager`1.Dispose(System.Boolean)">
+            <summary>
+                When disposing, actually dipose the store
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.RoleValidator`1">
+            <summary>
+                Validates roles before they are saved
+            </summary>
+            <typeparam name="TRole"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.RoleValidator`1.ValidateAsync(Microsoft.AspNet.Identity.RoleManager{`0},`0,System.Threading.CancellationToken)">
+            <summary>
+                Validates a role before saving
+            </summary>
+            <param name="manager"></param>
+            <param name="role"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.SignInManager`1">
+            <summary>
+                Interface that manages SignIn operations for a user
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.UserLoginInfo">
+            <summary>
+                Represents a linked login for a user (i.e. a local username/password or a facebook/google account
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserLoginInfo.#ctor(System.String,System.String)">
+            <summary>
+                Constructor
+            </summary>
+            <param name="loginProvider"></param>
+            <param name="providerKey"></param>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserLoginInfo.LoginProvider">
+            <summary>
+                Provider for the linked login, i.e. Local, Facebook, Google, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserLoginInfo.ProviderKey">
+            <summary>
+                Key for the linked login at the provider
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.UserManager`1">
+            <summary>
+                Exposes user related api which will automatically save changes to the UserStore
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.#ctor(Microsoft.AspNet.Identity.IUserStore{`0},Microsoft.Framework.OptionsModel.IOptionsAccessor{Microsoft.AspNet.Identity.IdentityOptions},Microsoft.AspNet.Identity.IPasswordHasher,Microsoft.AspNet.Identity.IUserValidator{`0},Microsoft.AspNet.Identity.IPasswordValidator{`0},Microsoft.AspNet.Identity.IClaimsIdentityFactory{`0})">
+            <summary>
+                Constructor which takes a service provider and user store
+            </summary>
+            <param name="store"></param>
+            <param name="optionsAccessor"></param>
+            <param name="passwordHasher"></param>
+            <param name="userValidator"></param>
+            <param name="passwordValidator"></param>
+            <param name="claimsIdentityFactory"></param>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.Store">
+            <summary>
+                Persistence abstraction that the Manager operates against
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.PasswordHasher">
+            <summary>
+                Used to hash/verify passwords
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.UserValidator">
+            <summary>
+                Used to validate users before persisting changes
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.PasswordValidator">
+            <summary>
+                Used to validate passwords before persisting changes
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.ClaimsIdentityFactory">
+            <summary>
+                Used to create claims identities from users
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.EmailService">
+            <summary>
+                Used to send email
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.SmsService">
+            <summary>
+                Used to send a sms message
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.UserTokenProvider">
+            <summary>
+                Used for generating ResetPassword and Confirmation Tokens
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.SupportsUserTwoFactor">
+            <summary>
+                Returns true if the store is an IUserTwoFactorStore
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.SupportsUserPassword">
+            <summary>
+                Returns true if the store is an IUserPasswordStore
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.SupportsUserSecurityStamp">
+            <summary>
+                Returns true if the store is an IUserSecurityStore
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.SupportsUserRole">
+            <summary>
+                Returns true if the store is an IUserRoleStore
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.SupportsUserLogin">
+            <summary>
+                Returns true if the store is an IUserLoginStore
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.SupportsUserEmail">
+            <summary>
+                Returns true if the store is an IUserEmailStore
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.SupportsUserPhoneNumber">
+            <summary>
+                Returns true if the store is an IUserPhoneNumberStore
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.SupportsUserClaim">
+            <summary>
+                Returns true if the store is an IUserClaimStore
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.SupportsUserLockout">
+            <summary>
+                Returns true if the store is an IUserLockoutStore
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.SupportsQueryableUsers">
+            <summary>
+                Returns true if the store is an IQueryableUserStore
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.Users">
+            <summary>
+                Returns an IQueryable of users if the store is an IQueryableUserStore
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserManager`1.TwoFactorProviders">
+            <summary>
+                Dictionary mapping user two factor providers
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.Dispose">
+            <summary>
+                Dispose the store context
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.CreateIdentityAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Creates a ClaimsIdentity representing the user
+            </summary>
+            <param name="user"></param>
+            <param name="authenticationType"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.CreateAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Create a user with no password
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.UpdateAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Update a user
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.DeleteAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Delete a user
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.FindByIdAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+                Find a user by id
+            </summary>
+            <param name="userId"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.FindByNameAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+                Find a user by name
+            </summary>
+            <param name="userName"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.CreateAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Create a user and associates it with the given password
+            </summary>
+            <param name="user"></param>
+            <param name="password"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GetUserNameAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+            Get the user's name
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.SetUserNameAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Set the user's name
+            </summary>
+            <param name="user"></param>
+            <param name="userName"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GetUserIdAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+            Get the user's id
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.FindByUserNamePasswordAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Return a user with the specified username and password or null if there is no match.
+            </summary>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.CheckPasswordAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Returns true if the password combination is valid for the user
+            </summary>
+            <param name="user"></param>
+            <param name="password"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.HasPasswordAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns true if the user has a password
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.AddPasswordAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Add a user password only if one does not already exist
+            </summary>
+            <param name="user"></param>
+            <param name="password"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.ChangePasswordAsync(`0,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Change a user password
+            </summary>
+            <param name="user"></param>
+            <param name="currentPassword"></param>
+            <param name="newPassword"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.RemovePasswordAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Remove a user's password
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.VerifyPasswordAsync(Microsoft.AspNet.Identity.IUserPasswordStore{`0},`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                By default, retrieves the hashed password from the user store and calls PasswordHasher.VerifyHashPassword
+            </summary>
+            <param name="store"></param>
+            <param name="user"></param>
+            <param name="password"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GetSecurityStampAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns the current security stamp for a user
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.UpdateSecurityStampAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                GenerateAsync a new security stamp for a user, used for SignOutEverywhere functionality
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GeneratePasswordResetTokenAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                GenerateAsync a password reset token for the user using the UserTokenProvider
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.ResetPasswordAsync(`0,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Reset a user's password using a reset password token
+            </summary>
+            <param name="user"></param>
+            <param name="token"></param>
+            <param name="newPassword"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.FindByLoginAsync(Microsoft.AspNet.Identity.UserLoginInfo,System.Threading.CancellationToken)">
+            <summary>
+                Returns the user associated with this login
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.RemoveLoginAsync(`0,Microsoft.AspNet.Identity.UserLoginInfo,System.Threading.CancellationToken)">
+            <summary>
+                Remove a user login
+            </summary>
+            <param name="user"></param>
+            <param name="login"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.AddLoginAsync(`0,Microsoft.AspNet.Identity.UserLoginInfo,System.Threading.CancellationToken)">
+            <summary>
+                Associate a login with a user
+            </summary>
+            <param name="user"></param>
+            <param name="login"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GetLoginsAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Gets the logins for a user.
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.AddClaimAsync(`0,System.Security.Claims.Claim,System.Threading.CancellationToken)">
+            <summary>
+                Add a user claim
+            </summary>
+            <param name="user"></param>
+            <param name="claim"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.RemoveClaimAsync(`0,System.Security.Claims.Claim,System.Threading.CancellationToken)">
+            <summary>
+                Remove a user claim
+            </summary>
+            <param name="user"></param>
+            <param name="claim"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GetClaimsAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Get a users's claims
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.AddToRoleAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Add a user to a role
+            </summary>
+            <param name="user"></param>
+            <param name="role"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.AddToRolesAsync(`0,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+            <summary>
+                Add a user to roles
+            </summary>
+            <param name="user"></param>
+            <param name="roles"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.RemoveFromRoleAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Remove a user from a role.
+            </summary>
+            <param name="user"></param>
+            <param name="role"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.RemoveFromRolesAsync(`0,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+            <summary>
+                Remove a user from a specified roles.
+            </summary>
+            <param name="user"></param>
+            <param name="roles"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GetRolesAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns the roles for the user
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.IsInRoleAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Returns true if the user is in the specified role
+            </summary>
+            <param name="user"></param>
+            <param name="role"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GetEmailAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Get a user's email
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.SetEmailAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Set a user's email
+            </summary>
+            <param name="user"></param>
+            <param name="email"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.FindByEmailAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+                FindByLoginAsync a user by his email
+            </summary>
+            <param name="email"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GenerateEmailConfirmationTokenAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Get the confirmation token for the user
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.ConfirmEmailAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Confirm the user with confirmation token
+            </summary>
+            <param name="user"></param>
+            <param name="token"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.IsEmailConfirmedAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns true if the user's email has been confirmed
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GetPhoneNumberAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Get a user's phoneNumber
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.SetPhoneNumberAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Set a user's phoneNumber
+            </summary>
+            <param name="user"></param>
+            <param name="phoneNumber"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.ChangePhoneNumberAsync(`0,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Set a user's phoneNumber with the verification token
+            </summary>
+            <param name="user"></param>
+            <param name="phoneNumber"></param>
+            <param name="token"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.IsPhoneNumberConfirmedAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns true if the user's phone number has been confirmed
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GenerateChangePhoneNumberTokenAsync(`0,System.String)">
+            <summary>
+                Get a phone number code for a user and phone number
+            </summary>
+            <param name="user"></param>
+            <param name="phoneNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.VerifyChangePhoneNumberTokenAsync(`0,System.String,System.String)">
+            <summary>
+                Verify a phone number code for a specific user and phone number
+            </summary>
+            <param name="user"></param>
+            <param name="token"></param>
+            <param name="phoneNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.VerifyUserTokenAsync(`0,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Verify a user token with the specified purpose
+            </summary>
+            <param name="user"></param>
+            <param name="purpose"></param>
+            <param name="token"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GenerateUserTokenAsync(System.String,`0,System.Threading.CancellationToken)">
+            <summary>
+                Get a user token for a specific purpose
+            </summary>
+            <param name="purpose"></param>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.RegisterTwoFactorProvider(System.String,Microsoft.AspNet.Identity.IUserTokenProvider{`0})">
+            <summary>
+                Register a user two factor provider
+            </summary>
+            <param name="twoFactorProvider"></param>
+            <param name="provider"></param>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GetValidTwoFactorProvidersAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns a list of valid two factor providers for a user
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.VerifyTwoFactorTokenAsync(`0,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Verify a user token with the specified provider
+            </summary>
+            <param name="user"></param>
+            <param name="twoFactorProvider"></param>
+            <param name="token"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GenerateTwoFactorTokenAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Get a user token for a specific user factor provider
+            </summary>
+            <param name="user"></param>
+            <param name="twoFactorProvider"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.NotifyTwoFactorTokenAsync(`0,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Notify a user with a token from a specific user factor provider
+            </summary>
+            <param name="user"></param>
+            <param name="twoFactorProvider"></param>
+            <param name="token"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GetTwoFactorEnabledAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Get a user's two factor provider
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.SetTwoFactorEnabledAsync(`0,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+                Set whether a user has two factor enabled or not
+            </summary>
+            <param name="user"></param>
+            <param name="enabled"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.SendEmailAsync(`0,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Send an email to the user
+            </summary>
+            <param name="user"></param>
+            <param name="subject"></param>
+            <param name="body"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.SendSmsAsync(`0,System.String,System.Threading.CancellationToken)">
+            <summary>
+                Send a user a sms message
+            </summary>
+            <param name="user"></param>
+            <param name="message"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.IsLockedOutAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns true if the user is locked out
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.SetLockoutEnabledAsync(`0,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+                Sets whether the user allows lockout
+            </summary>
+            <param name="user"></param>
+            <param name="enabled"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GetLockoutEnabledAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns whether the user allows lockout
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GetLockoutEndDateAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns the user lockout end date
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.SetLockoutEndDateAsync(`0,System.DateTimeOffset,System.Threading.CancellationToken)">
+            <summary>
+                Sets the user lockout end date
+            </summary>
+            <param name="user"></param>
+            <param name="lockoutEnd"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.AccessFailedAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Increments the access failed count for the user and if the failed access account is greater than or equal
+                to the MaxFailedAccessAttempsBeforeLockout, the user will be locked out for the next DefaultAccountLockoutTimeSpan
+                and the AccessFailedCount will be reset to 0.
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.ResetAccessFailedCountAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Resets the access failed count for the user to 0
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.GetAccessFailedCountAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+                Returns the number of failed access attempts for the user
+            </summary>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserManager`1.Dispose(System.Boolean)">
+            <summary>
+                When disposing, actually dipose the store context
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserOptions.AllowOnlyAlphanumericNames">
+            <summary>
+                Only allow [A-Za-z0-9@_] in UserNames
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.Identity.UserOptions.RequireUniqueEmail">
+            <summary>
+                If set, enforces that emails are non empty, valid, and unique
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.Identity.UserValidator`1">
+            <summary>
+                Validates users before they are saved
+            </summary>
+            <typeparam name="TUser"></typeparam>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserValidator`1.ValidateAsync(Microsoft.AspNet.Identity.UserManager{`0},`0,System.Threading.CancellationToken)">
+            <summary>
+                Validates a user before saving
+            </summary>
+            <param name="manager"></param>
+            <param name="user"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserValidator`1.IsDigit(System.Char)">
+            <summary>
+                Returns true if the character is a digit between '0' and '9'
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserValidator`1.IsLower(System.Char)">
+            <summary>
+                Returns true if the character is between 'a' and 'z'
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserValidator`1.IsUpper(System.Char)">
+            <summary>
+                Returns true if the character is between 'A' and 'Z'
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNet.Identity.UserValidator`1.IsAlphaNumeric(System.Char)">
+            <summary>
+                Returns true if the character is upper, lower, a digit, or a common email character [@_.]
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,48 @@
+﻿@using Web.UI.Common;
+@using Web.Localization;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="homecontent" data-clientid="divPoetTitlePanel">
+
+    <div class="tilesContainer">
+        
+        <div class="tile">
+            <i class="i_paperPencil"></i>
+            <h3 class="title">@Strings.QuotingTileText</h3>
+        </div>
+
+        <div class="tile">
+            <a href="@Url.OrderDashboard()">
+                <i class="i_paperPencil"></i>
+                <h3 class="title">@Strings.AgreementTileText</h3>
+            </a>
+        </div>
+
+        <div class="tile">
+            <a href="@Url.OrderDashboard()">
+                <i class="i_Shoppingbag"></i>
+                <h3 class="title">@Strings.OrderTileText</h3>
+            </a>
+        </div>
+
+        <div class="tile">
+            <i class="i_TwoPerson"></i>
+            <h3 class="title">@Strings.ManageUserTileText</h3>
+        </div>
+
+
+        <div class="tile">
+            <i class="i_FourLines"></i>
+            <h3 class="title">@Strings.ReportingTileText</h3>
+        </div>
+
+        <div class="tile">
+            <i class="i_QuestionMarkWhite"></i>
+            <h3 class="title">@Strings.HelpTileText</h3>
+        </div>
+    </div>
+</div>

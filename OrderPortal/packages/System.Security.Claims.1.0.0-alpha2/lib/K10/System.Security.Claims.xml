@@ -1,0 +1,581 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Security.Claims</name>
+    </assembly>
+    <members>
+        <member name="T:System.Security.Claims.Claim">
+            <summary>
+                A Claim is a statement about an entity by an Issuer.
+                A Claim consists of a Value, a Subject and an Issuer.
+                Additional properties, Type, ValueType, Properties and OriginalIssuer
+                help understand the claim when making decisions.
+            </summary>
+        </member>
+        <member name="M:System.Security.Claims.Claim.#ctor(System.String,System.String)">
+            <summary>
+                Creates a <see cref="T:System.Security.Claims.Claim" /> with the specified type and value.
+            </summary>
+            <param name="type">The claim type.</param>
+            <param name="value">The claim value.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="type" /> or <paramref name="value" /> is null.</exception>
+            <remarks>
+                <see cref="P:System.Security.Claims.Claim.Issuer" /> is set to <see cref="F:System.Security.Claims.ClaimsIdentity.DefaultIssuer" />,
+                <see cref="P:System.Security.Claims.Claim.ValueType" /> is set to <see cref="F:System.Security.Claims.ClaimValueTypes.String" />,
+                <see cref="P:System.Security.Claims.Claim.OriginalIssuer" /> is set to <see cref="F:System.Security.Claims.ClaimsIdentity.DefaultIssuer" />, and
+                <see cref="P:System.Security.Claims.Claim.Subject" /> is set to null.
+            </remarks>
+            <seealso cref="T:System.Security.Claims.ClaimsIdentity" />
+            <seealso cref="T:System.Security.Claims.ClaimTypes" />
+            <seealso cref="T:System.Security.Claims.ClaimValueTypes" />
+        </member>
+        <member name="M:System.Security.Claims.Claim.#ctor(System.String,System.String,System.String)">
+            <summary>
+                Creates a <see cref="T:System.Security.Claims.Claim" /> with the specified type, value, and value type.
+            </summary>
+            <param name="type">The claim type.</param>
+            <param name="value">The claim value.</param>
+            <param name="valueType">The claim value type.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="type" /> or <paramref name="value" /> is null.</exception>
+            <remarks>
+                <see cref="P:System.Security.Claims.Claim.Issuer" /> is set to <see cref="F:System.Security.Claims.ClaimsIdentity.DefaultIssuer" />,
+                <see cref="P:System.Security.Claims.Claim.OriginalIssuer" /> is set to <see cref="F:System.Security.Claims.ClaimsIdentity.DefaultIssuer" />,
+                and <see cref="P:System.Security.Claims.Claim.Subject" /> is set to null.
+            </remarks>
+            <seealso cref="T:System.Security.Claims.ClaimsIdentity" />
+            <seealso cref="T:System.Security.Claims.ClaimTypes" />
+            <seealso cref="T:System.Security.Claims.ClaimValueTypes" />
+        </member>
+        <member name="M:System.Security.Claims.Claim.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+                Creates a <see cref="T:System.Security.Claims.Claim" /> with the specified type, value, value type, and issuer.
+            </summary>
+            <param name="type">The claim type.</param>
+            <param name="value">The claim value.</param>
+            <param name="valueType">
+                The claim value type. If this parameter is empty or null, then
+                <see cref="F:System.Security.Claims.ClaimValueTypes.String" /> is used.
+            </param>
+            <param name="issuer">
+                The claim issuer. If this parameter is empty or null, then
+                <see cref="F:System.Security.Claims.ClaimsIdentity.DefaultIssuer" /> is used.
+            </param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="type" /> or <paramref name="value" /> is null.</exception>
+            <remarks>
+                <see cref="P:System.Security.Claims.Claim.OriginalIssuer" /> is set to value of the <paramref name="issuer" /> parameter,
+                <see cref="P:System.Security.Claims.Claim.Subject" /> is set to null.
+            </remarks>
+            <seealso cref="T:System.Security.Claims.ClaimsIdentity" />
+            <seealso cref="T:System.Security.Claims.ClaimTypes" />
+            <seealso cref="T:System.Security.Claims.ClaimValueTypes" />
+        </member>
+        <member name="M:System.Security.Claims.Claim.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+                Creates a <see cref="T:System.Security.Claims.Claim" /> with the specified type, value, value type, issuer and original issuer.
+            </summary>
+            <param name="type">The claim type.</param>
+            <param name="value">The claim value.</param>
+            <param name="valueType">
+                The claim value type. If this parameter is null, then <see cref="F:System.Security.Claims.ClaimValueTypes.String" /> is
+                used.
+            </param>
+            <param name="issuer">
+                The claim issuer. If this parameter is empty or null, then
+                <see cref="F:System.Security.Claims.ClaimsIdentity.DefaultIssuer" /> is used.
+            </param>
+            <param name="originalIssuer">
+                The original issuer of this claim. If this parameter is empty or null, then orignalIssuer
+                == issuer.
+            </param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="type" /> or <paramref name="value" /> is null.</exception>
+            <remarks>
+                <see cref="P:System.Security.Claims.Claim.Subject" /> is set to null.
+            </remarks>
+            <seealso cref="T:System.Security.Claims.ClaimsIdentity" />
+            <seealso cref="T:System.Security.Claims.ClaimTypes" />
+            <seealso cref="T:System.Security.Claims.ClaimValueTypes" />
+        </member>
+        <member name="M:System.Security.Claims.Claim.#ctor(System.String,System.String,System.String,System.String,System.String,System.Security.Claims.ClaimsIdentity)">
+            <summary>
+                Creates a <see cref="T:System.Security.Claims.Claim" /> with the specified type, value, value type, issuer and original issuer.
+            </summary>
+            <param name="type">The claim type.</param>
+            <param name="value">The claim value.</param>
+            <param name="valueType">
+                The claim value type. If this parameter is null, then <see cref="F:System.Security.Claims.ClaimValueTypes.String" /> is
+                used.
+            </param>
+            <param name="issuer">
+                The claim issuer. If this parameter is empty or null, then
+                <see cref="F:System.Security.Claims.ClaimsIdentity.DefaultIssuer" /> is used.
+            </param>
+            <param name="originalIssuer">
+                The original issuer of this claim. If this parameter is empty or null, then orignalIssuer
+                == issuer.
+            </param>
+            <param name="subject">The subject that this claim describes.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="type" /> or <paramref name="value" /> is null.</exception>
+            <seealso cref="T:System.Security.Claims.ClaimsIdentity" />
+            <seealso cref="T:System.Security.Claims.ClaimTypes" />
+            <seealso cref="T:System.Security.Claims.ClaimValueTypes" />
+        </member>
+        <member name="M:System.Security.Claims.Claim.#ctor(System.String,System.String,System.String,System.String,System.String,System.Security.Claims.ClaimsIdentity,System.String,System.String)">
+            <summary>
+                This internal constructor was added as a performance boost when adding claims that are found in the NTToken.
+                We need to add a property value to distinguish DeviceClaims from UserClaims.
+            </summary>
+            <param name="propertyKey">This allows adding a property when adding a Claim.</param>
+            <param name="propertyValue">The value associcated with the property.</param>
+        </member>
+        <member name="P:System.Security.Claims.Claim.Issuer">
+            <summary>
+                Gets the issuer of the <see cref="T:System.Security.Claims.Claim" />.
+            </summary>
+        </member>
+        <member name="P:System.Security.Claims.Claim.OriginalIssuer">
+            <summary>
+                Gets the original issuer of the <see cref="T:System.Security.Claims.Claim" />.
+            </summary>
+            <remarks>
+                When the <see cref="P:System.Security.Claims.Claim.OriginalIssuer" /> differs from the <see cref="P:System.Security.Claims.Claim.Issuer" />, it means
+                that the claim was issued by the <see cref="P:System.Security.Claims.Claim.OriginalIssuer" /> and was re-issued
+                by the <see cref="P:System.Security.Claims.Claim.Issuer" />.
+            </remarks>
+        </member>
+        <member name="P:System.Security.Claims.Claim.Properties">
+            <summary>
+                Gets the collection of Properties associated with the <see cref="T:System.Security.Claims.Claim" />.
+            </summary>
+        </member>
+        <member name="P:System.Security.Claims.Claim.Subject">
+            <summary>
+                Gets the subject of the <see cref="T:System.Security.Claims.Claim" />.
+            </summary>
+        </member>
+        <member name="P:System.Security.Claims.Claim.Type">
+            <summary>
+                Gets the claim type of the <see cref="T:System.Security.Claims.Claim" />.
+            </summary>
+        </member>
+        <member name="P:System.Security.Claims.Claim.Value">
+            <summary>
+                Gets the value of the <see cref="T:System.Security.Claims.Claim" />.
+            </summary>
+        </member>
+        <member name="P:System.Security.Claims.Claim.ValueType">
+            <summary>
+                Gets the value type of the <see cref="T:System.Security.Claims.Claim" />.
+            </summary>
+        </member>
+        <member name="M:System.Security.Claims.Claim.Clone">
+            <summary>
+                Returns a new <see cref="T:System.Security.Claims.Claim" /> object copied from this object. The subject of the new claim object is set to
+                null.
+            </summary>
+            <returns>A new <see cref="T:System.Security.Claims.Claim" /> object copied from this object.</returns>
+            <remarks>This is a shallow copy operation.</remarks>
+        </member>
+        <member name="M:System.Security.Claims.Claim.Clone(System.Security.Claims.ClaimsIdentity)">
+            <summary>
+                Returns a new <see cref="T:System.Security.Claims.Claim" /> object copied from this object. The subject of the new claim object is set to
+                identity.
+            </summary>
+            <param name="identity">The <see cref="T:System.Security.Claims.ClaimsIdentity" /> that this <see cref="T:System.Security.Claims.Claim" /> is associated with.</param>
+            <returns>A new <see cref="T:System.Security.Claims.Claim" /> object copied from this object.</returns>
+            <remarks>This is a shallow copy operation.</remarks>
+        </member>
+        <member name="M:System.Security.Claims.Claim.ToString">
+            <summary>
+                Returns a string representation of the <see cref="T:System.Security.Claims.Claim" /> object.
+            </summary>
+            <remarks>
+                The returned string contains the values of the <see cref="P:System.Security.Claims.Claim.Type" /> and <see cref="P:System.Security.Claims.Claim.Value" /> properties.
+            </remarks>
+            <returns>The string representation of the <see cref="T:System.Security.Claims.Claim" /> object.</returns>
+        </member>
+        <member name="T:System.Security.Claims.ClaimsIdentity">
+            <summary>
+                An Identity that is represented by a set of claims.
+            </summary>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.#ctor">
+            <summary>
+                Initializes an instance of <see cref="T:System.Security.Claims.ClaimsIdentity" /> with an empty claims collection.
+            </summary>
+            <remarks>
+                <see cref="!:Identity.AuthenticationType" /> is set to null.
+            </remarks>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Principal.IIdentity)">
+            <summary>
+                Initializes an instance of <see cref="T:System.Security.Claims.ClaimsIdentity" /> using the name and authentication type from
+                an <see cref="T:System.Security.Principal.IIdentity" /> instance.
+            </summary>
+            <param name="identity"><see cref="T:System.Security.Principal.IIdentity" /> to draw the name and authentication type from.</param>
+            <exception cref="T:System.ArgumentNullException"> if <paramref name="identity" /> is null.</exception>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})">
+            <summary>
+                Initializes an instance of <see cref="!:Identity" /> using an enumerated collection of
+                <see cref="T:System.Security.Claims.Claim" /> objects.
+            </summary>
+            <param name="claims">
+                The collection of <see cref="T:System.Security.Claims.Claim" /> objects to populate <see cref="!:Identity.Claims" /> with.
+            </param>
+            <remarks>
+                <see cref="!:Identity.AuthenticationType" /> is set to null.
+            </remarks>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.#ctor(System.String)">
+            <summary>
+                Initializes an instance of <see cref="!:Identity" /> with an empty <see cref="T:System.Security.Claims.Claim" /> collection
+                and the specified authentication type.
+            </summary>
+            <param name="authenticationType">The type of authentication used.</param>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String)">
+            <summary>
+                Initializes an instance of <see cref="!:Identity" /> using an enumerated collection of
+                <see cref="T:System.Security.Claims.Claim" /> objects.
+            </summary>
+            <param name="claims">
+                The collection of <see cref="T:System.Security.Claims.Claim" /> objects to populate <see cref="!:Identity.Claims" /> with.
+            </param>
+            <param name="authenticationType">The type of authentication used.</param>
+            <remarks>
+                <see cref="!:Identity.AuthenticationType" /> is set to null.
+            </remarks>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})">
+            <summary>
+                Initializes an instance of <see cref="T:System.Security.Claims.ClaimsIdentity" /> using the name and authentication type from
+                an <see cref="T:System.Security.Principal.IIdentity" /> instance.
+            </summary>
+            <param name="identity"><see cref="T:System.Security.Principal.IIdentity" /> to draw the name and authentication type from.</param>
+            <exception cref="T:System.ArgumentNullException"> if <paramref name="identity" /> is null.</exception>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.#ctor(System.String,System.String,System.String)">
+            <summary>
+                Initializes an instance of <see cref="!:Identity" /> with an empty <see cref="T:System.Security.Claims.Claim" /> collection,
+                the specified authentication type, name claim type, and role claim type.
+            </summary>
+            <param name="authenticationType">The type of authentication used.</param>
+            <param name="nameType">The claim type to use for <see cref="!:Identity.Name" />.</param>
+            <param name="roleType">The claim type to use for IClaimsPrincipal.IsInRole(string).</param>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)">
+            <summary>
+                Initializes an instance of <see cref="T:System.Security.Claims.ClaimsIdentity" /> using an enumeration of type
+                <see cref="T:System.Security.Claims.Claim" />, authentication type, name claim type, role claim type, and bootstrapContext.
+            </summary>
+            <param name="claims">An enumeration of type <see cref="T:System.Security.Claims.Claim" /> to initialize this identity</param>
+            <param name="authenticationType">The type of authentication used.</param>
+            <param name="nameType">The claim type to identify NameClaims.</param>
+            <param name="roleType">The claim type to identify RoleClaims.</param>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)">
+            <summary>
+                Initializes an instance of <see cref="T:System.Security.Claims.ClaimsIdentity" /> using an enumeration of type
+                <see cref="T:System.Security.Claims.Claim" />, authentication type, name claim type, role claim type, and bootstrapContext.
+            </summary>
+            <param name="identity">The initial identity to base this identity from.</param>
+            <param name="claims">An enumeration of type <see cref="T:System.Security.Claims.Claim" /> to initialize this identity.</param>
+            <param name="authenticationType">The type of authentication used.</param>
+            <param name="nameType">The claim type to identify NameClaims.</param>
+            <param name="roleType">The claim type to identify RoleClaims.</param>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String,System.Boolean)">
+            <summary>
+                This constructor was added so that the WindowsIdentity could control if the authenticationType should be checked.
+                For WindowsIdentities this
+                leads to a priviledged call and will fail where the caller has low priviledge.
+            </summary>
+            <param name="identity">The initial identity to base this identity from.</param>
+            <param name="claims">An enumeration of type <see cref="T:System.Security.Claims.Claim" /> to initialize this identity.</param>
+            <param name="authenticationType">The type of authentication used.</param>
+            <param name="nameType">The claim type to identify NameClaims.</param>
+            <param name="roleType">The claim type to identify RoleClaims.</param>
+            <param name="checkAuthType">
+                This boolean flag controls if we blindly set the authenticationType, since call
+                WindowsIdentity.AuthenticationType is a priviledged call.
+            </param>
+        </member>
+        <member name="P:System.Security.Claims.ClaimsIdentity.Actor">
+            <summary>
+                Gets or sets a <see cref="T:System.Security.Claims.ClaimsIdentity" /> that was granted delegation rights.
+            </summary>
+        </member>
+        <member name="P:System.Security.Claims.ClaimsIdentity.BootstrapContext">
+            <summary>
+                Gets or sets a context that was used to create this <see cref="T:System.Security.Claims.ClaimsIdentity" />.
+            </summary>
+        </member>
+        <member name="P:System.Security.Claims.ClaimsIdentity.Claims">
+            <summary>
+                Gets the claims as <see cref="T:System.Collections.Generic.IEnumerable`1" />, associated with this <see cref="T:System.Security.Claims.ClaimsIdentity" />.
+            </summary>
+            <remarks>May contain nulls.</remarks>
+        </member>
+        <member name="P:System.Security.Claims.ClaimsIdentity.ExternalClaims">
+            <summary>
+                Allow the association of claims with this instance of <see cref="T:System.Security.Claims.ClaimsIdentity" />.
+                The claims will not be serialized or added in Clone(). They will be included in searches, finds and returned from
+                the call to Claims.
+                It is recommended the creator of the claims ensures the subject of the claims reflects this
+                <see cref="T:System.Security.Claims.ClaimsIdentity" />.
+            </summary>
+        </member>
+        <member name="P:System.Security.Claims.ClaimsIdentity.Label">
+            <summary>
+                Gets or sets the label for this <see cref="!:Identity" />
+            </summary>
+        </member>
+        <member name="P:System.Security.Claims.ClaimsIdentity.NameClaimType">
+            <summary>
+                Gets the claim type used to distinguish claims that refer to the name.
+            </summary>
+        </member>
+        <member name="P:System.Security.Claims.ClaimsIdentity.RoleClaimType">
+            <summary>
+                Gets the claim type used to distinguish claims that refer to Roles.
+            </summary>
+        </member>
+        <member name="P:System.Security.Claims.ClaimsIdentity.AuthenticationType">
+            <summary>
+                Initializes an instance of <see cref="!:Identity" /> from a serialized stream created via
+                <see cref="!:ISerializable" />.
+            </summary>
+            <param name="info">
+                The <see cref="!:SerializationInfo" /> to read from.
+            </param>
+            <param name="context">The <see cref="!:StreamingContext" /> for serialization. Can be null.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown is the <paramref name="info" /> is null.</exception>
+            <summary>
+                Gets the authentication type.
+            </summary>
+        </member>
+        <member name="P:System.Security.Claims.ClaimsIdentity.IsAuthenticated">
+            <summary>
+                Gets a value that indicates whether the user has been authenticated.
+            </summary>
+        </member>
+        <member name="P:System.Security.Claims.ClaimsIdentity.Name">
+            <summary>
+                Gets the value of the first claim that has a type of NameClaimType. If no claim is found, null is returned.
+            </summary>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.Clone">
+            <summary>
+                Returns a new instance of <see cref="T:System.Security.Claims.ClaimsIdentity" /> with values copied from this object.
+            </summary>
+            <returns>A new <see cref="!:Identity" /> object copied from this object</returns>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.AddClaim(System.Security.Claims.Claim)">
+            <summary>
+                Adds a single claim to this ClaimsIdentity. The claim is examined and if the subject != this, then a new claim is
+                created by calling claim.Clone(this).  This creates a new claim, with the correct subject.
+            </summary>
+            <param name="claim">Enumeration of claims to add.</param>
+            This is SecurityCritical as we need to control who can add claims to the Identity. Futher down the pipe
+            Authorization decisions will be made based on the claims found in this collection.
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.AddClaims(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})">
+            <summary>
+                Adds a list of claims to this Claims Identity. Each claim is examined and if the subject != this, then a new claim
+                is
+                created by calling claim.Clone(this).  This creates a new claim, with the correct subject.
+            </summary>
+            <param name="claims">Enumeration of claims to add.</param>
+            This is SecurityCritical as we need to control who can add claims to the Identity. Futher down the pipe
+            Authorization decisions will be made based on the claims found in this collection.
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:System.Security.Claims.ClaimsIdentity.TryRemoveClaim(System.Security.Claims.Claim)" -->
+        <member name="M:System.Security.Claims.ClaimsIdentity.SafeAddClaims(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})">
+            <summary>
+                Called from constructor, isolated for easy review
+                This is called from the constructor, this implies that the base class has
+                ownership of holding onto the claims.  We can't call AddClaim as that is a virtual and the
+                Derived class may not be constructed yet.
+            </summary>
+            <param name="claims"></param>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.SafeAddClaim(System.Security.Claims.Claim)">
+            <summary>
+                Called from constructor, isolated for easy review.
+                This is called from the constructor, this implies that the base class has
+                ownership of holding onto the claims.  We can't call AddClaim as that is a virtual and the
+                Derived class may not be constructed yet.
+            </summary>
+            <param name="claim"></param>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.FindAll(System.Predicate{System.Security.Claims.Claim})">
+            <summary>
+                Retrieves a <see cref="T:System.Collections.Generic.IEnumerable`1" /> where each claim is matched by
+                <param name="match" />
+                .
+            </summary>
+            <param name="match">The function that performs the matching logic.</param>
+            <returns>A <see cref="T:System.Collections.Generic.IEnumerable`1" /> of matched claims.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:System.Security.Claims.ClaimsIdentity.FindAll(System.String)" -->
+        <member name="M:System.Security.Claims.ClaimsIdentity.HasClaim(System.Predicate{System.Security.Claims.Claim})">
+            <summary>
+                Determines if a claim is contained within this ClaimsIdentity.
+            </summary>
+            <param name="match">The function that performs the matching logic.</param>
+            <returns>true if a claim is found, false otherwise.</returns>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.HasClaim(System.String,System.String)">
+            <summary>
+                Determines if a claim with type AND value is contained in the claims within this ClaimsIdentity.
+            </summary>
+            <param name="type"> the type of the claim to match.</param>
+            <param name="value"> the value of the claim to match.</param>
+            <returns>true if a claim is matched, false otherwise.</returns>
+            <remarks>
+                Does not check Issuer or OriginalIssuer.  Comparison is made using Ordinal, case sensitive on value, case
+                in-sensitive on type.
+            </remarks>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.FindFirst(System.Predicate{System.Security.Claims.Claim})">
+            <summary>
+                Retrieves the first <see cref="T:System.Security.Claims.Claim" /> that is matched by
+                <param name="match" />
+                .
+            </summary>
+            <param name="match">The function that performs the matching logic.</param>
+            <returns>A <see cref="T:System.Security.Claims.Claim" />, null if nothing matches.</returns>
+            <remarks>Comparison is made using Ordinal, case in-sensitive.</remarks>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.FindFirst(System.String)">
+            <summary>
+                Retrieves the first <see cref="T:System.Security.Claims.Claim" /> where Claim.Type equals <paramref name="type" />.
+            </summary>
+            <param name="type">The type of the claim to match.</param>
+            <returns>A <see cref="T:System.Security.Claims.Claim" />, null if nothing matches.</returns>
+            <remarks>Comparison is made using Ordinal, case in-sensitive.</remarks>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsIdentity.IsCircular(System.Security.Claims.ClaimsIdentity)">
+            <summary>
+                Checks if a circular reference exists to 'this'
+            </summary>
+            <param name="subject"></param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Security.Claims.ClaimsPrincipal">
+            <summary>
+                Concrete IPrincipal supporting multiple claims-based identities
+            </summary>
+        </member>
+        <member name="P:System.Security.Claims.ClaimsPrincipal.Claims">
+            <summary>
+                Gets the claims as <see cref="T:System.Collections.Generic.IEnumerable`1" />, associated with this <see cref="T:System.Security.Claims.ClaimsPrincipal" /> by
+                enumerating all <see cref="!:ClaimsIdentities" />.
+            </summary>
+        </member>
+        <member name="P:System.Security.Claims.ClaimsPrincipal.Identities">
+            <summary>
+                Collection of <see cref="T:System.Security.Claims.ClaimsIdentity" />
+            </summary>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsPrincipal.#ctor">
+            <summary>
+                Initializes an instance of <see cref="T:System.Security.Claims.ClaimsPrincipal" />
+            </summary>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsPrincipal.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.ClaimsIdentity})">
+            <summary>
+                Initializes an instance of <see cref="N:System.Security.Principal" />
+            </summary>
+            <param name="identities">Collection of <see cref="T:System.Security.Claims.ClaimsIdentity" /> representing the subjects in the principal. </param>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsPrincipal.#ctor(System.Security.Principal.IIdentity)">
+            <summary>
+                Initializes an instance of <see cref="T:System.Security.Claims.ClaimsPrincipal" />
+            </summary>
+            <param name="identity">Collection of <see cref="T:System.Security.Claims.ClaimsIdentity" /> representing the subjects in the principal. </param>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsPrincipal.#ctor(System.Security.Principal.IPrincipal)">
+            <summary>
+                Initializes an instance of <see cref="N:System.Security.Principal" />
+            </summary>
+            <param name="principal">IPrincipal whose information is copied instance</param>
+        </member>
+        <member name="P:System.Security.Claims.ClaimsPrincipal.Identity">
+            <summary>
+                Gets the identity of the current principal.
+            </summary>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsPrincipal.IsInRole(System.String)">
+            <summary>
+                IsInRole answers the question: does an identity this principal possesses
+                contain a claim of type RoleClaimType where the value is '==' to the role.
+            </summary>
+            <param name="role">The role to check for.</param>
+            <returns>'True' if a claim is found. Otherwise 'False'.</returns>
+            <remarks>Each Identity has its own definition of the ClaimType that represents a role.</remarks>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsPrincipal.SelectPrimaryIdentity(System.Collections.Generic.IEnumerable{System.Security.Claims.ClaimsIdentity})">
+            <summary>
+                This method iterates through the collection of ClaimsIdentities and chooses an identity as the primary.
+                The choice is made by examining all the identities in order and choosing the first on that is
+                a WindowsIdentity OR in the case of no WindowsIdentities, the first identity
+            </summary>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsPrincipal.FindAll(System.Predicate{System.Security.Claims.Claim})">
+            <summary>
+                Retrieves a <see cref="T:System.Collections.Generic.IEnumerable`1" /> where each claim is matched by
+                <param name="match" />
+                .
+            </summary>
+            <param name="match">The predicate that performs the matching logic.</param>
+            <returns>A <see cref="T:System.Collections.Generic.IEnumerable`1" /> of matched claims.</returns>
+            <remarks>Returns claims from all Identities</remarks>
+            SafeCritical since it access m_identities
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:System.Security.Claims.ClaimsPrincipal.FindAll(System.String)" -->
+        <member name="M:System.Security.Claims.ClaimsPrincipal.FindFirst(System.Predicate{System.Security.Claims.Claim})">
+            <summary>
+                Retrieves the first <see cref="T:System.Security.Claims.Claim" /> that is matched by
+                <param name="match" />
+                .
+            </summary>
+            <param name="match">The predicate that performs the matching logic.</param>
+            <returns>A <see cref="T:System.Security.Claims.Claim" />, null if nothing matches.</returns>
+            <remarks>All identities are queried.</remarks>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsPrincipal.FindFirst(System.String)">
+            <summary>
+                Retrieves the first <see cref="T:System.Security.Claims.Claim" /> where the Claim.Type equals <paramref name="type" />.
+            </summary>
+            <param name="type">The type of the claim to match.</param>
+            <returns>A <see cref="T:System.Security.Claims.Claim" />, null if nothing matches.</returns>
+            <remarks>Comparison is made using Ordinal case in-sensitive, all identities are queried.</remarks>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsPrincipal.HasClaim(System.Predicate{System.Security.Claims.Claim})">
+            <summary>
+                Determines if a claim is contained within all the ClaimsIdentities in this ClaimPrincipal.
+            </summary>
+            <param name="match">The predicate that performs the matching logic.</param>
+            <returns>true if a claim is found, false otherwise.</returns>
+        </member>
+        <member name="M:System.Security.Claims.ClaimsPrincipal.HasClaim(System.String,System.String)">
+            <summary>
+                Determines if a claim of claimType AND claimValue exists in any of the identities.
+            </summary>
+            <param name="type"> the type of the claim to match.</param>
+            <param name="value"> the value of the claim to match.</param>
+            <returns>true if a claim is matched, false otherwise.</returns>
+        </member>
+        <member name="T:System.Security.Claims.ClaimTypes">
+            <summary>
+                Defines the claim types that are supported by the framework.
+            </summary>
+        </member>
+        <member name="T:System.Security.Claims.ClaimValueTypes">
+            <summary>
+                Defines the claim value types of the framework.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,7 @@
+C:\Dalei\SourceCode\OrderPortal\Web.UI.Tests.Integration\bin\Debug\Web.UI.Tests.Integration.dll.config
+C:\Dalei\SourceCode\OrderPortal\Web.UI.Tests.Integration\bin\Debug\Web.UI.Tests.Integration.dll
+C:\Dalei\SourceCode\OrderPortal\Web.UI.Tests.Integration\bin\Debug\Web.UI.Tests.Integration.pdb
+C:\Dalei\SourceCode\OrderPortal\Web.UI.Tests.Integration\bin\Debug\TechTalk.SpecFlow.dll
+C:\Dalei\SourceCode\OrderPortal\Web.UI.Tests.Integration\obj\Debug\Web.UI.Tests.Integration.csprojResolveAssemblyReference.cache
+C:\Dalei\SourceCode\OrderPortal\Web.UI.Tests.Integration\obj\Debug\Web.UI.Tests.Integration.dll
+C:\Dalei\SourceCode\OrderPortal\Web.UI.Tests.Integration\obj\Debug\Web.UI.Tests.Integration.pdb

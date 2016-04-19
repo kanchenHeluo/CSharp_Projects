@@ -1,0 +1,12 @@
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoConsoleApp\bin\Debug\MemoConsoleApp.exe.config
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoConsoleApp\bin\Debug\MemoConsoleApp.exe
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoConsoleApp\bin\Debug\MemoConsoleApp.pdb
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoConsoleApp\bin\Debug\MemoApiClient.dll
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoConsoleApp\bin\Debug\MemoContracts.dll
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoConsoleApp\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoConsoleApp\bin\Debug\MemoApiClient.pdb
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoConsoleApp\bin\Debug\MemoContracts.pdb
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoConsoleApp\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoConsoleApp\obj\Debug\MemoConsoleApp.csprojResolveAssemblyReference.cache
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoConsoleApp\obj\Debug\MemoConsoleApp.exe
+C:\IndividualProject\WebApi_WebApp_AzureAD\WebApi_WebApp_AzureAD\MemoConsoleApp\obj\Debug\MemoConsoleApp.pdb

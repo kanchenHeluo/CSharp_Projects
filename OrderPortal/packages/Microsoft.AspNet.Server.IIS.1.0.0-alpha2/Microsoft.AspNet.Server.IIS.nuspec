@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.Server.IIS</id>
+    <version>1.0.0-alpha2</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Enables lightweight hosting of web applications directly on top of IIS without going through the standard System.Web pipeline. Requires IIS 8.0 and .NET 4.5.1 or higher.</description>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.Loader.IIS.Interop" version="1.0.0-alpha2" />
+      <dependency id="Microsoft.AspNet.Loader.IIS" version="1.0.0-alpha2" />
+    </dependencies>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm</licenseUrl>
+  </metadata>
+</package>

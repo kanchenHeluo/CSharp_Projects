@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppForJobs", "WebAppForJobs\WebAppForJobs.csproj", "{14728100-2675-4725-AB51-EA4CA2BDC44E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6FA62426-785D-4262-AC40-CB02CD98B4D5} = {6FA62426-785D-4262-AC40-CB02CD98B4D5}
+		{03FC9058-E588-4D92-AD25-CA5C976C43F8} = {03FC9058-E588-4D92-AD25-CA5C976C43F8}
+		{44D10690-B8F1-446F-9B1B-2B22B59A4FC3} = {44D10690-B8F1-446F-9B1B-2B22B59A4FC3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppForJobs.Tests", "WebAppForJobs.Tests\WebAppForJobs.Tests.csproj", "{8F92CAF2-A8D0-47F7-8816-8297BFDECB30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurgeDataJob", "PurgeDataJob\PurgeDataJob.csproj", "{44D10690-B8F1-446F-9B1B-2B22B59A4FC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorAlertJob", "ErrorAlertJob\ErrorAlertJob.csproj", "{03FC9058-E588-4D92-AD25-CA5C976C43F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyReportJob", "DailyReportJob\DailyReportJob.csproj", "{6FA62426-785D-4262-AC40-CB02CD98B4D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14728100-2675-4725-AB51-EA4CA2BDC44E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14728100-2675-4725-AB51-EA4CA2BDC44E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14728100-2675-4725-AB51-EA4CA2BDC44E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14728100-2675-4725-AB51-EA4CA2BDC44E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F92CAF2-A8D0-47F7-8816-8297BFDECB30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F92CAF2-A8D0-47F7-8816-8297BFDECB30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F92CAF2-A8D0-47F7-8816-8297BFDECB30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F92CAF2-A8D0-47F7-8816-8297BFDECB30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44D10690-B8F1-446F-9B1B-2B22B59A4FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D10690-B8F1-446F-9B1B-2B22B59A4FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D10690-B8F1-446F-9B1B-2B22B59A4FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D10690-B8F1-446F-9B1B-2B22B59A4FC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03FC9058-E588-4D92-AD25-CA5C976C43F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03FC9058-E588-4D92-AD25-CA5C976C43F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03FC9058-E588-4D92-AD25-CA5C976C43F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03FC9058-E588-4D92-AD25-CA5C976C43F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FA62426-785D-4262-AC40-CB02CD98B4D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FA62426-785D-4262-AC40-CB02CD98B4D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FA62426-785D-4262-AC40-CB02CD98B4D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FA62426-785D-4262-AC40-CB02CD98B4D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

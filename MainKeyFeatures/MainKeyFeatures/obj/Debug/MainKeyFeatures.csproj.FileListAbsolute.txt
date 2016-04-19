@@ -1,0 +1,5 @@
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\MainKeyFeatures\bin\Debug\MainKeyFeatures.exe.config
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\MainKeyFeatures\bin\Debug\MainKeyFeatures.exe
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\MainKeyFeatures\bin\Debug\MainKeyFeatures.pdb
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\MainKeyFeatures\obj\Debug\MainKeyFeatures.exe
+C:\Users\kanchen\Source\Repos\SP-CRMERP-Ccrm-xRM_Platform\AzureConnector\Source\MainKeyFeatures\MainKeyFeatures\obj\Debug\MainKeyFeatures.pdb

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts.Requests.UserPreference" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Services.Order.DataContracts.Requests.UserPreference" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd2" namespace="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" />
+  <xs:complexType name="GetUserPreferenceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q1:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccessorGuid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApplicationGuid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Module" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserCredential" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetUserPreferenceRequest" nillable="true" type="tns:GetUserPreferenceRequest" />
+  <xs:complexType name="SetUserPreferenceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="urn:Microsoft.IT.Licensing.Services.Order.DataContract/2012/08" base="q2:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccessorGUID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AddressFormat" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApplicationGUID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CultureCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DateFormat" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Module" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserCredential" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetUserPreferenceRequest" nillable="true" type="tns:SetUserPreferenceRequest" />
+</xs:schema>

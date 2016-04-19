@@ -1,0 +1,60 @@
+﻿.k-widget.k-datepicker{
+    &,&:focus,&:active,&:hover{
+        padding: 0;
+        border-width: 0;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    &>.k-picker-wrap{
+        &,&:focus,&:active,&:hover{
+            padding:0;
+            border-width:0;
+        }
+
+        &>.k-input{
+            min-width: 5rem;
+            height: 2.4rem;
+            border: 1px solid #666;
+            background-color: #FFF;
+            font-size: 1.2rem;
+            vertical-align:middle;
+            color:#000;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            text-indent: 0;
+
+            &.show-calendar{
+                padding: 4px 22px 4px 4px;
+
+                &:focus,&:active,&:hover{
+                    padding: 3px 21px 3px 3px;
+                }
+            }
+
+            &.hide-calendar{
+                padding: 4px;
+                &:focus,&:active,&:hover{
+                     padding: 3px;
+                }
+
+                 &+.k-select{
+                    display:none;
+                 }
+            }
+
+            &:focus,&:active,&:hover{
+                 border: 2px solid #0072C6;
+            }
+        }
+
+        &>.k-select{
+            border-width: 0;
+            &>.k-icon.k-i-calendar{
+                background-position:-32px -175px;
+                vertical-align: text-bottom;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts {
+<script src="~/scripts/number.js"></script>
+}
+<div style="text-align: center">
+    <br/>无刷新求和示例<br/>
+    <p>GET</p>
+    <br />
+    <input id="addNum1" style="width: 107px" type="text" onkeyup="AddNumber();" value="0" />
+    +<input id="addNum2" style="width: 95px" type="text" onkeyup="AddNumber();" value="0" />
+    =<input id="addSum" style="width: 97px" type="text"/>
+    <br />
+    <p>POST</p>
+    <br />
+    <input id="multipleNum1" style="width: 107px" type="text" onkeyup="MultipleNumber();" value="0" />
+    X<input id="multipleNum2" style="width: 95px" type="text" onkeyup="MultipleNumber();" value="0" />
+    =<input id="multipleSum" style="width: 97px" type="text" />
+</div>

@@ -1,0 +1,118 @@
+﻿@using Web.UI.Common
+<!-- Order Create Start-->
+<div op-busy-subscriber="GetOrderDetail">
+    
+    <!--Promise register start-->
+    <span op-busy-publisher="getOrderDetailPromise" op-busy-publisher-event="GetOrderDetail"></span>
+    <!--Promise register end-->
+
+    <!--Header Start-->
+    <div>
+        <div class="layout-gap"></div>
+        <div class="layout-positionRel">
+            <div class="layout-inlineBlockOnly">
+                <a ui-sref="dashboard"><span class="i_ArrowBack"></span></a>
+            </div>
+            <div class="layout-inlineBlockOnly layout-positionAbsOnly">
+                <span class="ms-sectiontitle">Orders</span>
+            </div>
+            <div class="layout-gap"></div>
+        </div>
+    </div>
+    <!--Header End-->
+
+    <op-form name="orderEditForm">
+        <div ng-controller="orderSubmitCtrl">
+            
+            <!--Promise register start-->
+            <span op-busy-publisher="submitOrderPromise" op-busy-publisher-event="SubmitOrder"></span>
+            <!--Promise register end-->
+
+            <div class="fll">
+                <div class="ms-formblock leftalign">
+                    <label>Order Name</label>
+                    <input type="text" placeholder="Enter order name" ng-model="globalModels.orderModel.OrderName" />
+                </div>
+            </div>
+            <div class="flr">
+                <div>
+                    <label>Date Submitted:</label>
+                </div>
+
+                <div op-busy-subscriber="SubmitOrder">
+                    <div class="clr"></div>
+                    <div class="flr">
+                        @if (!UserContext.Current.IsReadonly)
+                        {
+                            <input type="button" value="Save & Validate Data" class="ms-stdbtn stdbtnmargin layout-ButtonM" ng-show="!updateAndSubmitStatus" ng-click="validators['orderEditForm'].$validate(); saveAndValidateOrder()" ng-disabled="validators['orderEditForm'].$pristine" />
+                        }
+                        @if (!UserContext.Current.IsReadonly)
+                        {
+                            <input type="button" value="Update & Submit Order" class="ms-stdbtn stdbtnmargin layout-ButtonM" ng-show="updateAndSubmitStatus" ng-click="updateOrder()" />
+                        }
+
+                        @if (UserContext.Current.CanSubmit)
+                        {
+                            <input type="button" value="Submit Order" class="ms-stdbtn layout-ButtonM" ng-show="!updateAndSubmitStatus" ng-click="submitOrder()" ng-disabled="submitDisabled()" />
+                        }
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="clr layout-gap"></div>
+        <!--Agreement Start-->
+        <div ng-controller="agreementSearchCtrl" ng-show="!globalModels.isEdit">
+            <div op-busy-subscriber="AgreementSearch SalesLocations">
+                <div ng-include="'../Resource/AgreementSearch'"></div>
+                <div ng-include="'../Resource/AgreementSearchResult'"></div>
+            </div>
+        </div>
+
+        <!--Agreement End-->
+        <div class="layout-gap"></div>
+        <!--Order Information Start-->
+        <div ng-controller="orderHeaderCtrl" ng-show="globalModels.agreementModel">
+            <div op-read-only="!globalModels.agreementModel">
+                <div ng-include="'../Resource/OrderHeader'"></div>
+            </div>
+            <op-errorsummary message-title="Server side validation error message" message-source="globalModels.serverSideValidationErrorMsgs"></op-errorsummary>
+        </div>
+        <!--Order Information End-->
+        <!--Order Items Start-->
+        <div ng-controller="orderLineItemCtrl" ng-show="globalModels.agreementModel && globalModels.orderModel && globalModels.orderModel.PurchaseOrderTypeCode &&  globalModels.orderModel.PurchaseOrderTypeCode.trim() != 'ZU'">
+            <div>
+                <div class="ms-sitetitle">Items: {{globalModels.lineItems.length}}</div>
+                <div portal-read-only="!globalModels.agreementModel">
+                    <div ng-include="'../Resource/OrderLineItem'"></div>
+                </div>
+            </div>
+        </div>
+        <!--Order Items End-->
+        <op-form name="shipToRequestForm">
+            <div ng-controller="orderShipToCtrl">
+                <div ng-if="globalModels.agreementModel && globalModels.orderModel && checkShipTo()" >
+                    <op-errorsummary message-title="Shipping information could not be submitted due to the following errors"></op-errorsummary>
+                    <div ng-include="'../Resource/OrderShipTo'"></div>
+                </div>
+            </div>
+        </op-form>
+        <div class="clr"></div>
+    </op-form>
+
+    <op-dialog title="Your session is about to expire!" ng-open="sessionExpirePromptDlgInfo.isOpen" ng-on-close="">
+        <div class="text-center">
+            <div class="clr layout-gapS"></div>
+            <div class="clr layout-gapS"></div>
+            <div>
+                <label class="ms-stdlabel required">Your session is about to expire. Please do something on the webpage to hold on the session.</label>
+            </div>
+            <div class="clr layout-gapS"></div>
+            <div>
+            </div>
+            <div class="clr layout-gapS"></div>
+        </div>
+    </op-dialog>
+</div>
+<!-- Order Create End-->

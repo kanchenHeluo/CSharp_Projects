@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>EntityFramework.Migrations</id>
+    <version>7.0.0-alpha2</version>
+    <title>EntityFramework.Migrations</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>EntityFramework.Migrations</description>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.1">
+        <dependency id="EntityFramework.Relational" version="7.0.0-alpha2" />
+      </group>
+      <group targetFramework="K1.0">
+        <dependency id="EntityFramework.Relational" version="7.0.0-alpha2" />
+        <dependency id="Microsoft.CSharp" version="4.0.0.0" />
+      </group>
+      <group targetFramework=".NETPortable4.6-Profile44">
+        <dependency id="EntityFramework.Relational" version="7.0.0-alpha2" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Microsoft.CSharp" targetFramework=".NETPortable4.6-Profile44" />
+      <frameworkAssembly assemblyName="System.Dynamic.Runtime" targetFramework=".NETPortable4.6-Profile44" />
+      <frameworkAssembly assemblyName="System.Reflection.Primitives" targetFramework=".NETPortable4.6-Profile44" />
+    </frameworkAssemblies>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm</licenseUrl>
+  </metadata>
+</package>

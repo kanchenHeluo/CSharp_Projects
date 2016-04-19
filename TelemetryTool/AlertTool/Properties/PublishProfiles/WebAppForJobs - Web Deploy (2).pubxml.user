@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAbEBuP3ruu0C1LPRbPRGGMwAAAAACAAAAAAADZgAAwAAAABAAAAA8h7pklL23ekVzErC5XxgoAAAAAASAAACgAAAAEAAAAAydysKVVVhNOZw/glfRAfqAAAAAfumqmtK434EiN7cfl/KRl1M0vEoiKZiokHn3XndSyu1WZYS7+siXs6XO0Yg9QTvqMSuOq8XgoO6YrBuvhXyxhe2q2qUXqSUxYexvM+tRStynFbA4QntEu9QAufV89DHnIMCCPuT3w7OiJNOQ6xEOw2+957NF19X21ZUI+30+fVoUAAAAOWW8cPYZ+85Q0PA5wvghoMhVUxo=</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <AzureDBConnectionStrings Include="Server=tcp:azcrmintpcnsq1.database.windows.net,1433;Database=UtilityCRM_FeedstoreStaging;User ID=SQLSA;Password=C!0udcrm@((0unt;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30" />
+    <AzureDBConnectionStrings Include="Server=tcp:azcrmintpcnsq1.database.windows.net,1433;Database=UtilityCRM_FeedstoreStaging;User ID=SQLSA;Password=C!0udcrm@((0unt;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30" />
+    <AzureDBConnectionStrings Include="Server=tcp:azcrmintpcnsql2.database.windows.net,1433;Database=UtilityCRM_FeedstoreStaging;User ID=SQLSA;Password=C!0udcrm@((0unt;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30" />
+    <AzureDBConnectionStrings Include="Server=tcp:azcrmintpcnsql2.database.windows.net,1433;Database=UtilityCRM_FeedstoreStaging;User ID=SQLSA;Password=C!0udcrm@((0unt;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30" />
+    <AzureDBConnectionStrings Include="Server=tcp:azcrmintpcnsql3.database.windows.net,1433;Database=TelemetryDB;User ID=SQLSA;Password=C!0udcrm@((0unt;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30" />
+    <AzureDBConnectionStrings Include="Server=tcp:azcrmintpcnsql3.database.windows.net,1433;Database=TelemetryDB;User ID=SQLSA;Password=C!0udcrm@((0unt;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30" />
+    <AzureDBConnectionStrings Include="Server=tcp:azcrmintpcnsql3.database.windows.net,1433;Database=UtilityCRM_FeedstoreStaging;User ID=SQLSA;Password=C!0udcrm@((0unt;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30" />
+    <AzureDBConnectionStrings Include="Server=tcp:azcrmintpcnsql3.database.windows.net,1433;Database=UtilityCRM_FeedstoreStaging;User ID=SQLSA;Password=C!0udcrm@((0unt;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30" />
+    <AzureDBConnectionStrings Include="Server=tcp:azcrmintpcnsql4.database.windows.net,1433;Database=UtilityCRM_FeedstoreStaging;User ID=SQLSA;Password=C!0udcrm@((0unt;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30" />
+    <AzureDBConnectionStrings Include="Server=tcp:azcrmintpcnsql4.database.windows.net,1433;Database=UtilityCRM_FeedstoreStaging;User ID=SQLSA;Password=C!0udcrm@((0unt;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30" />
+  </ItemGroup>
+</Project>

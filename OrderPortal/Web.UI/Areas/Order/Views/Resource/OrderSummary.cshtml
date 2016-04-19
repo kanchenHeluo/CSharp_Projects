@@ -1,0 +1,127 @@
+﻿ <!-- Order Summary Start"-->
+<div ng-init="init()">
+    <!--Header Start-->
+    <div>
+        <div class="layout-gap"></div>
+        <div class="layout-positionRel">
+            <div class="layout-inlineBlockOnly">
+                <a ui-sref="dashboard"><span class="i_ArrowBack"></span></a>
+            </div>
+            <div class="layout-inlineBlockOnly layout-positionAbsOnly">
+                <span class="ms-sectiontitle">Order Summary</span>
+            </div>
+            <div class="layout-gap"></div>
+        </div>
+    </div>
+
+    <!--Header End-->
+    <!--Complete order Start-->
+    <div>
+
+        <div class="ms-sitetitle">Complete order</div>
+        <div class="clr layout-gap"></div>
+
+        <div class="fll">
+            <div class="ms-formblock">
+                <label class="ms-stdlabel">Purchase Order Number</label>
+                <span class="ms-stdtext">{{globalModels.orderModel.PurchaseOrderNumber}}</span>
+            </div>
+            
+            <div class="clr layout-gapS"></div>
+        </div>
+
+        <div class="clr"></div>
+    </div>
+    <!--Complete order End-->
+    <!--Order Information Start-->
+    <div>
+        <div class="clr layout-gap"></div>
+        <div class="ms-sitetitle">Order Information</div>
+        <div class="clr layout-gapS"></div>
+
+        <div class="ms-formblock">
+            <label class="ms-stdlabel">Purchase Order Date</label>
+            <span class="ms-stdtext">{{globalModels.orderModel.UsageDate}}</span>
+        </div>
+
+        <div class="ms-formblock">
+            <label class="ms-stdlabel">BILL TO<br>NUMBER</label>
+            <span class="ms-stdtext">{{globalModels.orderModel.DirectCustomerNumber}}</span>
+        </div>
+        
+        <div class="ms-formblock small">
+            <label class="ms-stdlabel">Currency</label>
+            <span class="ms-stdtext">{{globalModels.orderModel.PricingCurrencyCode}}</span>
+        </div>
+
+        <div class="layout-gapS" />
+
+        <div class="ms-formblock">
+            <label class="ms-stdlabel">PO TYPE</label>
+            <span class="ms-stdtext">{{globalModels.orderModel.PurchaseOrderTypeCode}}</span>
+        </div>
+
+        <div class="ms-formblock">
+            <label class="ms-stdlabel">PROGRAM TYPE</label>
+            <span class="ms-stdtext">{{globalModels.orderModel.ProgramCode}}</span>
+        </div>
+
+        <div class="ms-formblock">
+            <label class="ms-stdlabel">Indirect Customer Number</label>
+            <span class="ms-stdtext">{{globalModels.orderModel.IndirectCustomerNumber}}</span>
+        </div>
+        
+        <div class="ms-formblock">
+            <label class="ms-stdlabel">Extended Amount</label>
+            <span class="ms-stdtext">{{globalModels.orderModel.TotalExtendedAmount}}</span>
+        </div>
+
+        <div class="layout-gapS" />
+
+    </div>
+    <!--Order Information Start-->
+    <!--Order Items Start-->
+    <div>
+        <div class="clr layout-gap"></div>
+        <div class="ms-sitetitle">Items:{{globalModels.lineItems.length}}</div>
+        <div class="clr layout-gap"></div>
+
+        <div class="layout-scroll maxheight">
+            <table class="table table-striped table-hover notclickable table-bordered nowrap">
+                <thead>
+                    <tr class="ms-stdlabel">
+                        <th></th>
+                        <th>Item Number</th>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Usage Country</th>
+                        <th>Usage Date</th>
+                        <th>Unit Quantity</th>
+                        <th>Program Offering</th>
+                        <th>Billing Option</th>
+                        <th>Unit Price</th>
+                        <th>Microsoft Extended Amount</th>
+                    </tr>
+                </thead>
+                <tbody class="ms-stdtext">
+                    <tr ng-repeat="item in globalModels.lineItems">
+                        <td>{{$index}}</td>
+                        <td>{{item.PartNumber}}</td>
+                        <td>{{item.ItemName}}</td>
+                        <td>{{item.QuantityOrdered}}</td>
+                        <td>{{item.CountryName}}</td>
+                        <td>{{item.POLIUsageDate}}</td>
+                        <td>{{item.PurchaseUnitQuantity}}</td>
+                        <td>{{item.ProgramOfferingCode}}</td>
+                        <td>{{item.BillingOptionCode}}</td>
+                        <td>{{item.UnitPrice}}</td>
+                        <td>{{item.ExtendedAmount}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--Order Items End-->
+
+</div>
+<!-- Order Summary End"-->

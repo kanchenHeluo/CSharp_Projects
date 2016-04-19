@@ -1,0 +1,1058 @@
+﻿/*Default navigation icons*/
+/* Common properties*/
+.i_DropDownArrow,
+.i_DocMulti,
+.i_Filter,
+.i_ArrowUpDown,
+.i_Magnify,
+.i_Close,
+.i_Info,
+.i_Download,
+.i_ArrowLeft,
+.i_ArrowRight,
+.i_ArrowLeftS,
+.i_ArrowRightS,
+.i_KeyExport,
+.i_Key,
+.i_Printer,
+.i_ArrowRightM,
+.i_CircleCheckmark,
+.i_CircleCheckmarkSmall,
+.i_ArrowBack,
+.i_BackArrowInCircle,
+.i_NotificationInfo,
+.i_InfoView,
+.i_NotificationWarning,
+.i_NotificationWarningSmall,
+.i_NotificationError,
+.i_NotificationErrorSmall,
+.i_Search,
+.i_Clear,
+.i_ClearSmall,
+.i_Closebig,
+.i_EditPencil,
+.i_ClosePopUp,
+.i_Refresh,
+.i_AddPlus,
+.i_PencilSmall,
+.i_SwooshDelete,
+.i_CircleArrow,
+.i_ProductCatalog,
+.i_paperPencil,
+.userImage,
+.i_CircleClose,
+.i_ActionsDropDownArrow,
+.i_SmallCheckmarkBlack,
+.i_Word,
+.i_GreenCheckmark,
+.i_paperPencil,
+.i_Sales,
+.i_Shoppingbag,
+.i_TwoPerson,
+.i_DownloadArrow,
+.i_Tools,
+.i_ViewPermissions,
+.i_QuestionMarkWhite,
+.i_FourLines,
+.i_Paper,
+.i_Benefits,
+.i_ToastSuccessCheckmark,
+.i_ToastInfo,
+.i_ToastWarning,
+.i_ToastError,
+.i_CircleHelp
+{
+	display: inline-block;
+	overflow:hidden;
+	position:relative;
+}
+
+*.hover > .i_DropDownArrow,
+*:hover > .i_DocMulti,
+*:hover > .i_Filter,
+*:hover > .i_ArrowUpDown,
+*:hover > .i_Magnify,
+*:hover > .i_Close,
+*:hover > .i_Info,
+*:hover > .i_Download,
+*:hover > .i_ArrowLeft,
+*:hover > .i_ArrowRight,
+*:hover > .i_ArrowLeftS,
+*:hover > .i_ArrowRightS,
+*:hover > .i_KeyExport,
+*:hover > .i_Key,
+*:hover > .i_Printer,
+*:hover > .i_CircleCheckmark,
+*:hover > .i_CircleCheckmarkSmall,
+*:hover > .i_ArrowBack,
+*:hover > .i_Closebig
+*:hover > .i_Search,
+*:hover > .i_EditPencil,
+*:hover > .i_ClosePopUp,
+*:hover > .i_Refresh,
+*:hover > .i_PencilSmall,
+*:hover > .i_AddPlus,
+*:hover > .i_SwooshDelete,
+*:hover > .i_CircleArrow,
+*:hover > .i_ProductCatalog,
+*:hover > .i_BackArrowInCircle,
+*:hover > .i_CircleHelp
+{
+	cursor:pointer;
+}
+
+/* Size Groups*/
+.i_NotificationWarning,
+.i_paperPencil,
+.i_NotificationError,
+.i_paperPencil,
+.i_Sales,
+.i_Shoppingbag,
+.i_TwoPerson,
+.i_DownloadArrow,
+.i_Tools,
+.i_ViewPermissions,
+.i_QuestionMarkWhite,
+.i_FourLines,
+.i_Paper,
+.i_Benefits,
+.i_ToastSuccessCheckmark,
+.i_ToastInfo,
+.i_ToastWarning,
+.i_ToastError 
+{
+	width: 36px;
+	height: 36px;
+}
+.i_DocMulti,
+.i_Filter,
+.i_ArrowUpDown,
+.i_Magnify,
+.i_Close,
+.i_Info,
+.i_Download,
+.i_ArrowLeft,
+.i_ArrowRight,
+.i_ArrowLeftS,
+.i_ArrowRightS,
+.i_KeyExport,
+.i_Key,
+.i_Printer,
+.i_CircleCheckmark,
+.i_CircleCheckmarkSmall,
+.i_ArrowBack,
+.i_BackArrowInCircle 
+{
+	width: 34px;
+	height: 34px;
+}
+
+.i_CircleClose
+{
+	 width: 32px;
+	height: 32px;
+}
+
+.i_CircleArrow
+{
+	width: 28px;
+	height: 28px;
+}
+
+.i_ArrowRightM,
+.i_NotificationInfo,
+.i_NotificationWarningSmall,
+.i_NotificationErrorSmall,
+.i_Closebig,
+.i_EditPencil,
+.i_ClosePopUp,
+.i_AddPlus,
+.i_Refresh,
+.i_Word,
+.i_GreenCheckmark
+{
+	width: 24px;
+	height: 24px;
+}
+
+.i_Search,
+.i_PencilSmall,
+.i_ProductCatalog,
+.i_Clear,
+.i_SmallCheckmarkBlack
+{
+	width: 20px;
+	height: 20px;
+}
+
+.i_ArrowRightS, 
+.i_ArrowLeftS 
+{
+	width: 18px;
+	height: 18px;
+}
+
+.i_DropDownArrow,
+.i_CircleHelp
+{
+	width: 16px;
+	height: 16px;
+}
+.i_InfoView
+{
+	width: 17px;
+	height: 17px;
+}
+.userImage
+{
+	 width: 15px;
+	height: 15px;
+}
+.i_ClearSmall,
+.i_SwooshDelete,
+.i_ActionsDropDownArrow
+{
+	width: 14px;
+	height: 14px;
+}
+
+/* Specifics */
+
+.i_DropDownArrow:after 
+{
+	content: url('../Images/Icons.png');
+	left:-920px;
+	top:-200px;
+	position:relative;   
+}
+
+.i_CircleHelp:after {
+	content: url('../Images/Icons.png');
+	left: -400px;
+	top: -280px;
+	position:relative;
+}
+
+.i_DocMulti:after 
+{
+	content: url('../Images/Icons.png');
+	left: -41px;
+	top: -1px;
+	position:relative;   
+}
+
+.i_Filter:after 
+{
+	content: url('../Images/Icons.png');
+	left: -81px;
+	top: -1px;
+	position:relative;   
+}
+
+.i_ArrowUpDown:after
+{
+	content: url('../Images/Icons.png');
+	left: -281px;
+	top: -1px;
+	position:relative;  
+}
+
+.i_Magnify:after
+{
+	content: url('../Images/Icons.png');
+	left: -361px;
+	top: -1px;
+	position:relative;  
+}
+
+.i_Close:after
+{
+	content: url('../Images/Icons.png');
+	left: -401px;
+	top: -1px;
+	position:relative;
+}
+
+.i_Info:after
+{
+	content: url('../Images/Icons.png');
+	left: -441px;
+	top: -1px;
+	position:relative;
+}
+
+.i_Download:after
+{
+	content: url('../Images/Icons.png');
+	left: -999px;
+	top: -1px;
+	position:relative;
+}  
+
+.i_ArrowLeft:after
+{
+	content: url('../Images/Icons.png');
+	left: -521px;
+	top: -1px;
+	position:relative;
+}
+
+.i_ArrowRight:after
+{
+	content: url('../Images/Icons.png');
+	left: -561px;
+	top: -81px;
+	position:relative;
+}
+.i_ArrowLeftS:after
+{
+	content: url('../Images/Icons.png');
+	left: -1000px;
+	top: -199px;
+	position:relative;
+}
+
+.i_ArrowRightS:after
+{
+	content: url('../Images/Icons.png');
+	left: -1080px;
+	top: -199px;
+	position:relative;
+}
+ 
+.i_KeyExport:after
+{
+	content: url('../Images/Icons.png');
+	left: -641px;
+	top: -1px;
+	position:relative;
+} 
+
+.i_Key:after
+{
+	content: url('../Images/Icons.png');
+	left: -1039px;
+	top: -0px;
+	position:relative;
+} 
+
+.i_Printer:after
+{
+	content: url('../Images/Icons.png');
+	left: -721px;
+	top: -1px;
+	position:relative;
+}
+.i_ArrowRightM:after 
+{
+	content: url('../Images/Icons.png');
+	left: -560px;
+	top: -280px;
+	position:relative;   
+}
+
+.i_CircleCheckmark:after
+{
+	content: url('../Images/Icons.png');
+	left: -1120px;
+	top: 0;
+	position:relative;
+} 
+
+.i_CircleCheckmarkSmall:after
+{
+	content: url('../Images/Icons.png');
+	left: -1160px;
+	top: 0;
+	position:relative;
+} 
+
+.i_ArrowBack:after
+{
+	content: url('../Images/Icons.png');
+	left: -40px;
+	top: -360px;
+	position:relative;
+} 
+
+.i_NotificationInfo:after
+{
+	content: url('../Images/Icons.png');
+	left: -440px;
+	top: -200px;
+	position:relative;
+}
+
+.i_InfoView:after
+{
+	content: url('../Images/Icons.png');
+	left: -440px;
+	top: -320px;  
+	position:relative;
+}
+
+
+.i_NotificationWarning:after
+{
+	content: url('../Images/Icons.png');
+	left: -560px;
+	top: -200px;
+	position:relative;
+}
+
+.i_NotificationWarningSmall:after
+{
+	content: url('../Images/Icons.png');
+	left: -479px;
+	top: -198px;
+	position:relative;
+}
+
+.i_NotificationError:after
+{
+	content: url('../Images/Icons.png');
+	left: -600px;
+	top: -200px;
+	position:relative;
+}
+
+.i_NotificationErrorSmall:after
+{
+	content: url('../Images/Icons.png');
+	left: -518px;
+	top: -198px;
+	position:relative;
+}
+
+.i_Search:after
+{
+	content: url('../Images/Icons.png');
+	left: -878px;
+	top: -237px;
+	position:relative;
+}
+
+.i_Clear:after
+{
+	content: url('../Images/Icons.png');   
+	left:-838px;
+	top:-198px;
+	position:relative;
+}
+
+.i_ClearSmall:after
+{
+	content: url('../Images/Icons.png');
+	left:-228px;
+	top:-201px;
+	position:relative;
+}
+
+.i_Closebig:after
+{
+	content: url('../Images/Icons.png');
+	left: -1083px;
+	top: -4px;
+	position:relative;
+}
+
+.i_EditPencil:after
+{
+	content: url('../Images/Icons.png');
+	left:-639px;
+	top: -278px;
+	position:relative;
+}
+
+.i_ClosePopUp:after
+{
+	content: url('../Images/Icons.png');
+	left: -799px;
+	top: -279px;
+	position:relative;
+}
+
+.i_Refresh:after
+{
+	content: url('../Images/Icons.png');
+	left:-1196px;
+	top:-317px;
+	position:relative;
+}
+
+.i_PencilSmall:after
+{
+	content: url('../Images/Icons.png');
+	left:-758px;
+	top:-279px;
+	position:relative;
+}
+
+.i_BackArrowInCircle:after 
+{
+	content: url('../Images/Icons.png');
+	left: -39px;
+	top: -360px;
+	position:relative;   
+}
+
+.i_AddPlus:after 
+{
+	content: url('../Images/Icons.png');
+	left:-599px;
+	top:-279px;
+	position:relative;   
+}
+
+.i_SwooshDelete:after 
+{
+	content: url('../Images/Icons.png');
+	left:-1319px;
+	top:-360px;
+	position:relative;   
+}
+
+.i_CircleArrow:after 
+{
+	content: url('../Images/Icons.png');
+	left: -1120px;
+	top: -320px;
+	position:relative;   
+}
+
+.i_ProductCatalog:after 
+{
+	content: url('../Images/Icons.png');
+	left:-1357px;
+	top:-197px;
+	position:relative;   
+}
+
+.userImage:after 
+{
+	content: url('../Images/Icons.png');
+	left:-1279px; 
+	top:-279px; 
+	position:relative;   
+}
+.i_CircleClose:after 
+{
+	content: url('../Images/Icons.png');
+	left: -999px;
+	top: -120px;
+	position:relative;   
+}
+
+.i_ActionsDropDownArrow:after 
+{
+	content: url('../Images/Icons.png');
+	left:-1279px;
+	top:-358px;
+	position:relative;   
+}
+
+.i_SmallCheckmarkBlack:after 
+{
+	content: url('../Images/Icons.png');
+	left: -956px;
+	top: -273px;
+	position:relative;   
+}
+
+.i_Word:after 
+{
+	content: url('../Images/Icons.png');
+	left: -400px;
+	top: -353px;
+	position:relative;   
+}
+
+.i_GreenCheckmark:after 
+{
+	content: url('../Images/Icons.png');
+	left: -206px;
+	top: -162px;
+	position:relative;   
+}
+
+.i_paperPencil:after 
+{
+	content: url('../Images/Icons.png');
+	left: -240px;
+	top:-240px;
+	position:relative;   
+}
+
+.i_Sales:after 
+{
+	content: url('../Images/Icons.png');
+	left: -480px;
+	top:-240px;
+	position:relative;   
+}
+
+.i_Shoppingbag:after 
+{
+	content: url('../Images/Icons.png');
+	left: -274px;
+	top:-240px;
+	position:relative;   
+}
+
+.i_TwoPerson:after 
+{
+	content: url('../Images/Icons.png');
+	left: -401px;
+	top:-240px;
+	position:relative;   
+}
+
+.i_DownloadArrow:after 
+{
+	content: url('../Images/Icons.png');
+	left : -312px;
+	top: -240px;
+	position:relative;   
+}
+
+.i_Tools:after 
+{
+	content: url('../Images/Icons.png');
+	left: -360px;
+	top:-240px;
+	position:relative;   
+}
+
+.i_ViewPermissions:after 
+{
+	content: url('../Images/Icons.png');
+	left: -560px;
+	top:-240px;
+	position:relative;   
+}
+
+.i_QuestionMarkWhite:after 
+{
+	content: url('../Images/Icons.png');
+	left: -437px;
+	top:-240px;
+	position:relative;   
+}
+
+.i_FourLines:after 
+{
+	content: url('../Images/Icons.png');
+	left: -520px;
+	top:-240px;
+	position:relative;   
+}
+
+.i_Paper:after 
+{
+	content: url('../Images/Icons.png');
+	left: -600px;
+	top:-240px;
+	position:relative;   
+}
+
+.i_Benefits:after 
+{
+	content: url('../Images/Icons.png');
+	left: -639px;
+	top:-240px;
+	position:relative;   
+}
+
+.i_ToastSuccessCheckmark:after 
+{
+	content: url('../Images/Icons.png');
+	left: -278px;
+	top:-279px;
+	position:relative;   
+}
+.i_ToastInfo:after 
+{
+	content: url('../Images/Icons.png');
+	left: -319px;
+	top:-277px;
+	position:relative;   
+}
+.i_ToastWarning:after 
+{
+	content: url('../Images/Icons.png');
+	left: -358px;
+	top:-277px;
+	position:relative;   
+}
+.i_ToastError:after 
+{
+	content: url('../Images/Icons.png');
+	left: -559px;
+	top:-159px;
+	position:relative;   
+}
+
+/*:Hover :Focus .active*/  
+
+.i_DropDownArrow:hover:after,
+.i_DropDownArrow:active:after,
+.i_DropDownArrow:focus:after {
+	left: -920px;
+	top: -200px;
+}
+
+.i_CircleHelp:hover:after,
+.i_CircleHelp:active:after,
+.i_CircleHelp:focus:after {
+	left: -440px;
+	top: -280px;
+}
+
+.i_DocMulti:hover:after,
+.i_DocMulti:focus:after,
+.i_DocMulti.active:after 
+{
+	 left: -40px;
+	 top: -81px;
+}
+
+.i_Filter:hover:after,
+.i_Filter:focus:after,
+.i_Filter.active:after 
+{
+	 left: -80px;
+	 top: -81px;
+}
+
+.i_ArrowUpDown:hover:after,
+.i_ArrowUpDown:focus:after,
+.i_ArrowUpDown.active:after 
+{
+	 left: -281px;
+	 top: -81px;
+}
+
+.i_Magnify:hover:after,
+.i_Magnify:focus:after,
+.i_Magnify.active:after 
+{
+	 left: -361px;
+	 top: -81px;
+}
+
+.i_Close:hover:after,
+.i_Close:focus:after,
+.i_Close.active:after 
+{
+	 left: -401px;
+	 top: -81px;
+}
+
+.i_Info:hover:after,
+.i_Info:focus:after,
+.i_Info.active:after 
+{
+	 left: -441px;
+	 top: -81px;
+}
+
+.i_Download:hover:after,
+.i_Download:focus:after,
+.i_Download.active:after 
+{
+	 left: -999px;
+	 top: -79px;
+}
+
+.i_ArrowLeft:hover:after,
+.i_ArrowLeft:focus:after,
+.i_ArrowLeft.active:after 
+{
+	 left: -521px;
+	 top: -81px;
+}
+
+.i_ArrowRight:hover:after,
+.i_ArrowRight:focus:after,
+.i_ArrowRight.active:after 
+{
+	 left: -561px;
+	 top: -1px;
+}
+
+.i_ArrowLeftS:hover:after,
+.i_ArrowLeftS:focus:after,
+.i_ArrowLeftS.active:after 
+{
+	left: -1040px;
+	top: -199px;
+}
+
+.i_ArrowRightS:hover:after,
+.i_ArrowRightS:focus:after,
+.i_ArrowRightS.active:after 
+{
+	left: -1120px;
+	top: -199px;
+}
+
+.i_ArrowBack:hover:after,
+.i_ArrowBack:focus:after,
+.i_ArrowBack.active:after 
+{
+	left: -80px;
+	top: -360px;
+}
+
+.i_KeyExport:hover:after,
+.i_KeyExport:focus:after,
+.i_KeyExport.active:after 
+{
+	 left: -641px;
+	 top: -81px;
+}
+
+.i_Key:hover:after,
+.i_Key:focus:after,
+.i_Key.active:after 
+{
+	 left: -1039px;
+	 top: -80px;
+}
+
+.i_Printer:hover:after,
+.i_Printer:focus:after,
+.i_Printer.active:after 
+{
+	 left: -721px;
+	 top: -81px;
+}
+
+.i_ArrowRightM:hover:after,
+.i_ArrowRightM:focus:after,
+.i_ArrowRightM.active:after 
+{
+	left: -560px;
+	top: -360px;
+}
+
+
+.i_CircleCheckmark:hover:after,
+.i_CircleCheckmark:focus:after,
+.i_CircleCheckmark.active:after 
+{
+	left: -1120px;
+	top: -120px;
+}
+
+.i_CircleCheckmarkSmall:hover:after,
+.i_CircleCheckmarkSmall:focus:after,
+.i_CircleCheckmarkSmall.active:after 
+{
+   left: -1160px;
+	top: -120px;
+}
+
+.i_Search:hover:after,
+.i_Search:focus:after,
+.i_Search.active:after 
+{
+	 left: -878px;
+	 top: -197px;
+}
+
+.i_Closebig:hover:after,
+.i_Closebig:focus:after,
+.i_Closebig.active:after 
+{
+	left: -1083px;
+	top: -124px;
+}
+
+.i_EditPencil:hover:after,
+.i_EditPencil:focus:after,
+.i_EditPencil.active:after 
+{
+	left:-639px;
+	top: -318px;
+}
+
+.i_ClosePopUp:hover:after,
+.i_ClosePopUp:focus:after,
+.i_ClosePopUp.active:after 
+{
+	left: -799px;
+	top: -319px;
+}
+
+.i_Refresh:hover:after,
+.i_Refresh:focus:after,
+.i_Refresh.active:after 
+{
+	left:-1236px;
+	top:-317px;
+}
+
+.i_PencilSmall:hover:after,
+.i_PencilSmall:focus:after,
+.i_PencilSmall.active:after 
+{
+	left:-758px;
+	top:-319px;
+}
+
+.i_BackArrowInCircle:hover:after, 
+.i_BackArrowInCircle:focus:after,
+.i_BackArrowInCircle.active:after 
+{
+	left:-78px;
+	top:-360px;    
+}
+
+.i_AddPlus:hover:after,
+.i_AddPlus:focus:after,
+.i_AddPlus.active:after 
+{
+	left:-599px;
+	top:-399px;
+}
+
+.i_SwooshDelete:hover:after,
+.i_SwooshDelete:focus:after,
+.i_SwooshDelete.active:after 
+{
+	left:-1359px;
+	top:-360px;
+}
+
+.i_CircleArrow:hover:after,
+.i_CircleArrow:focus:after,
+.i_CircleArrow.active:after 
+{
+	left: -1040px;
+	top: -320px;
+}
+
+.i_ProductCatalog:hover:after,
+.i_ProductCatalog:focus:after,
+.i_ProductCatalog.active:after 
+{
+	left:-1357px;
+	top:-237px;
+}
+
+
+/*Different class*/
+
+.i_AddPlus.imgTextBtn:after 
+{
+	left:-599px;
+	top:-319px;
+}
+
+
+/*.Disabled*/
+.i_DropDownArrow.disabled:after 
+{
+	left: -960px;
+	top: -200px;
+}
+
+.i_DocMulti.disabled:after 
+{
+	left: -40px;
+	 top: -41px;
+}
+
+.i_Filter.disabled:after 
+{
+	left: -81px;
+	top: -41px;
+}
+
+.i_ArrowUpDown.disabled:after 
+{
+	left: -281px;
+	top: -41px;
+}
+
+.i_Magnify.disabled:after 
+{
+	left: -361px;
+	top: -41px;
+}
+
+.i_Close.disabled:after 
+{
+	left: -401px;
+	top: -41px;
+}
+
+.i_Info.disabled:after 
+{
+	left: -441px;
+	top: -41px;
+}
+
+.i_Download.disabled:after 
+{
+	left: -999px;
+	top: -40px;
+}
+
+.i_ArrowLeft.disabled:after 
+{
+	left: -521px;
+	top: -41px;
+}
+
+.i_KeyExport.disabled:after 
+{
+	left: -641px;
+	top: -41px;
+}
+
+.i_Key.disabled:after 
+{
+	left: -1039px;
+	top: -40px;
+}
+
+.i_Printer.disabled:after 
+{
+	left: -721px;
+	top: -41px;
+}
+
+.i_ArrowRightM.disabled:after 
+{
+	left:-1040px;
+	top:-280px;
+}
+
+.i_ArrowRight.disabled:after 
+{
+	left: -521px;
+	top: -41px;
+}
+
+
+
+
+/*speciality icons*/
+.i_msHeadIcon {
+	display: inline-block;
+	vertical-align: middle;
+	overflow:hidden;
+
+}
+.i_msHeadIcon:before {
+	content: url('../Images/Icons.png');
+	left: -119px;
+	top: -359px;
+	vertical-align: middle;
+	display: inline-block;
+	width: 80px;
+	height: 17px;
+	position:relative;
+}

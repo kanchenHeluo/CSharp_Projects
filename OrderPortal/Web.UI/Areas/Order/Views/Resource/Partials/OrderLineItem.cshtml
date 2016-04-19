@@ -1,0 +1,142 @@
+﻿@using Web.Localization
+<op-form name="lineItemForm">
+    <!--Order Items Start-->
+    <div op-busy-subscriber="LineItemAttributes SearchSku UsageCountries FlagReasons searchOpportunitystepUp searchOpportunityrenewal importRenewalLineItems searchOpportunitytrueUps getCoverageDate getLineItemEstimate">
+
+        <!--Promise register start-->
+        <span op-busy-publisher="LineItemAttributesPromise" op-busy-publisher-event="LineItemAttributes"></span>
+        <span op-busy-publisher="searchSkuPromise" op-busy-publisher-event="SearchSku"></span>
+        <span op-busy-publisher="UsageCountriesPromise" op-busy-publisher-event="UsageCountries"></span>
+        <span op-busy-publisher="FlagReasonsPromise" op-busy-publisher-event="FlagReasons"></span>
+        <span op-busy-publisher="searchOpportunitystepUpPromise" op-busy-publisher-event="searchOpportunitystepUp"></span>
+        <span op-busy-publisher="searchOpportunityrenewalPromise" op-busy-publisher-event="searchOpportunityrenewal"></span>
+        <span op-busy-publisher="searchOrderHistoryPromise" op-busy-publisher-event="importRenewalLineItems"></span>
+        <span op-busy-publisher="searchOpportunitytrueUpsPromise" op-busy-publisher-event="searchOpportunitytrueUps"></span>
+        <span op-busy-publisher="getCoverageDatePromise" op-busy-publisher-event="getCoverageDate"></span>
+        <span op-busy-publisher="getLineItemEstimatePromise" op-busy-publisher-event="getLineItemEstimate"></span>
+        <!--Promise register end-->
+
+        <div ng-repeat="item in globalModels.lineItems track by $index">
+            <div ng-include="'../Resource/OrderLineItemRow'"></div>
+        </div>
+        <div>
+            <op-panelcontainer is-open="false" is-disabled="true">
+                <div class="replacement-left">
+                    <div style="display:inline-block">
+                        <div class="ms-formblock leftalign">
+                            <label class="ms-stdlabel">@("Item Name".Localize())</label>
+                            <input type="text" maxlength="80" class="ms-stdinput" ng-model="item.ItemName" />
+                        </div>
+                        <div class="ms-formblock">
+                            <label class="ms-stdlabel">@("Item Number".Localize())</label>
+                            <input type="text" maxlength="16" class="ms-stdinput" ng-model="item.PartNumber" />
+                        </div>
+                        <div class="ms-formblock">
+                            <label class="ms-stdlabel">@("Product Family".Localize())</label>
+                            <input type="text" class="ms-stdinput" ng-model="item.ProductFamilyName" maxlength="35" />
+                        </div>
+                        <div class="layout-ItemSearchSymbol">
+                            <span class="search symbol" ng-click="searchAndAddNewItem(item)"></span>
+                        </div>
+                        <div class="dropdown layout-MoreSymbol">
+                            <span class="more symbol" data-toggle="dropdown"></span>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><span ng-click="showCategory(true)">Browse All</span></li>
+                                <li ng-repeat="cate in categories" ng-if="cate.isOpportunitiy"><span ng-click="showCategory(cate.Title)">Browse {{cate.Title}}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="replacement-right">
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><span ng-click="toggleLineItemAll(true)">Expand All Segments</span></li>
+                        <li><span ng-click="toggleLineItemAll(false)">Collapse All Segments</span></li>
+                    </ul>
+                </div>
+            </op-panelcontainer>
+        </div>
+        <op-slide-in title="Product Catalog" ng-open="dialogStatus.superCatalogOpen">
+            <div ng-include="'../Resource/SuperCatalog'"></div>
+        </op-slide-in>
+    </div>
+    <!--Order Items End-->
+
+    <!--Pricing Start-->
+    <div>
+        <div class="clr layout-gap"></div>
+        <div class="ms-sectiontitle">Pricing</div>
+        <div class="clr layout-gap"></div>
+
+        <div class="layout-scroll maxheightS">
+            <table class="table table-striped table-hover notclickable table-bordered nowrap">
+                <thead>
+                    <tr class="ms-stdlabel">
+                        <th>Price Level</th>
+                        <th>Adjustment</th>
+                        <th>Estimated Taxes</th>
+                        <th>Item Points</th>
+                        <th>Invoice Date</th>
+                        <th>Amount</th>
+                        <th>Invoice Status</th>
+                    </tr>
+                </thead>
+                <tbody class="ms-stdtext">
+                    <tr>
+                        <td>A</td>
+                        <td>0.00</td>
+                        <td>2344.33</td>
+                        <td>45</td>
+                        <td>8/22/2014</td>
+                        <td>1000.00</td>
+                        <td>Not Invoiced</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--Pricing End-->
+    
+    <!--Bottom Start-->
+    <div>
+        <div class="clr layout-gap"></div>
+
+        <div class="fll">
+            <div class="ms-formblock large leftalign">
+                <label class="ms-stdlabel">Your notes (not submitted to Microsoft)</label>
+                <textarea class="large" ng-model="globalModels.orderModel.UserNotes">Rajesh - I am heading out to lunch and then going to Syd’s soccer game at the high school - can you finish this and get it submitted this afternoon? Thanks!</textarea>
+            </div>
+        </div>
+
+        <div class="flr subtotal">
+            <div class="ms-stdlabel">ALL ORDERS (USD)</div>
+            <div class="layout-gapXS"></div>
+            <div class="ms-stdtext">
+                <div class="clr"></div>
+                <div class="fll">Subtotal</div>
+                <div class="flr">{{getSubTotal()}}</div>
+                <div class="clr"></div>
+            </div>
+            <div class="layout-gapXS"></div>
+            <div class="ms-stdtext">
+                <div class="clr"></div>
+                <div class="fll">Estimated Tax</div>
+                <div class="flr">{{estimatedTax()}}</div>
+                <div class="clr"></div>
+            </div>
+            <div class="layout-gapXS"></div>
+            <div class=" ms-stdtext bold">
+                <div class="clr"></div>
+                <div class="fll">Total Price</div>
+                <div class="flr">{{getTotalPayment()}}</div>
+                <div class="clr"></div>
+            </div>
+            <div class="layout-gap"></div>
+            <div class="ms-stdtext">Prices are estimated until the order is processed. Taxes are finalized upon invoice.</div>
+        </div>
+
+        <div class="clr"></div>
+        <div class="layout-gap"></div>
+
+    </div>
+    <!--Bottom End-->
+</op-form>

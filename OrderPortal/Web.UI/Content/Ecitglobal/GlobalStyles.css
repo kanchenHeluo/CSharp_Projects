@@ -1,0 +1,931 @@
+﻿/* Standard Global Styles*/
+/* Initial document setup */
+*{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+*::-ms-clear {
+		display: none;
+}
+* HTML {
+	position: absolute;
+}
+
+HTML
+{
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	height: 100%;
+	font-size: 62.5%;
+}
+
+* body, body
+{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+body
+{
+	font-family: "Segoe UI", Tahoma, Helvetica,  Arial, Verdana, sans-serif;
+	font-weight: 500;
+	color: #000;
+	position: relative;
+	z-index: 1;
+	direction: ltr /*@leftToRight*/;
+}
+
+/* Backward browser support */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary
+{
+	display: block;
+}
+
+p, H4, H5, body, div, span, td, tr, article, footer, header, aside, details, menu, summary, dialog
+{
+	margin: 0;
+	padding: 0;
+}
+
+p, td, tr, th, em, blockquote, article, footer, header, aside, summary, details, dialog {
+	font-size: 1.2rem;
+}
+
+/* End document setup*/
+
+
+.ms-sitetitle
+{
+	font-size: 1.9rem;
+	font-weight: 600;
+	color: #666;
+	text-transform: capitalize;
+}
+
+h1,
+.ms-sectiontitle
+{
+	font-size: 2.4rem;
+	font-weight: 500;
+	color: #666;
+}
+
+h2,
+.ms-containertitle
+{
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: #000;
+}
+
+h3,
+.ms-textheading.medium
+{
+	
+	font-size: 1.4rem;
+	line-height: 1.4em;
+	font-weight: 600;
+	color: #000;
+}
+
+h4,
+.ms-textheading
+{
+	
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	font-weight: 700;
+	color: #000;
+}
+
+a,
+a:link,
+a:visited,
+.ms-linktext
+{
+	
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	color: #0072C6;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a:hover, a:active, a:focus,
+.ms-linktext.active
+.ms-linktext:hover,
+.ms-linktext:active,
+.ms-linktext:focus
+{
+	text-decoration: underline;
+}
+
+p,
+.ms-stdtext
+{
+	
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: #000;
+	text-transform:none;
+}
+
+
+
+
+label,
+.ms-label,	
+.ms-stdlabel
+{
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #666;
+	text-transform: uppercase;
+	margin-right:1rem;
+}
+
+textarea {
+	font-family: "Segoe UI", Tahoma, Helvetica,  Arial, Verdana, sans-serif;
+	font-size: 1.2rem;
+	color:#000;
+	font-weight:500;
+	min-height:4rem;
+	border:solid 1px #666;
+	padding:4px;
+}
+
+textarea:hover,
+textarea:active,
+textarea:focus,
+textarea.active
+{
+	border:solid 2px #0072C6;
+	padding:3px;
+}
+
+textarea.disabled,
+textarea:disabled {
+	background-color:#EEE !important;
+	border:solid 1px #A0A0A0 !important;
+	padding: 4px !important;
+}
+
+.ms-stdinput,
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"] {
+	padding: 4px;
+	min-width: 5rem;
+	height: 2.4rem;
+	border: 1px solid #666;
+	background-color: #FFF;
+	font-size: 1.2rem;
+	vertical-align:middle;
+	color:#000;
+}
+
+	.ms-stdinput:focus,
+	.ms-stdinput:active,
+	.ms-stdinput:hover,
+	input[type="text"]:hover,
+	input[type="email"]:hover,
+	input[type="number"]:hover,
+	input[type="password"]:hover,
+	input[type="search"]:hover,
+	input[type="tel"]:hover,
+	input[type="url"]:hover,
+	input[type="text"]:active,
+	input[type="email"]:active,
+	input[type="number"]:active,
+	input[type="password"]:active,
+	input[type="search"]:active,
+	input[type="tel"]:active,
+	input[type="url"]:active,
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="number"]:focus,
+	input[type="password"]:focus,
+	input[type="search"]:focus,
+	input[type="tel"]:focus,
+	input[type="url"]:focus {
+		border:solid 2px #0072C6;
+		padding: 2px 3px;
+	}
+
+input:disabled{
+	border:solid 1px #666 !important;
+	background-color:#EEE !important;
+	color:#A0A0A0 !important;
+	padding:4px;
+}
+
+input[type="button"],
+input[type="submit"],
+.ms-stdbtn
+{
+	
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #FFF;
+	background-color: #666;
+	padding: 7px 10px;
+	border: none;
+	text-transform: uppercase;
+	height:3.2rem;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.ms-stdbtn:hover,
+input[type="button"]:active,
+input[type="submit"]:active,
+.ms-stdbtn:active,
+input[type="button"].active,
+input[type="submit"].active,
+.ms-stdbtn.active,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+.ms-stdbtn:focus
+{
+	background-color: #0072C6;
+	cursor: pointer;
+}
+
+/* Extra commonanlly used styles */
+
+.ms-smalllinktext,
+.ms-smalllinktext:link,
+.ms-smalllinktext:visited
+{
+	font-size: 1.1em;
+	font-size: 1.1rem;
+	font-weight: 500;
+	color: #666;
+	text-decoration: none;
+}
+
+.ms-smalllinktext:hover,
+.ms-smalllinktext:focus,
+.ms-smalllinktext:active,
+.ms-smalllinktext.active
+{
+	color: #0072C6;
+	text-decoration: underline;
+}
+
+.ms-stdtext.white
+{	
+	font-size: 1.2rem;
+	color: #FFF;
+}
+
+.ms-stdtext.medium
+{
+	
+	font-size: 1.4rem;
+	font-weight: 500;
+	color: #000;
+}
+
+.ms-stdlabel.medium
+{
+	
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+	font-weight: 600;
+	color: #666;
+	text-transform: uppercase;
+	margin-right:1rem;
+}
+
+.ms-infolabel
+{
+	
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	font-weight: 500;
+	color: #000;
+	border-bottom: dashed 1px #000;
+	text-transform: none;
+}
+
+
+
+
+/* Global Nav */
+.ms-globalnavroot
+{
+	font-size: 2.4rem;
+	font-weight: 500;
+	color: #000;
+	cursor: pointer;
+}
+
+.ms-globalnavroot:hover,
+.ms-globalnavroot:focus
+{
+	color: #0072C6;
+}
+
+.ms-globalnavitem
+{
+	
+	font-size: 1.4rem;
+	font-weight: 500;
+	color: #000;
+	cursor: pointer;
+}
+
+.ms-globalnavitem:hover,
+.ms-globalnavitem:focus
+{
+	color: #FFF;
+	background-color: #0072C6;
+}
+
+.ms-globalnavitem:active,
+.ms-globalnavitem.active
+{
+	
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: #000;
+	cursor: pointer;
+}
+
+/* END Global Nav */
+
+/* Bread Crumb */
+.ms-breadcrumbs {
+	font-size: 0;
+	height: 3.2rem;
+	white-space: nowrap;
+}
+
+	.ms-breadcrumbs > .symbol.rightAngle {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 1.2rem;
+	}
+
+		.ms-breadcrumbs > .symbol.rightAngle:before {
+			vertical-align: middle;
+			margin: 0 .4rem;
+		}
+.ms-breadcrumbs a.ms-breadcrumblink,
+.ms-breadcrumbs a.ms-breadcrumblink:link,
+.ms-breadcrumbs a.ms-breadcrumblink:visited
+{
+	vertical-align:middle;
+	font-size: 1.4rem;
+	font-weight: 500;
+	color: #0072C6;
+	cursor: pointer;
+	padding:0 4px;
+	height:3.2rem;
+	
+}
+
+.ms-breadcrumbs a.ms-breadcrumblink:hover,
+.ms-breadcrumbs a.ms-breadcrumblink:focus
+{
+	color: #0072C6;
+	text-decoration:none;
+	background-color:#F4F4F4;
+}
+
+.ms-breadcrumbs .ms-breadcrumblink:active,
+.ms-breadcrumbs .ms-breadcrumblink.active,
+.ms-breadcrumbs .ms-breadcrumblink.active:link,
+.ms-breadcrumbs .ms-breadcrumblink.active:visited,
+.ms-breadcrumbs .ms-breadcrumblink.active:hover,
+.ms-breadcrumbs .ms-breadcrumblink.active:focus
+{
+	color: #000;
+	background-color:transparent;
+	cursor:default;
+}
+
+/* Bread Crumb */
+
+
+/* Help Classes*/
+a.ms-helptextlink,
+a.ms-helptextlink:link,
+a.ms-helptextlink:visited,
+.ms-helptextlink
+{
+	
+	font-size: 1.2rem;
+	line-height: 1.3rem;
+	font-weight: 500;
+	color: #0072C6;
+}
+
+.ms-helptextlink:active,
+.ms-helptextlink.active,
+a.ms-helptextlink:hover,
+a.ms-helptextlink:focus
+{
+	text-decoration: underline;
+}
+/*End Help Classes*/
+
+
+.ms-dialogtext
+{	
+	font-size: 1.4rem;
+	line-height: 1.6rem;
+	font-weight: 600;
+}
+
+
+select,
+.ms-stddroplist
+{
+	
+	font-size:1.2rem;
+	vertical-align:middle;
+	height: 2.4rem;
+	padding: 2px;
+	width:10rem;
+	border: 1px solid #666;
+	min-width: 5rem;
+	background-color:transparent;
+}
+select:not([disabled]):hover,
+select:not([disabled]):active,
+select:not([disabled]):focus,
+select.active:not([disabled])
+{
+	border:solid 2px #0072C6;
+	padding:1px;
+}
+/*select,
+.ms-stddroplist
+{
+	
+	font-size:1.2rem;
+	vertical-align:middle;
+	height: 2.4rem;
+	padding: 2px;
+	width:10rem;
+	border: 1px solid #666;
+	min-width: 5rem;
+}*/
+
+.ms-stdlistitem
+{
+	
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: #000;
+	display: inline-block;
+	min-height: 1.5rem;
+	padding:4px;
+}
+
+.ms-stdlistitem:hover,
+.ms-stdlistitem:focus
+{
+	color: #FFF;
+	background-color: #0072C6 !important;	
+	
+	cursor: pointer;
+}
+
+.ms-pageitem
+{
+	
+	font-size: 1.2rem;
+	background-color: #FFF;
+	width: 24px;
+	height: 2.4rem;
+}
+
+.ms-pageitem:active,
+.ms-pageitem.active
+{
+	
+	font-size: 1.2rem;
+	background-color: #DADADA;
+	width: 24px;
+	height: 2.4rem;
+}
+.ms-bannerheading
+{
+	font-size: 1.8rem;
+	color: #000;
+}
+
+
+
+a.ms-stdsecondarybtn,
+a.ms-stdsecondarybtn:link,
+a.ms-stdsecondarybtn:visited,
+input[type="submit"].ms-stdsecondarybtn,
+input[type="button"].ms-stdsecondarybtn,
+input[type="submit"].ms-stdsecondarybtn,
+button.ms-stdsecondarybtn,
+*.ms-stdsecondarybtn
+{
+	color: #666;
+	background-color: transparent;
+	cursor: pointer;
+	text-transform: uppercase;
+	display:inline-block;
+	padding:7px 10px;
+	border:solid 1px #666;
+	text-align:center;
+
+}
+
+input[type="button"].ms-stdsecondarybtn:hover,
+input[type="submit"].ms-stdsecondarybtn:hover,
+.ms-stdsecondarybtn:hover,
+.ms-stdsecondarybtn:hover>*,
+
+input[type="button"].ms-stdsecondarybtn:active,
+input[type="submit"].ms-stdsecondarybtn:active,
+.ms-stdsecondarybtn:active,
+.ms-stdsecondarybtn:active>*,
+
+input[type="button"].ms-stdsecondarybtn.active,
+input[type="submit"].ms-stdsecondarybtn.active,
+.ms-stdsecondarybtn.active,
+.ms-stdsecondarybtn.active>*,
+
+
+input[type="button"].ms-stdsecondarybtn:focus,
+input[type="submit"].ms-stdsecondarybtn:focus,
+.ms-stdsecondarybtn:focus,
+.ms-stdsecondarybtn:focus>*
+{
+	background-color: #0072C6;
+	text-decoration:none;
+	color: #FFF;
+	border:solid 1px #0072C6;
+}
+
+.ms-stdsecondarybtn>*
+{
+	vertical-align: middle;
+}
+
+.ms-imgtextbtn
+{
+	font-size: 1.6rem;
+	display:inline-block;
+	font-weight: 500;
+	color: #666;
+	cursor: pointer;
+	padding:7px 10px;
+}
+
+.ms-imgtextbtn>*
+{
+	display: inline-block;
+}
+
+.ms-imgtextbtn:hover,
+.ms-imgtextbtn:focus
+{
+	color: #0072C6; 
+}
+
+.ms-imgtextbtn2
+{
+	
+	font-size: 1.2rem;
+	font-weight: 600;
+	display:inline-block;
+	color: #666;
+	cursor: pointer;
+	padding:7px 10px;
+	text-transform: uppercase;
+	line-height:2.4rem;
+	
+}
+
+.ms-imgtextbtn2>*
+{
+	
+	display: inline-block;
+	vertical-align:middle;
+	
+}
+
+.ms-imgtextbtn2:hover,
+.ms-imgtextbtn2:focus
+{
+	color:#FFF;
+	background-color: #0072C6; 
+	text-decoration: none;
+}
+
+
+/* error page classes */
+.ms-errorpageheader
+{
+	
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+
+.ms-errorpagesubheader
+{
+	
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #666;
+}
+/* END error page classes */
+
+
+
+/* Sign In Classes */
+.ms-signintitletext,
+.ms-signintitletextcust,
+.ms-signintitletextpart
+{
+	font-size: 3rem;
+}
+
+.ms-signintitletextpart
+{
+	color: #007233;
+}
+
+.ms-signintitletextcust
+{
+	color: #0072C6;
+}
+
+.ms-signinintrotext
+{
+	font-size: 3rem;
+	font-weight: 300;
+	color: #666;
+}
+
+.ms-signinbtnpart
+{
+	height: 10rem;
+	min-width: 200px;
+	background-color: #007233;
+}
+
+.ms-signinbtncust
+{
+	height: 10rem;
+	min-width: 200px;
+	background-color: #0072C6;
+}
+
+.ms-signinbtnlabel
+{
+	font-size: 1.9rem;
+	color: #fff;
+}
+
+.ms-signinbtnsublabel
+{
+	font-size: 1.2rem;
+	color: #fff;
+}
+/* END Sign In Classes */
+
+/*.active,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+select:focus
+{
+	border: solid 1px #0072C6;
+}*/
+
+*.disabled input,
+input.disabled,
+*:disabled input,   
+input:disabled
+{
+	border-color:#EEE;
+}
+
+
+/* extra markup for forcing a disabled look.*/
+:disabled,
+.disabled,
+.disabled *,
+.disabled:hover,
+.disabled:hover *
+
+{
+	color: #a0a0a0 !important;
+	cursor: default !important;
+	text-decoration: none !important;
+}
+
+input.disabled,
+input:disabled,
+select.disabled,
+select:disabled
+{
+	background-color:#EEE !important;
+	border:solid 1px #A0A0A0 !important;
+}
+
+
+.ms-errorinput
+{
+	border-color: #E81123;
+}
+
+.ms-errorinput:not(select),
+.ms-fielderrortext
+{
+	font-size: 1.2rem;
+	color: #E81123;
+}
+/* External framework styles*/
+.field-validation-error,
+.validation-summary-errors {
+	border: 1px solid red;
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: #000;
+}
+
+	.input-validation-error,
+	.input-validation-error:hover,
+	.input-validation-error:active,
+	.input-validation-error.active
+	{
+		border: 1px solid red !important;
+	}
+
+.validation-summary-errors{
+	margin-bottom: 1rem;
+}
+
+
+/* Helper / Compound  Styles */
+.active
+{
+	/* used to apply state on an active or selected element*/
+}
+
+.focus
+{
+	/* defined to give appearance same as a input field focus */
+	outline:auto;
+}
+
+.disabled
+{
+	/* has default style rules from global styles based on type*/
+}
+
+/* mark item to be styled as readonly, same visual appearance as 
+	disabled="disabled" without disabling content
+*/
+.readonly
+{
+	background-color: #DADADA !important;
+	cursor: default !important;
+}
+
+/* Aligns text center */
+.atl
+{
+	text-align: left !important;
+}
+/* Aligns text right */
+.atr
+{
+	text-align: right !important;
+}
+
+/* Aligns text center */
+.atc
+{
+	text-align: center !important;
+}
+
+.aligntop
+{
+	vertical-align:top !important;
+}
+
+.ilb
+{
+	display: inline-block !important;
+}
+
+/* Hides content but leaves allocated space */
+.hidden
+{
+	visibility: hidden !important;
+}
+
+/* Hides content and collapses allocated space*/
+.hide
+{
+	display: none !important;
+}
+
+.wrap
+{
+	white-space: normal !important;
+	-ms-word-break: break-all !important;
+	word-break: break-all !important;
+}
+
+.nowrap
+{
+	white-space: nowrap !important;
+}
+
+.pointer
+{
+	cursor: pointer !important;
+}
+
+.required:before
+{
+	content: '*';
+	padding: 5px;
+	color: #FF0000;
+}
+
+.defaultcase
+{
+	text-transform:none !important;
+}
+
+
+.uppercase
+{
+	text-transform: uppercase !important;
+}
+
+/* Text color override */
+.white
+{
+	color: #fff !important;
+}
+
+.black
+{
+	color: #000 !important;
+}
+
+.bold
+{
+	font-weight: 600 !important;
+}
+
+.bolder
+{
+	font-weight: 700 !important;
+}
+
+.flr
+{
+	float: right!important;
+}
+
+.fll
+{
+	float:left !important;
+}
+
+.clear,
+.clr
+{
+	clear:both;
+}
+
+.vt
+{
+	vertical-align: top !important;
+}
+
+.vb
+{
+	vertical-align: bottom !important;
+}

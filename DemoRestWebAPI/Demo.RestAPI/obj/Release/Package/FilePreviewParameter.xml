@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="ckRestApi" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\IndividualProject\\DemoRestWebAPI\\Demo\.RestAPI\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\IndividualProject\\DemoRestWebAPI\\Demo\.RestAPI\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="PurchaseOrderAPIContext-Web.config Connection String" description="" value="Data Source=(localdb)\v11.0; Initial Catalog=PurchaseOrderAPIContext-20150526113506; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|PurchaseOrderAPIContext-20150526113506.mdf" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\IndividualProject\\DemoRestWebAPI\\Demo\.RestAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='PurchaseOrderAPIContext']/@connectionString" />
+  </parameter>
+</parameters>

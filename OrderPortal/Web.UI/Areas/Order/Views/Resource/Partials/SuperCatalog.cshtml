@@ -1,0 +1,74 @@
+﻿@using Web.Localization
+
+<div op-busy-subscriber="SearchSku importRenewalLineItems searchOpportunityrenewal searchOpportunitystepUp">
+    <div class="layout-inlineBlock">
+        <div class="ms-formblock xxlarge leftalign layout-positionRel">
+            <label class="ms-stdlabel">Search</label>
+            <input type="text" ng-model="skuSearchItem.ItemName" class="ms-stdinput" />
+            <span class="search symbol layout-searchsymbolinbox" ng-click="searchCatelog()"></span>
+        </div>
+        <div class="dropdown layout-MoreSymbol">
+            <span class="more symbol" data-toggle="dropdown"></span>
+            <ul class="dropdown-menu dropdown-menu-right">
+                <li><span ng-click="showCategory(true)">Show All</span></li>
+                <li ng-repeat="cate in categories"><span ng-click="showCategory(cate.Title)">{{cate.isOpportunitiy ? 'Browse ' : 'Search '}}{{cate.Title}}</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="layout-gap"></div>
+    <div ng-repeat="cate in categories" ng-if="cate.search">
+        <op-panelcontainer is-open="cate.panelExpanded" is-disabled="false">
+            <div class="replacement-left">
+                <div style="display:inline-block; width: 100%;">
+                    <div class="layout-inlineBlock" style="width: 100%;">
+                        <table class="table table-catelog">
+                            <thead>
+                                <tr>
+                                    <td ng-if="cate.results != null && cate.results.length > 0" ng-repeat="c in cate.Columns" ng-style="{ width: c.width, 'font-weight': $index == 0 ? 'bold': 'normal' }">{{c.name}}</td>
+                                    <td ng-if="cate.results == null || cate.results.length == 0" colspan="6">No relative {{cate.Columns[0].name}}</td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="replacement-right">
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><span ng-click="importSku()">Add Selected to Order</span></li>
+                    <li><span ng-click="toggleAllCategories(true)">Expand All Segments</span></li>
+                    <li><span ng-click="toggleAllCategories(false)">Minimize all Segments</span></li>
+                    <li><span ng-click="toggleAllCategoriesItems(false)">Remove All</span></li>
+                </ul>
+            </div>
+            <table class="table table-catelog" ng-if="cate.results != null">
+                <tbody>
+                    <tr ng-repeat="item in cate.results" ng-class="{selected: item.selected}" ng-click="selectCatelogItem($event, item, 'td')">
+                        <td class="clickable" ng-repeat="c in cate.Columns" ng-style="{width: c.itemWidth || c.width, 'font-weight': $index == 0 ? 'bold': 'normal' }">{{item[c.field]}}</td>
+                        <td style="text-align: right;">
+                            <div class="dropdown">
+                                <span class="more symbol" data-toggle="dropdown"></span>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><span ng-click="importSku()">Add Selected to Order</span></li>
+                                    <li><span ng-click="toggleAllCategories(true)">Expand All Segments</span></li>
+                                    <li><span ng-click="toggleAllCategories(false)">Minimize all Segments</span></li>
+                                    <li><span ng-click="toggleAllCategoriesItems(false)">Remove All</span></li>
+                                    <li><span ng-click="item.selected=false">Remove This Item</span></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="margin-left: 15px;">
+                <op-pagination ng-if="!cate.isOpportunitiy" op-cur-page="dialogStatus.currentPage" op-total-item="dialogStatus.totalCount" op-page-interval="dialogStatus.pageInterval" op-item-per-page="dialogStatus.itemsPerPage" op-page-change="catalogPaging()" />
+            </div>
+        </op-panelcontainer>
+        <div class="layout-gapS"></div>
+    </div>
+    @*<div class="flr">
+            <input type="button" class="ms-stdbtn" ng-click="dialogStatus.superCatalogOpen=false" value="Cancel" />
+            <input type="button" class="ms-stdbtn" ng-click="importSku()" value="Next" />
+        </div>*@
+</div>
+
+

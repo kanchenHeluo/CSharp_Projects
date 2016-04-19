@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="PurchaseOrderAPIContext-Web.config Connection String" description="PurchaseOrderAPIContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(localdb)\v11.0; Initial Catalog=PurchaseOrderAPIContext-20150526113506; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|PurchaseOrderAPIContext-20150526113506.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\IndividualProject\\DemoRestWebAPI\\Demo\.RestAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='PurchaseOrderAPIContext']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling.WCF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bieint07.fareast.corp.microsoft.com/OrderService/Order.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling" />
+  <xs:complexType name="ServiceFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.IT.Licensing.Common.ErrorHandling" minOccurs="0" name="Errors" nillable="true" type="q1:ArrayOfMessage" />
+      <xs:element minOccurs="0" name="Type" type="tns:ServiceFaultType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceFault" nillable="true" type="tns:ServiceFault" />
+  <xs:simpleType name="ServiceFaultType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="InternalSystemFailure" />
+      <xs:enumeration value="Validation" />
+      <xs:enumeration value="BusinessRuleViolation" />
+      <xs:enumeration value="ExternalSystemFailure" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ServiceFaultType" nillable="true" type="tns:ServiceFaultType" />
+</xs:schema>
