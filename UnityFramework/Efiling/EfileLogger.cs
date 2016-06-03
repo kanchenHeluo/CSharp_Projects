@@ -1,0 +1,7 @@
+﻿
+namespace Efiling
+{
+    class EfileLogger
+    {
+    }
+}

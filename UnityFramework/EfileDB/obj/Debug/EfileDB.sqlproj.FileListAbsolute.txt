@@ -1,0 +1,9 @@
+C:\KCCodes\UnityFramework\EfileDB\bin\Debug\EfileDB.dacpac
+C:\KCCodes\UnityFramework\EfileDB\bin\Debug\EfileDB.dll
+C:\KCCodes\UnityFramework\EfileDB\bin\Debug\EfileDB.pdb
+C:\KCCodes\UnityFramework\EfileDB\obj\Debug\EfileDB.dll
+C:\KCCodes\UnityFramework\EfileDB\obj\Debug\EfileDB.pdb
+C:\KCCodes\UnityFramework\EfileDB\obj\Debug\Model.xml
+C:\KCCodes\UnityFramework\EfileDB\obj\Debug\refactor.xml
+C:\KCCodes\UnityFramework\EfileDB\obj\Debug\postdeploy.sql
+C:\KCCodes\UnityFramework\EfileDB\obj\Debug\predeploy.sql
